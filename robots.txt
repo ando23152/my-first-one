@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://truepart-fabrication.onrender.com/sitemap.xml
