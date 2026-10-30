@@ -38,8 +38,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
 .brand{display:flex;align-items:center;text-decoration:none}
-.brand-logo{height:56px;width:auto;display:block}
-@media (max-width:520px){.brand-logo{height:44px}}
+.brand-logo{height:76px;width:auto;display:block;filter:drop-shadow(0 0 10px rgba(227,38,47,.35))}
+@media (max-width:520px){.brand-logo{height:58px}}
 .brand-word{font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase;line-height:1}
 .brand-word span{color:var(--muted);font-weight:600}
 nav{display:flex;gap:24px;align-items:center}
@@ -52,7 +52,7 @@ nav a:hover{color:var(--ink)}
 
 /* hero */
 .hero{padding-block:56px 40px;border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
 .hero h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:900;text-transform:uppercase;letter-spacing:.01em;margin-top:14px}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero .lede{font-size:1.15rem;color:var(--muted);max-width:34em;margin-top:22px}
@@ -61,7 +61,7 @@ nav a:hover{color:var(--ink)}
 .hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .hero figure{margin:0;min-width:0}
 .hero-logo{display:grid;place-items:center}
-.hero-logo img{width:100%;max-width:560px;height:auto}
+.hero-logo img{width:100%;max-width:700px;height:auto;filter:drop-shadow(0 0 24px rgba(227,38,47,.4)) drop-shadow(0 0 2px rgba(255,255,255,.35))}
 .hero svg{width:100%;height:auto;display:block}
 .titleblock{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);margin-top:12px}
 .titleblock div{padding:8px 10px;border-right:1px solid var(--line)}
