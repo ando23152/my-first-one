@@ -493,7 +493,7 @@ def build(mode, root):
         sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
             f"  <url><loc>{BASE}/{u}</loc><lastmod>2026-10-30</lastmod></url>\n" for u in urls) + "</urlset>\n"
         write(root, "sitemap.xml", sm)
-        write(root, "robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
+        write(root, "robots.txt", (f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n") if INDEX else "# Temporary address: block all crawling until the real domain is live.\nUser-agent: *\nDisallow: /\n")
     return urls
 
 if __name__ == "__main__":

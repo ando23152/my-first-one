@@ -1,4 +1,3 @@
+# Temporary address: block all crawling until the real domain is live.
 User-agent: *
-Allow: /
-
-Sitemap: https://truepart-fabrication.onrender.com/sitemap.xml
+Disallow: /
