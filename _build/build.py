@@ -95,6 +95,8 @@ td.m a:hover{border-color:var(--accent)}
 .statement p.sub a,.svc + .svc a,.scope li a,.quote .info p a,.steps p a{color:var(--ink)}
 
 @media (min-width:861px){.shop{grid-template-columns:repeat(2,1fr)}}
+.hero-shot img{-webkit-mask-image:none!important;mask-image:none!important;border-radius:14px}
+.hero-shot{padding-inline:clamp(16px,3vw,40px);max-width:1630px;margin-inline:auto!important;margin-top:20px!important}
 """
 
 LIGHT_CSS = r"""
@@ -315,7 +317,7 @@ def a11y(h):
     h = h.replace('<div class="ftable">', '<div class="ftable" tabindex="0" role="region" aria-label="Scrollable table">')
     return h.replace('<div class="tbl">', '<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table">')
 def webp(h):
-    h = re.sub(r"(assets/img/(?:hero|svc-[a-z]+|sample-[a-z]+)(?:-light)?)\.jpg", r"\1.webp?v=5", h)
+    h = re.sub(r"(assets/img/(?:hero|svc-[a-z]+|sample-[a-z]+)(?:-light)?)\.jpg", r"\1.webp?v=6", h)
     return h.replace(".replace('.jpg','-light.jpg')", ".replace('.webp','-light.webp')")
 def doc(c, headhtml, body, art_index=False):
     return a11y(webp(swapimgs(_doc(c, headhtml, body, art_index))))
