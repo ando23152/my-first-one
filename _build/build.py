@@ -156,7 +156,7 @@ def css():
     import tools, parts_pages
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
     import improve
-    return improve.minify_css(base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + __import__('shop').SHOP_CSS + improve.IMP_CSS + LIGHT_CSS)
+    return improve.minify_css(__import__('seo').font_css() + base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + __import__('shop').SHOP_CSS + improve.IMP_CSS + LIGHT_CSS)
 
 JS = r"""
 (function(){
@@ -265,7 +265,7 @@ ORG = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": BASE +
        "address": {"@type": "PostalAddress", "addressLocality": "Modesto", "addressRegion": "CA", "addressCountry": "US"},
        "areaServed": ["Modesto", "Ceres", "Turlock", "Manteca", "Tracy", "Stockton", "Stanislaus County", "San Joaquin County"],
        "sameAs": [EBAY], "telephone": "+1-209-554-4800",
-       "knowsAbout": ["Additive manufacturing", "Replacement parts", "Reverse engineering", "Jigs and fixtures", "Small-batch manufacturing"]}
+       "priceRange": "$$", "currenciesAccepted": "USD", "knowsAbout": ["Additive manufacturing", "Replacement parts", "Reverse engineering", "Jigs and fixtures", "Small-batch manufacturing"]}
 
 def crumbs_ld(items):
     return {"@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -362,7 +362,7 @@ def a11y(h):
     h = h.replace('logo-dark.png"', 'logo-dark.png?v=9"')
     h = h.replace('<div class="ftable">', '<div class="ftable" tabindex="0" role="region" aria-label="Scrollable table">')
     h = h.replace('<div class="tbl">', '<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table">')
-    return __import__("improve").post(h)
+    return __import__("seo").post(__import__("improve").post(h))
 def webp(h):
     h = re.sub(r"(assets/img/(?:hero|svc-[a-z]+|sample-[a-z]+)(?:-light|-black)?)\.jpg", r"\1.webp?v=6", h)
     return h.replace(".replace('.jpg','-light.jpg')", ".replace('.webp','-light.webp')")
@@ -497,7 +497,7 @@ def home(c, art=False, raw=False):
     title = "Custom Part Manufacturing & Replacement Parts in Modesto, CA | True Part Fabrication"
     desc = "True Part Fabrication designs and manufactures replacement parts, custom brackets, jigs, fixtures, and small-batch runs for businesses in Modesto, Turlock, Stockton, and the Central Valley. Free reprint if it doesn't fit."
     org = dict(ORG)
-    web = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE, "url": BASE + "/"}
+    web = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE, "alternateName": "True Part", "url": BASE + "/", "inLanguage": ["en", "es"], "publisher": {"@id": BASE + "/#business"}}
     script = TPL[TPL.index('<script id="cat-data"'):]
     sample = json.dumps({k: c.asset('img/sample-' + k + '.jpg') for k in ['adapter','nozzle','brush','separator','clip','roller']})
     script = script.replace("im.src=IMG[it.i];", "var s0=IMG[it.i],th=document.documentElement.getAttribute('data-tpf-theme');im.setAttribute('data-dark',s0);im.setAttribute('data-light',s0.replace('.webp','-light.webp'));im.setAttribute('data-black',s0.replace('.webp','-black.webp'));im.src=(th==='light'||th==='black')?im.getAttribute('data-'+th):s0;")
@@ -712,7 +712,7 @@ def privacy(c):
   <h2>Files and part designs</h2>
   <p>Part photos, measurements, and models you send are used for your job and kept on file so we can reprint your part. Tell us if you'd like them deleted.</p>
   <h2>Third-party services</h2>
-  <p>This site loads fonts from Google Fonts, which may log your IP address. Links to our eBay store take you to eBay, which has its own privacy policy.</p>
+  <p>This site's fonts and images are served from our own site, not from outside services. Links to our eBay store take you to eBay, which has its own privacy policy.</p>
   @@PAY@@<h2>Contact</h2>
   <p>Questions or deletion requests: contact us through the quote form on our home page.</p>
   <p style="color:var(--faint);font-size:.88rem">Last updated October 2026.</p>
@@ -777,6 +777,7 @@ def build(mode, root):
         for f in os.listdir("/home/claude/site/assets/img"):
             shutil.copy("/home/claude/site/assets/img/" + f, root + "/assets/img/" + f)
     write(root, "assets/site.css", css())
+    __import__("seo").copy_fonts(root)
     write(root, "assets/manifest.webmanifest", json.dumps({"name": "True Part Fabrication", "short_name": "True Part", "description": "Custom part manufacturing and replacement parts in Modesto, CA.",
         "start_url": "../", "scope": "../", "display": "standalone", "background_color": "#0A3161", "theme_color": "#0A3161",
         "icons": [{"src": "img/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}]}, indent=1))
@@ -804,13 +805,17 @@ def build(mode, root):
     for t in TERMS:
         p = "glossary/" + t["slug"] + "/"
         write(root, p + "index.html", gloss_page(Ctx(mode, p), t))
-    urls = [""] + [p for p in pages if p] + ["glossary/" + t["slug"] + "/" for t in TERMS]
+    urls = [""] + [p for p in pages if p and p not in __import__("seo").NOINDEX and p != "cart/"] + ["glossary/" + t["slug"] + "/" for t in TERMS]
     if mode == "render":
         sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
             f"  <url><loc>{BASE}/{u}</loc><lastmod>2026-10-31</lastmod></url>\n" for u in urls) + "</urlset>\n"
         write(root, "sitemap.xml", sm)
         nf = notfound(Ctx(mode, ""))
-        nf = re.sub(r'(href|src)="(?!https?:|/|#|mailto:|data:)', r'\1="/', nf).replace('href="/./"', 'href="/"')
+        nf = re.sub(r'(href|src)="(?!https?:|/|#|mailto:|tel:|data:)', r'\1="/', nf).replace('href="/./"', 'href="/"')
+        nf = re.sub(r"<title>.*?</title>", "<title>Page not found | True Part Fabrication</title>", nf, 1, flags=re.S)
+        nf = re.sub(r'\n?<link rel="(?:canonical|alternate)"[^>]*>', "", nf)
+        nf = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex">', nf, 1)
+        nf = re.sub(r'\n?<meta property="og:url"[^>]*>', "", nf)
         write(root, "404.html", nf)
         write(root, "robots.txt", (f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n") if INDEX else "# Temporary address: block all crawling until the real domain is live.\nUser-agent: *\nDisallow: /\n")
     return urls

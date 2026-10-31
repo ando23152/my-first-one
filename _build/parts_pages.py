@@ -137,7 +137,7 @@ def part_page(c, it, items, hose):
       <div class="acts2"><button type="button" class="tbtn" data-print>Print spec sheet</button>{f'<button type="button" class="tbtn" data-copytext="{esc(it["oem"])}">Copy part number</button>' if it["oem"] else ''}<button type="button" class="tbtn" data-share data-title="{esc(it['n'])}">Share this part</button><a class="tbtn" style="display:inline-flex;align-items:center;text-decoration:none" href="mailto:ando23152@gmail.com?subject={quote('Question about ' + it['n'] + ' (' + B.rp(it) + ')')}">Ask a question</a><span class="tstat" role="status"></span></div>
       <p class="note">Send your equipment's model number with the request so we can confirm the fit before we print. Not sure of a size? Use the <a href="{c.link('guides/how-to-measure-a-part/')}">measuring guide</a>. Prices and turnaround are in your written quote; see the <a href="{c.link('faq/')}">FAQ</a> and our <a href="{c.link('terms/')}">Terms of Service</a>.</p>
     </div>
-    <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of a custom manufactured {esc(KIND.get(it['i'], it['i']).lower())}" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
+    <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of a {esc(KIND.get(it['i'], it['i']).lower())} like this {esc(b)} {esc(ref)} replacement" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
   </div>
   {f'<div class="head" style="margin:10px 0 22px"><div class="label">More {esc(b)} parts</div></div><div class="rel">{rel}</div>' if rel else ''}
   <div class="recent" id="recent" data-me="{esc(it['n'])}|{esc(B.rp(it))}" hidden><div class="head" style="margin:44px 0 18px"><div class="label">Recently viewed</div></div><div class="rel" id="recent-list"></div></div>
@@ -147,8 +147,7 @@ def part_page(c, it, items, hose):
 </div>
 </main>"""
     t_ref = f" for {b} {ref}" if ref else f" for {b}"
-    title = f"{it['n']}{t_ref} | True Part Fabrication"
-    if len(title) > 95: title = f"{it['n']}{t_ref}"
+    title = __import__("seo").part_title(it) + " | True Part Fabrication"
     desc = f"Aftermarket {it['n'][0].lower() + it['n'][1:]} that {'replaces' if it['oem'] else 'fits'} {b} {ref}." + (f" Fits {fit}." if fit else "") + f" Made in {it['mat']} in Modesto, CA. Free reprint if it doesn't fit."
     lds = [B.crumbs_ld(crumbs_list)]
     if it.get("price"):
