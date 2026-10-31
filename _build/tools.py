@@ -131,7 +131,7 @@ def hose_finder(c):
     <div class="row1">
       <div class="search"><svg viewBox="0 0 16 16" fill="none" stroke="var(--muted)" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg><label for="hf-q" style="position:absolute;left:-9999px">Search models</label><input id="hf-q" type="search" placeholder="Search a model number, e.g. DXV10S or 0880-20"></div>
       <label for="hf-g" style="position:absolute;left:-9999px">Type</label><select id="hf-g">{gopts}</select>
-      <span id="hf-count" style="color:var(--faint);font-size:.88rem;margin-left:auto"></span>
+      <span id="hf-count" style="color:var(--faint);font-size:.88rem;margin-left:auto"></span><button type="button" class="tbtn" data-copylink="hf-cl">Copy link to this view</button><span id="hf-cl" role="status" style="color:var(--muted);font-size:.85rem"></span>
     </div>
     <div class="chips" role="group" aria-label="Filter by brand">{bchips}</div>
     <div class="chips" role="group" aria-label="Filter by size">{schips}</div>
@@ -141,7 +141,7 @@ def hose_finder(c):
     <tbody>
 {chr(10).join(rows)}
     </tbody></table></div>
-  <p class="empty" id="hf-empty" hidden>Nothing matches. Try a shorter model number, or <a href="{c.link('', 'quote')}" style="color:var(--ink)">ask us</a> and we'll measure it.</p>
+  <p class="empty" id="hf-empty" hidden>Nothing matches. Try a shorter model number, build a custom piece in the <a href="{c.link('tools/adapter-builder/')}" style="color:var(--ink)">adapter builder</a>, or <a href="{c.link('', 'quote')}" style="color:var(--ink)">ask us</a> and we'll measure it.</p>
   <div class="explain">
     <div><h3>Sizes are nominal</h3><p>"2-1/2 inch" names a family, not an exact measurement. Cuff and port diameters vary by brand, which is why universal adapters often fit loosely. See {G(c,'dust-port-hose-sizes','shop-vac hose sizes')}.</p></div>
     <div><h3>Confidence ratings</h3><p><b class="ok">Confirmed</b> means a published manufacturer spec. <b class="lk">Likely</b> means matched by size or rating. <b>Verify</b> means check your product before buying.</p></div>
@@ -296,7 +296,7 @@ def brand_page(c, b):
     body = f"""<main id="main">
 {page_hero(c, [('Home',''),('Resources','resources/'),(b + ' parts','brands/' + slug + '/')], f'Compatible parts for {b} {cat}', esc(intro))}
 <section style="padding-block:44px 100px"><div class="wrap">
-  <div class="parts-top"><h3>{f"{len(items)} compatible {esc(b)} parts" if items else f"Custom {esc(b)} adapters and fittings, made to order"}</h3><a class="btn ghost" href="{c.link('parts/')}">All brands <span class="ar">→</span></a></div>
+  <div class="parts-top"><h3>{f"{len(items)} compatible {esc(b)} parts" if items else f"Custom {esc(b)} adapters and fittings, made to order"}</h3><span style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ghost" href="{c.link('parts/')}?brand={esc(b).replace(' ','%20')}">Filter in catalog <span class="ar">→</span></a><a class="btn ghost" href="{c.link('tools/hose-size-finder/')}?brand={esc(b).replace(' ','%20')}">{esc(b)} hose sizes <span class="ar">→</span></a></span></div>
   {f'<div class="list">{rows}</div>' if items else f'<p style="color:var(--muted);max-width:62ch">We don\'t keep a stock list for {esc(b)} yet. Every part is modeled to your hose, port, or tool. Check the sizes below, then <a href="{c.link("", "quote")}" style="color:var(--ink)">request a quote</a> with your model number.</p>'}
   {htab}
   <p class="legal">These are compatible aftermarket parts made by True Part Fabrication, not genuine {esc(b)} parts. {esc(b)} and its model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>

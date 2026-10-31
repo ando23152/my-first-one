@@ -70,7 +70,7 @@
       <label class="full" for="rl-notes">Notes (optional)<textarea id="rl-notes" placeholder="Equipment model numbers, colors, delivery address"></textarea></label>
       <label class="agree full" for="rl-terms"><input type="checkbox" id="rl-terms"> <span>I've read and agree to the <a href="../terms/">Terms of Service</a>.</span></label>
       <p class="xerr" id="rl-err" role="alert" hidden></p>
-      <div class="full" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Open in my email <span class="ar">→</span></button><button class="btn ghost" type="button" id="rl-copy">Copy request</button><button class="btn ghost" type="button" id="rl-clear">Clear list</button><span id="rl-st" role="status" style="color:var(--muted);font-size:.92rem"></span></div>
+      <div class="full" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Open in my email <span class="ar">→</span></button><button class="btn ghost" type="button" id="rl-copy">Copy request</button><button class="btn ghost" type="button" id="rl-csv">Download spreadsheet (CSV)</button><button class="btn ghost" type="button" id="rl-print">Print list</button><button class="btn ghost" type="button" id="rl-clear">Clear list</button><span id="rl-st" role="status" style="color:var(--muted);font-size:.92rem"></span></div>
     </form>
   </div>
 </div>
@@ -93,15 +93,19 @@
   document.getElementById('rl-form').addEventListener('submit',function(e){e.preventDefault();if(!check())return;location.href='mailto:ando23152@gmail.com?subject='+encodeURIComponent('Quote request: '+get().length+' parts')+'&body='+encodeURIComponent(text());st.textContent='Your email app opened with the request. Send it to finish.'});
   document.getElementById('rl-copy').addEventListener('click',function(){if(!check())return;var t=text();try{navigator.clipboard.writeText(t).then(function(){st.textContent='Copied. Paste it into an email to us.'},function(){st.textContent='Copy did not work in this browser.'})}catch(e){st.textContent='Copy did not work in this browser.'}});
   document.getElementById('rl-clear').addEventListener('click',function(){set([]);draw();st.textContent='List cleared.'});
+  document.getElementById('rl-print').addEventListener('click',function(){window.print()});
+  document.getElementById('rl-csv').addEventListener('click',function(){var L=get(),rows=[['Line','Quantity','Part','Replaces / fits']];L.forEach(function(x,i){var t=x.t.replace(/^Compatible part: |^Pieza compatible: /,'').split('\n');rows.push([i+1,x.q||1,t[0],t.slice(1).join(' ')])});
+    var csv=rows.map(function(r){return r.map(function(c){c=String(c);return /[",\n]/.test(c)?'"'+c.replace(/"/g,'""')+'"':c}).join(',')}).join('\r\n');
+    var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='TPF-request-list.csv';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);st.textContent='Spreadsheet downloaded.'});
   draw();
 })();
 </script>
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div><img src="../assets/img/logo-dark.png?v=9" data-light="../assets/img/logo-light.png" data-black="../assets/img/logo-black.png" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
-      <div><h4>Explore</h4><ul><li><a href="../services/">Services</a></li><li><a href="../#business">For business</a></li><li><a href="../parts/">Compatible parts</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../projects/">Projects</a></li><li><a href="../#process">Process</a></li><li><a href="../resources/">Resources</a></li><li><a href="../tools/hose-size-finder/">Hose size finder</a></li><li><a href="../glossary/">Glossary</a></li><li><a href="../faq/">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="../#quote">Request a quote</a></li><li><a href="../reorder/">Reorder a part</a></li><li><a href="https://www.ebay.com/usr/truepartfabrication" target="_blank" rel="noopener">eBay store</a></li><li><a href="../search/">Search</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../terms/">Terms of Service</a></li></ul></div>
+      <div><img src="../assets/img/logo-dark.png?v=9" data-light="../assets/img/logo-light.png" data-black="../assets/img/logo-black.png" alt="True Part Fabrication" width="800" height="493" loading="lazy" decoding="async"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="../services/">Services</a></li><li><a href="../#business">For business</a></li><li><a href="../parts/">Compatible parts</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../projects/">Projects</a></li><li><a href="../#process">Process</a></li><li><a href="../resources/">Resources</a></li><li><a href="../tools/hose-size-finder/">Hose size finder</a></li><li><a href="../tools/adapter-builder/">Adapter builder</a></li><li><a href="../glossary/">Glossary</a></li><li><a href="../faq/">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="../#quote">Request a quote</a></li><li><a href="../reorder/">Reorder a part</a></li><li><a href="../request-list/">Request list</a></li><li><a href="https://www.ebay.com/usr/truepartfabrication" target="_blank" rel="noopener">eBay store</a></li><li><a href="../search/">Search</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../terms/">Terms of Service</a></li><li><a href="../sitemap/">Site map</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>

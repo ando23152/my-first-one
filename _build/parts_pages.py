@@ -1,5 +1,6 @@
 """One page per catalog part: /parts/<slug>/"""
 import re, html, json
+from urllib.parse import quote
 import build as B
 esc = html.escape
 
@@ -100,7 +101,7 @@ def part_page(c, it, items, hose):
             ("Material", mat_html(c, it["mat"])),
             ("Type", esc(KIND.get(it["i"], it["i"].title())))]
     if sizes:
-        rows.append(("Size", "".join(f'<span class="sz">{esc(s)}</span> ' for s in sizes) + f' <a href="{c.link("tools/hose-size-finder/")}" style="color:var(--ink);font-size:.88rem">Hose size finder</a>'))
+        rows.append(("Size", "".join(f'<span class="sz">{esc(s)}</span> ' for s in sizes) + f' <a href="{c.link("tools/hose-size-finder/")}?brand={esc(b).replace(" ","%20")}" style="color:var(--ink);font-size:.88rem">All {esc(b)} sizes</a>'))
     rows.append(("Made in", "Modesto, California, to order"))
     spec = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in rows)
     price = ""
@@ -125,13 +126,14 @@ def part_page(c, it, items, hose):
         <a class="btn" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request this part <span class="ar">→</span></a>
         <a class="btn ghost" href="{EBAY_SEARCH + esc(re.sub(r'[^A-Za-z0-9-]+', '+', ref).strip('+'))}" target="_blank" rel="noopener">Check our eBay store <span class="ar">↗</span></a>
       </div>
-      <div class="acts2"><button type="button" class="tbtn" data-print>Print spec sheet</button><button type="button" class="tbtn" data-share data-title="{esc(it['n'])}">Share this part</button><span class="tstat" role="status"></span></div>
+      <div class="acts2"><button type="button" class="tbtn" data-print>Print spec sheet</button><button type="button" class="tbtn" data-share data-title="{esc(it['n'])}">Share this part</button><a class="tbtn" style="display:inline-flex;align-items:center;text-decoration:none" href="mailto:ando23152@gmail.com?subject={quote('Question about ' + it['n'] + ' (' + B.rp(it) + ')')}">Ask a question</a><span class="tstat" role="status"></span></div>
       <p class="note">Send your equipment's model number with the request so we can confirm the fit before we print. Not sure of a size? Use the <a href="{c.link('guides/how-to-measure-a-part/')}">measuring guide</a>. Prices and turnaround are in your written quote; see the <a href="{c.link('faq/')}">FAQ</a> and our <a href="{c.link('terms/')}">Terms of Service</a>.</p>
     </div>
     <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of a custom manufactured {esc(KIND.get(it['i'], it['i']).lower())}" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
   </div>
   {f'<div class="head" style="margin:10px 0 22px"><div class="label">More {esc(b)} parts</div></div><div class="rel">{rel}</div>' if rel else ''}
   <div class="recent" id="recent" data-me="{esc(it['n'])}|{esc(B.rp(it))}" hidden><div class="head" style="margin:44px 0 18px"><div class="label">Recently viewed</div></div><div class="rel" id="recent-list"></div></div>
+  <div class="stickybar" aria-label="Quick actions"><span class="n">{esc(it['n'])}</span><a class="btn" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request</a></div>
   <p class="legal" style="margin:44px 0 90px">This is a compatible aftermarket part made by True Part Fabrication, not a genuine {esc(b)} part. {esc(b)} and its part and model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>
 </div>
 </main>"""
@@ -144,7 +146,8 @@ def part_page(c, it, items, hose):
         lds.append({"@context": "https://schema.org", "@type": "Product", "name": it["n"], "description": desc,
                     "brand": {"@type": "Brand", "name": "True Part Fabrication"}, "image": B.BASE + "/assets/img/sample-" + it["i"] + ".jpg",
                     "offers": {"@type": "Offer", "price": f'{it["price"]:.2f}', "priceCurrency": "USD", "availability": "https://schema.org/PreOrder", "url": B.BASE + "/" + url(it)}})
-    return B.doc(c, B.head(c, title, desc[:300], lds, og_type="product"), body)
+    out = B.doc(c, B.head(c, title, desc[:300], lds, og_type="product"), body)
+    return out.replace(f'<meta property="og:image" content="{B.BASE}/assets/img/og-image.jpg">', f'<meta property="og:image" content="{B.BASE}/assets/img/sample-{it["i"]}.jpg">', 1).replace('<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">', '<meta property="og:image:width" content="640"><meta property="og:image:height" content="480">', 1).replace('content="True Part Fabrication logo over 3D-printed parts"', f'content="Illustration of a custom {esc(KIND.get(it["i"], it["i"]).lower())}"', 1).replace('content="True Part Fabrication logo over custom manufactured parts"', f'content="Illustration of a custom {esc(KIND.get(it["i"], it["i"]).lower())}"', 1)
 
 def pages():
     import tools as T

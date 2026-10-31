@@ -316,15 +316,18 @@ SEARCH_JS = r"""<script>
   var IDX=window.TPF_IDX||[],q=document.getElementById('sq'),out=document.getElementById('sres'),st=document.getElementById('scount');
   function norm(s){return (s||'').toLowerCase().replace(/[^a-z0-9\/\.\- ]+/g,' ')}
   IDX.forEach(function(r){r._t=norm(r.t);r._a=norm(r.t+' '+r.k+' '+r.d+' '+r.x)});
+  function mark(el,text,words){var re=new RegExp('('+words.filter(function(w){return w.length>1}).map(function(w){return w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|')+')','ig');if(!words.some(function(w){return w.length>1})){el.textContent=text;return}
+    text.split(re).forEach(function(part,i){if(i%2){var m=document.createElement('mark');m.textContent=part;el.appendChild(m)}else el.appendChild(document.createTextNode(part))})}
+  var pop=document.getElementById('spop');if(pop)pop.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;q.value=b.textContent;q.dispatchEvent(new Event('input'));q.focus()});
   function run(){
-    var v=norm(q.value).trim();out.innerHTML='';
+    var v=norm(q.value).trim();out.innerHTML='';if(pop)pop.hidden=!!v;
     if(!v){st.textContent='';return}
     var words=v.split(/\s+/),res=[];
     IDX.forEach(function(r){var ok=words.every(function(w){return r._a.indexOf(w)>-1});if(!ok)return;var s=0;words.forEach(function(w){if(r._t.indexOf(w)>-1)s+=3});if(r.k!=='Glossary'&&r.k.indexOf('part')<0)s+=1;res.push([s,r])});
     res.sort(function(a,b){return b[0]-a[0]});
     st.textContent=res.length+(res.length===1?' result':' results');
     res.slice(0,60).forEach(function(x){var r=x[1],li=document.createElement('li'),a=document.createElement('a');a.href=r.u;
-      var k=document.createElement('span');k.textContent=r.k;var h=document.createElement('h3');h.textContent=r.t;var p=document.createElement('p');p.textContent=r.d;
+      var k=document.createElement('span');k.textContent=r.k;var h=document.createElement('h3');mark(h,r.t,words);var p=document.createElement('p');mark(p,r.d,words);
       a.appendChild(k);a.appendChild(h);a.appendChild(p);li.appendChild(a);out.appendChild(li)});
     if(!res.length){var li=document.createElement('li');li.innerHTML='<p style="padding:18px 0;color:var(--muted)">No matches. Try a part number, a brand, or a word like "adapter". Or <a href="'+document.getElementById('sq-quote').href+'" style="color:var(--ink)">describe your part in a quote request</a>.</p>';out.appendChild(li)}
   }
@@ -341,6 +344,7 @@ def search(c):
 {hero(c, [('Home',''),('Search','search/')], 'Search the site', 'Parts by name, brand, or part number, plus services, tools, guides, and glossary terms.')}
 <div class="wrap" style="padding-block:40px 90px">
   <form class="sbox" id="sform" role="search"><label for="sq" style="position:absolute;left:-9999px">Search</label><input id="sq" type="search" placeholder="Try 49-90-2018, Makita, or bracket" autocomplete="off" autofocus><button class="btn" type="submit">Search</button></form>
+  <div class="pop" id="spop"><span>Popular searches</span><button type="button">Milwaukee 49-90-2018</button><button type="button">DeWalt DWV9000</button><button type="button">Makita</button><button type="button">dust adapter</button><button type="button">bracket</button><button type="button">PETG</button><button type="button">2-1/2 in</button></div>
   <p id="scount" role="status" style="color:var(--faint);margin-top:14px;font-size:.9rem"></p>
   <ul class="sres" id="sres"></ul>
   <a id="sq-quote" href="{c.link('', 'quote')}" hidden>quote</a>
@@ -444,7 +448,7 @@ LIST_JS = r"""
   function updPill(){var p=document.getElementById('list-pill'),n=getL().length;if(!p)return;p.hidden=n===0;var b=document.getElementById('list-n');if(b)b.textContent=n;p.setAttribute('aria-label',(ES?'Lista de solicitud: ':'Request list: ')+n+(ES?' piezas':n===1?' part':' parts'))}
   function lbl(on){return on?(ES?'✓ En la lista':'✓ On list'):(ES?'+ Lista':'+ Add to list')}
   document.querySelectorAll('a[data-part]').forEach(function(a){
-    if(a.closest('.pc'))return;
+    if(a.closest('.pc')||a.closest('.stickybar'))return;
     var b=document.createElement('button');b.type='button';b.className='add-list';var t=a.getAttribute('data-part');b.setAttribute('data-add',t);
     var on=inL(t);b.textContent=lbl(on);b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?(ES?'Quitar de la lista: ':'Remove from request list: '):(ES?'Añadir a la lista: ':'Add to request list: '))+t.split('\n')[0].replace(/^[^:]*: /,''));
     a.insertAdjacentElement('afterend',b);
@@ -492,7 +496,7 @@ def request_list(c):
       <label class="full" for="rl-notes">Notes (optional)<textarea id="rl-notes" placeholder="Equipment model numbers, colors, delivery address"></textarea></label>
       <label class="agree full" for="rl-terms"><input type="checkbox" id="rl-terms"> <span>I've read and agree to the <a href="{c.link('terms/')}">Terms of Service</a>.</span></label>
       <p class="xerr" id="rl-err" role="alert" hidden></p>
-      <div class="full" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Open in my email <span class="ar">→</span></button><button class="btn ghost" type="button" id="rl-copy">Copy request</button><button class="btn ghost" type="button" id="rl-clear">Clear list</button><span id="rl-st" role="status" style="color:var(--muted);font-size:.92rem"></span></div>
+      <div class="full" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Open in my email <span class="ar">→</span></button><button class="btn ghost" type="button" id="rl-copy">Copy request</button><button class="btn ghost" type="button" id="rl-csv">Download spreadsheet (CSV)</button><button class="btn ghost" type="button" id="rl-print">Print list</button><button class="btn ghost" type="button" id="rl-clear">Clear list</button><span id="rl-st" role="status" style="color:var(--muted);font-size:.92rem"></span></div>
     </form>
   </div>
 </div>
@@ -515,6 +519,10 @@ def request_list(c):
   document.getElementById('rl-form').addEventListener('submit',function(e){{e.preventDefault();if(!check())return;location.href='mailto:{QUOTE_TO}?subject='+encodeURIComponent('Quote request: '+get().length+' parts')+'&body='+encodeURIComponent(text());st.textContent='Your email app opened with the request. Send it to finish.'}});
   document.getElementById('rl-copy').addEventListener('click',function(){{if(!check())return;var t=text();try{{navigator.clipboard.writeText(t).then(function(){{st.textContent='Copied. Paste it into an email to us.'}},function(){{st.textContent='Copy did not work in this browser.'}})}}catch(e){{st.textContent='Copy did not work in this browser.'}}}});
   document.getElementById('rl-clear').addEventListener('click',function(){{set([]);draw();st.textContent='List cleared.'}});
+  document.getElementById('rl-print').addEventListener('click',function(){{window.print()}});
+  document.getElementById('rl-csv').addEventListener('click',function(){{var L=get(),rows=[['Line','Quantity','Part','Replaces / fits']];L.forEach(function(x,i){{var t=x.t.replace(/^Compatible part: |^Pieza compatible: /,'').split('\\n');rows.push([i+1,x.q||1,t[0],t.slice(1).join(' ')])}});
+    var csv=rows.map(function(r){{return r.map(function(c){{c=String(c);return /[",\\n]/.test(c)?'"'+c.replace(/"/g,'""')+'"':c}}).join(',')}}).join('\\r\\n');
+    var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{{type:'text/csv'}}));a.download='TPF-request-list.csv';document.body.appendChild(a);a.click();setTimeout(function(){{URL.revokeObjectURL(a.href);a.remove()}},500);st.textContent='Spreadsheet downloaded.'}});
   draw();
 }})();
 </script>"""

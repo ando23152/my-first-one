@@ -98,7 +98,7 @@
   function updPill(){var p=document.getElementById('list-pill'),n=getL().length;if(!p)return;p.hidden=n===0;var b=document.getElementById('list-n');if(b)b.textContent=n;p.setAttribute('aria-label',(ES?'Lista de solicitud: ':'Request list: ')+n+(ES?' piezas':n===1?' part':' parts'))}
   function lbl(on){return on?(ES?'✓ En la lista':'✓ On list'):(ES?'+ Lista':'+ Add to list')}
   document.querySelectorAll('a[data-part]').forEach(function(a){
-    if(a.closest('.pc'))return;
+    if(a.closest('.pc')||a.closest('.stickybar'))return;
     var b=document.createElement('button');b.type='button';b.className='add-list';var t=a.getAttribute('data-part');b.setAttribute('data-add',t);
     var on=inL(t);b.textContent=lbl(on);b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?(ES?'Quitar de la lista: ':'Remove from request list: '):(ES?'Añadir a la lista: ':'Add to request list: '))+t.split('\n')[0].replace(/^[^:]*: /,''));
     a.insertAdjacentElement('afterend',b);
@@ -132,6 +132,26 @@
   // ---- faster page loads: prefetch internal links on hover or touch ----
   var pf={};function pre(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||a.target||a.hasAttribute('download'))return;var h=a.href.split('#')[0];if(!h||pf[h]||a.origin!==location.origin||h===location.href.split('#')[0]||/^mailto:|^tel:/.test(a.getAttribute('href')))return;pf[h]=1;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l)}
   document.addEventListener('mouseover',pre,{passive:true});document.addEventListener('touchstart',pre,{passive:true});
+
+  // r7: opening countdown in the banner
+  (function(){var o=document.querySelector('.opening .wrap');if(!o)return;var d=Math.ceil((new Date(2027,0,1)-new Date())/864e5);if(d<1)return;var es=document.documentElement.lang==='es';
+    var s=document.createElement('span');s.className='cd';s.textContent=es?('· faltan '+d+(d===1?' día ':' días ')):('· '+d+(d===1?' day':' days')+' to go ');var first=o.firstChild;if(first&&first.nodeType===3){first.after(s)}})();
+  // r6: keep keyboard focus inside the open phone menu
+  (function(){var mn=document.getElementById('mnav'),mb=document.getElementById('menu-btn');if(!mn||!mb)return;
+    document.addEventListener('keydown',function(e){if(e.key!=='Tab'||mn.hidden)return;var f=[mb].concat([].slice.call(mn.querySelectorAll('a,button')));var i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&(i<=0)){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus()}});
+    mb.addEventListener('click',function(){if(!mn.hidden){var a=mn.querySelector('a');if(a)setTimeout(function(){a.focus()},30)}})})();
+  // r18: check the contact field looks like a phone number or email before any form sends
+  document.addEventListener('submit',function(e){var f=e.target,c=f.querySelector('[id$="-contact"]');if(!c)return;var v=c.value.trim();if(!v)return;
+    var ok=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)||(v.replace(/\D/g,'').length>=7);if(ok)return;e.preventDefault();e.stopImmediatePropagation();
+    var es=document.documentElement.lang==='es',msg=es?'Escriba un teléfono o correo válido para poder responderle.':'Enter a phone number or email address we can reach you at.';
+    var er=f.querySelector('[role=alert]');if(er){er.textContent=msg;er.hidden=false}c.setAttribute('aria-invalid','true');c.focus()},true);
+  document.addEventListener('input',function(e){if(e.target.id&&/-contact$/.test(e.target.id))e.target.removeAttribute('aria-invalid')});
+  // r21: sticky request bar on part pages (phones)
+  (function(){var sb=document.querySelector('.stickybar');if(!sb)return;document.body.classList.add('has-sticky')})();
+  // r12: copy a link to the current filtered view
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-copylink]');if(!b)return;var st=document.getElementById(b.getAttribute('data-copylink'));
+    try{navigator.clipboard.writeText(location.href).then(function(){if(st)st.textContent='Link copied.'},function(){if(st)st.textContent=location.href})}catch(err){if(st)st.textContent=location.href}});
 
   // quote form
   var f=document.getElementById('qf');

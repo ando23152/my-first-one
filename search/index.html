@@ -59,6 +59,7 @@
 </div></div>
 <div class="wrap" style="padding-block:40px 90px">
   <form class="sbox" id="sform" role="search"><label for="sq" style="position:absolute;left:-9999px">Search</label><input id="sq" type="search" placeholder="Try 49-90-2018, Makita, or bracket" autocomplete="off" autofocus><button class="btn" type="submit">Search</button></form>
+  <div class="pop" id="spop"><span>Popular searches</span><button type="button">Milwaukee 49-90-2018</button><button type="button">DeWalt DWV9000</button><button type="button">Makita</button><button type="button">dust adapter</button><button type="button">bracket</button><button type="button">PETG</button><button type="button">2-1/2 in</button></div>
   <p id="scount" role="status" style="color:var(--faint);margin-top:14px;font-size:.9rem"></p>
   <ul class="sres" id="sres"></ul>
   <a id="sq-quote" href="../#quote" hidden>quote</a>
@@ -70,15 +71,18 @@
   var IDX=window.TPF_IDX||[],q=document.getElementById('sq'),out=document.getElementById('sres'),st=document.getElementById('scount');
   function norm(s){return (s||'').toLowerCase().replace(/[^a-z0-9\/\.\- ]+/g,' ')}
   IDX.forEach(function(r){r._t=norm(r.t);r._a=norm(r.t+' '+r.k+' '+r.d+' '+r.x)});
+  function mark(el,text,words){var re=new RegExp('('+words.filter(function(w){return w.length>1}).map(function(w){return w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|')+')','ig');if(!words.some(function(w){return w.length>1})){el.textContent=text;return}
+    text.split(re).forEach(function(part,i){if(i%2){var m=document.createElement('mark');m.textContent=part;el.appendChild(m)}else el.appendChild(document.createTextNode(part))})}
+  var pop=document.getElementById('spop');if(pop)pop.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;q.value=b.textContent;q.dispatchEvent(new Event('input'));q.focus()});
   function run(){
-    var v=norm(q.value).trim();out.innerHTML='';
+    var v=norm(q.value).trim();out.innerHTML='';if(pop)pop.hidden=!!v;
     if(!v){st.textContent='';return}
     var words=v.split(/\s+/),res=[];
     IDX.forEach(function(r){var ok=words.every(function(w){return r._a.indexOf(w)>-1});if(!ok)return;var s=0;words.forEach(function(w){if(r._t.indexOf(w)>-1)s+=3});if(r.k!=='Glossary'&&r.k.indexOf('part')<0)s+=1;res.push([s,r])});
     res.sort(function(a,b){return b[0]-a[0]});
     st.textContent=res.length+(res.length===1?' result':' results');
     res.slice(0,60).forEach(function(x){var r=x[1],li=document.createElement('li'),a=document.createElement('a');a.href=r.u;
-      var k=document.createElement('span');k.textContent=r.k;var h=document.createElement('h3');h.textContent=r.t;var p=document.createElement('p');p.textContent=r.d;
+      var k=document.createElement('span');k.textContent=r.k;var h=document.createElement('h3');mark(h,r.t,words);var p=document.createElement('p');mark(p,r.d,words);
       a.appendChild(k);a.appendChild(h);a.appendChild(p);li.appendChild(a);out.appendChild(li)});
     if(!res.length){var li=document.createElement('li');li.innerHTML='<p style="padding:18px 0;color:var(--muted)">No matches. Try a part number, a brand, or a word like "adapter". Or <a href="'+document.getElementById('sq-quote').href+'" style="color:var(--ink)">describe your part in a quote request</a>.</p>';out.appendChild(li)}
   }
@@ -91,9 +95,9 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div><img src="../assets/img/logo-dark.png?v=9" data-light="../assets/img/logo-light.png" data-black="../assets/img/logo-black.png" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
-      <div><h4>Explore</h4><ul><li><a href="../services/">Services</a></li><li><a href="../#business">For business</a></li><li><a href="../parts/">Compatible parts</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../projects/">Projects</a></li><li><a href="../#process">Process</a></li><li><a href="../resources/">Resources</a></li><li><a href="../tools/hose-size-finder/">Hose size finder</a></li><li><a href="../glossary/">Glossary</a></li><li><a href="../faq/">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="../#quote">Request a quote</a></li><li><a href="../reorder/">Reorder a part</a></li><li><a href="https://www.ebay.com/usr/truepartfabrication" target="_blank" rel="noopener">eBay store</a></li><li><a href="../search/">Search</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../terms/">Terms of Service</a></li></ul></div>
+      <div><img src="../assets/img/logo-dark.png?v=9" data-light="../assets/img/logo-light.png" data-black="../assets/img/logo-black.png" alt="True Part Fabrication" width="800" height="493" loading="lazy" decoding="async"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="../services/">Services</a></li><li><a href="../#business">For business</a></li><li><a href="../parts/">Compatible parts</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../projects/">Projects</a></li><li><a href="../#process">Process</a></li><li><a href="../resources/">Resources</a></li><li><a href="../tools/hose-size-finder/">Hose size finder</a></li><li><a href="../tools/adapter-builder/">Adapter builder</a></li><li><a href="../glossary/">Glossary</a></li><li><a href="../faq/">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="../#quote">Request a quote</a></li><li><a href="../reorder/">Reorder a part</a></li><li><a href="../request-list/">Request list</a></li><li><a href="https://www.ebay.com/usr/truepartfabrication" target="_blank" rel="noopener">eBay store</a></li><li><a href="../search/">Search</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../terms/">Terms of Service</a></li><li><a href="../sitemap/">Site map</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>

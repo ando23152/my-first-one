@@ -152,7 +152,8 @@ LIGHT_CSS = r"""
 def css():
     import tools, parts_pages
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
-    return base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + LIGHT_CSS
+    import improve
+    return improve.minify_css(base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + improve.IMP_CSS + LIGHT_CSS)
 
 JS = r"""
 (function(){
@@ -328,8 +329,8 @@ def footer(c):
   <div class="wrap">
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
-      <div><h4>Explore</h4><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('tools/adapter-builder/')}">Adapter builder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li><li><a href="{L('request-list/')}">Request list</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li><li><a href="{L('sitemap/')}">Site map</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
@@ -354,7 +355,8 @@ def a11y(h):
     h = re.sub(r'<span class=(?:"sz"|sz)>([^<]+)</span>', _sz, h)
     h = h.replace('logo-dark.png"', 'logo-dark.png?v=9"')
     h = h.replace('<div class="ftable">', '<div class="ftable" tabindex="0" role="region" aria-label="Scrollable table">')
-    return h.replace('<div class="tbl">', '<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table">')
+    h = h.replace('<div class="tbl">', '<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table">')
+    return __import__("improve").post(h)
 def webp(h):
     h = re.sub(r"(assets/img/(?:hero|svc-[a-z]+|sample-[a-z]+)(?:-light|-black)?)\.jpg", r"\1.webp?v=6", h)
     return h.replace(".replace('.jpg','-light.jpg')", ".replace('.webp','-light.webp')")
@@ -497,6 +499,9 @@ def home(c, art=False):
     script = script.replace("r.appendChild(el('div','n',it.n));", "var nd=el('div','n');var na=el('a',null,it.n);na.href=it.u;nd.appendChild(na);r.appendChild(nd);")
     CATU = {"feat": CAT["feat"], "items": [dict(x, u=c.link("parts/" + x["slug"] + "/")) for x in CAT["items"]]}
     script = script.replace('{{CAT}}', json.dumps(CATU, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')).replace('{{IMG_SAMPLE}}', sample)
+    main = main.replace('<div class="r"><a class="btn" id="q-mail" href="#">Open in email</a>', '<div class="r"><a class="btn" id="q-mail" href="#">Open in email</a>', 1)
+    main = main.replace('''        <div class="r"><a class="btn" id="q-mail"''', '''        <div class="next"><h3>What happens next</h3><ol><li>Send the email with a photo of the part.</li><li>We reply with questions or a written quote: material, price, and turnaround.</li><li>You approve, we model and print, and the part is checked for fit before it ships.</li></ol></div>
+        <div class="r"><a class="btn" id="q-mail"''', 1)
     main = main + '\n<script>window.TPF_HOME=1</script>\n' + script
     return doc(c, head(c, title, desc, [org, web]), main, art_index=art)
 
@@ -530,7 +535,7 @@ def parts(c):
   <div class="list" id="plist">
 {chr(10).join(rows)}
   </div>
-  <p class="empty" id="cat-empty" hidden>No parts match. Turn off "Confirmed fit only," or describe your part in the <a href="{c.link('', 'quote')}" style="color:var(--ink)">quote form</a>.</p>
+  <p class="empty" id="cat-empty" hidden>No parts match. Turn off "Confirmed fit only," try the <a href="{c.link('search/')}">site search</a>, build a custom piece in the <a href="{c.link('tools/adapter-builder/')}">adapter builder</a>, or describe your part in the <a href="{c.link('', 'quote')}" style="color:var(--ink)">quote form</a>.</p>
   <div class="more"><button class="btn ghost" type="button" id="cat-more" hidden>Show more</button></div>
   <p class="legal">These are compatible aftermarket parts made by True Part Fabrication, not original manufacturer parts. Brand names and part numbers belong to their owners and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by any brand listed. Learn more about <a href="{c.link('glossary/aftermarket-part/')}" style="color:var(--muted)">aftermarket parts</a>.</p>
 </div></section>
@@ -567,7 +572,11 @@ def faq(c):
   <h1>Frequently asked questions</h1>
   <p class="lead">Quotes, pricing, turnaround, materials, and what we can and can't make.</p>
 </div></div>
+<div class="wrap"><div class="filterbar"><label for="faq-q" style="position:absolute;left:-9999px">Filter questions</label><input id="faq-q" type="search" placeholder="Filter questions, e.g. price, reprint, material"><button type="button" class="tbtn" id="faq-all">Expand all</button><span id="faq-n" role="status" style="color:var(--faint);font-size:.88rem"></span></div></div>
 <div class="wrap faq">{det}</div>
+<script>(function(){{var q=document.getElementById('faq-q'),d=[].slice.call(document.querySelectorAll('.faq details')),b=document.getElementById('faq-all'),n=document.getElementById('faq-n');
+q.addEventListener('input',function(){{var v=q.value.trim().toLowerCase(),k=0;d.forEach(function(x){{var ok=!v||x.textContent.toLowerCase().indexOf(v)>-1;x.hidden=!ok;if(ok)k++;if(v&&ok)x.open=true}});n.textContent=v?k+(k===1?' question':' questions'):''}});
+b.addEventListener('click',function(){{var open=b.textContent==='Expand all';d.forEach(function(x){{x.open=open}});b.textContent=open?'Collapse all':'Expand all'}})}})();</script>
 <div class="cta-band"><div class="wrap"><h2>Still have a question?</h2><p>Describe your part and we'll reply with questions or a written quote.</p><a class="btn" href="{c.link('', 'quote')}">Request a quote <span class="ar">→</span></a></div></div>
 </main>"""
     strip = lambda s: re.sub("<[^>]+>", "", s).strip()
@@ -586,14 +595,19 @@ def gloss_index(c):
         cards = "".join(f'<a class="gcard" href="{c.link("glossary/" + t["slug"] + "/")}"><h3>{esc(t["term"])}</h3><p>{esc(t["short"])}</p><span>Read more →</span></a>' for t in ts)
         groups.append(f'<div class="gloss-group" id="{cat.lower()}"><h2>{cat}</h2><div class="gloss-grid">{cards}</div></div>')
     jump = " ".join(f'<a href="#{cat.lower()}">{cat}</a>' for cat in CATS)
+    az = "".join(f'<a href="{c.link("glossary/" + t["slug"] + "/")}" title="{esc(t["term"])}">{esc(t["term"].split(" (")[0])}</a>' for t in sorted(TERMS, key=lambda t: t["term"].lower()))
     body = f"""<main id="main">
 <div class="page-hero"><div class="wrap">
   {crumbs(c, [('Home', ''), ('Glossary', 'glossary/')])}
   <h1>Manufacturing and replacement parts glossary</h1>
   <p class="lead">Plain-English definitions of the materials, fits, and manufacturing terms that come up when you order a custom or replacement part, and what each one means for your part.</p>
   <div class="terms-strip">{jump}</div>
+  <div class="filterbar"><label for="gl-q" style="position:absolute;left:-9999px">Filter terms</label><input id="gl-q" type="search" placeholder="Filter terms, e.g. heat, fit, nylon"><span id="gl-n" role="status" style="color:var(--faint);font-size:.88rem"></span></div>
+  <nav class="az" aria-label="Terms A to Z">{az}</nav>
 </div></div>
 <div class="wrap" style="padding-bottom:60px">{''.join(groups)}</div>
+<script>(function(){{var q=document.getElementById('gl-q'),n=document.getElementById('gl-n'),cards=[].slice.call(document.querySelectorAll('.gcard')),grp=[].slice.call(document.querySelectorAll('.gloss-group'));
+q.addEventListener('input',function(){{var v=q.value.trim().toLowerCase(),k=0;cards.forEach(function(c){{var ok=!v||c.textContent.toLowerCase().indexOf(v)>-1;c.hidden=!ok;if(ok)k++}});grp.forEach(function(g){{g.hidden=!g.querySelector('.gcard:not([hidden])')}});n.textContent=v?k+(k===1?' term':' terms'):''}})}})();</script>
 <div class="cta-band"><div class="wrap"><h2>Have a part in mind?</h2><p>You don't need the vocabulary to get a quote. Describe what broke and we'll handle the rest.</p><a class="btn" href="{c.link('', 'quote')}">Request a quote <span class="ar">→</span></a></div></div>
 </main>"""
     setld = {"@context": "https://schema.org", "@type": "DefinedTermSet", "name": "True Part Fabrication glossary", "url": BASE + "/glossary/",
@@ -694,7 +708,8 @@ def notfound(c):
 <div class="page-hero" style="border-bottom:0"><div class="wrap">
   <div class="label">404</div>
   <h1>We couldn't find that page</h1>
-  <p class="lead">It may have moved, or the link may be mistyped. These are good places to start:</p>
+  <p class="lead">It may have moved, or the link may be mistyped. Search for it, or start from one of these pages:</p>
+  <form class="sbox" action="{c.link('search/')}" method="get" role="search" style="margin-top:24px"><label for="nf-q" style="position:absolute;left:-9999px">Search the site</label><input id="nf-q" name="q" type="search" placeholder="Part number, brand, or topic"><button class="btn" type="submit">Search</button></form>
   <div class="terms-strip" style="margin-top:26px"><a href="{c.link('')}">Home</a><a href="{c.link('parts/')}">Compatible parts</a><a href="{c.link('tools/hose-size-finder/')}">Hose size finder</a><a href="{c.link('tools/material-picker/')}">Material picker</a><a href="{c.link('resources/')}">All resources</a><a href="{c.link('search/')}">Search</a><a href="{c.link('', 'quote')}">Request a quote</a></div>
 </div></div>
 </main>"""
@@ -715,7 +730,7 @@ def build(mode, root):
     write(root, "assets/manifest.webmanifest", json.dumps({"name": "True Part Fabrication", "short_name": "True Part", "description": "Custom part manufacturing and replacement parts in Modesto, CA.",
         "start_url": "../", "scope": "../", "display": "standalone", "background_color": "#0A3161", "theme_color": "#0A3161",
         "icons": [{"src": "img/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}]}, indent=1))
-    write(root, "assets/site.js", JS.replace("@@MENU@@", __import__("extras").MENU_JS + __import__("extras").LIST_JS).replace("@@DRAFT@@", __import__("extras").DRAFT_JS))
+    write(root, "assets/site.js", JS.replace("@@MENU@@", __import__("extras").MENU_JS + __import__("extras").LIST_JS + __import__("improve").IMP_JS).replace("@@DRAFT@@", __import__("extras").DRAFT_JS))
     import tools, parts_pages
     parts_pages.assign_slugs(CAT["items"])
     pages = {"": lambda c: home(c, art=(mode == "art")), "parts/": parts, "faq/": faq, "glossary/": gloss_index, "privacy/": privacy, "terms/": terms}
@@ -724,6 +739,8 @@ def build(mode, root):
     import es, extras
     pages.update(es.pages())
     pages.update(extras.pages())
+    import improve
+    pages["sitemap/"] = lambda c: improve.sitemap_page(c, pages)
     for p, fn in pages.items():
         write(root, p + "index.html", fn(Ctx(mode, p)))
     for t in TERMS:
