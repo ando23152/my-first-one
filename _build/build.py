@@ -260,7 +260,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="{c.asset('site.css')}">
+<link rel="stylesheet" href="{c.asset('site.css')}?v=7">
 """
     return h + "\n".join(ld(x) for x in lds)
 
@@ -304,7 +304,7 @@ def footer(c):
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
 </footer>
-<script src="{c.asset('site.js')}" defer></script>"""
+<script src="{c.asset('site.js')}?v=7" defer></script>"""
 
 SWAP = re.compile(r'<img([^>]*?) src="([^"]*assets/img/)(logo-dark\.png|hero\.jpg|svc-[a-z]+\.jpg|sample-[a-z]+\.jpg)"')
 def swapimgs(h):
