@@ -1,0 +1,39 @@
+# True Part Fabrication
+
+> True Part Fabrication LLC makes compatible aftermarket replacement parts, custom parts, and small production runs in Modesto, California. Opening January 1, 2027. Phone (209) 554-4800.
+
+Parts are plastic, made to order, and not genuine brand parts. We do not make safety-critical, pressurized, electrical, braking or steering, child-safety, medical, pool, code-compliance, or food-contact parts.
+
+## Main pages
+- [Services](https://truepart-fabrication.onrender.com/services/): replacement parts, custom fabrication, electronics enclosures, small-batch manufacturing
+- [Compatible parts catalog](https://truepart-fabrication.onrender.com/parts/): 196 parts by brand and part number
+- [Pricing](https://truepart-fabrication.onrender.com/pricing/): how quotes are priced
+- [FAQ](https://truepart-fabrication.onrender.com/faq/)
+- [Terms of Service](https://truepart-fabrication.onrender.com/terms/)
+
+## Tools and guides
+- [Hose and dust port size finder](https://truepart-fabrication.onrender.com/tools/hose-size-finder/)
+- [Adapter builder](https://truepart-fabrication.onrender.com/tools/adapter-builder/)
+- [Material picker](https://truepart-fabrication.onrender.com/tools/material-picker/)
+- [How to measure a part](https://truepart-fabrication.onrender.com/guides/how-to-measure-a-part/)
+- [Shop vac hose sizes by brand](https://truepart-fabrication.onrender.com/guides/shop-vac-hose-sizes/)
+- [Replacing a discontinued plastic part](https://truepart-fabrication.onrender.com/guides/replacing-a-discontinued-plastic-part/)
+- [Glossary](https://truepart-fabrication.onrender.com/glossary/)
+
+## Parts by brand
+- [DeWalt](https://truepart-fabrication.onrender.com/brands/dewalt/)
+- [Milwaukee](https://truepart-fabrication.onrender.com/brands/milwaukee/)
+- [RYOBI](https://truepart-fabrication.onrender.com/brands/ryobi/)
+- [RIDGID](https://truepart-fabrication.onrender.com/brands/ridgid/)
+- [Makita](https://truepart-fabrication.onrender.com/brands/makita/)
+- [Craftsman](https://truepart-fabrication.onrender.com/brands/craftsman/)
+- [Shop-Vac](https://truepart-fabrication.onrender.com/brands/shop-vac/)
+- [Vacmaster](https://truepart-fabrication.onrender.com/brands/vacmaster/)
+- [WEN](https://truepart-fabrication.onrender.com/brands/wen/)
+- [Shark](https://truepart-fabrication.onrender.com/brands/shark/)
+- [Prolux](https://truepart-fabrication.onrender.com/brands/prolux/)
+- [Samsung](https://truepart-fabrication.onrender.com/brands/samsung/)
+- [Hampton Bay](https://truepart-fabrication.onrender.com/brands/hampton-bay/)
+
+## Spanish
+- [Página en español](https://truepart-fabrication.onrender.com/es/)

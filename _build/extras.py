@@ -232,7 +232,7 @@ def services_index(c):
 def service_page(c, svc):
     slug, name, h, lead, blocks, links = svc
     cards = "".join(f'<div class="card"><h3>{esc(t)}</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in items) + "</ul></div>" for t, items in blocks)
-    rel = "".join(f'<a href="{c.link(p)}">{esc(t)}</a>' for t, p in links)
+    rel = "".join(f'<a href="{c.link(p)}">{esc(t)}</a>' for t, p in list(links) + [x for x in __import__("seo2").SERVICE_LINKS.get(slug, []) if x not in links])
     pop = ""
     if slug == "replacement-parts":
         pp = [it for it in B.CAT["items"] if it.get("pp") and it["f"]][:9]
@@ -242,7 +242,7 @@ def service_page(c, svc):
     body = f"""<main id="main">
 {hero(c, [('Home',''),('Services','services/'),(name, path)], f'{esc(name)}: <em class="s" style="font-family:var(--f-serif)">{esc(h)}</em>', esc(lead) + ' Free reprint if it doesn\'t fit.', f'<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px"><a class="btn" href="{c.link("", "quote")}">Request a quote <span class="ar">→</span></a><a class="btn ghost" href="{c.link("pricing/")}">How pricing works</a></div>')}
 <div class="wrap">
-<section class="sec"><div class="cards3">{cards}</div></section>
+<section class="sec" aria-labelledby="svc-what"><h2 id="svc-what" class="sr-only">What we make and how it works</h2><div class="cards3">{cards}</div></section>
 {pop}
 <section class="sec"><div class="head" style="margin-bottom:18px"><div class="label">Related</div></div><div class="terms-strip">{rel}</div></section>
 <section class="sec"><div class="head" style="margin-bottom:18px"><div class="label">Other services</div></div><div class="cards3">{others}</div></section>
@@ -308,6 +308,8 @@ def search_index(c):
                     ("Cart", "request-list/", "Buy priced parts online, or send several parts in one quote request."),
                     ("Material picker", "tools/material-picker/", "Five questions to the right material: PLA, PETG, ASA, TPU, nylon."),
                     ("How to measure a part", "guides/how-to-measure-a-part/", "Photograph and measure a broken part for an accurate quote."),
+                    ("Shop vac hose sizes by brand", "guides/shop-vac-hose-sizes/", "Common shop vac hose sizes, how to measure, and the sizes each brand uses."),
+                    ("Replacing a discontinued plastic part", "guides/replacing-a-discontinued-plastic-part/", "Five ways to find or replace a discontinued plastic part."),
                     ("Terms of Service", "terms/", "Quotes, orders, aftermarket parts, fit guarantee."), ("Privacy", "privacy/", "How we handle your information."),
                     ("Projects", "projects/", "Real jobs from our shop."), ("Español", "es/", "Página en español: piezas de repuesto e impresión 3D.")]:
         add(t, "Page", u, d)

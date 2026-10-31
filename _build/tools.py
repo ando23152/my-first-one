@@ -295,11 +295,12 @@ def brand_page(c, b):
         htab = f"""<div class="head" style="margin:72px 0 24px"><div class="label">Hose and port sizes</div><h2>{esc(b)} <em class="s">connection sizes</em></h2><p>Published hose and port sizes for {esc(b)} {esc(cat)}. See the full <a href="{c.link('tools/hose-size-finder/')}" style="color:var(--ink)">hose size finder</a> for accessories and other brands.</p></div>
 <div class="ftable"><table style="min-width:640px"><thead><tr><th>Model</th><th>Item</th><th>Size</th><th>Confidence</th></tr></thead><tbody>{trs}</tbody></table></div>{more_link}"""
     body = f"""<main id="main">
-{page_hero(c, [('Home',''),('Resources','resources/'),(b + ' parts','brands/' + slug + '/')], f'Compatible parts for {b} {cat}', esc(intro))}
+{page_hero(c, [('Home',''),('Compatible parts','parts/'),(b + ' parts','brands/' + slug + '/')], f'Compatible parts for {b} {cat}', esc(intro))}
 <section style="padding-block:44px 100px"><div class="wrap">
-  <div class="parts-top"><h3>{f"{len(items)} compatible {esc(b)} parts" if items else f"Custom {esc(b)} adapters and fittings, made to order"}</h3><span style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ghost" href="{c.link('parts/')}?brand={esc(b).replace(' ','%20')}">Filter in catalog <span class="ar">→</span></a><a class="btn ghost" href="{c.link('tools/hose-size-finder/')}?brand={esc(b).replace(' ','%20')}">{esc(b)} hose sizes <span class="ar">→</span></a></span></div>
+  <div class="parts-top"><h2 class="pt-h">{f"{len(items)} compatible {esc(b)} parts" if items else f"Custom {esc(b)} adapters and fittings, made to order"}</h2><span style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ghost" href="{c.link('parts/')}?brand={esc(b).replace(' ','%20')}">Filter in catalog <span class="ar">→</span></a><a class="btn ghost" href="{c.link('tools/hose-size-finder/')}?brand={esc(b).replace(' ','%20')}">{esc(b)} hose sizes <span class="ar">→</span></a></span></div>
   {f'<div class="list">{rows}</div>' if items else f'<p style="color:var(--muted);max-width:62ch">We don\'t keep a stock list for {esc(b)} yet. Every part is modeled to your hose, port, or tool. Check the sizes below, then <a href="{c.link("", "quote")}" style="color:var(--ink)">request a quote</a> with your model number.</p>'}
   {htab}
+  {__import__("seo2").brand_extra(c, b)}
   <div style="margin-top:44px"><div class="head" style="margin-bottom:14px"><div class="label">Other brands</div></div><div class="terms-strip">{''.join(f'<a href="{c.link("brands/" + v[0] + "/")}">{esc(k)}</a>' for k, v in BRANDS.items() if k != b)}</div></div>
   <p class="legal">These are compatible aftermarket parts made by True Part Fabrication, not genuine {esc(b)} parts. {esc(b)} and its model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>
 </div></section>
@@ -307,7 +308,7 @@ def brand_page(c, b):
 </main>"""
     title = f"Compatible {b} Replacement Parts & Accessories | True Part Fabrication"
     desc = f"Made-to-order aftermarket parts that fit {b} {cat}: {len(items)} compatible parts" + (", plus hose and port sizes" if hose else "") + ". Made to order in Modesto, CA, with a free reprint if it doesn't fit."
-    return B.doc(c, B.head(c, title, desc, [B.crumbs_ld([("Home", ""), ("Resources", "resources/"), (b + " parts", "brands/" + slug + "/")])]), body)
+    return B.doc(c, B.head(c, title, desc, [B.crumbs_ld([("Home", ""), ("Compatible parts", "parts/"), (b + " parts", "brands/" + slug + "/")])]), body)
 
 # ---------------- INDUSTRY PAGES ----------------
 INDS = [
@@ -352,6 +353,7 @@ def industry_page(c, ind):
     <div class="price"><div class="k">Typical business job</div><p class="n">$75 – $800+</p><small>Depends on size, material, and quantity.</small></div></div>
   </div>
   <div style="margin-top:56px"><div class="label" style="margin-bottom:14px">Related terms</div><div class="terms-strip">{gls}</div></div>
+  {__import__("seo2").links_strip(c, "Related services and guides", __import__("seo2").IND_LINKS.get(slug, []))}
   <div style="margin-top:28px"><div class="label" style="margin-bottom:14px">Other industries</div><div class="terms-strip">{others}</div></div>
 </div></section>
 {cta(c, 'Have a part that keeps breaking?', 'Send a photo or the part itself. We\'ll reply with questions or a written quote.')}
@@ -366,6 +368,8 @@ def resources(c):
              ("Tool", "Adapter builder", "Pick any two hose or port sizes and request an adapter made to fit both.", "tools/adapter-builder/"),
              ("Tool", "Material picker", "Answer five questions and get the right material for your part, with a full comparison chart.", "tools/material-picker/"),
              ("Guide", "How to measure a part", "Photograph and measure a broken part so it can be modeled and printed.", "guides/how-to-measure-a-part/"),
+             ("Guide", "Shop vac hose sizes by brand", "The common hose sizes, how to measure, and which sizes each brand uses.", "guides/shop-vac-hose-sizes/"),
+             ("Guide", "Replacing a discontinued plastic part", "Five ways to find or replace a part the manufacturer no longer sells.", "guides/replacing-a-discontinued-plastic-part/"),
              ("Reference", "Glossary", f"{len(B.TERMS)} plain-English definitions of printing, material, and fit terms.", "glossary/"),
              ("Reference", "FAQ", "Quotes, pricing, turnaround, the fit guarantee, and what we won't make.", "faq/"),
              ("Catalog", "Compatible parts", f"{len(CAT['items'])} made-to-order aftermarket parts, searchable by part number.", "parts/")]

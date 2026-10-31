@@ -25,6 +25,18 @@ TITLE_OVERRIDES = {
     "es/": "Piezas de repuesto y a medida en Modesto | True Part",
 }
 DESC_OVERRIDES = {
+    'industries/warehouse-cold-storage/': 'Scanner holsters, label holders, cable guides, organizers and bumpers made to fit your racks and carts, for warehouses and cold storage in the Central Valley.',
+    'industries/industrial-shops/': 'Printed jigs, fixtures, brackets and dust collection fittings for machine shops, fabricators and maintenance teams in Modesto and the Central Valley.',
+    'industries/agriculture/': 'Covers, clips, spacers, sensor mounts and cab organizers for growers, packers and equipment dealers in Stanislaus and San Joaquin counties.',
+    'industries/food-processing/': 'Non-food-contact sensor mounts, guides, holders and changeover jigs for food processing plants in Modesto and the Central Valley. Made to order, fast.',
+    'business/': 'Replacement and custom parts for food processing, agriculture, warehouses, cold storage and industrial shops in Modesto, Turlock, Stockton and nearby.',
+    '': 'Replacement parts, custom brackets, jigs, fixtures and small-batch runs, designed and made in Modesto, CA, for businesses across the Central Valley.',
+    'parts/': '@N made-to-order aftermarket parts for DeWalt, Milwaukee, RYOBI, RIDGID, WEN, Shark and more: adapters, nozzles, brushes and clips. Search by part number.',
+    'guides/replacing-a-discontinued-plastic-part/': 'Five ways to replace a discontinued plastic part: find the part number, check for a newer one, buy used, go aftermarket, or have it remade.',
+    'tools/material-picker/': 'Free material picker for custom parts. Compare PLA, PETG, ASA, ABS, carbon-fiber nylon and TPU for heat, sun, toughness and flexibility.',
+    'about/': 'True Part Fabrication is a manufacturing company in Modesto, California, making replacement parts, custom components and small-batch runs.',
+    'es/': 'Piezas de repuesto, soportes, plantillas y lotes pequeños hechos a medida en Modesto, CA, para negocios del Valle Central. Reimpresión gratis si no queda.',
+    'es/piezas/': '@N piezas compatibles hechas a pedido para DeWalt, Milwaukee, RYOBI, Makita y más: adaptadores, boquillas, cepillos y clips. Hechas en Modesto, CA.',
     "privacy/": "How True Part Fabrication handles the information you share: quote requests, part files, online payments through Stripe, and deletion requests.",
 }
 
@@ -76,6 +88,7 @@ def part_title(it):
     lead = ref if ref.lower().startswith(b.lower()) else f"{b} {ref}"
     name = re.sub(r"\s*\([^)]*\)", "", n).strip()
     name = re.split(r":\s", name)[0]
+    name = name[:1].upper() + name[1:]
     t = f"{lead} {name}"
     if len(t) <= MAX_TITLE - 13:
         t += " Replacement"
@@ -100,7 +113,7 @@ def post(h):
         if new != full:
             h = h.replace(m.group(0), "<title>" + html.escape(new, quote=False) + "</title>", 1)
     if path in DESC_OVERRIDES:
-        d = html.escape(DESC_OVERRIDES[path])
+        d = html.escape(DESC_OVERRIDES[path].replace("@N", str(len(B.CAT["items"]))))
         h = re.sub(r'(<meta (?:name="description"|property="og:description") content=")[^"]*"', lambda mm: mm.group(1) + d + '"', h)
     # utility pages: always noindex
     if path in NOINDEX:
@@ -123,6 +136,20 @@ def post(h):
     pre = mm.group(1) if mm else "assets/"
     pl = "".join(f'<link rel="preload" href="{pre}fonts/{f}" as="font" type="font/woff2" crossorigin>\n' for f in PRELOAD)
     h = re.sub(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">\s*<link rel="preconnect" href="https://fonts\.gstatic\.com" crossorigin>\s*<link rel="stylesheet" href="https://fonts\.googleapis\.com/[^"]*">\n?', pl, h)
+    # og:image per section (service renders are 1000x750)
+    OGI = {"services/replacement-parts/": "svc-adapter", "services/custom-fabrication/": "svc-bracket", "services/electronics-enclosures/": "svc-enclosure",
+           "services/small-batch-manufacturing/": "svc-batch", "industries/industrial-shops/": "svc-bracket", "industries/agriculture/": "svc-bracket",
+           "industries/food-processing/": "svc-batch", "industries/warehouse-cold-storage/": "svc-batch", "tools/adapter-builder/": "svc-adapter",
+           "tools/hose-size-finder/": "svc-adapter", "guides/shop-vac-hose-sizes/": "svc-adapter"}
+    img = OGI.get(path) or ("svc-adapter" if path.startswith("brands/") else None)
+    if img and 'og-image.jpg' in h:
+        h = h.replace(f'<meta property="og:image" content="{B.BASE}/assets/img/og-image.jpg">', f'<meta property="og:image" content="{B.BASE}/assets/img/{img}.jpg">', 1)
+        h = h.replace('<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">', '<meta property="og:image:width" content="1000"><meta property="og:image:height" content="750">', 1)
+        h = re.sub(r'<meta property="og:image:alt" content="[^"]*">', '<meta property="og:image:alt" content="Rendering of a custom manufactured part">', h, 1)
+    # LCP: on the home page the big logo is the first thing seen; header logo need not jump the queue
+    if path in ("",):
+        h = h.replace('<img class="hero-logo" src=', '<img class="hero-logo" fetchpriority="high" src=', 1)
+        h = re.sub(r'(<a class="brand"[^>]*><img) fetchpriority="high"', r'\1', h, 1)
     # opening banner as a labelled landmark
     h = re.sub(r'<div class="opening" role="note"><div class="wrap">(.*?)</div></div>', lambda m: '<aside class="opening" aria-label="' + ('Apertura' if '<html lang="es"' in h else 'Opening') + '"><div class="wrap">' + m.group(1) + '</div></aside>', h, count=1, flags=re.S)
     # catalog: give the part rows (h3) a section heading
@@ -139,6 +166,9 @@ def post(h):
         if items:
             ld = {"@context": "https://schema.org", "@type": "ItemList", "name": html.unescape(re.sub(r"<[^>]+>", "", re.search(r"<h1[^>]*>(.*?)</h1>", h, re.S).group(1))).strip() if "<h1" in h else "Parts", "itemListElement": items}
             h = h.replace("</head>", B.ld(ld) + "\n</head>", 1)
+    # light HTML minify: drop indentation and blank lines outside <pre>/<textarea>/<script>
+    parts = re.split(r"(<script[\s\S]*?</script>|<textarea[\s\S]*?</textarea>|<pre[\s\S]*?</pre>)", h)
+    h = "".join(p if p.startswith(("<script", "<textarea", "<pre")) else re.sub(r"\n[ \t]+", "\n", re.sub(r"\n\s*\n+", "\n", p)) for p in parts)
     return h
 
 # ---------- unique copy for each part page ----------

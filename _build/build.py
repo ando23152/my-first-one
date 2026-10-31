@@ -156,7 +156,7 @@ def css():
     import tools, parts_pages
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
     import improve
-    return improve.minify_css(__import__('seo').font_css() + __import__('seo').PART_CSS + base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + __import__('shop').SHOP_CSS + improve.IMP_CSS + LIGHT_CSS)
+    return improve.minify_css(__import__('seo').font_css() + __import__('seo').PART_CSS + base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + __import__('shop').SHOP_CSS + improve.IMP_CSS + __import__('seo2').CSS + LIGHT_CSS)
 
 JS = r"""
 (function(){
@@ -267,6 +267,9 @@ ORG = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": BASE +
        "sameAs": [EBAY], "telephone": "+1-209-554-4800",
        "priceRange": "$$", "currenciesAccepted": "USD", "knowsAbout": ["Additive manufacturing", "Replacement parts", "Reverse engineering", "Jigs and fixtures", "Small-batch manufacturing"]}
 
+ORG["logo"] = {"@type": "ImageObject", "url": BASE + "/assets/img/logo-dark.png", "width": 800, "height": 493}
+ORG["contactPoint"] = [{"@type": "ContactPoint", "telephone": "+1-209-554-4800", "contactType": "customer service", "areaServed": "US-CA"}]
+
 def crumbs_ld(items):
     return {"@context": "https://schema.org", "@type": "BreadcrumbList",
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": BASE + "/" + p} for i, (n, p) in enumerate(items)]}
@@ -336,6 +339,7 @@ def footer(c):
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
       <div><h2 class="fh">Explore</h2><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('tools/adapter-builder/')}">Adapter builder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
+      {__import__('seo2').footer_brands(c)}
       <div><h2 class="fh">Contact</h2><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li><li><a href="{L('request-list/')}">Cart</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li><li><a href="{L('sitemap/')}">Site map</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span><a href="{L('business/')}" style="color:inherit;text-decoration:none">Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</a></span></div>
@@ -604,7 +608,7 @@ def FAQS(c):
      ("Where are you located, and do you ship?", "<p>We're in Modesto, California, and serve Modesto, Ceres, Turlock, Manteca, Tracy, and Stockton, including on-site measuring for parts that can't come off the machine. We also ship statewide.</p>"),
      ("Are your parts genuine brand parts?", f"<p>No. They're compatible {G('aftermarket-part','aftermarket parts')} that we design and make. Brand names and part numbers are used only to show what a part fits.</p>"),
      ("Can I buy parts without a quote?", f'<p>Some ready-made parts are available in our <a href="{EBAY}" target="_blank" rel="noopener">eBay store</a>. Everything else is made to order.</p>'),
-    ]
+    ] + __import__("seo2").extra_faqs(c)
 def faq(c):
     items = FAQS(c)
     def _fid(q): return "q-" + re.sub(r"[^a-z0-9]+", "-", q.lower()).strip("-")[:48]
@@ -684,6 +688,7 @@ def gloss_page(c, t):
   <aside class="side">
     <div class="box"><h2>Related terms</h2><ul>{rel}</ul></div>
     {f'<div class="box"><h2>More in {t["cat"]}</h2><ul>{more}</ul></div>' if more else ''}
+    {__import__('seo2').gloss_extra(c, t)}
     <div class="box"><h2>Need a part?</h2><p>We design and manufacture replacement parts in Modesto, CA. Free reprint if it doesn't fit.</p><a class="btn ghost" href="{c.link('parts/')}" style="height:40px;font-size:.85rem">Browse compatible parts</a></div>
   </aside>
 </div>
@@ -769,6 +774,19 @@ def notfound(c):
 def write(root, path, text):
     p = os.path.join(root, path); os.makedirs(os.path.dirname(p), exist_ok=True); open(p, "w").write(text)
 
+# sitemap lastmod: the date a page's content last changed (tracked by hash in lastmod.json)
+try: _LM = json.load(open(SRC + "/lastmod.json"))
+except Exception: _LM = {}
+def _lm(root, u):
+    import hashlib, datetime
+    t = open(os.path.join(root, u, "index.html")).read()
+    t = re.sub(r"\?v=\d+", "", t)
+    hsh = hashlib.sha1(t.encode()).hexdigest()[:16]
+    old = _LM.get(u)
+    if not old or old[0] != hsh:
+        _LM[u] = [hsh, datetime.date.today().isoformat()]
+    return _LM[u][1]
+
 def build(mode, root):
     if os.path.exists(root) and root != "/home/claude/site":
         shutil.rmtree(root)
@@ -794,6 +812,8 @@ def build(mode, root):
     pages.update(extras.pages())
     import shop
     pages.update(shop.pages())
+    pages.update(__import__("seo2").pages())
+    write(root, "llms.txt", __import__("seo2").llms_txt())
     write(root, "assets/prices.json", json.dumps(shop.prices_data(CAT["items"]), ensure_ascii=False, separators=(",", ":")))
     sp = "/home/claude/site_src/checkout-server/prices.json"
     if os.path.isdir(os.path.dirname(sp)):
@@ -808,7 +828,8 @@ def build(mode, root):
     urls = [""] + [p for p in pages if p and p not in __import__("seo").NOINDEX and p != "cart/"] + ["glossary/" + t["slug"] + "/" for t in TERMS]
     if mode == "render":
         sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
-            f"  <url><loc>{BASE}/{u}</loc><lastmod>2026-10-31</lastmod></url>\n" for u in urls) + "</urlset>\n"
+            f"  <url><loc>{BASE}/{u}</loc><lastmod>{_lm(root, u)}</lastmod></url>\n" for u in urls) + "</urlset>\n"
+        json.dump(_LM, open(SRC + "/lastmod.json", "w"), indent=0, sort_keys=True)
         write(root, "sitemap.xml", sm)
         nf = notfound(Ctx(mode, ""))
         nf = re.sub(r'(href|src)="(?!https?:|/|#|mailto:|tel:|data:)', r'\1="/', nf).replace('href="/./"', 'href="/"')

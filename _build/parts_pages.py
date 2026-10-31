@@ -122,7 +122,7 @@ def part_page(c, it, items, hose):
     body = f"""<main id="main" data-url="{B.BASE}/{url(it)}">
 <div class="page-hero"><div class="wrap">
   {B.crumbs(c, crumbs_list)}
-  <h1>{esc(it['n'])}</h1>
+  <h1>{esc(it['n'])}<span class="h1sub">{'Replaces' if it['oem'] else 'For'} {esc(b)} {esc(ref)}</span></h1>
   <p class="lead">A compatible aftermarket replacement for {esc(b)} {esc(ref)}, manufactured to order in Modesto, CA. Fit is {status} for the models listed. Free reprint if it doesn't fit.</p>
   {price}
 </div></div>
@@ -137,11 +137,12 @@ def part_page(c, it, items, hose):
       <div class="acts2"><button type="button" class="tbtn" data-print>Print spec sheet</button>{f'<button type="button" class="tbtn" data-copytext="{esc(it["oem"])}">Copy part number</button>' if it["oem"] else ''}<button type="button" class="tbtn" data-share data-title="{esc(it['n'])}">Share this part</button><a class="tbtn" style="display:inline-flex;align-items:center;text-decoration:none" href="mailto:ando23152@gmail.com?subject={quote('Question about ' + it['n'] + ' (' + B.rp(it) + ')')}">Ask a question</a><span class="tstat" role="status"></span></div>
       <p class="note">Send your equipment's model number with the request so we can confirm the fit before we print. Not sure of a size? Use the <a href="{c.link('guides/how-to-measure-a-part/')}">measuring guide</a>. Prices and turnaround are in your written quote; see the <a href="{c.link('faq/')}">FAQ</a> and our <a href="{c.link('terms/')}">Terms of Service</a>.</p>
     </div>
-    <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of a {esc(KIND.get(it['i'], it['i']).lower())} like this {esc(b)} {esc(ref)} replacement" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
+    <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of {('an ' if __import__('seo2').KIND_PLURAL.get(it['i'], (it['i'],))[0][0] in 'aeiou' else 'a ') + esc(__import__('seo2').KIND_PLURAL.get(it['i'], (it['i'],))[0])} like this {esc(b)} {esc(ref)} replacement" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
   </div>
   {__import__('seo').part_about(c, it, sizes, KIND.get(it['i'], it['i']))}
   {f'<div class="head" style="margin:10px 0 22px"><div class="label">More {esc(b)} parts</div></div><div class="rel">{rel}</div>' if rel else ''}
   <div class="recent" id="recent" data-me="{esc(it['n'])}|{esc(B.rp(it))}" hidden><div class="head" style="margin:44px 0 18px"><div class="label">Recently viewed</div></div><div class="rel" id="recent-list"></div></div>
+  {__import__('seo2').same_size(c, it)}
   {pn}
   <div class="stickybar" aria-label="Quick actions"><span class="n">{esc(it['n'])}</span><a class="btn" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request</a></div>
   <p class="legal" style="margin:44px 0 90px">This is a compatible aftermarket part made by True Part Fabrication, not a genuine {esc(b)} part. {esc(b)} and its part and model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>
@@ -149,7 +150,7 @@ def part_page(c, it, items, hose):
 </main>"""
     t_ref = f" for {b} {ref}" if ref else f" for {b}"
     title = __import__("seo").part_title(it) + " | True Part Fabrication"
-    desc = f"Aftermarket {it['n'][0].lower() + it['n'][1:]} that {'replaces' if it['oem'] else 'fits'} {b} {ref}." + (f" Fits {fit}." if fit else "") + f" Made in {it['mat']} in Modesto, CA. Free reprint if it doesn't fit."
+    desc = __import__('seo2').part_desc(it)
     lds = [B.crumbs_ld(crumbs_list)]
     if it.get("price"):
         lds.append({"@context": "https://schema.org", "@type": "Product", "name": it["n"], "description": desc,

@@ -111,7 +111,7 @@ def sitemap_page(c, pages):
     main = [(t, p) if not p.startswith("#") else (t, "") for t, p in main]
     import extras as X
     svc = [(n, "services/" + s + "/") for s, n, *_ in X.SERVICES]
-    tools = [("Resources hub", "resources/"), ("Hose size finder", "tools/hose-size-finder/"), ("Adapter builder", "tools/adapter-builder/"), ("Material picker", "tools/material-picker/"), ("How to measure a part", "guides/how-to-measure-a-part/"), ("Glossary", "glossary/")]
+    tools = [("Resources hub", "resources/"), ("Hose size finder", "tools/hose-size-finder/"), ("Adapter builder", "tools/adapter-builder/"), ("Material picker", "tools/material-picker/"), ("Shop vac hose sizes by brand", "guides/shop-vac-hose-sizes/"), ("Replacing a discontinued part", "guides/replacing-a-discontinued-plastic-part/"), ("How to measure a part", "guides/how-to-measure-a-part/"), ("Glossary", "glossary/")]
     inds = [(n, "industries/" + s + "/") for s, n, *_ in T.INDS]
     brands = [(b + " parts", "brands/" + v[0] + "/") for b, v in T.BRANDS.items()]
     terms = [(t["term"], "glossary/" + t["slug"] + "/") for t in sorted(TERMS, key=lambda t: t["term"].lower())]
@@ -300,7 +300,12 @@ def post(h):
     def trim(mm):
         d = html.unescape(mm.group(2))
         if len(d) <= 160: return mm.group(0)
-        cut = d[:157].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+        # prefer ending on a whole sentence; otherwise drop a trailing "Serving ..." clause; last resort, word cut
+        ends = [m.end() for m in re.finditer(r"[.!?](?=\s|$)", d[:160])]
+        if ends and ends[-1] >= 90:
+            cut = d[:ends[-1]]
+        else:
+            cut = d[:157].rsplit(" ", 1)[0].rstrip(",;:") + "…"
         return mm.group(1) + esc(cut, quote=True) + '">'
     h = re.sub(r'(<meta name="description" content=")([^"]*)">', trim, h, 1)
     h = re.sub(r'(<meta property="og:description" content=")([^"]*)">', trim, h, 1)
