@@ -282,7 +282,7 @@ def brand_page(c, b):
     slug, cat, intro = BRANDS[b]
     items = [x for x in CAT["items"] if x["b"] == b]
     hose = [r for r in HOSE if r["b"] == b and r["g"] in ("Vacuums & collectors", "Hoses", "Power tool ports")]
-    rows = "\n".join(f"""<div class="row"><div class="b">{esc(it['b'])}</div><h3 class="n" style="font:600 1rem var(--f-body);text-transform:none;letter-spacing:0">{esc(it['n'])}{'' if it['f'] else '<span class="fitbadge">Fit to confirm</span>'}</h3><div class="o">{esc(B.rp(it))}</div><div class="f">{esc(it['f'] or 'Ask us to confirm your model')}</div><a class="btn ghost" style="height:34px;padding:0 14px;font-size:.8rem" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request</a></div>""" for it in items)
+    rows = "\n".join(f"""<div class="row"><div class="b">{esc(it['b'])}</div><h3 class="n" style="font:600 1rem var(--f-body);text-transform:none;letter-spacing:0"><a href="{c.link('parts/' + it['slug'] + '/')}">{esc(it['n'])}</a>{'' if it['f'] else '<span class="fitbadge">Fit to confirm</span>'}</h3><div class="o">{esc(B.rp(it))}</div><div class="f">{esc(it['f'] or 'Ask us to confirm your model')}</div><a class="btn ghost" style="height:34px;padding:0 14px;font-size:.8rem" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request</a></div>""" for it in items)
     htab = ""
     if hose:
         trs = "".join(f'<tr><td class="mo">{esc(r["mc"])}</td><td>{esc(r["d"])}</td><td>{"".join(f"<span class=sz>{esc(s)}</span>" for s in r["s"])}</td><td><span class="cf {r["conf"] or "na"}">{esc(r["conf"] or "Unrated")}</span></td></tr>' for r in hose[:24])

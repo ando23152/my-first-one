@@ -133,9 +133,9 @@ LIGHT_CSS = r"""
 :root[data-tpf-theme="light"] .theme-btn .moon{display:none}
 """
 def css():
-    import tools
+    import tools, parts_pages
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
-    return base + EXTRA_CSS + tools.EXTRA_CSS + LIGHT_CSS
+    return base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + LIGHT_CSS
 
 JS = r"""
 (function(){
@@ -264,7 +264,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 def header(c):
     L = c.link
     return f"""<a href="#main" class="skip" style="position:absolute;left:-9999px;top:0;z-index:50;background:var(--accent);color:#fff;padding:10px 16px" onfocus="this.style.left='12px'" onblur="this.style.left='-9999px'">Skip to content</a>
-<div class="opening" role="note"><div class="wrap">Opening January 1, 2027 <span aria-hidden="true">·</span> <a href="{L('', 'quote')}">Quote requests welcome now</a></div></div>
+<div class="opening" role="note"><div class="wrap">Opening January 1, 2027 <span aria-hidden="true">·</span> <a href="{L('', 'quote')}">Quote requests welcome now</a> <span aria-hidden="true">·</span> <a href="{L('es/')}" hreflang="es" lang="es">Español</a></div></div>
 <header id="hdr">
   <div class="wrap bar">
     <a class="brand" href="{L('')}" aria-label="True Part Fabrication home"><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493"></a>
@@ -319,7 +319,7 @@ def _doc(c, headhtml, body, art_index=False):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-{headhtml}
+{headhtml}{ALT if c.path == "" else ""}
 </head>
 <body>
 {header(c)}
@@ -329,6 +329,7 @@ def _doc(c, headhtml, body, art_index=False):
 </html>
 """
 
+ALT = f'\n<link rel="alternate" hreflang="en" href="{BASE}/">\n<link rel="alternate" hreflang="es" href="{BASE}/es/">\n<link rel="alternate" hreflang="x-default" href="{BASE}/">'
 def crumbs(c, items):
     parts = []
     for n, p in items[:-1]:
@@ -345,7 +346,7 @@ def feat_cards(c):
         it = next((x for x in CAT["items"] if x["oem"] == m), None)
         if not it: continue
         out.append(f"""<article class="pc"><div class="ph"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Sample image of a 3D-printed {it['i']}" width="640" height="480" loading="lazy"><span>Sample image</span></div>
-<div class="bd"><div class="br">Fits {esc(it['b'])}</div><h4>{esc(it['n'])}</h4><div class="rp">{esc(rp(it))}</div><div class="ft">{esc('Fits ' + it['f']) if it['f'] else 'Ask us to confirm your model'}</div>
+<div class="bd"><div class="br">Fits {esc(it['b'])}</div><h4><a href="{c.link('parts/' + it['slug'] + '/')}">{esc(it['n'])}</a></h4><div class="rp">{esc(rp(it))}</div><div class="ft">{esc('Fits ' + it['f']) if it['f'] else 'Ask us to confirm your model'}</div>
 <a class="go" href="{c.link('', 'quote')}" data-part="{esc(part_text(it))}">Request this part →</a></div></article>""")
     return "\n".join(out)
 
@@ -423,7 +424,10 @@ def home(c, art=False):
     script = TPL[TPL.index('<script id="cat-data"'):]
     sample = json.dumps({k: c.asset('img/sample-' + k + '.jpg') for k in ['adapter','nozzle','brush','separator','clip','roller']})
     script = script.replace("im.src=IMG[it.i];", "im.src=IMG[it.i];im.setAttribute('data-light',IMG[it.i].replace('.jpg','-light.jpg'));")
-    script = script.replace('{{CAT}}', json.dumps(CAT, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')).replace('{{IMG_SAMPLE}}', sample)
+    script = script.replace("bd.appendChild(el('h4',null,it.n));", "var h4=el('h4');var ha=el('a',null,it.n);ha.href=it.u;h4.appendChild(ha);bd.appendChild(h4);")
+    script = script.replace("r.appendChild(el('div','n',it.n));", "var nd=el('div','n');var na=el('a',null,it.n);na.href=it.u;nd.appendChild(na);r.appendChild(nd);")
+    CATU = {"feat": CAT["feat"], "items": [dict(x, u=c.link("parts/" + x["slug"] + "/")) for x in CAT["items"]]}
+    script = script.replace('{{CAT}}', json.dumps(CATU, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')).replace('{{IMG_SAMPLE}}', sample)
     main = main + '\n<script>window.TPF_HOME=1</script>\n' + script
     return doc(c, head(c, title, desc, [org, web]), main, art_index=art)
 
@@ -438,7 +442,7 @@ def parts(c):
     for it in items:
         k = (it["b"] + " " + it["oem"] + " " + it.get("for", "") + " " + it["n"] + " " + it["f"]).lower()
         badge = "" if it["f"] else '<span class="fitbadge">Fit to confirm</span>'
-        rows.append(f"""<div class="row" data-b="{esc(it['b'])}" data-fit="{1 if it['f'] else 0}" data-k="{esc(k)}"><div class="b">{esc(it['b'])}</div><h3 class="n" style="font:600 1rem var(--f-body);text-transform:none;letter-spacing:0">{esc(it['n'])}{badge}</h3><div class="o">{esc(rp(it))}</div><div class="f">{esc(it['f'] or 'Ask us to confirm your model')}</div><a class="btn ghost" style="height:34px;padding:0 14px;font-size:.8rem" href="{c.link('', 'quote')}" data-part="{esc(part_text(it))}">Request</a></div>""")
+        rows.append(f"""<div class="row" data-b="{esc(it['b'])}" data-fit="{1 if it['f'] else 0}" data-k="{esc(k)}"><div class="b">{esc(it['b'])}</div><h3 class="n" style="font:600 1rem var(--f-body);text-transform:none;letter-spacing:0"><a href="{c.link('parts/' + it['slug'] + '/')}">{esc(it['n'])}</a>{badge}</h3><div class="o">{esc(rp(it))}</div><div class="f">{esc(it['f'] or 'Ask us to confirm your model')}</div><a class="btn ghost" style="height:34px;padding:0 14px;font-size:.8rem" href="{c.link('', 'quote')}" data-part="{esc(part_text(it))}">Request</a></div>""")
     body = f"""<main id="main">
 <div class="page-hero"><div class="wrap">
   {crumbs(c, [('Home', ''), ('Compatible parts', 'parts/')])}
@@ -638,9 +642,13 @@ def build(mode, root):
             shutil.copy("/home/claude/site/assets/img/" + f, root + "/assets/img/" + f)
     write(root, "assets/site.css", css())
     write(root, "assets/site.js", JS)
-    import tools
+    import tools, parts_pages
+    parts_pages.assign_slugs(CAT["items"])
     pages = {"": lambda c: home(c, art=(mode == "art")), "parts/": parts, "faq/": faq, "glossary/": gloss_index, "privacy/": privacy, "terms/": terms}
     pages.update(tools.pages())
+    pages.update(parts_pages.pages())
+    import es
+    pages.update(es.pages())
     for p, fn in pages.items():
         write(root, p + "index.html", fn(Ctx(mode, p)))
     for t in TERMS:
