@@ -314,6 +314,7 @@ def swapimgs(h):
         return '<img' + m.group(1) + ' src="' + m.group(2) + name + '" data-light="' + m.group(2) + light + '"'
     return SWAP.sub(r, h)
 def a11y(h):
+    h = h.replace('logo-dark.png"', 'logo-dark.png?v=9"')
     h = h.replace('<div class="ftable">', '<div class="ftable" tabindex="0" role="region" aria-label="Scrollable table">')
     return h.replace('<div class="tbl">', '<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table">')
 def webp(h):
