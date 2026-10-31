@@ -299,6 +299,7 @@ def brand_page(c, b):
   <div class="parts-top"><h3>{f"{len(items)} compatible {esc(b)} parts" if items else f"Custom {esc(b)} adapters and fittings, made to order"}</h3><span style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ghost" href="{c.link('parts/')}?brand={esc(b).replace(' ','%20')}">Filter in catalog <span class="ar">→</span></a><a class="btn ghost" href="{c.link('tools/hose-size-finder/')}?brand={esc(b).replace(' ','%20')}">{esc(b)} hose sizes <span class="ar">→</span></a></span></div>
   {f'<div class="list">{rows}</div>' if items else f'<p style="color:var(--muted);max-width:62ch">We don\'t keep a stock list for {esc(b)} yet. Every part is modeled to your hose, port, or tool. Check the sizes below, then <a href="{c.link("", "quote")}" style="color:var(--ink)">request a quote</a> with your model number.</p>'}
   {htab}
+  <div style="margin-top:44px"><div class="head" style="margin-bottom:14px"><div class="label">Other brands</div></div><div class="terms-strip">{''.join(f'<a href="{c.link("brands/" + v[0] + "/")}">{esc(k)}</a>' for k, v in BRANDS.items() if k != b)}</div></div>
   <p class="legal">These are compatible aftermarket parts made by True Part Fabrication, not genuine {esc(b)} parts. {esc(b)} and its model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>
 </div></section>
 {cta(c, f"Don't see your {esc(b)} part?", 'Send a photo and the model number. If it\'s plastic and not safety-critical, we can usually make it.')}

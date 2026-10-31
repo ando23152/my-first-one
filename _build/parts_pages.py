@@ -110,6 +110,9 @@ def part_page(c, it, items, hose):
     same = [x for x in items if x is not it and x["b"] == b and x["i"] == it["i"]]
     same += [x for x in items if x is not it and x["b"] == b and x not in same]
     rel = "".join(f'<a href="{c.link(url(x))}">{esc(x["n"])}<span>{esc(B.rp(x))}</span></a>' for x in same[:6])
+    _bl = [x for x in items if x["b"] == b]; _i = _bl.index(it)
+    _pv, _nx = (_bl[_i - 1] if _i > 0 else None), (_bl[_i + 1] if _i < len(_bl) - 1 else None)
+    pn = f'<nav class="pn" aria-label="Previous and next {esc(b)} parts">' + (f'<a href="{c.link(url(_pv))}"><span>← Previous {esc(b)} part</span>{esc(_pv["n"])}</a>' if _pv else '') + (f'<a class="nx" href="{c.link(url(_nx))}"><span>Next {esc(b)} part →</span>{esc(_nx["n"])}</a>' if _nx else '') + '</nav>'
     status = "confirmed" if fit else "not yet confirmed"
     body = f"""<main id="main" data-url="{B.BASE}/{url(it)}">
 <div class="page-hero"><div class="wrap">
@@ -126,13 +129,14 @@ def part_page(c, it, items, hose):
         <a class="btn" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request this part <span class="ar">→</span></a>
         <a class="btn ghost" href="{EBAY_SEARCH + esc(re.sub(r'[^A-Za-z0-9-]+', '+', ref).strip('+'))}" target="_blank" rel="noopener">Check our eBay store <span class="ar">↗</span></a>
       </div>
-      <div class="acts2"><button type="button" class="tbtn" data-print>Print spec sheet</button><button type="button" class="tbtn" data-share data-title="{esc(it['n'])}">Share this part</button><a class="tbtn" style="display:inline-flex;align-items:center;text-decoration:none" href="mailto:ando23152@gmail.com?subject={quote('Question about ' + it['n'] + ' (' + B.rp(it) + ')')}">Ask a question</a><span class="tstat" role="status"></span></div>
+      <div class="acts2"><button type="button" class="tbtn" data-print>Print spec sheet</button>{f'<button type="button" class="tbtn" data-copytext="{esc(it["oem"])}">Copy part number</button>' if it["oem"] else ''}<button type="button" class="tbtn" data-share data-title="{esc(it['n'])}">Share this part</button><a class="tbtn" style="display:inline-flex;align-items:center;text-decoration:none" href="mailto:ando23152@gmail.com?subject={quote('Question about ' + it['n'] + ' (' + B.rp(it) + ')')}">Ask a question</a><span class="tstat" role="status"></span></div>
       <p class="note">Send your equipment's model number with the request so we can confirm the fit before we print. Not sure of a size? Use the <a href="{c.link('guides/how-to-measure-a-part/')}">measuring guide</a>. Prices and turnaround are in your written quote; see the <a href="{c.link('faq/')}">FAQ</a> and our <a href="{c.link('terms/')}">Terms of Service</a>.</p>
     </div>
     <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of a custom manufactured {esc(KIND.get(it['i'], it['i']).lower())}" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
   </div>
   {f'<div class="head" style="margin:10px 0 22px"><div class="label">More {esc(b)} parts</div></div><div class="rel">{rel}</div>' if rel else ''}
   <div class="recent" id="recent" data-me="{esc(it['n'])}|{esc(B.rp(it))}" hidden><div class="head" style="margin:44px 0 18px"><div class="label">Recently viewed</div></div><div class="rel" id="recent-list"></div></div>
+  {pn}
   <div class="stickybar" aria-label="Quick actions"><span class="n">{esc(it['n'])}</span><a class="btn" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request</a></div>
   <p class="legal" style="margin:44px 0 90px">This is a compatible aftermarket part made by True Part Fabrication, not a genuine {esc(b)} part. {esc(b)} and its part and model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>
 </div>

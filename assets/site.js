@@ -26,7 +26,7 @@
     if(form){fill(text);e.preventDefault();document.getElementById('quote').scrollIntoView({behavior:innerWidth<=900?'smooth':'instant',block:'start'})}
     else{store('tpf-part',text)}
   });
-  function fill(t){var d=document.getElementById('q-desc');if(!d){var e=document.getElementById('e-desc');if(e){e.value=t+'\nMi modelo: ';}return}document.getElementById('q-type').value='Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
+  function fill(t){var d=document.getElementById('q-desc');if(!d){var e=document.getElementById('e-desc');if(e){e.value=t+'\nMi modelo: ';}return}document.getElementById('q-type').value=/^Custom adapter/.test(t)?'Custom part or prototype':'Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
 
   // ---- save form drafts on this device ----
   ['qf','qf-es','rl-form'].concat([].map.call(document.querySelectorAll('form.xform[id]'),function(f){return f.id})).forEach(function(id){
@@ -152,6 +152,38 @@
   // r12: copy a link to the current filtered view
   document.addEventListener('click',function(e){var b=e.target.closest('[data-copylink]');if(!b)return;var st=document.getElementById(b.getAttribute('data-copylink'));
     try{navigator.clipboard.writeText(location.href).then(function(){if(st)st.textContent='Link copied.'},function(){if(st)st.textContent=location.href})}catch(err){if(st)st.textContent=location.href}});
+
+  // r1: clear catalog filters
+  (function(){var b=document.getElementById('cat-clear');if(!b)return;b.addEventListener('click',function(){var q=document.getElementById('cat-q'),f=document.getElementById('fit-only'),s=document.getElementById('cat-sort');
+    if(s&&s.value){s.value='';s.dispatchEvent(new Event('change'))}if(f&&!f.checked){f.checked=true;f.dispatchEvent(new Event('change'))}q.value='';q.dispatchEvent(new Event('input'));var all=document.querySelector('#cat-chips .chip[data-b="All"]');if(all)all.click();q.focus()})})();
+  // r3/r4: adapter builder swap ends + copy spec
+  (function(){var f=document.getElementById('ab');if(!f)return;var out=document.querySelector('.ab-out > div[style]');if(!out)return;
+    var sw=document.createElement('button');sw.type='button';sw.className='tbtn';sw.textContent='Swap ends';
+    var cp=document.createElement('button');cp.type='button';cp.className='tbtn';cp.textContent='Copy spec';
+    var st=document.createElement('span');st.className='tstat';st.setAttribute('role','status');out.appendChild(sw);out.appendChild(cp);out.appendChild(st);
+    sw.addEventListener('click',function(){['kind','size','fit','model'].forEach(function(k){var a=document.getElementById('a-'+k),b=document.getElementById('b-'+k),t=a.value;a.value=b.value;b.value=t});f.dispatchEvent(new Event('change'));st.textContent='Ends swapped.'});
+    cp.addEventListener('click',function(){var t=document.getElementById('ab-sum').textContent;try{navigator.clipboard.writeText(t).then(function(){st.textContent='Spec copied.'},function(){st.textContent='Copy did not work in this browser.'})}catch(e){st.textContent='Copy did not work in this browser.'}})})();
+  // r5: material picker answers saved in the link
+  (function(){var f=document.getElementById('mp');if(!f)return;try{var P=new URLSearchParams(location.search),any=false;P.forEach(function(v,k){var r=f.querySelector('input[name="'+k+'"][value="'+v+'"]');if(r){r.checked=true;any=true}});if(any)f.dispatchEvent(new Event('change',{bubbles:true}))}catch(e){}
+    f.addEventListener('change',function(){try{var p=new URLSearchParams();[].forEach.call(f.querySelectorAll('input[type=radio]:checked'),function(r){p.set(r.name,r.value)});var s=p.toString();history.replaceState(null,'',location.pathname+(s?'?'+s:''))}catch(e){}})})();
+  // r6: printable measuring checklist
+  (function(){var h=document.querySelector('ol.howto');if(!h)return;var d=document.createElement('div');d.className='acts2 tools2';d.style.marginBottom='18px';d.innerHTML='<button type="button" class="tbtn" data-print>Print this checklist</button>';h.parentNode.insertBefore(d,h)})();
+  // r7: description length counter
+  ['q-desc','e-desc'].forEach(function(id){var t=document.getElementById(id);if(!t)return;var c=document.createElement('div');c.className='cnt';c.id=id+'-cnt';t.insertAdjacentElement('afterend',c);t.setAttribute('aria-describedby',c.id);
+    function u(){var n=t.value.trim().length;c.textContent=n<40?(document.documentElement.lang==='es'?'Un poco más de detalle ayuda: marca, modelo y qué se rompió.':'A little more detail helps: make, model, and what broke.'):(n+(document.documentElement.lang==='es'?' caracteres':' characters'))}t.addEventListener('input',u);u()});
+  // r9: reorder link can carry a part ID
+  (function(){var r=document.getElementById('r-id');if(!r)return;try{var v=new URLSearchParams(location.search).get('id');if(v&&!r.value)r.value=v}catch(e){}})();
+  // r10: copyright year stays current
+  (function(){var y=new Date().getFullYear();document.querySelectorAll('.copy-line span').forEach(function(s){if(/©\s*2026/.test(s.textContent)&&y>2026)s.textContent=s.textContent.replace('2026','2026–'+y)})})();
+  // r16: arrow keys move through search results
+  (function(){var q=document.getElementById('sq'),ul=document.getElementById('sres');if(!q||!ul)return;
+    function links(){return [].slice.call(ul.querySelectorAll('a'))}
+    q.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){var l=links();if(l.length){e.preventDefault();l[0].focus()}}});
+    ul.addEventListener('keydown',function(e){var l=links(),i=l.indexOf(document.activeElement);if(i<0)return;if(e.key==='ArrowDown'&&i<l.length-1){e.preventDefault();l[i+1].focus()}if(e.key==='ArrowUp'){e.preventDefault();if(i>0)l[i-1].focus();else q.focus()}})})();
+  // r18: page-not-found suggests a search from the address
+  (function(){var i=document.getElementById('nf-q');if(!i||i.value)return;var seg=location.pathname.split('/').filter(Boolean).pop()||'';seg=decodeURIComponent(seg).replace(/\.html?$/,'').replace(/[-_]+/g,' ').trim();if(seg&&seg!=='404')i.value=seg})();
+  // r20: copy part number
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-copytext]');if(!b)return;var st=b.parentNode.querySelector('.tstat'),t=b.getAttribute('data-copytext');try{navigator.clipboard.writeText(t).then(function(){if(st)st.textContent='Copied '+t+'.'},function(){if(st)st.textContent=t})}catch(err){if(st)st.textContent=t}});
 
   // quote form
   var f=document.getElementById('qf');

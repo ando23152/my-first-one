@@ -224,20 +224,26 @@ def services_index(c):
 <div class="wrap" style="padding-block:48px 90px"><div class="cards2">{cards}</div></div>
 {cta(c)}
 </main>"""
+    il = {"@context": "https://schema.org", "@type": "ItemList", "name": "True Part Fabrication services", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": B.BASE + "/services/" + s + "/", "name": n} for i, (s, n, *_) in enumerate(SERVICES)]}
     return B.doc(c, B.head(c, "Custom Manufacturing Services in Modesto, CA | True Part Fabrication",
                            "Replacement parts, custom fabrication, electronics enclosures, and small-batch manufacturing, made in Modesto for the Central Valley.",
-                           [B.crumbs_ld([("Home", ""), ("Services", "services/")])]), body)
+                           [il, B.crumbs_ld([("Home", ""), ("Services", "services/")])]), body)
 
 def service_page(c, svc):
     slug, name, h, lead, blocks, links = svc
     cards = "".join(f'<div class="card"><h3>{esc(t)}</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in items) + "</ul></div>" for t, items in blocks)
     rel = "".join(f'<a href="{c.link(p)}">{esc(t)}</a>' for t, p in links)
+    pop = ""
+    if slug == "replacement-parts":
+        pp = [it for it in B.CAT["items"] if it.get("pp") and it["f"]][:9]
+        pop = '<section class="sec"><div class="head" style="margin-bottom:18px"><div class="label">Popular parts</div></div><div class="mini">' + "".join(f'<a href="{c.link("parts/" + it["slug"] + "/")}">{esc(it["n"])}<span>{esc(B.rp(it))}</span></a>' for it in pp) + f'</div><p style="margin-top:16px"><a href="{c.link("parts/")}" style="color:var(--ink)">Browse all {len(B.CAT["items"])} parts →</a></p></section>'
     others = "".join(f'<a class="card" href="{c.link("services/" + s + "/")}"><div class="k">{esc(n)}</div><h3>{esc(hh)}</h3></a>' for s, n, hh, *_ in SERVICES if s != slug)
     path = "services/" + slug + "/"
     body = f"""<main id="main">
 {hero(c, [('Home',''),('Services','services/'),(name, path)], f'{esc(name)}: <em class="s" style="font-family:var(--f-serif)">{esc(h)}</em>', esc(lead) + ' Free reprint if it doesn\'t fit.', f'<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px"><a class="btn" href="{c.link("", "quote")}">Request a quote <span class="ar">→</span></a><a class="btn ghost" href="{c.link("pricing/")}">How pricing works</a></div>')}
 <div class="wrap">
 <section class="sec"><div class="cards3">{cards}</div></section>
+{pop}
 <section class="sec"><div class="head" style="margin-bottom:18px"><div class="label">Related</div></div><div class="terms-strip">{rel}</div></section>
 <section class="sec"><div class="head" style="margin-bottom:18px"><div class="label">Other services</div></div><div class="cards3">{others}</div></section>
 </div>
@@ -308,6 +314,7 @@ def search_index(c):
     for slug, nm, desc, *_ in T.INDS: add(nm, "Industry", "industries/" + slug + "/", desc)
     for b, (slug, cat, intro) in T.BRANDS.items(): add(b + " parts", "Brand", "brands/" + slug + "/", intro)
     for t in TERMS: add(t["term"], "Glossary", "glossary/" + t["slug"] + "/", t["short"])
+    for fq, fa in B.FAQS(c): add(fq, "FAQ", "faq/", re.sub("<[^>]+>", "", fa).strip()[:200])
     for it in B.CAT["items"]:
         add(it["n"], it["b"] + " part", "parts/" + it["slug"] + "/", B.rp(it) + (". Fits " + it["f"] if it["f"] else ""), it["oem"] + " " + it.get("for", ""))
     return idx
@@ -381,6 +388,7 @@ def es_catalog(c):
   <div class="tools">
     <div class="search"><svg viewBox="0 0 16 16" fill="none" stroke="var(--muted)" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg><label for="cat-q" style="position:absolute;left:-9999px">Buscar piezas</label><input id="cat-q" type="search" placeholder="Número de pieza, modelo o nombre"></div>
     <label class="toggle" for="fit-only"><input type="checkbox" id="fit-only" checked> Solo ajuste confirmado</label>
+    <button type="button" class="tbtn" id="cat-clear">Borrar filtros</button>
     <label class="sortbox" for="cat-sort">Ordenar<select id="cat-sort"><option value="">Destacadas</option><option value="name">Nombre A–Z</option><option value="brand">Marca A–Z</option><option value="pn">Número de pieza</option></select></label>
     <span id="cat-count" style="color:var(--faint);font-size:.88rem;margin-left:auto"></span>
   </div>

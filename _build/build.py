@@ -184,7 +184,7 @@ JS = r"""
     if(form){fill(text);e.preventDefault();document.getElementById('quote').scrollIntoView({behavior:innerWidth<=900?'smooth':'instant',block:'start'})}
     else{store('tpf-part',text)}
   });
-  function fill(t){var d=document.getElementById('q-desc');if(!d){var e=document.getElementById('e-desc');if(e){e.value=t+'\nMi modelo: ';}return}document.getElementById('q-type').value='Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
+  function fill(t){var d=document.getElementById('q-desc');if(!d){var e=document.getElementById('e-desc');if(e){e.value=t+'\nMi modelo: ';}return}document.getElementById('q-type').value=/^Custom adapter/.test(t)?'Custom part or prototype':'Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
 @@DRAFT@@
   var pending=take('tpf-part');if(pending)fill(pending);
   // parts filter
@@ -534,6 +534,8 @@ def section_page(c, sid):
         qs = script[script.index("var f=document.getElementById('qf')"):]
         qs = qs[:qs.rindex("})();")]
         extra = "\n<script>window.TPF_HOME=1</script>\n<script>(function(){\n" + qs + "\n})();</script>"
+    if sid == "quote":
+        sec = sec + '''<div class="wrap" style="padding-bottom:80px"><div class="callout checklist"><div class="k">Before you send</div><ul><li>Photos of the part from three angles, with a ruler or calipers in the shot</li><li>The make and model of the equipment it goes on</li><li>Any part number molded or printed on the original</li><li>How many you need, and when</li><li>Where it's used: indoors, outdoors, heat, cold, or chemicals</li></ul></div></div>'''
     body = f'''<main id="main" class="secpage">
 <div class="wrap" style="padding-top:28px">{crumbs(c, [('Home', ''), (name, sid + '/')])}</div>
 {sec}
@@ -562,6 +564,7 @@ def parts(c):
   <div class="tools">
     <div class="search"><svg viewBox="0 0 16 16" fill="none" stroke="var(--muted)" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg><label for="cat-q" style="position:absolute;left:-9999px">Search parts</label><input id="cat-q" type="search" placeholder="Search part number, model, or name"></div>
     <label class="toggle" for="fit-only"><input type="checkbox" id="fit-only" checked> Confirmed fit only</label>
+    <button type="button" class="tbtn" id="cat-clear">Clear filters</button>
     <label class="sortbox" for="cat-sort">Sort<select id="cat-sort"><option value="">Featured</option><option value="name">Name A–Z</option><option value="brand">Brand A–Z</option><option value="pn">Part number</option></select></label>
     <span id="cat-count" style="color:var(--faint);font-size:.88rem;margin-left:auto"></span>
   </div>
@@ -656,6 +659,9 @@ def gloss_page(c, t):
     rel = "".join(f'<li><a href="{c.link("glossary/" + s + "/")}">{esc(GLOSS[s]["term"])}</a></li>' for s in t["related"] if s in GLOSS)
     same = [x for x in TERMS if x["cat"] == t["cat"] and x["slug"] != t["slug"] and x["slug"] not in t["related"]][:4]
     more = "".join(f'<li><a href="{c.link("glossary/" + x["slug"] + "/")}">{esc(x["term"])}</a></li>' for x in same)
+    _st = sorted(TERMS, key=lambda x: x["term"].lower()); _i = [x["slug"] for x in _st].index(t["slug"])
+    _pv, _nx = (_st[_i - 1] if _i > 0 else None), (_st[_i + 1] if _i < len(_st) - 1 else None)
+    pn = '<nav class="pn" aria-label="Previous and next terms">' + (f'<a href="{c.link("glossary/" + _pv["slug"] + "/")}"><span>← Previous term</span>{esc(_pv["term"])}</a>' if _pv else '') + (f'<a class="nx" href="{c.link("glossary/" + _nx["slug"] + "/")}"><span>Next term →</span>{esc(_nx["term"])}</a>' if _nx else '') + '</nav>'
     body = f"""<main id="main">
 <div class="page-hero"><div class="wrap">
   {crumbs(c, [('Home', ''), ('Glossary', 'glossary/'), (t['term'], 'glossary/' + t['slug'] + '/')])}
@@ -668,6 +674,7 @@ def gloss_page(c, t):
     {paras}
     <div class="callout"><div class="k">What it means for your part</div><p>{esc(t['quote'])}</p></div>
     <p><a class="btn" href="{c.link('', 'quote')}">Request a quote <span class="ar">→</span></a></p>
+    {pn}
   </article>
   <aside class="side">
     <div class="box"><h2>Related terms</h2><ul>{rel}</ul></div>
@@ -786,7 +793,7 @@ def build(mode, root):
     urls = [""] + [p for p in pages if p] + ["glossary/" + t["slug"] + "/" for t in TERMS]
     if mode == "render":
         sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
-            f"  <url><loc>{BASE}/{u}</loc><lastmod>2026-10-30</lastmod></url>\n" for u in urls) + "</urlset>\n"
+            f"  <url><loc>{BASE}/{u}</loc><lastmod>2026-10-31</lastmod></url>\n" for u in urls) + "</urlset>\n"
         write(root, "sitemap.xml", sm)
         nf = notfound(Ctx(mode, ""))
         nf = re.sub(r'(href|src)="(?!https?:|/|#|mailto:|data:)', r'\1="/', nf).replace('href="/./"', 'href="/"')

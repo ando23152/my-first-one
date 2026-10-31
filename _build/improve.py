@@ -131,3 +131,90 @@ def sitemap_page(c, pages):
 </div></div>
 </main>"""
     return B.doc(c, B.head(c, "Site Map | True Part Fabrication", "Every page on the True Part Fabrication website: services, tools, brands, parts, and glossary.", [B.crumbs_ld([("Home", ""), ("Site map", "sitemap/")])]), body)
+
+# ================= second 25-round pass =================
+IMP_CSS += r"""
+/* r2: hose finder table keeps its header in view */
+.ftable:has(#hf){max-height:78vh;overflow:auto}
+#hf thead th{position:sticky;top:0;z-index:2;background:var(--surface)}
+/* r11: skip link */
+.skip{position:absolute;left:-9999px;top:0;z-index:60;background:var(--accent);color:#fff;padding:10px 16px;border-radius:0 0 6px 0;font-weight:600}
+.skip:focus{left:0}
+/* r13: screen-reader-only text */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* r7: description counter */
+.cnt{font:400 .8rem var(--f-body);color:var(--faint);text-align:right;margin-top:4px}
+/* r14/15: previous / next */
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:40px 0 0}
+.pn a{display:grid;gap:4px;padding:16px 18px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink)}
+.pn a:hover{border-color:var(--accent)}
+.pn a span{font:500 .7rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.pn a.nx{text-align:right;grid-column:2}
+@media (max-width:560px){.pn{grid-template-columns:1fr}.pn a.nx{grid-column:1}}
+/* r16: search keyboard focus */
+.sres a:focus-visible{outline-offset:0}
+/* r25: quote checklist */
+.checklist{max-width:760px}
+.checklist ul{margin:10px 0 0;padding-left:20px;display:grid;gap:6px;color:var(--ink)}
+/* r21: popular parts on service page */
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mini a{display:grid;gap:4px;padding:16px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink);background:var(--surface)}
+.mini a:hover{border-color:var(--accent)}
+.mini a span{font:.72rem var(--f-mono);color:var(--faint)}
+@media (max-width:860px){.mini{grid-template-columns:1fr 1fr}}@media (max-width:520px){.mini{grid-template-columns:1fr}}
+@media print{.pn,.cnt,.tools2{display:none!important}}
+"""
+
+IMP_JS += r"""
+  // r1: clear catalog filters
+  (function(){var b=document.getElementById('cat-clear');if(!b)return;b.addEventListener('click',function(){var q=document.getElementById('cat-q'),f=document.getElementById('fit-only'),s=document.getElementById('cat-sort');
+    if(s&&s.value){s.value='';s.dispatchEvent(new Event('change'))}if(f&&!f.checked){f.checked=true;f.dispatchEvent(new Event('change'))}q.value='';q.dispatchEvent(new Event('input'));var all=document.querySelector('#cat-chips .chip[data-b="All"]');if(all)all.click();q.focus()})})();
+  // r3/r4: adapter builder swap ends + copy spec
+  (function(){var f=document.getElementById('ab');if(!f)return;var out=document.querySelector('.ab-out > div[style]');if(!out)return;
+    var sw=document.createElement('button');sw.type='button';sw.className='tbtn';sw.textContent='Swap ends';
+    var cp=document.createElement('button');cp.type='button';cp.className='tbtn';cp.textContent='Copy spec';
+    var st=document.createElement('span');st.className='tstat';st.setAttribute('role','status');out.appendChild(sw);out.appendChild(cp);out.appendChild(st);
+    sw.addEventListener('click',function(){['kind','size','fit','model'].forEach(function(k){var a=document.getElementById('a-'+k),b=document.getElementById('b-'+k),t=a.value;a.value=b.value;b.value=t});f.dispatchEvent(new Event('change'));st.textContent='Ends swapped.'});
+    cp.addEventListener('click',function(){var t=document.getElementById('ab-sum').textContent;try{navigator.clipboard.writeText(t).then(function(){st.textContent='Spec copied.'},function(){st.textContent='Copy did not work in this browser.'})}catch(e){st.textContent='Copy did not work in this browser.'}})})();
+  // r5: material picker answers saved in the link
+  (function(){var f=document.getElementById('mp');if(!f)return;try{var P=new URLSearchParams(location.search),any=false;P.forEach(function(v,k){var r=f.querySelector('input[name="'+k+'"][value="'+v+'"]');if(r){r.checked=true;any=true}});if(any)f.dispatchEvent(new Event('change',{bubbles:true}))}catch(e){}
+    f.addEventListener('change',function(){try{var p=new URLSearchParams();[].forEach.call(f.querySelectorAll('input[type=radio]:checked'),function(r){p.set(r.name,r.value)});var s=p.toString();history.replaceState(null,'',location.pathname+(s?'?'+s:''))}catch(e){}})})();
+  // r6: printable measuring checklist
+  (function(){var h=document.querySelector('ol.howto');if(!h)return;var d=document.createElement('div');d.className='acts2 tools2';d.style.marginBottom='18px';d.innerHTML='<button type="button" class="tbtn" data-print>Print this checklist</button>';h.parentNode.insertBefore(d,h)})();
+  // r7: description length counter
+  ['q-desc','e-desc'].forEach(function(id){var t=document.getElementById(id);if(!t)return;var c=document.createElement('div');c.className='cnt';c.id=id+'-cnt';t.insertAdjacentElement('afterend',c);t.setAttribute('aria-describedby',c.id);
+    function u(){var n=t.value.trim().length;c.textContent=n<40?(document.documentElement.lang==='es'?'Un poco más de detalle ayuda: marca, modelo y qué se rompió.':'A little more detail helps: make, model, and what broke.'):(n+(document.documentElement.lang==='es'?' caracteres':' characters'))}t.addEventListener('input',u);u()});
+  // r9: reorder link can carry a part ID
+  (function(){var r=document.getElementById('r-id');if(!r)return;try{var v=new URLSearchParams(location.search).get('id');if(v&&!r.value)r.value=v}catch(e){}})();
+  // r10: copyright year stays current
+  (function(){var y=new Date().getFullYear();document.querySelectorAll('.copy-line span').forEach(function(s){if(/©\s*2026/.test(s.textContent)&&y>2026)s.textContent=s.textContent.replace('2026','2026–'+y)})})();
+  // r16: arrow keys move through search results
+  (function(){var q=document.getElementById('sq'),ul=document.getElementById('sres');if(!q||!ul)return;
+    function links(){return [].slice.call(ul.querySelectorAll('a'))}
+    q.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){var l=links();if(l.length){e.preventDefault();l[0].focus()}}});
+    ul.addEventListener('keydown',function(e){var l=links(),i=l.indexOf(document.activeElement);if(i<0)return;if(e.key==='ArrowDown'&&i<l.length-1){e.preventDefault();l[i+1].focus()}if(e.key==='ArrowUp'){e.preventDefault();if(i>0)l[i-1].focus();else q.focus()}})})();
+  // r18: page-not-found suggests a search from the address
+  (function(){var i=document.getElementById('nf-q');if(!i||i.value)return;var seg=location.pathname.split('/').filter(Boolean).pop()||'';seg=decodeURIComponent(seg).replace(/\.html?$/,'').replace(/[-_]+/g,' ').trim();if(seg&&seg!=='404')i.value=seg})();
+  // r20: copy part number
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-copytext]');if(!b)return;var st=b.parentNode.querySelector('.tstat'),t=b.getAttribute('data-copytext');try{navigator.clipboard.writeText(t).then(function(){if(st)st.textContent='Copied '+t+'.'},function(){if(st)st.textContent=t})}catch(err){if(st)st.textContent=t}});
+"""
+
+_post1 = post
+def post(h):
+    h = _post1(h)
+    # r11: skip link uses a class instead of inline script
+    h = re.sub(r'<a href="#main" class="skip"[^>]*>([^<]*)</a>', r'<a href="#main" class="skip">\1</a>', h)
+    # r12: referrer policy
+    if 'name="referrer"' not in h:
+        h = h.replace('<meta name="robots"', '<meta name="referrer" content="strict-origin-when-cross-origin">\n<meta name="robots"', 1)
+    # r13: links that open a new tab say so to screen readers
+    def nt(m):
+        a, inner = m.group(1), m.group(2)
+        if 'sr-only' in inner: return m.group(0)
+        es_ = 'lang="es"' in h[:400]
+        return a + inner + ('<span class="sr-only"> (se abre en una pestaña nueva)</span>' if es_ else '<span class="sr-only"> (opens in a new tab)</span>') + '</a>'
+    h = re.sub(r'(<a [^>]*target="_blank"[^>]*>)(.*?)</a>', nt, h, flags=re.S)
+    # r24: header logo loads first
+    h = h.replace('<a class="brand" href="', '<a class="brand" data-x href="', 1)
+    h = re.sub(r'(<a class="brand" data-x href="[^"]*"[^>]*>)<img ', r'\1<img fetchpriority="high" ', h, 1).replace('<a class="brand" data-x ', '<a class="brand" ', 1)
+    return h
