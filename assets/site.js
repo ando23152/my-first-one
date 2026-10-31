@@ -1,5 +1,14 @@
 
 (function(){
+  var root=document.documentElement,tb=document.getElementById('theme-btn'),meta=document.querySelector('meta[name="theme-color"]');
+  function applyTheme(t){
+    if(t==='light')root.setAttribute('data-tpf-theme','light');else root.removeAttribute('data-tpf-theme');
+    document.querySelectorAll('img[data-light]').forEach(function(i){if(!i.getAttribute('data-dark'))i.setAttribute('data-dark',i.getAttribute('src'));var want=t==='light'?i.getAttribute('data-light'):i.getAttribute('data-dark');if(i.getAttribute('src')!==want)i.setAttribute('src',want)});
+    if(tb)tb.setAttribute('aria-label',t==='light'?'Switch to dark theme':'Switch to light theme');
+    if(meta)meta.setAttribute('content',t==='light'?'#ffffff':'#070708');
+  }
+  applyTheme(root.getAttribute('data-tpf-theme')==='light'?'light':'dark');
+  if(tb)tb.addEventListener('click',function(){var t=root.getAttribute('data-tpf-theme')==='light'?'dark':'light';applyTheme(t);try{localStorage.setItem('tpf-theme',t)}catch(e){}});
   var hdr=document.getElementById('hdr');
   function onS(){hdr.classList.toggle('scrolled',scrollY>24)}addEventListener('scroll',onS,{passive:true});onS();
   function store(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}
@@ -40,8 +49,7 @@
       if(v('q-when'))lines.push('Needed by: '+v('q-when'));
       lines.push('','Description:',v('q-desc'),'','(Please attach a photo of the part)');
       txt.textContent=lines.join('\n');out.hidden=false;
-      st.textContent='Open it in your email app, or copy it and email it to us. Attach a photo of the part.';
-      document.getElementById('q-mail').href='mailto:nsottero@gmail.com?subject='+encodeURIComponent('Quote request: '+v('q-type'))+'&body='+encodeURIComponent(txt.textContent);
+      st.textContent='Copy your request, then send it to us with a photo of the part.';
     });
     document.getElementById('q-copy').addEventListener('click',function(){
       var t=txt.textContent;

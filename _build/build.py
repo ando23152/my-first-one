@@ -13,7 +13,7 @@ BASE = "https://truepart-fabrication.onrender.com"
 INDEX = False          # False while on the temporary Render address: pages carry noindex
 SITE = "True Part Fabrication"
 EMAIL = "nsottero@gmail.com"
-EBAY = "https://www.ebay.com/usr/sottero"
+EBAY = "https://www.ebay.com/usr/truepartfabrication"
 SRC = "/home/claude/site_src"
 TPL = open("/home/claude/v2/template.html").read()
 CAT = json.load(open("/home/claude/site/catalog.json"))
@@ -76,15 +76,78 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 td.m a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
 td.m a:hover{border-color:var(--accent)}
 .steps a{color:var(--ink)}
+.opening{background:var(--accent);color:#fff;font-size:.85rem;text-align:center;padding-block:9px;position:relative;z-index:21}
+.opening a{color:#fff;font-weight:600;text-underline-offset:3px}
+.agree{display:flex;gap:10px;align-items:flex-start;font:400 .95rem var(--f-body)!important;letter-spacing:0!important;text-transform:none!important;color:var(--ink)!important;cursor:pointer}
+.agree input{width:18px;height:18px;margin-top:2px;flex:none;accent-color:var(--accent)}
+.agree a{color:var(--ink)}
+.terms h2{scroll-margin-top:110px}
+.brands .row a{font-family:var(--f-display);font-stretch:110%;font-weight:600;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);text-decoration:none;transition:color .2s}
+.brands .row a:hover{color:var(--ink)}
+.svc li a{color:inherit;text-decoration:none}
+.svc li:has(a):hover{border-color:var(--accent);color:var(--ink)}
+.facts a.fact{display:block;padding:28px 24px;border-right:1px solid var(--line);text-decoration:none;color:inherit;transition:background .2s}
+.facts a.fact:last-child{border-right:0}
+.facts a.fact:hover{background:var(--surface)}
+.facts a.fact b{display:block;font-family:var(--f-display);font-stretch:106%;font-weight:500;font-size:1.1rem;line-height:1;letter-spacing:-.01em}
+.facts a.fact span{display:block;margin-top:8px;color:var(--muted);font-size:.88rem}
+@media (max-width:860px){.facts a.fact{border-right:0;border-bottom:1px solid var(--line)}.facts a.fact:last-child{border-bottom:0}}
+.statement p.sub a,.svc + .svc a,.scope li a,.quote .info p a,.steps p a{color:var(--ink)}
+
+@media (min-width:861px){.shop{grid-template-columns:repeat(2,1fr)}}
 """
 
+LIGHT_CSS = r"""
+/* ---- light theme (visitor toggle) ---- */
+:root[data-tpf-theme="light"]{--bg:#ffffff;--surface:#f6f6f4;--surface-2:#efefec;--ink:#121214;--muted:#2b2b30;--faint:#626269;--line:#e2e2de;--accent:#d71f28;--accent-hi:#c3141c;color-scheme:light}
+:root[data-tpf-theme="light"] header.scrolled{background:rgba(255,255,255,.9)}
+:root[data-tpf-theme="light"] .hero::before{background:radial-gradient(closest-side,rgba(215,31,40,.06),rgba(215,31,40,0))}
+:root[data-tpf-theme="light"] .hero-logo,:root[data-tpf-theme="light"] .brand img{filter:none}
+:root[data-tpf-theme="light"] .hero-shot img{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 80%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 80%,transparent 100%)}
+:root[data-tpf-theme="light"] .facts{background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg) 40%)}
+:root[data-tpf-theme="light"] .btn.ghost{border-color:#cdcdc8}
+:root[data-tpf-theme="light"] .btn.ghost:hover{border-color:var(--ink)}
+:root[data-tpf-theme="light"] .btn:hover{box-shadow:0 10px 26px -12px rgba(215,31,40,.6)}
+:root[data-tpf-theme="light"] .pc:hover,:root[data-tpf-theme="light"] .res:hover,:root[data-tpf-theme="light"] .gcard:hover{border-color:#cdcdc8}
+:root[data-tpf-theme="light"] .chip:hover{border-color:#bdbdb8}
+:root[data-tpf-theme="light"] .row button{border-color:#cdcdc8}
+:root[data-tpf-theme="light"] .row button:hover{color:#fff}
+:root[data-tpf-theme="light"] .steps .n{border-color:#cdcdc8}
+:root[data-tpf-theme="light"] .statement{background:radial-gradient(60% 80% at 50% 50%,rgba(215,31,40,.06),transparent)}
+:root[data-tpf-theme="light"] .price,:root[data-tpf-theme="light"] .callout,:root[data-tpf-theme="light"] .result{background:linear-gradient(135deg,rgba(215,31,40,.08),rgba(215,31,40,.01));border-color:rgba(215,31,40,.35)}
+:root[data-tpf-theme="light"] .inds div{background:var(--bg)}
+:root[data-tpf-theme="light"] .inds div:hover{background:var(--surface)}
+:root[data-tpf-theme="light"] td.m i{box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+:root[data-tpf-theme="light"] .pc .ph span{background:rgba(255,255,255,.85);color:var(--ink)}
+:root[data-tpf-theme="light"] .cf.Confirmed{color:#1c7f45;border-color:rgba(28,127,69,.4)}
+:root[data-tpf-theme="light"] .cf.Likely{color:#9a6200;border-color:rgba(154,98,0,.4)}
+:root[data-tpf-theme="light"] .dots i{color:#d6d6d2}
+:root[data-tpf-theme="light"] .mq label.o,:root[data-tpf-theme="light"] .sz{border-color:#cdcdc8}
+:root[data-tpf-theme="light"] .explain b.ok{color:#1c7f45}
+:root[data-tpf-theme="light"] .explain b.lk{color:#9a6200}
+.theme-btn{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:border-color .2s}
+.theme-btn:hover{border-color:var(--accent)}
+.theme-btn svg{width:18px;height:18px}
+.theme-btn .sun{display:none}
+:root[data-tpf-theme="light"] .theme-btn .sun{display:block}
+:root[data-tpf-theme="light"] .theme-btn .moon{display:none}
+"""
 def css():
     import tools
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
-    return base + EXTRA_CSS + tools.EXTRA_CSS
+    return base + EXTRA_CSS + tools.EXTRA_CSS + LIGHT_CSS
 
 JS = r"""
 (function(){
+  var root=document.documentElement,tb=document.getElementById('theme-btn'),meta=document.querySelector('meta[name="theme-color"]');
+  function applyTheme(t){
+    if(t==='light')root.setAttribute('data-tpf-theme','light');else root.removeAttribute('data-tpf-theme');
+    document.querySelectorAll('img[data-light]').forEach(function(i){if(!i.getAttribute('data-dark'))i.setAttribute('data-dark',i.getAttribute('src'));var want=t==='light'?i.getAttribute('data-light'):i.getAttribute('data-dark');if(i.getAttribute('src')!==want)i.setAttribute('src',want)});
+    if(tb)tb.setAttribute('aria-label',t==='light'?'Switch to dark theme':'Switch to light theme');
+    if(meta)meta.setAttribute('content',t==='light'?'#ffffff':'#070708');
+  }
+  applyTheme(root.getAttribute('data-tpf-theme')==='light'?'light':'dark');
+  if(tb)tb.addEventListener('click',function(){var t=root.getAttribute('data-tpf-theme')==='light'?'dark':'light';applyTheme(t);try{localStorage.setItem('tpf-theme',t)}catch(e){}});
   var hdr=document.getElementById('hdr');
   function onS(){hdr.classList.toggle('scrolled',scrollY>24)}addEventListener('scroll',onS,{passive:true});onS();
   function store(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}
@@ -125,8 +188,7 @@ JS = r"""
       if(v('q-when'))lines.push('Needed by: '+v('q-when'));
       lines.push('','Description:',v('q-desc'),'','(Please attach a photo of the part)');
       txt.textContent=lines.join('\n');out.hidden=false;
-      st.textContent='Open it in your email app, or copy it and email it to us. Attach a photo of the part.';
-      document.getElementById('q-mail').href='mailto:"""+EMAIL+r"""?subject='+encodeURIComponent('Quote request: '+v('q-type'))+'&body='+encodeURIComponent(txt.textContent);
+      st.textContent='Copy your request, then send it to us with a photo of the part.';
     });
     document.getElementById('q-copy').addEventListener('click',function(){
       var t=txt.textContent;
@@ -162,7 +224,7 @@ def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensu
 ORG = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": BASE + "/#business", "name": "True Part Fabrication LLC",
        "url": BASE + "/", "logo": BASE + "/assets/img/logo-dark.png", "image": BASE + "/assets/img/og-image.jpg",
        "description": "Custom 3D printing, replacement parts, and small-batch manufacturing in Modesto, California.",
-       "email": EMAIL, "address": {"@type": "PostalAddress", "addressLocality": "Modesto", "addressRegion": "CA", "addressCountry": "US"},
+       "address": {"@type": "PostalAddress", "addressLocality": "Modesto", "addressRegion": "CA", "addressCountry": "US"},
        "areaServed": ["Modesto", "Ceres", "Turlock", "Manteca", "Tracy", "Stockton", "Stanislaus County", "San Joaquin County"],
        "sameAs": [EBAY],
        "knowsAbout": ["3D printing", "Replacement parts", "Reverse engineering", "Jigs and fixtures", "Small-batch manufacturing"]}
@@ -188,12 +250,13 @@ def head(c, title, desc, lds=(), og_type="website"):
 <meta property="og:image:alt" content="True Part Fabrication logo over 3D-printed parts">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#070708">
+<script>try{{var t=localStorage.getItem("tpf-theme");if(t==="light")document.documentElement.setAttribute("data-tpf-theme","light")}}catch(e){{}}</script>
 <link rel="icon" type="image/png" sizes="32x32" href="{c.asset('img/favicon-32.png')}">
 <link rel="icon" type="image/png" sizes="48x48" href="{c.asset('img/favicon-48.png')}">
 <link rel="apple-touch-icon" href="{c.asset('img/icon-180.png')}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="{c.asset('site.css')}">
 """
     return h + "\n".join(ld(x) for x in lds)
@@ -201,6 +264,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 def header(c):
     L = c.link
     return f"""<a href="#main" class="skip" style="position:absolute;left:-9999px;top:0;z-index:50;background:var(--accent);color:#fff;padding:10px 16px" onfocus="this.style.left='12px'" onblur="this.style.left='-9999px'">Skip to content</a>
+<div class="opening" role="note"><div class="wrap">Opening January 1, 2027 <span aria-hidden="true">·</span> <a href="{L('', 'quote')}">Quote requests welcome now</a></div></div>
 <header id="hdr">
   <div class="wrap bar">
     <a class="brand" href="{L('')}" aria-label="True Part Fabrication home"><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493"></a>
@@ -212,6 +276,7 @@ def header(c):
       <a class="l" href="{L('resources/')}">Resources</a>
       <a class="l" href="{L('faq/')}">FAQ</a>
       <a class="l" href="{L('', 'about')}">About</a>
+      <button class="theme-btn" type="button" id="theme-btn" aria-label="Switch to light theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="btn" href="{L('', 'quote')}">Request a quote</a>
     </nav>
   </div>
@@ -224,14 +289,29 @@ def footer(c):
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
       <div><h4>Explore</h4><ul><li><a href="{L('', 'services')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><span style="color:var(--muted)">{EMAIL}</span></li><li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('privacy/')}">Privacy</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
 </footer>
 <script src="{c.asset('site.js')}" defer></script>"""
 
+SWAP = re.compile(r'<img([^>]*?) src="([^"]*assets/img/)(logo-dark\.png|hero\.jpg|svc-[a-z]+\.jpg|sample-[a-z]+\.jpg)"')
+def swapimgs(h):
+    def r(m):
+        name = m.group(3)
+        light = "logo-light.png" if name == "logo-dark.png" else name.replace(".jpg", "-light.jpg")
+        return '<img' + m.group(1) + ' src="' + m.group(2) + name + '" data-light="' + m.group(2) + light + '"'
+    return SWAP.sub(r, h)
+def a11y(h):
+    h = h.replace('<div class="ftable">', '<div class="ftable" tabindex="0" role="region" aria-label="Scrollable table">')
+    return h.replace('<div class="tbl">', '<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table">')
+def webp(h):
+    h = re.sub(r"(assets/img/(?:hero|svc-[a-z]+|sample-[a-z]+)(?:-light)?)\.jpg", r"\1.webp", h)
+    return h.replace(".replace('.jpg','-light.jpg')", ".replace('.webp','-light.webp')")
 def doc(c, headhtml, body, art_index=False):
+    return a11y(webp(swapimgs(_doc(c, headhtml, body, art_index))))
+def _doc(c, headhtml, body, art_index=False):
     if art_index:
         return headhtml + "\n<meta name=\"claude:viewport-fit-sides\" content=\"cover\">\n" + header(c) + "\n" + body + "\n" + footer(c) + "\n"
     return f"""<!doctype html>
@@ -272,7 +352,7 @@ def feat_cards(c):
 # ---------------- HOME ----------------
 def home(c, art=False):
     main = re.search(r'(<main id="top">.*?</main>)', TPL, re.S).group(1)
-    main = main.replace('<main id="top">', '<main id="main">')
+    main = main.replace('<main id="top">', '<main id="main">').replace('{{TERMS}}', c.link('terms/'))
     # img data URIs -> files
     main = re.sub(r'src="data:image/png;base64,[^"]+"', f'src="{c.asset("img/logo-dark.png")}"', main)
     for k in ["HERO", "ADAPTER", "BRACKET", "ENCLOSURE", "BATCH"]:
@@ -281,9 +361,26 @@ def home(c, art=False):
     main = main.replace("{{CHECK}}", check)
     main = main.replace('<img src="' + c.asset("img/svc-"), '<img loading="lazy" src="' + c.asset("img/svc-"))
     # additive: link to the full parts page beside the eBay button
-    main = main.replace('<div class="parts-top"><h3>Popular parts</h3><a class="btn ghost" href="https://www.ebay.com/usr/sottero"',
-        '<div class="parts-top"><h3>Popular parts</h3><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ghost" href="' + c.link('parts/') + '">Parts catalog page <span class="ar">→</span></a><a class="btn ghost" href="https://www.ebay.com/usr/sottero"',1)
+    main = main.replace('<div class="parts-top"><h3>Popular parts</h3><a class="btn ghost" href="https://www.ebay.com/usr/truepartfabrication"',
+        '<div class="parts-top"><h3>Popular parts</h3><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn ghost" href="' + c.link('parts/') + '">Parts catalog page <span class="ar">→</span></a><a class="btn ghost" href="https://www.ebay.com/usr/truepartfabrication"',1)
     main = main.replace('Shop ready-made parts on eBay <span class="ar">↗</span></a></div>','Shop ready-made parts on eBay <span class="ar">↗</span></a></div></div>',1)
+    # ---- link text to matching resource pages (additive; wording unchanged) ----
+    def A(p, text, frag=""):
+        return '<a href="' + c.link(p, frag) + '">' + text + '</a>'
+    for nm, sl in [("DeWalt","dewalt"),("Milwaukee","milwaukee"),("Ryobi","ryobi"),("Ridgid","ridgid"),("Makita","makita"),("Craftsman","craftsman"),("Shop-Vac","shop-vac"),("Vacmaster","vacmaster"),("WEN","wen"),("Shark","shark"),("Prolux","prolux"),("Samsung","samsung"),("Hampton Bay","hampton-bay")]:
+        main = main.replace("<span>" + nm + "</span>", '<a href="' + c.link("brands/" + sl + "/") + '">' + nm + "</a>", 1)
+    TAGS = [("Dust adapters","tools/hose-size-finder/"),("Hose fittings","glossary/dust-port-hose-sizes/"),("Clips &amp; covers","parts/"),("Rollers","brands/samsung/"),
+            ("Brackets","industries/industrial-shops/"),("Jigs &amp; fixtures","glossary/jig/"),("Prototypes","tools/material-picker/"),("Organizers","industries/warehouse-cold-storage/"),
+            ("Enclosures","glossary/asa/"),("No tooling","glossary/small-batch-manufacturing/"),("No 1,000-unit minimums","glossary/small-batch-manufacturing/"),("Repeat orders","faq/")]
+    for t_, p_ in TAGS:
+        main = main.replace("<li>" + t_ + "</li>", "<li>" + A(p_, t_) + "</li>", 1)
+    for b_, p_, f_ in [("Free reprint","faq/",""),("300 mm³","","materials"),("Modesto, CA","faq/","")]:
+        main = re.sub(r'<div><b>' + re.escape(b_) + r'</b><span>([^<]*)</span></div>', lambda m: '<a class="fact" href="' + c.link(p_, f_) + '"><b>' + b_ + '</b><span>' + m.group(1) + '</span></a>', main, 1)
+    main = main.replace("<p>Send photos, the broken piece,", "<p>" + A("guides/how-to-measure-a-part/", "Send photos") + ", the broken piece,", 1)
+    main = main.replace("<p>Calipers in the shop,", "<p>" + A("guides/how-to-measure-a-part/", "Calipers") + " in the shop,", 1)
+    main = main.replace("Send us your measurements or the part,", "Send us your " + A("guides/how-to-measure-a-part/", "measurements") + " or the part,", 1)
+    main = main.replace("Code-compliance parts and food-contact parts", "Code-compliance parts and " + A("glossary/food-contact/", "food-contact parts"), 1)
+    main = main.replace("then email the request to us with a photo of the part.", "then email the request to us with a " + A("guides/how-to-measure-a-part/", "photo of the part") + ".", 1)
     # glossary links in materials table + process
     for name, slug in [("PLA / PLA-CF", "pla"), ("PETG", "petg"), ("ASA / ABS", "asa"), ("PA-CF (nylon carbon)", "pa-cf")]:
         main = re.sub(r'(<td class="m"><i style="background:#[0-9A-F]{6}"></i>)' + re.escape(name) + "</td>", r'\1<a href="' + c.link("glossary/" + slug + "/") + '">' + name + "</a></td>", main)
@@ -304,7 +401,7 @@ def home(c, art=False):
 </section>
 
 """
-    main = main.replace('<section id="quote"', tools_sec + '<section id="quote"', 1)
+    main = main.replace('<div class="brands">', tools_sec + '<div class="brands">', 1)
     for nm, sl in [("Food processing", "food-processing"), ("Agriculture", "agriculture"), ("Warehouse &amp; cold storage", "warehouse-cold-storage"), ("Industrial shops", "industrial-shops")]:
         main = main.replace("<div><h3>" + nm + "</h3>", '<div><h3><a href="' + c.link("industries/" + sl + "/") + '" style="color:inherit;text-decoration:none">' + nm + "</a></h3>", 1)
     main = main.replace('<section id="quote"', f"""<section id="learn" style="border-top:1px solid var(--line);padding-block:80px">
@@ -325,6 +422,7 @@ def home(c, art=False):
     web = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE, "url": BASE + "/"}
     script = TPL[TPL.index('<script id="cat-data"'):]
     sample = json.dumps({k: c.asset('img/sample-' + k + '.jpg') for k in ['adapter','nozzle','brush','separator','clip','roller']})
+    script = script.replace("im.src=IMG[it.i];", "im.src=IMG[it.i];im.setAttribute('data-light',IMG[it.i].replace('.jpg','-light.jpg'));")
     script = script.replace('{{CAT}}', json.dumps(CAT, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')).replace('{{IMG_SAMPLE}}', sample)
     main = main + '\n<script>window.TPF_HOME=1</script>\n' + script
     return doc(c, head(c, title, desc, [org, web]), main, art_index=art)
@@ -372,6 +470,7 @@ def parts(c):
 def FAQS(c):
     G = lambda s, t: f'<a href="{c.link("glossary/" + s + "/")}">{t}</a>'
     return [
+     ("When do you open?", f"<p>We open January 1, 2027. You can send quote requests now, and we'll reply with questions or a written quote so your job is ready to start when we open.</p>"),
      ("What should I send to get a quote?", f"<p>The original part is best, even if it's broken. If you can't send it, send clear photos from a few angles with a ruler or calipers in the shot, plus the make and model of the equipment and any part number you can find.</p><p>Have a 3D file? Attach it. We accept STL, STEP, and most {G('cad','CAD')} formats.</p>"),
      ("How much does a part cost?", "<p>It depends on the part's size, the material, and how many you need. Most business jobs run from about $75 to $800 or more. Every job gets a written quote with the material, price, and turnaround before we print anything.</p>"),
      ("How long does it take?", f"<p>Turnaround depends on whether the part needs to be measured and modeled from scratch or we already have the model. Your written quote states the turnaround before work starts. Repeat orders are faster because your model is already on file.</p>"),
@@ -470,8 +569,8 @@ def privacy(c):
 </div></div>
 <div class="wrap"><div class="prose">
   <h2>What we collect</h2>
-  <p>This website doesn't use accounts, tracking cookies, or advertising. The quote form doesn't send anything by itself: it prepares a message that you choose to send from your own email.</p>
-  <p>When you email us, we receive what you include, such as your name, company, contact details, part description, photos, and files.</p>
+  <p>This website doesn't use accounts, tracking cookies, or advertising. The quote form doesn't send anything by itself: it prepares a request that you choose to send to us.</p>
+  <p>When you send us a request, we receive what you include, such as your name, company, contact details, part description, photos, and files.</p>
   <h2>How we use it</h2>
   <p>We use your information only to answer your request, prepare quotes, make and deliver your parts, and keep records for repeat orders and our accounts. We don't sell or rent your information.</p>
   <h2>Files and part designs</h2>
@@ -479,11 +578,52 @@ def privacy(c):
   <h2>Third-party services</h2>
   <p>This site loads fonts from Google Fonts, which may log your IP address. Links to our eBay store take you to eBay, which has its own privacy policy.</p>
   <h2>Contact</h2>
-  <p>Questions or deletion requests: {EMAIL}.</p>
+  <p>Questions or deletion requests: contact us through the quote form on our home page.</p>
   <p style="color:var(--faint);font-size:.88rem">Last updated October 2026.</p>
 </div></div>
 </main>"""
     return doc(c, head(c, "Privacy | True Part Fabrication", "How True Part Fabrication handles the information you share with us.", [crumbs_ld([("Home", ""), ("Privacy", "privacy/")])]), body)
+
+
+TERMS_SECTIONS = [
+ ("About these terms", ["These terms apply to quotes, orders, and parts from True Part Fabrication LLC (\"we,\" \"us\"), a California company in Modesto. By sending a quote request or placing an order, you agree to them. Your written quote may add details for a specific job; if the quote and these terms differ, the quote controls for that job."]),
+ ("Quotes and orders", ["Every job starts with a written quote that states the part, material, quantity, price, and estimated turnaround. Work begins after you approve the quote.", "Turnaround times are estimates. We'll tell you promptly if a job will take longer than quoted.", "Payment terms, including any deposit, are stated in your quote."]),
+ ("Aftermarket parts", ["Our parts are aftermarket parts that we design and make. They are not original manufacturer (OEM) parts. Brand names and part numbers are used only to describe fit. We are not affiliated with or endorsed by any brand we mention.", "Using an aftermarket part may affect a manufacturer's warranty on your equipment. Check your warranty before installing one."]),
+ ("Parts we don't make", ["We don't make parts where a failure could hurt someone, including safety-critical, life-safety, or load-bearing parts; pressurized or air-pressure parts; electrical parts and housings; automotive braking or steering parts; child-safety, medical, or pool-safety items; code-compliance parts; and parts that contact food or drink.", "We may decline any job, and we'll tell you why."]),
+ ("Your information and designs", ["You're responsible for the accuracy of the measurements, photos, drawings, and files you send, and for describing how the part will be used.", "By sending us a part, drawing, or file, you confirm you have the right to have it reproduced or modified for your own use. We keep your part's model on file so we can reprint it for you; we don't sell it or make it for others without your permission."]),
+ ("Fit guarantee", ["If a part we make doesn't fit the equipment described in your quote, tell us within 30 days of delivery. Send your measurements or the part, and we'll adjust the model and reprint it at no charge.", "The fit guarantee covers fit. It doesn't cover parts used outside the conditions described in your quote (for example, higher heat or load), parts that were modified after delivery, or problems caused by incorrect measurements or information you provided. In those cases we'll quote a corrected part."]),
+ ("Intended use", ["You're responsible for confirming that a part is suitable for your equipment and use, and for installing it correctly. 3D-printed parts have different properties from molded parts; we'll recommend a material, but final suitability is your decision."]),
+ ("Limitation of liability", ["To the extent the law allows, our total liability for any part or job is limited to the amount you paid for it, and we aren't liable for indirect or consequential losses such as downtime or lost profits. Nothing in these terms limits rights you have under law that can't be waived."]),
+ ("Governing law", ["These terms are governed by the laws of the State of California."]),
+ ("Changes and contact", ["We may update these terms. The version in effect when you approve a quote applies to that job. Questions about these terms: use the email link in the quote section of our home page."]),
+]
+def terms(c):
+    toc = "".join(f'<li><a href="#t{i}" style="color:var(--ink)">{esc(h)}</a></li>' for i, (h, _) in enumerate(TERMS_SECTIONS))
+    secs = "".join(f'<h2 id="t{i}">{esc(h)}</h2>' + "".join(f"<p>{esc(p)}</p>" for p in ps) for i, (h, ps) in enumerate(TERMS_SECTIONS))
+    body = f"""<main id="main">
+<div class="page-hero"><div class="wrap">
+  {crumbs(c, [('Home', ''), ('Terms of Service', 'terms/')])}
+  <h1>Terms of Service</h1>
+  <p class="lead">The plain-language terms for quotes, orders, and our fit guarantee.</p>
+</div></div>
+<div class="wrap"><div class="prose terms">
+  <nav aria-label="On this page"><ol style="margin:0;padding-left:20px;display:grid;gap:6px">{toc}</ol></nav>
+  {secs}
+  <p style="color:var(--faint);font-size:.88rem">Last updated October 2026.</p>
+</div></div>
+</main>"""
+    return doc(c, head(c, "Terms of Service | True Part Fabrication", "Terms for quotes, orders, aftermarket parts, the fit guarantee, and what True Part Fabrication won't make.", [crumbs_ld([("Home", ""), ("Terms of Service", "terms/")])]), body)
+
+def notfound(c):
+    body = f"""<main id="main">
+<div class="page-hero" style="border-bottom:0"><div class="wrap">
+  <div class="label">404</div>
+  <h1>We couldn't find that page</h1>
+  <p class="lead">It may have moved, or the link may be mistyped. These are good places to start:</p>
+  <div class="terms-strip" style="margin-top:26px"><a href="{c.link('')}">Home</a><a href="{c.link('parts/')}">Compatible parts</a><a href="{c.link('tools/hose-size-finder/')}">Hose size finder</a><a href="{c.link('tools/material-picker/')}">Material picker</a><a href="{c.link('resources/')}">All resources</a><a href="{c.link('', 'quote')}">Request a quote</a></div>
+</div></div>
+</main>"""
+    return doc(c, head(c, "Page not found | True Part Fabrication", "This page couldn't be found.", []), body)
 
 # ---------------- BUILD ----------------
 def write(root, path, text):
@@ -499,7 +639,7 @@ def build(mode, root):
     write(root, "assets/site.css", css())
     write(root, "assets/site.js", JS)
     import tools
-    pages = {"": lambda c: home(c, art=(mode == "art")), "parts/": parts, "faq/": faq, "glossary/": gloss_index, "privacy/": privacy}
+    pages = {"": lambda c: home(c, art=(mode == "art")), "parts/": parts, "faq/": faq, "glossary/": gloss_index, "privacy/": privacy, "terms/": terms}
     pages.update(tools.pages())
     for p, fn in pages.items():
         write(root, p + "index.html", fn(Ctx(mode, p)))
@@ -511,6 +651,9 @@ def build(mode, root):
         sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
             f"  <url><loc>{BASE}/{u}</loc><lastmod>2026-10-30</lastmod></url>\n" for u in urls) + "</urlset>\n"
         write(root, "sitemap.xml", sm)
+        nf = notfound(Ctx(mode, ""))
+        nf = re.sub(r'(href|src)="(?!https?:|/|#|mailto:|data:)', r'\1="/', nf).replace('href="/./"', 'href="/"')
+        write(root, "404.html", nf)
         write(root, "robots.txt", (f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n") if INDEX else "# Temporary address: block all crawling until the real domain is live.\nUser-agent: *\nDisallow: /\n")
     return urls
 

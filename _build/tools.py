@@ -6,7 +6,7 @@ esc = html.escape
 HOSE = json.load(open(B.SRC + "/hose_rows.json"))
 CAT = B.CAT
 OEMS = {x["oem"]: x for x in CAT["items"] if x["oem"]}
-SIZE_ORDER = ["1-1/4 in", "1-3/8 in", "1-1/2 in", "1-2/3 in", "1-7/8 in", "2 in", "2-1/4 in", "2-1/2 in", "4 in", "32 mm", "35 mm", "36 mm", "38 mm"]
+SIZE_ORDER = ["15/16 in", "1 in", "1-1/4 in", "1-3/8 in", "1-1/2 in", "1-2/3 in", "1-3/4 in", "1-7/8 in", "2 in", "2-1/4 in", "2-1/2 in", "4 in", "32 mm", "35 mm", "36 mm", "38 mm", "22 mm", "24 mm"]
 
 def clean_model(m): return re.sub(r"\s*\((?:not|no |aftermarket|fits)[^)]*\)", "", m).strip()
 def group(r):
@@ -42,6 +42,8 @@ EXTRA_CSS = r"""
 .cf{font:.68rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 8px;white-space:nowrap}
 .cf.Confirmed{color:#7fe0a0;border:1px solid rgba(127,224,160,.4)}
 .cf.Likely{color:#f0c46a;border:1px solid rgba(240,196,106,.4)}
+.explain b.ok{color:#7fe0a0}.explain b.lk{color:#f0c46a}
+.result p a.btn{color:#fff}
 .cf.Verify,.cf.na{color:var(--faint);border:1px solid var(--line)}
 .ftable a.ask{color:var(--ink);font-weight:600;font-size:.84rem;white-space:nowrap}
 .filters{display:grid;gap:14px;margin-bottom:22px}
@@ -54,13 +56,13 @@ EXTRA_CSS = r"""
 .explain p{color:var(--muted);font-size:.93rem;margin-top:8px}
 @media (max-width:860px){.explain{grid-template-columns:1fr}}
 .picker{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
-.q{position:relative;border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:24px;margin:0 0 16px}
-.q legend{font:600 1rem var(--f-body);padding:0 6px;color:var(--ink)}
-.q .opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.q input{position:absolute;opacity:0;pointer-events:none}
-.q label.o{cursor:pointer;border:1px solid #3a3a40;border-radius:999px;padding:9px 15px;font-size:.9rem;color:var(--ink);transition:all .2s;text-transform:none;letter-spacing:0;font-family:var(--f-body)}
-.q input:checked+label.o{background:var(--accent);border-color:var(--accent);color:#fff}
-.q input:focus-visible+label.o{outline:2px solid var(--accent-hi);outline-offset:2px}
+.mq{position:relative;border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:24px;margin:0 0 16px}
+.mq legend{font:600 1rem var(--f-body);padding:0 6px;color:var(--ink)}
+.mq .opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.mq input{position:absolute;opacity:0;pointer-events:none}
+.mq label.o{cursor:pointer;border:1px solid #3a3a40;border-radius:999px;padding:9px 15px;font-size:.9rem;color:var(--ink);transition:all .2s;text-transform:none;letter-spacing:0;font-family:var(--f-body)}
+.mq input:checked+label.o{background:var(--accent);border-color:var(--accent);color:#fff}
+.mq input:focus-visible+label.o{outline:2px solid var(--accent-hi);outline-offset:2px}
 .result{position:sticky;top:120px;border:1px solid rgba(227,38,47,.45);border-radius:8px;padding:28px;background:linear-gradient(135deg,rgba(227,38,47,.14),rgba(227,38,47,.02))}
 .result .k{font:500 .7rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent-hi)}
 .result h2{font-size:2rem;margin-top:10px}
@@ -141,7 +143,7 @@ def hose_finder(c):
   <p class="empty" id="hf-empty" hidden>Nothing matches. Try a shorter model number, or <a href="{c.link('', 'quote')}" style="color:var(--ink)">ask us</a> and we'll measure it.</p>
   <div class="explain">
     <div><h3>Sizes are nominal</h3><p>"2-1/2 inch" names a family, not an exact measurement. Cuff and port diameters vary by brand, which is why universal adapters often fit loosely. See {G(c,'dust-port-hose-sizes','shop-vac hose sizes')}.</p></div>
-    <div><h3>Confidence ratings</h3><p><b style="color:#7fe0a0">Confirmed</b> means a published manufacturer spec. <b style="color:#f0c46a">Likely</b> means matched by size or rating. <b>Verify</b> means check your product before buying.</p></div>
+    <div><h3>Confidence ratings</h3><p><b class="ok">Confirmed</b> means a published manufacturer spec. <b class="lk">Likely</b> means matched by size or rating. <b>Verify</b> means check your product before buying.</p></div>
     <div><h3>Measure to be sure</h3><p>Before ordering an adapter, measure the outside of the hose cuff and the inside or outside of the port. Our <a href="{c.link('guides/how-to-measure-a-part/')}" style="color:var(--ink)">measuring guide</a> shows how.</p></div>
   </div>
   <p class="legal">Researched October 2026 from manufacturer and retailer listings. Brand names and model numbers belong to their owners and are used only to describe fit. True Part Fabrication is not affiliated with any brand listed. Always confirm sizes on your own equipment.</p>
@@ -179,7 +181,7 @@ def material_picker(c):
     qs = ""
     for key, label, opts in Q:
         o = "".join(f'<input type="radio" name="{key}" id="{key}-{v}" value="{v}"{" checked" if i == 0 else ""}><label class="o" for="{key}-{v}">{esc(t)}</label>' for i, (v, t) in enumerate(opts))
-        qs += f'<fieldset class="q"><legend>{esc(label)}</legend><div class="opts">{o}</div></fieldset>'
+        qs += f'<fieldset class="mq"><legend>{esc(label)}</legend><div class="opts">{o}</div></fieldset>'
     rows = "".join(f'<tr><td class="m"><a href="{c.link("glossary/" + s + "/")}">{n}</a></td><td class="t">{h}{(" / " + f) if f else ""}</td><td>{dots(uv)}</td><td>{dots(t)}</td><td>{dots(fl)}</td><td>{dots(st)}</td><td>{dots(w)}</td><td>{"$" * co}</td><td>{esc(best)}</td></tr>'
                    for n, s, h, f, uv, t, fl, st, w, co, best in MATS)
     links = {n: c.link("glossary/" + s + "/") for n, s, *_ in MATS}
@@ -266,6 +268,10 @@ BRANDS = {
  "Milwaukee": ("milwaukee", "wet/dry vacs and vacuum accessories", "Milwaukee's wet/dry vacs use 1-1/4, 1-7/8, and 2-1/2 inch hoses, and its stepped attachment line spans all three. We make compatible separators, nozzles, collectors, and adapters, plus parts for its modular vac systems."),
  "RYOBI": ("ryobi", "wet/dry vacs and accessories", "RYOBI's cordless and corded wet/dry vacs mostly use 1-1/4 and 1-7/8 inch hoses, with larger models at 2-1/2 inches. We make compatible nozzles, crevice tools, adapters, and fittings."),
  "RIDGID": ("ridgid", "wet/dry vacs and accessories", "RIDGID's wet/dry vacs are built around 1-7/8 and 2-1/2 inch locking hoses. We make compatible nozzles, adapters, drain fittings, and accessories, including step-downs to smaller tool ports."),
+ "Makita": ("makita", "dust extractors and wet/dry vacs", "Makita's cordless and corded dust extractors use 1 inch and 1-1/4 inch hoses, with tool cuffs in 22, 24, and 38 mm. We make adapters that join Makita hoses to other brands' tools and ports, and step-downs between Makita's own cuff sizes."),
+ "Craftsman": ("craftsman", "wet/dry vacs and accessories", "Craftsman wet/dry vacs use 1-1/4, 1-7/8, and 2-1/2 inch hoses, with Pos-I-Lock fittings on the larger models. We make step adapters between those sizes, plus compatible nozzles, grips, and fittings."),
+ "Shop-Vac": ("shop-vac", "wet/dry vacs and accessories", "Shop-Vac wet/dry vacs use 1-1/4, 1-1/2, 1-7/8, and 2-1/2 inch hoses, many with Lock-On ends. We make conversion adapters between those sizes and fittings that connect Shop-Vac hoses to power tools."),
+ "Vacmaster": ("vacmaster", "wet/dry vacs and accessories", "Vacmaster wet/dry vacs use 1-1/4, 1-7/8, and 2-1/2 inch hoses. We make adapters between those sizes, power tool adapters, and compatible nozzles."),
  "WEN": ("wen", "dust collection and woodworking tools", "WEN's dust collectors use 4 inch hoses, and its benchtop tools have 1-1/2, 2, 2-1/2, and 4 inch dust ports. We make reducers, blast gates, elbows, separators, and adapters that tie them together."),
  "Shark": ("shark", "vacuums", "Shark uprights, cordless sticks, and robot vacuums use brand-specific wands, latches, and attachments. We make compatible crevice tools, brushes, wall mounts, and accessories."),
  "Prolux": ("prolux", "backpack and canister vacuums", "Prolux backpack and canister vacuums mostly use 1-1/2 inch (38 mm) wands and tools, the common commercial size. We make compatible floor tools, caddies, latches, and fittings."),
@@ -279,14 +285,14 @@ def brand_page(c, b):
     rows = "\n".join(f"""<div class="row"><div class="b">{esc(it['b'])}</div><h3 class="n" style="font:600 1rem var(--f-body);text-transform:none;letter-spacing:0">{esc(it['n'])}{'' if it['f'] else '<span class="fitbadge">Fit to confirm</span>'}</h3><div class="o">{esc(B.rp(it))}</div><div class="f">{esc(it['f'] or 'Ask us to confirm your model')}</div><a class="btn ghost" style="height:34px;padding:0 14px;font-size:.8rem" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request</a></div>""" for it in items)
     htab = ""
     if hose:
-        trs = "".join(f'<tr><td class="mo">{esc(r["mc"])}</td><td>{esc(r["d"])}</td><td>{"".join(f"<span class=sz>{esc(s)}</span>" for s in r["s"])}</td><td><span class="cf {r["conf"] or "na"}">{esc(r["conf"] or "Unrated")}</span></td></tr>' for r in hose[:18])
+        trs = "".join(f'<tr><td class="mo">{esc(r["mc"])}</td><td>{esc(r["d"])}</td><td>{"".join(f"<span class=sz>{esc(s)}</span>" for s in r["s"])}</td><td><span class="cf {r["conf"] or "na"}">{esc(r["conf"] or "Unrated")}</span></td></tr>' for r in hose[:24])
         htab = f"""<div class="head" style="margin:72px 0 24px"><div class="label">Hose and port sizes</div><h2>{esc(b)} <em class="s">connection sizes</em></h2><p>Published hose and port sizes for {esc(b)} {esc(cat)}. See the full <a href="{c.link('tools/hose-size-finder/')}" style="color:var(--ink)">hose size finder</a> for accessories and other brands.</p></div>
 <div class="ftable"><table style="min-width:640px"><thead><tr><th>Model</th><th>Item</th><th>Size</th><th>Confidence</th></tr></thead><tbody>{trs}</tbody></table></div>"""
     body = f"""<main id="main">
 {page_hero(c, [('Home',''),('Resources','resources/'),(b + ' parts','brands/' + slug + '/')], f'Compatible parts for {b} {cat}', esc(intro))}
 <section style="padding-block:44px 100px"><div class="wrap">
-  <div class="parts-top"><h3>{len(items)} compatible {esc(b)} parts</h3><a class="btn ghost" href="{c.link('parts/')}">All brands <span class="ar">→</span></a></div>
-  <div class="list">{rows}</div>
+  <div class="parts-top"><h3>{f"{len(items)} compatible {esc(b)} parts" if items else f"Custom {esc(b)} adapters and fittings, made to order"}</h3><a class="btn ghost" href="{c.link('parts/')}">All brands <span class="ar">→</span></a></div>
+  {f'<div class="list">{rows}</div>' if items else f'<p style="color:var(--muted);max-width:62ch">We don\'t keep a stock list for {esc(b)} yet. Every part is modeled to your hose, port, or tool. Check the sizes below, then <a href="{c.link("", "quote")}" style="color:var(--ink)">request a quote</a> with your model number.</p>'}
   {htab}
   <p class="legal">These are compatible aftermarket parts made by True Part Fabrication, not genuine {esc(b)} parts. {esc(b)} and its model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>
 </div></section>

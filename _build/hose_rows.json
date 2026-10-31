@@ -1,1 +1,3591 @@
-[{"b": "Shark", "sys": "Upright - Navigator Lift-Away", "m": "193FFJ", "d": "Floor nozzle hose (pod-to-nozzle)", "t": "hose", "c": "Navigator 1-1/4in friction", "w": "NV350, NV351, NV352, NV355, NV356, NV356E, NV357, NV360, UV440", "conf": "Likely", "s": ["1-1/4 in"]}, {"b": "Shark", "sys": "Upright - Navigator Lift-Away", "m": "112FFJ", "d": "Crevice tool + dusting brush set", "t": "crevice/dusting", "c": "Navigator 1-1/4in friction", "w": "NV350, NV351, NV352, NV355, NV356E, NV357, NV360, NV370, UV440", "conf": "Likely", "s": ["1-1/4 in"]}, {"b": "Shark", "sys": "Upright - Navigator Lift-Away", "m": "121FFJ", "d": "Extension wand (23in)", "t": "wand", "c": "Navigator 1-1/4in friction", "w": "NV350, NV351, NV352, NV356E, NV360, NV361, UV440", "conf": "Likely", "s": ["1-1/4 in"]}, {"b": "RIDGID", "sys": "vac", "m": "WD4070", "d": "4 gal 5.0 HP portable wet/dry vac", "t": "vac (corded)", "c": "1-7/8 in. x 7 ft locking DUAL-FLEX hose", "w": "VF3500/VF3800 filters; 1-7/8 in. accessories", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "WD0319", "d": "3 gal 18V cordless handheld wet/dry vac (tool only)", "t": "vac (18V)", "c": "1-7/8 in. 2-7 ft expandable locking hose", "w": "VF3400 (incl), VF3500/VF3600/VF3700/VF3800; RIDGID 18V batteries", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "HD0918", "d": "9 gal 18V cordless NXT wet/dry vac (tool only)", "t": "vac (18V)", "c": "1-7/8 in. x 7 ft hose", "w": "VF4000 recommended upgrade; RIDGID 18V batteries", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "HD0919", "d": "9 gal 18V cordless NXT wet/dry vac", "t": "vac (18V)", "c": "1-7/8 in. x 7 ft locking DUAL-FLEX hose", "w": "VF4000 (incl), VF5000/VF6000/VF7000/VF8000; 18V batteries R840020 R840040 R840060 R840080 R870015", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "HD1200", "d": "12 gal 5.0 HP NXT wet/dry vac", "t": "vac (corded)", "c": "2-1/2 in. x 7 ft locking DUAL-FLEX hose", "w": "VF4000 (incl), VF5000/VF6000/VF8000/VF7000; VF3502/VF3602 bags; LA25xx accessories", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "HD1400", "d": "14 gal 6.0 HP NXT wet/dry vac", "t": "vac (corded)", "c": "2-1/2 in. x 7 ft hose", "w": "VF4000-VF8000 5-16 gal filters; VF3502/VF3602 bags", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "HD1800", "d": "16 gal 6.5 HP NXT wet/dry vac with cart", "t": "vac (corded)", "c": "2-1/2 in. x 7 ft locking DUAL-FLEX hose", "w": "VF5000 (incl); 5-16 gal filters; VF3502/VF3602 bags", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1720", "d": "1-7/8 in. x 7 ft Tug-A-Long hose (adapts to 1-1/4 in. accessories)", "t": "hose", "c": "1-7/8 in. locking cuff; incl 1-7/8>1-1/4 adapter", "w": "Most 4/6/9 gal RIDGID; WD4070; WD16360", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1722", "d": "1-7/8 in. x 14 ft locking hose", "t": "hose", "c": "1-7/8 in. locking", "w": "HD0300 HD0318 HD0600 HD0900 HD0919 WD0319 WD3050 WD4070 WD4080 WD4522 WD5500 WD6425", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT2572", "d": "1-7/8 in. x 8 ft Pro-Grade locking hose", "t": "hose", "c": "1-7/8 in. locking", "w": "RIDGID vacs with 1-7/8 in. hose", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2570", "d": "1-7/8 in. x 10 ft locking Professional hose kit (5 adapters)", "t": "hose", "c": "1-7/8 in. locking both ends; adapters for 2-1/2 in. inlets", "w": "HD0300 HD0318 HD0600 HD0900 HD0919 WD0319 WD3050 WD4070 WD4080 WD4522 WD5500 WD6425 RV2400A RV2600B RV2400HF", "conf": "Confirmed", "s": ["1-7/8 in", "2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT2520", "d": "2-1/2 in. x 7 ft Tug-A-Long hose", "t": "hose", "c": "2-1/2 in.; adapter for all RIDGID 2-1/2 in. inlets", "w": "RIDGID 2-1/2 in. vacs", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT2522", "d": "2-1/2 in. x 20 ft Tug-A-Long hose", "t": "hose", "c": "2-1/2 in.", "w": "RIDGID 2-1/2 in. vacs", "conf": "Verify", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2521", "d": "2-1/2 in. x 13 ft DUAL-FLEX locking hose kit (3 adapters)", "t": "hose", "c": "2-1/2 in. locking; cuff 2-1/4 OD", "w": "HD1200 HD1280 HD1400 HD1401 HD1600 HD1640 HD1800 HD1900 WD1060 WD1956", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2522", "d": "2-1/2 in. x 20 ft DUAL-FLEX locking hose kit", "t": "hose", "c": "2-1/2 in. locking", "w": "HD1200 HD1280 HD1400 HD1401 HD1600 HD1640 HD1800 HD1900 WD1060 WD1956", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT2505", "d": "2-1/2 in. hose grip with bleeder valve", "t": "adapter", "c": "2-1/2 in. friction fit (non-locking)", "w": "2-1/2 in. RIDGID hoses/wands", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2508", "d": "2-1/2 in. locking extension wand (20.5 in.)", "t": "wand", "c": "2-1/2 in. locking", "w": "All RIDGID 2-1/2 in. hose vacs", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2518", "d": "2-1/2 in. locking telescoping wand (28-48 in.)", "t": "wand", "c": "2-1/2 in. locking", "w": "RIDGID 2-1/2 in. vacs incl HD1200, older non-locking vacs, WD18510", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2509", "d": "2-1/2 in. locking utility nozzle", "t": "nozzle", "c": "2-1/2 in. locking", "w": "All RIDGID 2-1/2 in. hose vacs", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2510", "d": "2-1/2 in. locking wet nozzle", "t": "nozzle", "c": "2-1/2 in. locking", "w": "RIDGID 2-1/2 in. vacs", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2501", "d": "2-1/2 in. locking round dusting brush", "t": "nozzle", "c": "2-1/2 in. locking", "w": "RIDGID 2-1/2 in. vacs", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2502", "d": "2-1/2 in. locking crevice tool", "t": "nozzle", "c": "2-1/2 in. locking", "w": "RIDGID 2-1/2 in. vacs", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2503", "d": "2-1/2 in. locking car nozzle", "t": "nozzle", "c": "2-1/2 in. locking", "w": "RIDGID 2-1/2 in. vacs", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "LA2514", "d": "2-1/2 in. locking floor brush", "t": "floor tool", "c": "2-1/2 in. locking", "w": "RIDGID 2-1/2 in. vacs", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1701", "d": "1-7/8 in. dusting brush", "t": "nozzle", "c": "1-7/8 in. friction", "w": "RIDGID 1-7/8 in. vacs", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1702", "d": "1-7/8 in. crevice tool", "t": "nozzle", "c": "1-7/8 in.", "w": "RIDGID 1-7/8 in. vacs", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1708", "d": "1-7/8 in. extension wand", "t": "wand", "c": "1-7/8 in.", "w": "RIDGID 1-7/8 in. vacs", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1709", "d": "1-7/8 in. utility nozzle", "t": "nozzle", "c": "1-7/8 in.", "w": "RIDGID 1-7/8 in. vacs", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1710", "d": "1-7/8 in. wet nozzle (squeegee)", "t": "nozzle", "c": "1-7/8 in.", "w": "RIDGID 1-7/8 in. vacs", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1712", "d": "1-7/8 in. crevice/dusting brush combo", "t": "nozzle", "c": "1-7/8 in.", "w": "RIDGID 1-7/8 in. vacs", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1714", "d": "1-7/8 in. floor brush", "t": "floor tool", "c": "1-7/8 in.", "w": "RIDGID 1-7/8 in. vacs", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1781", "d": "1-7/8 in. car nozzle", "t": "nozzle", "c": "1-7/8 in.", "w": "RIDGID 1-7/8 in. vacs", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT2530", "d": "Multi-surface carpet/hard floor nozzle", "t": "floor tool", "c": "1-1/4 or 2-1/2 in. (adapter incl); 1-7/8 needs VT1755", "w": "RIDGID vacs with 2-1/2 or 1-1/4 hose/wand", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT2571", "d": "Turbo beater bar kit", "t": "floor tool", "c": "1-1/4 and 2-1/2 in. (adapter incl)", "w": "Select RIDGID vacs (chart PDF); reviewer used on WD4070", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "RIDGID", "sys": "vac", "m": "VT1734", "d": "7-pc car cleaning kit with 14 ft 1-7/8 in. DUAL-FLEX hose", "t": "car kit", "c": "1-7/8 in. hose; step-down to 1-1/4 in. tools", "w": "All RIDGID vacs per listing; drum-port vacs direct; 4 gal, RT0600 confirmed", "conf": "Confirmed", "s": ["1-1/4 in", "1-7/8 in"]}, {"b": "RIDGID", "sys": "tool dust", "m": "VT1407", "d": "2-1/2 in. power tool adaptor (stepped, trimmable)", "t": "adapter", "c": "2-1/2 in. vac hose cuff to ~1-2 in. tool ports (trim to fit)", "w": "LA2520 LA2521 LA2522 LA2570 hoses; miter saws, sanders, benchtop tools", "conf": "Likely", "s": ["2 in", "2-1/2 in"]}, {"b": "RIDGID", "sys": "tool dust", "m": "R4520", "d": "10 in. cast iron table saw", "t": "tool", "c": "4 in. cabinet dust port", "w": "Dust collector; shop vac needs 4 in. reducer (none from RIDGID)", "conf": "Verify", "s": ["4 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "PCL732B", "d": "18V ONE+ 5 Gal. Bucket Top Wet/Dry Vacuum (tool only), incl. hose + crevice tool", "t": "vacuum", "c": "1-1/4 in. hose", "w": "A32BT01; UniversalFit A32UA01-07 + A32AD01", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "PCL733B", "d": "18V ONE+ 1 Gal. Wet/Dry Vacuum (tool only)", "t": "vacuum", "c": "1-1/4 in. x 5 ft hose", "w": "A32VH03; A323G01; UniversalFit A32UA01-07", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "PCL734B", "d": "18V ONE+ LINK 3 Gal. Wet/Dry Vacuum (tool only)", "t": "vacuum", "c": "1-1/4 in. x 6 ft hose", "w": "A32VH03; A323G01; UniversalFit A32UA01-07", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "PCL735B", "d": "18V ONE+ 6 Gal. Wet/Dry Vacuum (tool only)", "t": "vacuum", "c": "1-7/8 in. x 7 ft hose", "w": "A32VH02; A326G01; A326G01N; A3210G01; UniversalFit A32UA01-07", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "PWV201B", "d": "18V ONE+ 4.75 Gal. Wet/Dry Vacuum (tool only)", "t": "vacuum", "c": "1-3/8 in. x 5 ft hose", "w": "A32VH04N; A32TW01N; A32SS02N; UniversalFit A32UA01-07 (range 1-1/4 to 2-1/2)", "conf": "Confirmed", "s": ["1-3/8 in"]}, {"b": "RYOBI", "sys": "40V", "m": "RY40WD01B", "d": "40V 10 Gal. Wet/Dry Vacuum (tool only)", "t": "vacuum", "c": "1-7/8 in. x 8 ft locking hose", "w": "A32VH05; A326G01; A3210G01; A32FB01; UniversalFit A32UA01-07", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "A32VH03", "d": "6 ft x 1-1/4 in. replacement wet/dry hose", "t": "hose", "c": "1-1/4 in.", "w": "PCL733, PCL734, P3240", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "A32VH02", "d": "7 ft x 1-7/8 in. replacement hose", "t": "hose", "c": "1-7/8 in.", "w": "PCL735, P770", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "A32VH04N", "d": "5 ft x 1-3/8 in. replacement hose", "t": "hose", "c": "1-3/8 in.", "w": "PWV200, PWV201", "conf": "Confirmed", "s": ["1-3/8 in"]}, {"b": "RYOBI", "sys": "40V", "m": "A32VH05", "d": "8 ft x 1-7/8 in. locking wet/dry hose", "t": "hose", "c": "1-7/8 in.", "w": "RY40WD01", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "A32BT01", "d": "1-1/4 in. 2-pc Bucket Top accessory kit (4 ft hose + crevice tool)", "t": "hose kit", "c": "1-1/4 in.", "w": "PCL732", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "A323G01", "d": "1-1/4 in. crevice tool + utility nozzle", "t": "nozzle kit", "c": "1-1/4 in.", "w": "PCL733, PCL734, P3240", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "RYOBI", "sys": "18V ONE+/40V", "m": "A326G01", "d": "1-7/8 in. 4-pc kit: crevice tool, floor nozzle, 2 extension wands", "t": "wand/nozzle kit", "c": "1-7/8 in.", "w": "RY40WD01, PCL735, P770", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "A326G01N", "d": "P770 6 Gal. accessory kit: 1-7/8 in. crevice tool, floor nozzle, 2x15 in. wands", "t": "wand/nozzle kit", "c": "1-7/8 in.", "w": "P770; likely PCL735, RY40WD01", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RYOBI", "sys": "18V ONE+/40V", "m": "A3210G01", "d": "1-7/8 in. 6-pc kit: 2 wands, crevice, car nozzle, floor nozzle w/ squeegee + brush", "t": "wand/nozzle kit", "c": "1-7/8 in.", "w": "RY40WD01, PCL735, P770", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "A32TW01N", "d": "1-3/8 in. telescoping extension wand, 21-35 in.", "t": "extension wand", "c": "1-3/8 in.", "w": "PWV200, PWV201", "conf": "Confirmed", "s": ["1-3/8 in"]}, {"b": "RYOBI", "sys": "18V ONE+", "m": "A32SS02N", "d": "1-3/8 in. accessory kit: crevice tool, floor nozzle, dust brush", "t": "nozzle kit", "c": "1-3/8 in.", "w": "PWV200, PWV201", "conf": "Confirmed", "s": ["1-3/8 in"]}, {"b": "RYOBI", "sys": "UniversalFit", "m": "A32AD01", "d": "UniversalFit wet/dry vacuum adapter (step adapter)", "t": "adapter", "c": "1-1/4 to 2-1/2 in.", "w": "All RYOBI wet/dry vacs; tool dust ports (e.g. miter saw per ToolGuyd)", "conf": "Confirmed", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "RYOBI", "sys": "UniversalFit", "m": "A32UA01", "d": "UniversalFit crevice tool", "t": "nozzle", "c": "1-1/4 / 1-7/8 / 2-1/2 in.", "w": "All RYOBI wet/dry vacs + most brands", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RYOBI", "sys": "UniversalFit", "m": "A32UA02", "d": "UniversalFit flexible micro-crevice tool (rubber)", "t": "nozzle", "c": "1-1/4 / 1-7/8 / 2-1/2 in.", "w": "All RYOBI wet/dry vacs + most brands", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RYOBI", "sys": "UniversalFit", "m": "A32UA03", "d": "UniversalFit flexible extended micro-crevice tool, 14 in.", "t": "nozzle", "c": "1-1/4 / 1-7/8 / 2-1/2 in.", "w": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RYOBI", "sys": "UniversalFit", "m": "A32UA04", "d": "UniversalFit dust brush (triangular)", "t": "brush", "c": "1-1/4 / 1-7/8 / 2-1/2 in.", "w": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RYOBI", "sys": "UniversalFit", "m": "A32UA05", "d": "UniversalFit car nozzle, 3-3/8 in. opening", "t": "nozzle", "c": "1-1/4 / 1-7/8 / 2-1/2 in.", "w": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RYOBI", "sys": "UniversalFit", "m": "A32UA06", "d": "UniversalFit micro-crevice tool (16 bendable straws)", "t": "nozzle", "c": "1-1/4 / 1-7/8 / 2-1/2 in.", "w": "PCL732, PCL733, PCL734, PCL735, PWV200, RY40WD01", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "RYOBI", "sys": "UniversalFit", "m": "A32UA07", "d": "UniversalFit floor head, 10 in. wide", "t": "floor tool", "c": "1-1/4 to 2-1/2 in.", "w": "All RYOBI wet/dry vacs + most brands", "conf": "Confirmed", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "RYOBI", "sys": "18V ONE+ hand vac", "m": "A32K01", "d": "Jobsite hand vac kit: 5 ft x 1-1/4 in. hose, extension wand, crevice tool, floor nozzle", "t": "hose kit", "c": "1-1/4 in.", "w": "PBLHV701, PCL705", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "RYOBI", "sys": "18V ONE+ hand vac", "m": "A32K02", "d": "4-pc wet/dry hand vac kit: crevice, squeegee, dust brush, accessory adaptor", "t": "nozzle kit", "c": "1-7/16 in. accessory (spec says 1-1/2 in.)", "w": "PCL702", "conf": "Confirmed", "s": ["1-1/2 in"]}, {"b": "RYOBI", "sys": "18V ONE+ hand vac", "m": "A32K05", "d": "Hand vac kit: crevice, dust brush, utility nozzle, 2 ft hose", "t": "hose kit", "c": "1-1/4 in.", "w": "PCL705", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "RYOBI", "sys": "18V ONE+ dust", "m": "A21CCV1", "d": "Corner Cat sander vacuum adaptor", "t": "dust adapter", "c": "1-1/4 in. vac hose", "w": "PCL416 Corner Cat sander; 1-1/4 in. vacs (PCL732/733/734)", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "Husky", "sys": "Wet/Dry Vac", "m": "AT18303P-4A", "d": "Husky 4 Gal. poly wet/dry vac, 5 ft hose", "t": "vacuum", "c": "1-1/4 in. hose (per Slickdeals commenter)", "w": "1-1/4 in. accessories", "conf": "Verify", "s": ["1-1/4 in"]}, {"b": "Husky", "sys": "Wet/Dry Vac", "m": "AT18304-6B", "d": "Husky 6 Gal. 4.0 Peak HP stainless wet/dry vac, locking hose, wands, filters, dust bag", "t": "vacuum", "c": "1-1/4 in. hose (per Slickdeals commenter), 5 ft", "w": "1-1/4 in. accessories; Universal AT19-3100 6-gal bags (generic fit claim)", "conf": "Verify", "s": ["1-1/4 in"]}, {"b": "Husky", "sys": "Wet/Dry Vac", "m": "AT18503-10C", "d": "Husky 10 Gal. 6.0 Peak HP stainless wet/dry vac", "t": "vacuum", "c": "1-7/8 in. x 6 ft hose (per manual)", "w": "1-7/8 in. accessories; cartridge filter 6-16 gal (Universal AT08-2566 claims Husky 6-16 gal)", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Husky", "sys": "Wet/Dry Vac", "m": "AT18621P-16A", "d": "Husky 16 Gal. 6.5 Peak HP poly cart wet/dry vac", "t": "vacuum", "c": "2-1/2 in. x 6 ft hose", "w": "2-1/2 in. accessories (Universal AT08-2536 hose, AT08-2591 floor brush); filter 08-2566B/08-2566BP", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Husky", "sys": "Wet/Dry Vac", "m": "AT08-2536", "d": "Universal brand 2-1/2 in. x 6 ft hose for 16 gal (third-party)", "t": "hose", "c": "2-1/2 in.", "w": "AT18621P-16A (2-1/2 in. port)", "conf": "Verify", "s": ["2-1/2 in"]}, {"b": "Husky", "sys": "Wet/Dry Vac", "m": "AT08-2591", "d": "Universal brand 2-1/2 in. floor brush for 16 gal (third-party)", "t": "nozzle", "c": "2-1/2 in.", "w": "AT18621P-16A; most 2.5 in. hoses", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "M18 NEXUS wet/dry", "m": "0910-20", "d": "M18 FUEL 6 Gal wet/dry vac (NEXUS)", "t": "vacuum", "c": "1-7/8 in quarter-turn hose (9 ft incl.)", "w": "1-7/8 in hoses 49-90-1996/1984/1986/1976; 2-1/2 in hoses 49-90-2004/2006 per reviews", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "M18 PACKOUT wet/dry", "m": "0971-20", "d": "M18 FUEL 4 Gal PACKOUT wet/dry vac w/ VACLINK", "t": "vacuum", "c": "1-7/8 in (9 ft expandable 49-90-1976 incl.)", "w": "1-7/8 in hoses/tools; 49-90-1976; dust-extraction hose clip adapter incl.", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "M18 PACKOUT compact", "m": "0970-20", "d": "M18 FUEL PACKOUT 2.5 Gal wet/dry vac", "t": "vacuum", "c": "1-1/4 in (6 ft hose)", "w": "49-90-2014, 49-90-2018, AIR-TIP line", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "Milwaukee", "sys": "M18 compact", "m": "0880-20", "d": "M18 2 Gal wet/dry vac", "t": "vacuum", "c": "1-1/4 in (6 ft hose)", "w": "49-90-2014, 49-90-2018, AIR-TIP", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "Milwaukee", "sys": "M12 compact", "m": "0960-20", "d": "M12 FUEL 1.6 Gal wet/dry vac", "t": "vacuum", "c": "1-1/4 in (5 ft hose)", "w": "49-90-2018, AIR-TIP (Milwaukee Q&A on 49-90-2022)", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "Milwaukee", "sys": "M18 compact", "m": "0940-20", "d": "M18 FUEL compact jobsite vacuum (0.25 gal)", "t": "vacuum", "c": "1-1/4 in (inferred from 49-90-2018 compat list)", "w": "49-90-2018", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "Milwaukee", "sys": "M18 compact", "m": "0882-20", "d": "M18 compact vacuum", "t": "vacuum", "c": "1-1/4 in inlet (4 ft hose)", "w": "49-90-2018", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "Milwaukee", "sys": "M18 backpack", "m": "0885-20", "d": "M18 FUEL 3-in-1 backpack vacuum", "t": "vacuum", "c": "1-7/8 in (6 ft hose)", "w": "49-90-1964 hose; 49-90-1976 (images); AIR-TIP 0980-20 disputed", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in hose", "m": "49-90-1996", "d": "1-7/8 in x 9 ft flexible hose (gray ring)", "t": "hose", "c": "1-7/8 in quarter-turn", "w": "0910, 0920, 0930, 0931", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in hose", "m": "49-90-1984", "d": "1-7/8 in x 16 ft flexible hose", "t": "hose", "c": "1-7/8 in quarter-turn", "w": "0910, 0920, 0930, 0931", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in hose", "m": "49-90-1986", "d": "1-7/8 in x 32-102 in expandable hose", "t": "hose", "c": "1-7/8 in quarter-turn", "w": "0910, 0920, 0930, 0931", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in hose", "m": "49-90-1976", "d": "1-7/8 in x 9 ft expandable hose (37 in collapsed)", "t": "hose", "c": "1-7/8 in quarter-turn", "w": "NEXUS 0910/0914/0915/0920/0926/0930/0931; 0971", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "2-1/2 in hose", "m": "49-90-2006", "d": "2-1/2 in x 9 ft flexible hose (red ring)", "t": "hose", "c": "2-1/2 in quarter-turn", "w": "0930-22HD (stock); 0910/0920 per reviews; M18 FUEL 8-1/4 table saw port direct", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "2-1/2 in hose", "m": "49-90-2004", "d": "2-1/2 in x 16 ft flexible hose", "t": "hose", "c": "2-1/2 in quarter-turn", "w": "Milwaukee wet/dry vacs (0930; 0910/0920 per reviews)", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "1-1/4 in hose", "m": "49-90-2014", "d": "1-1/4 in x 2-6 ft expandable hose", "t": "hose", "c": "1-1/4 in", "w": "0970-20, 0880-20", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "Milwaukee", "sys": "36 mm extractor hose", "m": "49-90-1973", "d": "10 ft accessory hose 36 mm anti-static", "t": "hose", "c": "36 mm quarter-turn, hose clip, removable end", "w": "0888-20/22HD", "conf": "Confirmed", "s": ["36 mm"]}, {"b": "Milwaukee", "sys": "36 mm extractor hose", "m": "49-90-1971", "d": "20 ft accessory hose 36 mm anti-static", "t": "hose", "c": "36 mm quarter-turn, hose clip, removable end", "w": "0888-20/22HD", "conf": "Confirmed", "s": ["36 mm"]}, {"b": "Milwaukee", "sys": "1-7/8 in tools", "m": "49-90-1987", "d": "1-7/8 in extension wand 19-1/2 in", "t": "wand", "c": "1-7/8 in friction", "w": "1-7/8 hoses 49-90-1996/1984/1986; 0910/0920/0971", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in tools", "m": "49-90-1988", "d": "1-7/8 in crevice tool 7-1/2 in", "t": "crevice tool", "c": "1-7/8 in", "w": "1-7/8 hoses 49-90-1996/1984/1986", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in tools", "m": "49-90-2011", "d": "1-7/8 in floor utility nozzle", "t": "nozzle", "c": "1-7/8 in", "w": "0920-20 (included)", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in tools", "m": "49-90-1981", "d": "1-7/8 in round brush", "t": "brush", "c": "1-7/8 in", "w": "1-7/8 hoses 49-90-1996/1984/1986; M18 2 gal only if 1-7/8 hose", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in tools", "m": "49-90-1982", "d": "1-7/8 in floor brush (reversible)", "t": "floor tool", "c": "1-7/8 in", "w": "1-7/8 hoses 49-90-1996/1984/1986", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in tools", "m": "49-90-1983", "d": "1-7/8 in curved nozzle", "t": "nozzle", "c": "1-7/8 in", "w": "1-7/8 hoses", "conf": "Likely", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in tools", "m": "49-90-1985", "d": "1-7/8 in wet floor nozzle 9-1/2 in squeegee", "t": "floor tool", "c": "1-7/8 in", "w": "1-7/8 hoses 49-90-1996/1984/1986", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "Milwaukee", "sys": "1-7/8 in tools", "m": "49-90-1970", "d": "PACKOUT cleaning accessory kit (round brush, floor nozzle, floor brush, crevice, 2 wands) w/ hose end adapter", "t": "kit", "c": "1-7/8 in tools + 36 mm hose-end adapter", "w": "0888-20/22HD", "conf": "Confirmed", "s": ["1-7/8 in", "36 mm"]}, {"b": "Milwaukee", "sys": "2-1/2 in tools", "m": "49-90-2007", "d": "2-1/2 in extension wand 19-1/2 in", "t": "wand", "c": "2-1/2 in friction", "w": "2-1/2 hoses 49-90-2004/2006; 0930-22HD", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "2-1/2 in tools", "m": "49-90-2008", "d": "2-1/2 in crevice tool", "t": "crevice tool", "c": "2-1/2 in", "w": "0930-22HD (included)", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "2-1/2 in tools", "m": "49-90-2009", "d": "2-1/2 in floor utility nozzle", "t": "nozzle", "c": "2-1/2 in", "w": "0930-22HD (included)", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "2-1/2 in tools", "m": "49-90-2001", "d": "2-1/2 in round brush", "t": "brush", "c": "2-1/2 in", "w": "2-1/2 hoses", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "2-1/2 in tools", "m": "49-90-2002", "d": "2-1/2 in floor brush", "t": "floor tool", "c": "2-1/2 in", "w": "2-1/2 hoses 49-90-2004/2006", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "2-1/2 in tools", "m": "49-90-2005", "d": "2-1/2 in wet floor nozzle", "t": "floor tool", "c": "2-1/2 in", "w": "2-1/2 hoses", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "1-1/4 in tools", "m": "49-90-2017", "d": "1-1/4 in round brush", "t": "brush", "c": "1-1/4 in", "w": "0880/0970/0960 class", "conf": "Likely", "s": ["1-1/4 in"]}, {"b": "Milwaukee", "sys": "Adapters", "m": "49-90-1991", "d": "Hose & accessory adapter kit (2-1/2>1-7/8 accessory; 2-1/2>2-1/2/1-7/8 hose; 1-7/8>1-7/8 hose)", "t": "adapter", "c": "2-1/2 in / 1-7/8 in", "w": "Milwaukee 1-7/8 and 2-1/2 hoses/tools; other brands (Ridgid) per Q&A", "conf": "Confirmed", "s": ["1-7/8 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "Adapters", "m": "49-90-1992", "d": "Hose-to-drain adapter kit (garden hose to drain)", "t": "drain adapter", "c": "~1-1/4 in thread to 3/4 in garden hose", "w": "0910, 0920, 0930 (6/9/12 gal)", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "Milwaukee", "sys": "Separators", "m": "49-90-2200", "d": "PACKOUT compact debris separator (6 ft 1-7/8 expandable hose + multi-fit adapter)", "t": "separator", "c": "1-1/4, 1-7/8, 2-1/2 in multi-fit", "w": "Any common wet/dry vac; mounting clips for 0910/0920/0930; 49-90-2201 caster kit", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2022", "d": "AIR-TIP dust collector (wall suction funnel)", "t": "dust attachment", "c": "1-1/4, 1-7/8, 2-1/2 in", "w": "Any brand at those sizes; Milwaukee Q&A: 0970 PACKOUT 2.5 gal, M12 FUEL 1.6 gal", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2044", "d": "AIR-TIP compact dust collector", "t": "dust attachment", "c": "1-1/4, 1-7/8, 2-1/2 in", "w": "Any wet/dry brand at those sizes", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2037", "d": "AIR-TIP long reach flexible micro hose set (1/4-5/8 in micro hoses, 5 pc)", "t": "hose set", "c": "1-1/4, 1-7/8, 2-1/2 in", "w": "Any wet/dry brand at those sizes", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2026", "d": "AIR-TIP 4-in-1 right angle tool (5 pc)", "t": "nozzle", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2028", "d": "AIR-TIP 2-in-1 utility brush", "t": "brush", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2038", "d": "AIR-TIP rocking utility nozzle w/ brushes", "t": "nozzle", "c": "1-1/4, 1-7/8, 2-1/2 in", "w": "Milwaukee + other brands at those sizes", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2039", "d": "AIR-TIP 2-1/2 in rocking utility nozzle w/ brushes", "t": "nozzle", "c": "2-1/2 in", "w": "2-1/2 hoses", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2040", "d": "AIR-TIP claw utility nozzle w/ brushes", "t": "nozzle", "c": "1-1/4, 1-7/8, 2-1/2 in", "w": "Milwaukee + other brands at those sizes", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2020", "d": "AIR-TIP swiveling palm brush", "t": "brush", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2021", "d": "AIR-TIP rotating corner brush", "t": "brush", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2027", "d": "AIR-TIP low-profile pivoting brush", "t": "brush", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2031", "d": "AIR-TIP pivoting extension wand", "t": "wand", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes; bundled w/ 0960-20", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2032", "d": "AIR-TIP magnetic utility nozzle", "t": "nozzle", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2033", "d": "AIR-TIP 2-1/2 in magnetic utility nozzle", "t": "nozzle", "c": "2-1/2 in", "w": "2-1/2 hoses", "conf": "Likely", "s": ["2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2034", "d": "AIR-TIP non-marring crevice tool + utility nozzle (2 pc)", "t": "kit", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2035", "d": "AIR-TIP cross brush tool", "t": "brush", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "49-90-2019A", "d": "AIR-TIP automotive kit w/ crevice tools, utility nozzle and bag (4 pc)", "t": "kit", "c": "1-1/4 to 2-1/2 in", "w": "AIR-TIP sizes", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "Milwaukee", "sys": "AIR-TIP universal", "m": "0980-20", "d": "M12 AIR-TIP powered utility nozzle (brush roll)", "t": "powered nozzle", "c": "1-1/4, 1-7/8, 2-1/2 in", "w": "Other brands at those sizes; 0885 backpack disputed", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux 2.0 (PLC2.0) Commercial", "d": "Bagless backpack w/ Deluxe 1-1/2 in. tool kit", "t": "Vacuum", "c": "1-1/2 in. (38 mm) hose/wand/tools", "w": "Any 1.5 in. commercial tools (ProTeam-style)", "conf": "Confirmed", "s": ["1-1/2 in", "38 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux 2.0 Cordless", "d": "1-hr lithium bagless backpack", "t": "Vacuum", "c": "1-1/2 in. (38 mm), assumed same as 2.0 kit", "w": "Prolux 2.0 tool kits", "conf": "Likely", "s": ["1-1/2 in", "38 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux 2.0", "d": "Replacement extendable wand 27.5-44 in., locking clamp", "t": "Wand", "c": "1-1/2 in. (38 mm)", "w": "Any PLC2.0 w/ standard kit; any 1.5 in. hose w/o handle", "conf": "Confirmed", "s": ["1-1/2 in", "38 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux PLC2.0", "d": "Replacement extendable wand (PLC SKU)", "t": "Wand", "c": "1-1/2 in. (38 mm)", "w": "PLC2.0, any 1.5 in. hose", "conf": "Confirmed", "s": ["1-1/2 in", "38 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux 2.0", "d": "Standard hose and tool kit (mini turbo, multi-surface, squeegee, wand)", "t": "Hose/tool kit", "c": "1-1/2 in. (38 mm)", "w": "Prolux 2.0 standard", "conf": "Confirmed", "s": ["1-1/2 in", "38 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux 2.0 / backpacks", "d": "Inch-and-a-half hose and tool kit for backpack vacuums", "t": "Hose/tool kit", "c": "1-1/2 in. (38 mm)", "w": "Prolux 2.0 Commercial; generic 1.5 in. backpacks", "conf": "Confirmed", "s": ["1-1/2 in", "38 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux 2.0", "d": "Squeegee floor tool", "t": "Attachment", "c": "Likely 1-1/2 in.", "w": "Prolux 2.0", "conf": "Verify", "s": ["1-1/2 in"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux X8 Pro (PLCX8P)", "d": "Commercial backpack w/ deluxe 1-1/2 in. tool kit", "t": "Vacuum", "c": "1-1/2 in. (38 mm)", "w": "1.5 in. tools", "conf": "Confirmed", "s": ["1-1/2 in", "38 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux X8 Lite", "d": "Light-commercial backpack w/ premium tool kit (Wessel Werk RD285 floor tool, mini turbo)", "t": "Vacuum", "c": "Not stated; residential kit likely 32 mm", "w": "32 mm tools if confirmed", "conf": "Verify", "s": ["32 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux 10qt (PLC10)", "d": "Commercial 10 qt backpack, 1-1/2 in. tool kit", "t": "Vacuum", "c": "38 mm adjustable wand and hose", "w": "1.5 in. commercial tools", "conf": "Confirmed", "s": ["38 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux 10qt", "d": "Replacement hose", "t": "Hose", "c": "1-1/2 in. (38 mm)", "w": "Other brands' 1.5 in. wands/tools", "conf": "Confirmed", "s": ["1-1/2 in", "38 mm"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux 10qt", "d": "Multi-surface 14 in. floor tool, ProTeam-grade", "t": "Attachment", "c": "1-1/2 in. wand opening", "w": "ProTeam and most commercial 1.5 in. wands", "conf": "Confirmed", "s": ["1-1/2 in"]}, {"b": "Prolux", "sys": "Backpack", "m": "Prolux XForce Pro", "d": "Commercial bagless backpack, 1.5 in. attachment kit", "t": "Vacuum", "c": "1.5 in. (38 mm)", "w": "1.5 in. tools", "conf": "Confirmed", "s": ["1-1/2 in", "38 mm"]}, {"b": "Prolux", "sys": "Canister", "m": "Prolux Tritan", "d": "Bagged canister, 12 A, sealed HEPA", "t": "Vacuum", "c": "Not stated (residential, likely 32 mm); old = friction fit, new = button lock", "w": "Tritan tools of matching generation", "conf": "Verify", "s": ["32 mm"]}, {"b": "Prolux", "sys": "Universal", "m": "32 mm (any brand)", "d": "Mini turbo head (air-driven)", "t": "Attachment", "c": "32 mm (standard)", "w": "Any vacuum with 32 mm wand or hose", "conf": "Confirmed", "s": ["32 mm"]}, {"b": "Prolux", "sys": "Universal", "m": "32 mm (any brand)", "d": "Deluxe hardwood / squeegee floor tool", "t": "Attachment", "c": "32 mm", "w": "Any 32 mm hose or wand", "conf": "Confirmed", "s": ["32 mm"]}, {"b": "Prolux", "sys": "Universal", "m": "32 mm (any brand)", "d": "2 generic aftermarket 32 mm extension wands", "t": "Wand", "c": "32 mm", "w": "Generic 32 mm tools", "conf": "Confirmed", "s": ["32 mm"]}, {"b": "Prolux", "sys": "Central", "m": "Prolux CV12000 + any 1.5 in. inlet", "d": "30 ft universal central vac hose kit w/ multi-surface tools", "t": "Hose kit", "c": "1.5 in. inlet", "w": "Prolux, Electrolux, Honeywell, Vacumaid, Beam, Hoover, Aggressor, NuTone central systems", "conf": "Confirmed", "s": ["1-1/2 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 1-7/8 in.", "m": "DXVA19-2500", "d": "1-7/8 in. x 7 ft. ULTRA Durable Hose", "t": "Hose", "c": "1-7/8 in.", "w": "DXV04T, DXV06G, DXV10SB", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 1-7/8 in.", "m": "DXVA19-2515", "d": "Extra Long 15 ft. Vacuum Hose for 1-7/8 in.", "t": "Hose", "c": "1-7/8 in.", "w": "DXV04T, DXV06G, DXV10SB", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 1-7/8 in.", "m": "DXVA19-1400", "d": "1-7/8 in. Crevice Nozzle Attachment", "t": "Attachment", "c": "1-7/8 in.", "w": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 1-7/8 in.", "m": "DXVA19-1900", "d": "1-7/8 in. Floor Brush Attachment", "t": "Attachment", "c": "1-7/8 in.", "w": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 1-7/8 in.", "m": "DXVA13-4333", "d": "1-7/8 in. Car Cleaning Nozzle Attachment", "t": "Attachment", "c": "1-7/8 in.", "w": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 1-7/8 in.", "m": "DXVA13-4364", "d": "1-7/8 in. Car Cleaning Flexible Claw Nozzle", "t": "Attachment", "c": "1-7/8 in.", "w": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718", "conf": "Confirmed", "s": ["1-7/8 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 2-1/2 in.", "m": "DXVA19-2501", "d": "2-1/2 in. x 7 ft. ULTRA Durable Hose", "t": "Hose", "c": "2-1/2 in.", "w": "DXV12P, DXV16PA; DXV212P (verify)", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 2-1/2 in.", "m": "DXVA08-2502", "d": "2-1/2 in. Extension Wand", "t": "Extension", "c": "2-1/2 in.", "w": "DXV12P, DXV16PA, DXV212P; DXV04T, DXV06G, DXV10SB via DXVA11-2100", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 2-1/2 in.", "m": "DXVA08-2503", "d": "2-1/2 in. Utility Nozzle Attachment", "t": "Attachment", "c": "2-1/2 in.", "w": "DXV12P, DXV16PA, DXV212P; DXV04T, DXV06G, DXV10SB via DXVA11-2100", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 adapters", "m": "DXVA08-2718", "d": "2-1/2 in. to 1-7/8 in. Accessory Hose Adapter", "t": "Adapter", "c": "2-1/2 in. \u2192 1-7/8 in.", "w": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-7/8 in. attachments (DXVA19-1400, DXVA19-1900, DXVA13-4333, DXVA13-4364) or DXVA19-2780", "conf": "Confirmed", "s": ["1-7/8 in", "2-1/2 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 adapters", "m": "DXVA11-2100", "d": "1-7/8 in. to 2-1/2 in. Accessory Hose Adapter", "t": "Adapter", "c": "1-7/8 in. \u2192 2-1/2 in.", "w": "Vacs: DXV04T, DXV06G, DXV10SB \u2192 DXVA08-2502, DXVA08-2503", "conf": "Confirmed", "s": ["1-7/8 in", "2-1/2 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 adapters", "m": "DXVA08-2712", "d": "2-1/2 in. to 1-1/4 in. Accessory Hose Adapter", "t": "Adapter", "c": "2-1/2 in. \u2192 1-1/4 in.", "w": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-1/4 in. attachments / small tool ports", "conf": "Confirmed", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 adapters", "m": "DXVA15-1100", "d": "Multi-Fit Accessory Attachment Hose Adapter", "t": "Adapter", "c": "Stepped 2-1/2, 1-7/8, 1-1/4 in.", "w": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "DeWalt", "sys": "Shop vac \u2014 adapters", "m": "DXVA13-0801", "d": "1.25\u20132.5 in. Car Cleaning Accessory Kit", "t": "Attachment kit", "c": "1-1/4 to 2-1/2 in.", "w": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P", "conf": "Likely", "s": ["1-1/4 in", "2-1/2 in"]}, {"b": "DeWalt", "sys": "Vac to power tool", "m": "DXVA19-2780", "d": "Adapter 1-7/8 in. Hose to 1-2/3 in. Power Tools", "t": "Adapter", "c": "1-7/8 in. \u2192 1-2/3 in. tool port", "w": "Vacs: DXV04T, DXV06G, DXV10SB (direct); DXV12P, DXV16PA, DXV212P (stack with DXVA08-2718). Tools: DeWalt sanders, miter saws, table saws with 1-2/3 in. ports", "conf": "Confirmed", "s": ["1-2/3 in", "1-7/8 in"]}, {"b": "DeWalt", "sys": "Dust extractor (AirLock)", "m": "DWV2759", "d": "Dust Extractor Accessory Kit (5-Piece)", "t": "Attachment kit", "c": "1-1/4 in. / 35 mm", "w": "DWV010, DWV015, DCV585B", "conf": "Likely", "s": ["1-1/4 in", "35 mm"]}, {"b": "DeWalt", "sys": "Dust extractor (AirLock)", "m": "DWV9000 (not on HD results)", "d": "AirLock Universal Quick Connector", "t": "Adapter", "c": "1-1/4 in. / 35 mm AirLock", "w": "DWV010, DWV015, DCV585B \u2192 DeWalt miter saws, table saws, sanders, routers, track saws", "conf": "Confirmed", "s": ["1-1/4 in", "35 mm"]}, {"b": "WEN", "sys": "Dust collector", "m": "DC3474", "d": "7.4A induction rolling dust collector, 600 CFM, 15-gal bag, wall-mountable", "t": "Dust collector", "c": "4 in. inlet (single)", "w": "28200/28221/28250 4 in. hoses; DCA001 to 2-1/2 in.; DCA013 cuff; DCA024-026 magnetic", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Dust collector", "m": "DC3401", "d": "5.7A brushed rolling dust collector, 660 CFM, 12-gal bag, wall-mountable", "t": "Dust collector", "c": "4 in. inlet (single)", "w": "Standard 4 in. hose (28200/28221); DCA001 reducer for 2-1/2 in. tools", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Dust collector", "m": "DC1300", "d": "1,300 CFM 14A collector, 50-gal bag, mobile base", "t": "Dust collector", "c": "Dual 4 in. inlets", "w": "4 in. hoses; DCA005 T / DCA003 Y; DC1300-AF1 canister", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Dust collector", "m": "3403", "d": "1,500 CFM 16A collector, 50-gal bag (older model)", "t": "Dust collector", "c": "Dual 4 in. inlets", "w": "28200/28221 'made specifically for' 3403; DC1300-AF1 canister", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Hose", "m": "28200", "d": "4 in. x 10 ft universal dust collection hose", "t": "Hose", "c": "4 in. cuff ends", "w": "3403/DC1300/DC3401/DC3474; DCA001/DCA004/DCA014", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Hose", "m": "28221", "d": "4 in. x 20 ft universal dust extractor hose", "t": "Hose", "c": "4 in. cuff ends", "w": "Same as 28200", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Hose", "m": "28250", "d": "4 in. x 50 ft universal dust extractor hose", "t": "Hose", "c": "4 in.", "w": "WEN 4 in. collectors and fittings", "conf": "Likely", "s": ["4 in"]}, {"b": "WEN", "sys": "Hose", "m": "DCA251", "d": "2-1/2 in. x 10 ft universal dust hose", "t": "Hose", "c": "2-1/2 in.", "w": "Shop vacs w/ 2-1/2 in. hose ports; DCA001 to 4 in.; DCA021 cyclone lid", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Hose", "m": "DCA252", "d": "2-1/2 in. x 20 ft universal dust hose", "t": "Hose", "c": "2-1/2 in.", "w": "Same as DCA251", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Hose", "m": "DCA016", "d": "4 in. x 36 in. flexible sculptable dust hose (segmented)", "t": "Hose", "c": "4 in.", "w": "4 in. ports/blast gates", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Hose", "m": "DCA018", "d": "2-1/2 in. x 36 in. flexible sculptable dust hose", "t": "Hose", "c": "2-1/2 in.", "w": "2-1/2 in. ports", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Hose", "m": "DCA023", "d": "1-1/4 in. x 10 ft dust hose kit w/ 4 reducers (2-1/2>1-1/2, 2-1/4>1-1/2, 2x 1-3/4>1-1/2, 1-3/16>1)", "t": "Hose kit", "c": "1-1/4 in. hose; stepped reducers", "w": "Small tool ports (belt/palm/spindle sanders), shop vacs", "conf": "Confirmed", "s": ["1-1/4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA001", "d": "4 in. to 2-1/2 in. cone reducer (ABS)", "t": "Reducer", "c": "4 in. side 94 mm ID/100 mm OD; 2-1/2 in. side 58 mm ID/63 mm OD", "w": "4 in. hoses/collectors to 2-1/2 in. tools/hoses", "conf": "Confirmed", "s": ["2-1/2 in", "4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA002", "d": "2-1/2 in. to 1-1/2 in. cone reducer", "t": "Reducer", "c": "2-1/2 in. to 1-1/2 in.", "w": "1-1/2 in. ports (scroll saws, spindle sanders) to 2-1/2 in. hose", "conf": "Confirmed", "s": ["1-1/2 in", "2-1/2 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA003", "d": "4 in. Y-fitting splitter", "t": "Y fitting", "c": "4 in. x3", "w": "4 in. hoses", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA005", "d": "4 in. T-fitting splitter", "t": "T fitting", "c": "4 in. x3", "w": "4 in. hoses", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA004", "d": "4 in. 90-degree elbow (94 mm ID/100 mm OD)", "t": "Elbow", "c": "4 in.", "w": "28200/28221", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA006", "d": "4 in. blast gate (plastic)", "t": "Blast gate", "c": "4 in.", "w": "4 in. hoses", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA007", "d": "2-1/2 in. blast gate (plastic)", "t": "Blast gate", "c": "2-1/2 in.", "w": "2-1/2 in. hoses", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA008", "d": "4 in. locking aluminum blast gate", "t": "Blast gate", "c": "4 in.", "w": "4 in. hoses", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA009", "d": "2-1/2 in. locking aluminum blast gate", "t": "Blast gate", "c": "2-1/2 in.", "w": "2-1/2 in. hoses", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA010", "d": "4 in. steel hose clamps, 10-pack (to 113 mm)", "t": "Clamp", "c": "4 in.", "w": "4 in. hoses/ports", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA011", "d": "2-1/2 in. steel hose clamps, 10-pack", "t": "Clamp", "c": "2-1/2 in.", "w": "2-1/2 in. hoses", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA013", "d": "4 in. flexible rubber dust cuff (101 mm ID / 114.5 mm OD)", "t": "Cuff", "c": "4 in.", "w": "Most 4 in. ports, gates, adapters", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA012", "d": "2-1/2 in. flexible rubber dust cuff", "t": "Cuff", "c": "2-1/2 in.", "w": "2-1/2 in. ports", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA024", "d": "4 in. magnetic dust hose coupling (steel clamp)", "t": "Magnetic QC", "c": "4 in. magnetic", "w": "DCA025 connector; WEN 4 in. hoses", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA025", "d": "4 in. magnetic dust collection hose connector", "t": "Magnetic QC", "c": "4 in. magnetic", "w": "DCA024; WEN 4 in. hoses", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA026", "d": "4 in. magnetic quick-connect set", "t": "Magnetic QC", "c": "4 in. magnetic", "w": "All WEN 4 in. hoses; DCA028", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Fitting", "m": "DCA027", "d": "2-1/2 in. magnetic quick-connect set", "t": "Magnetic QC", "c": "2-1/2 in. magnetic", "w": "WEN 2-1/2 in. hoses", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Accessory", "m": "DCA015", "d": "22 in. floor sweep for 4 in. hoses", "t": "Floor sweep", "c": "4 in.", "w": "28200/28221; DCA013", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Accessory", "m": "DCA028", "d": "Magnetic floor sweeping kit w/ 12x9.5 in. hatch, blast gate", "t": "Floor sweep", "c": "4 in. magnetic", "w": "DCA024/DCA025/DCA026", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Separator", "m": "DCA022", "d": "21 in. cyclone separator lid, 4 in. ports, fits 30-gal metal can (lip <=20-3/4 in.)", "t": "Cyclone lid", "c": "4 in. in/out + internal 90 elbow", "w": "DC3401/DC3474/DC1300 via 4 in. hose", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Separator", "m": "DCA021", "d": "12 in. cyclone separator lid, 2-1/2 in. ports, fits 5-gal bucket (lip <=11-3/4 in.)", "t": "Cyclone lid", "c": "2-1/2 in. in/out", "w": "VC4710/VC9209 need 1-1/4 to 2-1/2 in. adapter", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Shop vac part", "m": "VC4710-041", "d": "Replacement hose for VC4710", "t": "Hose", "c": "1-1/4 in. (per HD vac spec)", "w": "VC4710; likely VC9209", "conf": "Likely", "s": ["1-1/4 in"]}, {"b": "WEN", "sys": "Planer", "m": "PL1252", "d": "12.5 in. 2-blade benchtop planer", "t": "Tool", "c": "2 in. dust port", "w": "Needs 2 in. to 4 in. or 2-1/2 in. adapter; DCA014 is not a clean 2 in. step", "conf": "Confirmed", "s": ["2 in"]}, {"b": "WEN", "sys": "Planer", "m": "PL1303", "d": "13 in. 3-blade benchtop planer", "t": "Tool", "c": "2-1/2 in. and 4 in. dust ports", "w": "Direct to 4 in. hose", "conf": "Confirmed", "s": ["2-1/2 in", "4 in"]}, {"b": "WEN", "sys": "Planer", "m": "PL1337", "d": "13 in. 2-speed spiral planer", "t": "Tool", "c": "Combination 2-1/2 in. and 4 in. port", "w": "Direct", "conf": "Confirmed", "s": ["2-1/2 in", "4 in"]}, {"b": "WEN", "sys": "Jointer", "m": "JT630H", "d": "6 in. spiral benchtop jointer", "t": "Tool", "c": "2-1/2 in. dust port", "w": "DCA001 to 4 in.; Printables 1794744 4 in. replacement", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Jointer", "m": "JT3062", "d": "6 in. 2-blade benchtop jointer", "t": "Tool", "c": "2-1/2 in. dust port", "w": "DCA001 to 4 in.", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Jointer", "m": "JT833H", "d": "8 in. spiral jointer, extendable table", "t": "Tool", "c": "2-1/2 in. and 4 in. ports", "w": "JT833H-044 dust adapter", "conf": "Confirmed", "s": ["2-1/2 in", "4 in"]}, {"b": "WEN", "sys": "Jointer", "m": "JT1020H / JT1224H", "d": "10 in. / 12 in. spiral jointers", "t": "Tool", "c": "2-1/2 in. and 4 in. ports", "w": "Direct to 4 in.", "conf": "Confirmed", "s": ["2-1/2 in", "4 in"]}, {"b": "WEN", "sys": "Band saw", "m": "BA3962", "d": "10 in. 2-speed band saw w/ stand", "t": "Tool", "c": "3-in-1 stepped port (1-3/4, 2-3/4, 4 in.)", "w": "4 in. hose or 1-3/4 in. vac", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Band saw", "m": "BA1487", "d": "14 in. 2-speed band saw", "t": "Tool", "c": "3-in-1 port (1-3/4, 2-3/4, 4 in.)", "w": "4 in. hose", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Band saw", "m": "BA3959", "d": "9 in. benchtop band saw", "t": "Tool", "c": "2-1/2 in. dust port", "w": "DCA251 / DCA001", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Band saw", "m": "BA1411", "d": "14 in. 1 HP industrial band saw", "t": "Tool", "c": "4 in. dust port", "w": "Direct to 4 in.", "conf": "Confirmed", "s": ["4 in"]}, {"b": "WEN", "sys": "Scroll saw", "m": "3922 / 3923 / 3921 / LL2156", "d": "16 in. and 21 in. scroll saws", "t": "Tool", "c": "1-1/2 in. dust port", "w": "DCA002 or DCA023 reducers to vac", "conf": "Confirmed", "s": ["1-1/2 in"]}, {"b": "WEN", "sys": "Table saw", "m": "TT1015", "d": "10 in. 2 HP benchtop jobsite saw", "t": "Tool", "c": "2-1/2 in. dust port", "w": "DCA251 hose / DCA001", "conf": "Confirmed", "s": ["2-1/2 in"]}, {"b": "WEN", "sys": "Spindle sander", "m": "6524 / AT6535", "d": "Oscillating belt & spindle sanders", "t": "Tool", "c": "1-1/2 in. dust port", "w": "DCA002 / DCA023", "conf": "Confirmed", "s": ["1-1/2 in"]}, {"b": "WEN", "sys": "Spindle sander", "m": "HA5932", "d": "5A portable oscillating spindle sander", "t": "Tool", "c": "1-1/2 in. dust port (HA5932-003)", "w": "Shop vac 1-1/4 in. via adapter", "conf": "Confirmed", "s": ["1-1/2 in"]}, {"b": "WEN", "sys": "Disc sander", "m": "65812", "d": "12 in. benchtop disc sander", "t": "Tool", "c": "2 in. dust port (incl. 2-1/2 in. hose)", "w": "2-1/2 in. hose", "conf": "Confirmed", "s": ["2 in", "2-1/2 in"]}, {"b": "WEN", "sys": "Belt/disc sander", "m": "6502T", "d": "4x36 belt / 6 in. disc sander", "t": "Tool", "c": "2.25 in. dust port", "w": "No WEN fitting for 2-1/4 in. except DCA023 reducer to 1-1/2 in.", "conf": "Confirmed", "s": ["2-1/4 in"]}, {"b": "WEN", "sys": "Belt sander", "m": "HB321V / HB632V / HB6319 / 20418", "d": "3x21 / 3x18 handheld belt sanders", "t": "Tool", "c": "1-1/4 in. port, 1-7/16 in. OD", "w": "WEN 1-1/4 in. vac hose (friction fit)", "conf": "Confirmed", "s": ["1-1/4 in"]}]
+[
+ {
+  "b": "Shark",
+  "sys": "Upright - Navigator Lift-Away",
+  "m": "193FFJ",
+  "d": "Floor nozzle hose (pod-to-nozzle)",
+  "t": "hose",
+  "c": "Navigator 1-1/4in friction",
+  "w": "NV350, NV351, NV352, NV355, NV356, NV356E, NV357, NV360, UV440",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Shark",
+  "sys": "Upright - Navigator Lift-Away",
+  "m": "112FFJ",
+  "d": "Crevice tool + dusting brush set",
+  "t": "crevice/dusting",
+  "c": "Navigator 1-1/4in friction",
+  "w": "NV350, NV351, NV352, NV355, NV356E, NV357, NV360, NV370, UV440",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Shark",
+  "sys": "Upright - Navigator Lift-Away",
+  "m": "121FFJ",
+  "d": "Extension wand (23in)",
+  "t": "wand",
+  "c": "Navigator 1-1/4in friction",
+  "w": "NV350, NV351, NV352, NV356E, NV360, NV361, UV440",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "WD4070",
+  "d": "4 gal 5.0 HP portable wet/dry vac",
+  "t": "vac (corded)",
+  "c": "1-7/8 in. x 7 ft locking DUAL-FLEX hose",
+  "w": "VF3500/VF3800 filters; 1-7/8 in. accessories",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "WD0319",
+  "d": "3 gal 18V cordless handheld wet/dry vac (tool only)",
+  "t": "vac (18V)",
+  "c": "1-7/8 in. 2-7 ft expandable locking hose",
+  "w": "VF3400 (incl), VF3500/VF3600/VF3700/VF3800; RIDGID 18V batteries",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "HD0918",
+  "d": "9 gal 18V cordless NXT wet/dry vac (tool only)",
+  "t": "vac (18V)",
+  "c": "1-7/8 in. x 7 ft hose",
+  "w": "VF4000 recommended upgrade; RIDGID 18V batteries",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "HD0919",
+  "d": "9 gal 18V cordless NXT wet/dry vac",
+  "t": "vac (18V)",
+  "c": "1-7/8 in. x 7 ft locking DUAL-FLEX hose",
+  "w": "VF4000 (incl), VF5000/VF6000/VF7000/VF8000; 18V batteries R840020 R840040 R840060 R840080 R870015",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "HD1200",
+  "d": "12 gal 5.0 HP NXT wet/dry vac",
+  "t": "vac (corded)",
+  "c": "2-1/2 in. x 7 ft locking DUAL-FLEX hose",
+  "w": "VF4000 (incl), VF5000/VF6000/VF8000/VF7000; VF3502/VF3602 bags; LA25xx accessories",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "HD1400",
+  "d": "14 gal 6.0 HP NXT wet/dry vac",
+  "t": "vac (corded)",
+  "c": "2-1/2 in. x 7 ft hose",
+  "w": "VF4000-VF8000 5-16 gal filters; VF3502/VF3602 bags",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "HD1800",
+  "d": "16 gal 6.5 HP NXT wet/dry vac with cart",
+  "t": "vac (corded)",
+  "c": "2-1/2 in. x 7 ft locking DUAL-FLEX hose",
+  "w": "VF5000 (incl); 5-16 gal filters; VF3502/VF3602 bags",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1720",
+  "d": "1-7/8 in. x 7 ft Tug-A-Long hose (adapts to 1-1/4 in. accessories)",
+  "t": "hose",
+  "c": "1-7/8 in. locking cuff; incl 1-7/8>1-1/4 adapter",
+  "w": "Most 4/6/9 gal RIDGID; WD4070; WD16360",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1722",
+  "d": "1-7/8 in. x 14 ft locking hose",
+  "t": "hose",
+  "c": "1-7/8 in. locking",
+  "w": "HD0300 HD0318 HD0600 HD0900 HD0919 WD0319 WD3050 WD4070 WD4080 WD4522 WD5500 WD6425",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT2572",
+  "d": "1-7/8 in. x 8 ft Pro-Grade locking hose",
+  "t": "hose",
+  "c": "1-7/8 in. locking",
+  "w": "RIDGID vacs with 1-7/8 in. hose",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2570",
+  "d": "1-7/8 in. x 10 ft locking Professional hose kit (5 adapters)",
+  "t": "hose",
+  "c": "1-7/8 in. locking both ends; adapters for 2-1/2 in. inlets",
+  "w": "HD0300 HD0318 HD0600 HD0900 HD0919 WD0319 WD3050 WD4070 WD4080 WD4522 WD5500 WD6425 RV2400A RV2600B RV2400HF",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT2520",
+  "d": "2-1/2 in. x 7 ft Tug-A-Long hose",
+  "t": "hose",
+  "c": "2-1/2 in.; adapter for all RIDGID 2-1/2 in. inlets",
+  "w": "RIDGID 2-1/2 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT2522",
+  "d": "2-1/2 in. x 20 ft Tug-A-Long hose",
+  "t": "hose",
+  "c": "2-1/2 in.",
+  "w": "RIDGID 2-1/2 in. vacs",
+  "conf": "Verify",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2521",
+  "d": "2-1/2 in. x 13 ft DUAL-FLEX locking hose kit (3 adapters)",
+  "t": "hose",
+  "c": "2-1/2 in. locking; cuff 2-1/4 OD",
+  "w": "HD1200 HD1280 HD1400 HD1401 HD1600 HD1640 HD1800 HD1900 WD1060 WD1956",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2522",
+  "d": "2-1/2 in. x 20 ft DUAL-FLEX locking hose kit",
+  "t": "hose",
+  "c": "2-1/2 in. locking",
+  "w": "HD1200 HD1280 HD1400 HD1401 HD1600 HD1640 HD1800 HD1900 WD1060 WD1956",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT2505",
+  "d": "2-1/2 in. hose grip with bleeder valve",
+  "t": "adapter",
+  "c": "2-1/2 in. friction fit (non-locking)",
+  "w": "2-1/2 in. RIDGID hoses/wands",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2508",
+  "d": "2-1/2 in. locking extension wand (20.5 in.)",
+  "t": "wand",
+  "c": "2-1/2 in. locking",
+  "w": "All RIDGID 2-1/2 in. hose vacs",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2518",
+  "d": "2-1/2 in. locking telescoping wand (28-48 in.)",
+  "t": "wand",
+  "c": "2-1/2 in. locking",
+  "w": "RIDGID 2-1/2 in. vacs incl HD1200, older non-locking vacs, WD18510",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2509",
+  "d": "2-1/2 in. locking utility nozzle",
+  "t": "nozzle",
+  "c": "2-1/2 in. locking",
+  "w": "All RIDGID 2-1/2 in. hose vacs",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2510",
+  "d": "2-1/2 in. locking wet nozzle",
+  "t": "nozzle",
+  "c": "2-1/2 in. locking",
+  "w": "RIDGID 2-1/2 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2501",
+  "d": "2-1/2 in. locking round dusting brush",
+  "t": "nozzle",
+  "c": "2-1/2 in. locking",
+  "w": "RIDGID 2-1/2 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2502",
+  "d": "2-1/2 in. locking crevice tool",
+  "t": "nozzle",
+  "c": "2-1/2 in. locking",
+  "w": "RIDGID 2-1/2 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2503",
+  "d": "2-1/2 in. locking car nozzle",
+  "t": "nozzle",
+  "c": "2-1/2 in. locking",
+  "w": "RIDGID 2-1/2 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "LA2514",
+  "d": "2-1/2 in. locking floor brush",
+  "t": "floor tool",
+  "c": "2-1/2 in. locking",
+  "w": "RIDGID 2-1/2 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1701",
+  "d": "1-7/8 in. dusting brush",
+  "t": "nozzle",
+  "c": "1-7/8 in. friction",
+  "w": "RIDGID 1-7/8 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1702",
+  "d": "1-7/8 in. crevice tool",
+  "t": "nozzle",
+  "c": "1-7/8 in.",
+  "w": "RIDGID 1-7/8 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1708",
+  "d": "1-7/8 in. extension wand",
+  "t": "wand",
+  "c": "1-7/8 in.",
+  "w": "RIDGID 1-7/8 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1709",
+  "d": "1-7/8 in. utility nozzle",
+  "t": "nozzle",
+  "c": "1-7/8 in.",
+  "w": "RIDGID 1-7/8 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1710",
+  "d": "1-7/8 in. wet nozzle (squeegee)",
+  "t": "nozzle",
+  "c": "1-7/8 in.",
+  "w": "RIDGID 1-7/8 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1712",
+  "d": "1-7/8 in. crevice/dusting brush combo",
+  "t": "nozzle",
+  "c": "1-7/8 in.",
+  "w": "RIDGID 1-7/8 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1714",
+  "d": "1-7/8 in. floor brush",
+  "t": "floor tool",
+  "c": "1-7/8 in.",
+  "w": "RIDGID 1-7/8 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1781",
+  "d": "1-7/8 in. car nozzle",
+  "t": "nozzle",
+  "c": "1-7/8 in.",
+  "w": "RIDGID 1-7/8 in. vacs",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT2530",
+  "d": "Multi-surface carpet/hard floor nozzle",
+  "t": "floor tool",
+  "c": "1-1/4 or 2-1/2 in. (adapter incl); 1-7/8 needs VT1755",
+  "w": "RIDGID vacs with 2-1/2 or 1-1/4 hose/wand",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT2571",
+  "d": "Turbo beater bar kit",
+  "t": "floor tool",
+  "c": "1-1/4 and 2-1/2 in. (adapter incl)",
+  "w": "Select RIDGID vacs (chart PDF); reviewer used on WD4070",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "vac",
+  "m": "VT1734",
+  "d": "7-pc car cleaning kit with 14 ft 1-7/8 in. DUAL-FLEX hose",
+  "t": "car kit",
+  "c": "1-7/8 in. hose; step-down to 1-1/4 in. tools",
+  "w": "All RIDGID vacs per listing; drum-port vacs direct; 4 gal, RT0600 confirmed",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in",
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "tool dust",
+  "m": "VT1407",
+  "d": "2-1/2 in. power tool adaptor (stepped, trimmable)",
+  "t": "adapter",
+  "c": "2-1/2 in. vac hose cuff to ~1-2 in. tool ports (trim to fit)",
+  "w": "LA2520 LA2521 LA2522 LA2570 hoses; miter saws, sanders, benchtop tools",
+  "conf": "Likely",
+  "s": [
+   "2 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RIDGID",
+  "sys": "tool dust",
+  "m": "R4520",
+  "d": "10 in. cast iron table saw",
+  "t": "tool",
+  "c": "4 in. cabinet dust port",
+  "w": "Dust collector; shop vac needs 4 in. reducer (none from RIDGID)",
+  "conf": "Verify",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "PCL732B",
+  "d": "18V ONE+ 5 Gal. Bucket Top Wet/Dry Vacuum (tool only), incl. hose + crevice tool",
+  "t": "vacuum",
+  "c": "1-1/4 in. hose",
+  "w": "A32BT01; UniversalFit A32UA01-07 + A32AD01",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "PCL733B",
+  "d": "18V ONE+ 1 Gal. Wet/Dry Vacuum (tool only)",
+  "t": "vacuum",
+  "c": "1-1/4 in. x 5 ft hose",
+  "w": "A32VH03; A323G01; UniversalFit A32UA01-07",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "PCL734B",
+  "d": "18V ONE+ LINK 3 Gal. Wet/Dry Vacuum (tool only)",
+  "t": "vacuum",
+  "c": "1-1/4 in. x 6 ft hose",
+  "w": "A32VH03; A323G01; UniversalFit A32UA01-07",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "PCL735B",
+  "d": "18V ONE+ 6 Gal. Wet/Dry Vacuum (tool only)",
+  "t": "vacuum",
+  "c": "1-7/8 in. x 7 ft hose",
+  "w": "A32VH02; A326G01; A326G01N; A3210G01; UniversalFit A32UA01-07",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "PWV201B",
+  "d": "18V ONE+ 4.75 Gal. Wet/Dry Vacuum (tool only)",
+  "t": "vacuum",
+  "c": "1-3/8 in. x 5 ft hose",
+  "w": "A32VH04N; A32TW01N; A32SS02N; UniversalFit A32UA01-07 (range 1-1/4 to 2-1/2)",
+  "conf": "Confirmed",
+  "s": [
+   "1-3/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "40V",
+  "m": "RY40WD01B",
+  "d": "40V 10 Gal. Wet/Dry Vacuum (tool only)",
+  "t": "vacuum",
+  "c": "1-7/8 in. x 8 ft locking hose",
+  "w": "A32VH05; A326G01; A3210G01; A32FB01; UniversalFit A32UA01-07",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "A32VH03",
+  "d": "6 ft x 1-1/4 in. replacement wet/dry hose",
+  "t": "hose",
+  "c": "1-1/4 in.",
+  "w": "PCL733, PCL734, P3240",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "A32VH02",
+  "d": "7 ft x 1-7/8 in. replacement hose",
+  "t": "hose",
+  "c": "1-7/8 in.",
+  "w": "PCL735, P770",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "A32VH04N",
+  "d": "5 ft x 1-3/8 in. replacement hose",
+  "t": "hose",
+  "c": "1-3/8 in.",
+  "w": "PWV200, PWV201",
+  "conf": "Confirmed",
+  "s": [
+   "1-3/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "40V",
+  "m": "A32VH05",
+  "d": "8 ft x 1-7/8 in. locking wet/dry hose",
+  "t": "hose",
+  "c": "1-7/8 in.",
+  "w": "RY40WD01",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "A32BT01",
+  "d": "1-1/4 in. 2-pc Bucket Top accessory kit (4 ft hose + crevice tool)",
+  "t": "hose kit",
+  "c": "1-1/4 in.",
+  "w": "PCL732",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "A323G01",
+  "d": "1-1/4 in. crevice tool + utility nozzle",
+  "t": "nozzle kit",
+  "c": "1-1/4 in.",
+  "w": "PCL733, PCL734, P3240",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+/40V",
+  "m": "A326G01",
+  "d": "1-7/8 in. 4-pc kit: crevice tool, floor nozzle, 2 extension wands",
+  "t": "wand/nozzle kit",
+  "c": "1-7/8 in.",
+  "w": "RY40WD01, PCL735, P770",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "A326G01N",
+  "d": "P770 6 Gal. accessory kit: 1-7/8 in. crevice tool, floor nozzle, 2x15 in. wands",
+  "t": "wand/nozzle kit",
+  "c": "1-7/8 in.",
+  "w": "P770; likely PCL735, RY40WD01",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+/40V",
+  "m": "A3210G01",
+  "d": "1-7/8 in. 6-pc kit: 2 wands, crevice, car nozzle, floor nozzle w/ squeegee + brush",
+  "t": "wand/nozzle kit",
+  "c": "1-7/8 in.",
+  "w": "RY40WD01, PCL735, P770",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "A32TW01N",
+  "d": "1-3/8 in. telescoping extension wand, 21-35 in.",
+  "t": "extension wand",
+  "c": "1-3/8 in.",
+  "w": "PWV200, PWV201",
+  "conf": "Confirmed",
+  "s": [
+   "1-3/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+",
+  "m": "A32SS02N",
+  "d": "1-3/8 in. accessory kit: crevice tool, floor nozzle, dust brush",
+  "t": "nozzle kit",
+  "c": "1-3/8 in.",
+  "w": "PWV200, PWV201",
+  "conf": "Confirmed",
+  "s": [
+   "1-3/8 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "UniversalFit",
+  "m": "A32AD01",
+  "d": "UniversalFit wet/dry vacuum adapter (step adapter)",
+  "t": "adapter",
+  "c": "1-1/4 to 2-1/2 in.",
+  "w": "All RYOBI wet/dry vacs; tool dust ports (e.g. miter saw per ToolGuyd)",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "UniversalFit",
+  "m": "A32UA01",
+  "d": "UniversalFit crevice tool",
+  "t": "nozzle",
+  "c": "1-1/4 / 1-7/8 / 2-1/2 in.",
+  "w": "All RYOBI wet/dry vacs + most brands",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "UniversalFit",
+  "m": "A32UA02",
+  "d": "UniversalFit flexible micro-crevice tool (rubber)",
+  "t": "nozzle",
+  "c": "1-1/4 / 1-7/8 / 2-1/2 in.",
+  "w": "All RYOBI wet/dry vacs + most brands",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "UniversalFit",
+  "m": "A32UA03",
+  "d": "UniversalFit flexible extended micro-crevice tool, 14 in.",
+  "t": "nozzle",
+  "c": "1-1/4 / 1-7/8 / 2-1/2 in.",
+  "w": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "UniversalFit",
+  "m": "A32UA04",
+  "d": "UniversalFit dust brush (triangular)",
+  "t": "brush",
+  "c": "1-1/4 / 1-7/8 / 2-1/2 in.",
+  "w": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "UniversalFit",
+  "m": "A32UA05",
+  "d": "UniversalFit car nozzle, 3-3/8 in. opening",
+  "t": "nozzle",
+  "c": "1-1/4 / 1-7/8 / 2-1/2 in.",
+  "w": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "UniversalFit",
+  "m": "A32UA06",
+  "d": "UniversalFit micro-crevice tool (16 bendable straws)",
+  "t": "nozzle",
+  "c": "1-1/4 / 1-7/8 / 2-1/2 in.",
+  "w": "PCL732, PCL733, PCL734, PCL735, PWV200, RY40WD01",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "UniversalFit",
+  "m": "A32UA07",
+  "d": "UniversalFit floor head, 10 in. wide",
+  "t": "floor tool",
+  "c": "1-1/4 to 2-1/2 in.",
+  "w": "All RYOBI wet/dry vacs + most brands",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+ hand vac",
+  "m": "A32K01",
+  "d": "Jobsite hand vac kit: 5 ft x 1-1/4 in. hose, extension wand, crevice tool, floor nozzle",
+  "t": "hose kit",
+  "c": "1-1/4 in.",
+  "w": "PBLHV701, PCL705",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+ hand vac",
+  "m": "A32K02",
+  "d": "4-pc wet/dry hand vac kit: crevice, squeegee, dust brush, accessory adaptor",
+  "t": "nozzle kit",
+  "c": "1-7/16 in. accessory (spec says 1-1/2 in.)",
+  "w": "PCL702",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+ hand vac",
+  "m": "A32K05",
+  "d": "Hand vac kit: crevice, dust brush, utility nozzle, 2 ft hose",
+  "t": "hose kit",
+  "c": "1-1/4 in.",
+  "w": "PCL705",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "RYOBI",
+  "sys": "18V ONE+ dust",
+  "m": "A21CCV1",
+  "d": "Corner Cat sander vacuum adaptor",
+  "t": "dust adapter",
+  "c": "1-1/4 in. vac hose",
+  "w": "PCL416 Corner Cat sander; 1-1/4 in. vacs (PCL732/733/734)",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Husky",
+  "sys": "Wet/Dry Vac",
+  "m": "AT18303P-4A",
+  "d": "Husky 4 Gal. poly wet/dry vac, 5 ft hose",
+  "t": "vacuum",
+  "c": "1-1/4 in. hose (per Slickdeals commenter)",
+  "w": "1-1/4 in. accessories",
+  "conf": "Verify",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Husky",
+  "sys": "Wet/Dry Vac",
+  "m": "AT18304-6B",
+  "d": "Husky 6 Gal. 4.0 Peak HP stainless wet/dry vac, locking hose, wands, filters, dust bag",
+  "t": "vacuum",
+  "c": "1-1/4 in. hose (per Slickdeals commenter), 5 ft",
+  "w": "1-1/4 in. accessories; Universal AT19-3100 6-gal bags (generic fit claim)",
+  "conf": "Verify",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Husky",
+  "sys": "Wet/Dry Vac",
+  "m": "AT18503-10C",
+  "d": "Husky 10 Gal. 6.0 Peak HP stainless wet/dry vac",
+  "t": "vacuum",
+  "c": "1-7/8 in. x 6 ft hose (per manual)",
+  "w": "1-7/8 in. accessories; cartridge filter 6-16 gal (Universal AT08-2566 claims Husky 6-16 gal)",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Husky",
+  "sys": "Wet/Dry Vac",
+  "m": "AT18621P-16A",
+  "d": "Husky 16 Gal. 6.5 Peak HP poly cart wet/dry vac",
+  "t": "vacuum",
+  "c": "2-1/2 in. x 6 ft hose",
+  "w": "2-1/2 in. accessories (Universal AT08-2536 hose, AT08-2591 floor brush); filter 08-2566B/08-2566BP",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Husky",
+  "sys": "Wet/Dry Vac",
+  "m": "AT08-2536",
+  "d": "Universal brand 2-1/2 in. x 6 ft hose for 16 gal (third-party)",
+  "t": "hose",
+  "c": "2-1/2 in.",
+  "w": "AT18621P-16A (2-1/2 in. port)",
+  "conf": "Verify",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Husky",
+  "sys": "Wet/Dry Vac",
+  "m": "AT08-2591",
+  "d": "Universal brand 2-1/2 in. floor brush for 16 gal (third-party)",
+  "t": "nozzle",
+  "c": "2-1/2 in.",
+  "w": "AT18621P-16A; most 2.5 in. hoses",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "M18 NEXUS wet/dry",
+  "m": "0910-20",
+  "d": "M18 FUEL 6 Gal wet/dry vac (NEXUS)",
+  "t": "vacuum",
+  "c": "1-7/8 in quarter-turn hose (9 ft incl.)",
+  "w": "1-7/8 in hoses 49-90-1996/1984/1986/1976; 2-1/2 in hoses 49-90-2004/2006 per reviews",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "M18 PACKOUT wet/dry",
+  "m": "0971-20",
+  "d": "M18 FUEL 4 Gal PACKOUT wet/dry vac w/ VACLINK",
+  "t": "vacuum",
+  "c": "1-7/8 in (9 ft expandable 49-90-1976 incl.)",
+  "w": "1-7/8 in hoses/tools; 49-90-1976; dust-extraction hose clip adapter incl.",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "M18 PACKOUT compact",
+  "m": "0970-20",
+  "d": "M18 FUEL PACKOUT 2.5 Gal wet/dry vac",
+  "t": "vacuum",
+  "c": "1-1/4 in (6 ft hose)",
+  "w": "49-90-2014, 49-90-2018, AIR-TIP line",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "M18 compact",
+  "m": "0880-20",
+  "d": "M18 2 Gal wet/dry vac",
+  "t": "vacuum",
+  "c": "1-1/4 in (6 ft hose)",
+  "w": "49-90-2014, 49-90-2018, AIR-TIP",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "M12 compact",
+  "m": "0960-20",
+  "d": "M12 FUEL 1.6 Gal wet/dry vac",
+  "t": "vacuum",
+  "c": "1-1/4 in (5 ft hose)",
+  "w": "49-90-2018, AIR-TIP (Milwaukee Q&A on 49-90-2022)",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "M18 compact",
+  "m": "0940-20",
+  "d": "M18 FUEL compact jobsite vacuum (0.25 gal)",
+  "t": "vacuum",
+  "c": "1-1/4 in (inferred from 49-90-2018 compat list)",
+  "w": "49-90-2018",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "M18 compact",
+  "m": "0882-20",
+  "d": "M18 compact vacuum",
+  "t": "vacuum",
+  "c": "1-1/4 in inlet (4 ft hose)",
+  "w": "49-90-2018",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "M18 backpack",
+  "m": "0885-20",
+  "d": "M18 FUEL 3-in-1 backpack vacuum",
+  "t": "vacuum",
+  "c": "1-7/8 in (6 ft hose)",
+  "w": "49-90-1964 hose; 49-90-1976 (images); AIR-TIP 0980-20 disputed",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in hose",
+  "m": "49-90-1996",
+  "d": "1-7/8 in x 9 ft flexible hose (gray ring)",
+  "t": "hose",
+  "c": "1-7/8 in quarter-turn",
+  "w": "0910, 0920, 0930, 0931",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in hose",
+  "m": "49-90-1984",
+  "d": "1-7/8 in x 16 ft flexible hose",
+  "t": "hose",
+  "c": "1-7/8 in quarter-turn",
+  "w": "0910, 0920, 0930, 0931",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in hose",
+  "m": "49-90-1986",
+  "d": "1-7/8 in x 32-102 in expandable hose",
+  "t": "hose",
+  "c": "1-7/8 in quarter-turn",
+  "w": "0910, 0920, 0930, 0931",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in hose",
+  "m": "49-90-1976",
+  "d": "1-7/8 in x 9 ft expandable hose (37 in collapsed)",
+  "t": "hose",
+  "c": "1-7/8 in quarter-turn",
+  "w": "NEXUS 0910/0914/0915/0920/0926/0930/0931; 0971",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "2-1/2 in hose",
+  "m": "49-90-2006",
+  "d": "2-1/2 in x 9 ft flexible hose (red ring)",
+  "t": "hose",
+  "c": "2-1/2 in quarter-turn",
+  "w": "0930-22HD (stock); 0910/0920 per reviews; M18 FUEL 8-1/4 table saw port direct",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "2-1/2 in hose",
+  "m": "49-90-2004",
+  "d": "2-1/2 in x 16 ft flexible hose",
+  "t": "hose",
+  "c": "2-1/2 in quarter-turn",
+  "w": "Milwaukee wet/dry vacs (0930; 0910/0920 per reviews)",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-1/4 in hose",
+  "m": "49-90-2014",
+  "d": "1-1/4 in x 2-6 ft expandable hose",
+  "t": "hose",
+  "c": "1-1/4 in",
+  "w": "0970-20, 0880-20",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "36 mm extractor hose",
+  "m": "49-90-1973",
+  "d": "10 ft accessory hose 36 mm anti-static",
+  "t": "hose",
+  "c": "36 mm quarter-turn, hose clip, removable end",
+  "w": "0888-20/22HD",
+  "conf": "Confirmed",
+  "s": [
+   "36 mm"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "36 mm extractor hose",
+  "m": "49-90-1971",
+  "d": "20 ft accessory hose 36 mm anti-static",
+  "t": "hose",
+  "c": "36 mm quarter-turn, hose clip, removable end",
+  "w": "0888-20/22HD",
+  "conf": "Confirmed",
+  "s": [
+   "36 mm"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in tools",
+  "m": "49-90-1987",
+  "d": "1-7/8 in extension wand 19-1/2 in",
+  "t": "wand",
+  "c": "1-7/8 in friction",
+  "w": "1-7/8 hoses 49-90-1996/1984/1986; 0910/0920/0971",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in tools",
+  "m": "49-90-1988",
+  "d": "1-7/8 in crevice tool 7-1/2 in",
+  "t": "crevice tool",
+  "c": "1-7/8 in",
+  "w": "1-7/8 hoses 49-90-1996/1984/1986",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in tools",
+  "m": "49-90-2011",
+  "d": "1-7/8 in floor utility nozzle",
+  "t": "nozzle",
+  "c": "1-7/8 in",
+  "w": "0920-20 (included)",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in tools",
+  "m": "49-90-1981",
+  "d": "1-7/8 in round brush",
+  "t": "brush",
+  "c": "1-7/8 in",
+  "w": "1-7/8 hoses 49-90-1996/1984/1986; M18 2 gal only if 1-7/8 hose",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in tools",
+  "m": "49-90-1982",
+  "d": "1-7/8 in floor brush (reversible)",
+  "t": "floor tool",
+  "c": "1-7/8 in",
+  "w": "1-7/8 hoses 49-90-1996/1984/1986",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in tools",
+  "m": "49-90-1983",
+  "d": "1-7/8 in curved nozzle",
+  "t": "nozzle",
+  "c": "1-7/8 in",
+  "w": "1-7/8 hoses",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in tools",
+  "m": "49-90-1985",
+  "d": "1-7/8 in wet floor nozzle 9-1/2 in squeegee",
+  "t": "floor tool",
+  "c": "1-7/8 in",
+  "w": "1-7/8 hoses 49-90-1996/1984/1986",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-7/8 in tools",
+  "m": "49-90-1970",
+  "d": "PACKOUT cleaning accessory kit (round brush, floor nozzle, floor brush, crevice, 2 wands) w/ hose end adapter",
+  "t": "kit",
+  "c": "1-7/8 in tools + 36 mm hose-end adapter",
+  "w": "0888-20/22HD",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in",
+   "36 mm"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "2-1/2 in tools",
+  "m": "49-90-2007",
+  "d": "2-1/2 in extension wand 19-1/2 in",
+  "t": "wand",
+  "c": "2-1/2 in friction",
+  "w": "2-1/2 hoses 49-90-2004/2006; 0930-22HD",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "2-1/2 in tools",
+  "m": "49-90-2008",
+  "d": "2-1/2 in crevice tool",
+  "t": "crevice tool",
+  "c": "2-1/2 in",
+  "w": "0930-22HD (included)",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "2-1/2 in tools",
+  "m": "49-90-2009",
+  "d": "2-1/2 in floor utility nozzle",
+  "t": "nozzle",
+  "c": "2-1/2 in",
+  "w": "0930-22HD (included)",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "2-1/2 in tools",
+  "m": "49-90-2001",
+  "d": "2-1/2 in round brush",
+  "t": "brush",
+  "c": "2-1/2 in",
+  "w": "2-1/2 hoses",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "2-1/2 in tools",
+  "m": "49-90-2002",
+  "d": "2-1/2 in floor brush",
+  "t": "floor tool",
+  "c": "2-1/2 in",
+  "w": "2-1/2 hoses 49-90-2004/2006",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "2-1/2 in tools",
+  "m": "49-90-2005",
+  "d": "2-1/2 in wet floor nozzle",
+  "t": "floor tool",
+  "c": "2-1/2 in",
+  "w": "2-1/2 hoses",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "1-1/4 in tools",
+  "m": "49-90-2017",
+  "d": "1-1/4 in round brush",
+  "t": "brush",
+  "c": "1-1/4 in",
+  "w": "0880/0970/0960 class",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "Adapters",
+  "m": "49-90-1991",
+  "d": "Hose & accessory adapter kit (2-1/2>1-7/8 accessory; 2-1/2>2-1/2/1-7/8 hose; 1-7/8>1-7/8 hose)",
+  "t": "adapter",
+  "c": "2-1/2 in / 1-7/8 in",
+  "w": "Milwaukee 1-7/8 and 2-1/2 hoses/tools; other brands (Ridgid) per Q&A",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "Adapters",
+  "m": "49-90-1992",
+  "d": "Hose-to-drain adapter kit (garden hose to drain)",
+  "t": "drain adapter",
+  "c": "~1-1/4 in thread to 3/4 in garden hose",
+  "w": "0910, 0920, 0930 (6/9/12 gal)",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "Separators",
+  "m": "49-90-2200",
+  "d": "PACKOUT compact debris separator (6 ft 1-7/8 expandable hose + multi-fit adapter)",
+  "t": "separator",
+  "c": "1-1/4, 1-7/8, 2-1/2 in multi-fit",
+  "w": "Any common wet/dry vac; mounting clips for 0910/0920/0930; 49-90-2201 caster kit",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2022",
+  "d": "AIR-TIP dust collector (wall suction funnel)",
+  "t": "dust attachment",
+  "c": "1-1/4, 1-7/8, 2-1/2 in",
+  "w": "Any brand at those sizes; Milwaukee Q&A: 0970 PACKOUT 2.5 gal, M12 FUEL 1.6 gal",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2044",
+  "d": "AIR-TIP compact dust collector",
+  "t": "dust attachment",
+  "c": "1-1/4, 1-7/8, 2-1/2 in",
+  "w": "Any wet/dry brand at those sizes",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2037",
+  "d": "AIR-TIP long reach flexible micro hose set (1/4-5/8 in micro hoses, 5 pc)",
+  "t": "hose set",
+  "c": "1-1/4, 1-7/8, 2-1/2 in",
+  "w": "Any wet/dry brand at those sizes",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2026",
+  "d": "AIR-TIP 4-in-1 right angle tool (5 pc)",
+  "t": "nozzle",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2028",
+  "d": "AIR-TIP 2-in-1 utility brush",
+  "t": "brush",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2038",
+  "d": "AIR-TIP rocking utility nozzle w/ brushes",
+  "t": "nozzle",
+  "c": "1-1/4, 1-7/8, 2-1/2 in",
+  "w": "Milwaukee + other brands at those sizes",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2039",
+  "d": "AIR-TIP 2-1/2 in rocking utility nozzle w/ brushes",
+  "t": "nozzle",
+  "c": "2-1/2 in",
+  "w": "2-1/2 hoses",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2040",
+  "d": "AIR-TIP claw utility nozzle w/ brushes",
+  "t": "nozzle",
+  "c": "1-1/4, 1-7/8, 2-1/2 in",
+  "w": "Milwaukee + other brands at those sizes",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2020",
+  "d": "AIR-TIP swiveling palm brush",
+  "t": "brush",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2021",
+  "d": "AIR-TIP rotating corner brush",
+  "t": "brush",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2027",
+  "d": "AIR-TIP low-profile pivoting brush",
+  "t": "brush",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2031",
+  "d": "AIR-TIP pivoting extension wand",
+  "t": "wand",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes; bundled w/ 0960-20",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2032",
+  "d": "AIR-TIP magnetic utility nozzle",
+  "t": "nozzle",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2033",
+  "d": "AIR-TIP 2-1/2 in magnetic utility nozzle",
+  "t": "nozzle",
+  "c": "2-1/2 in",
+  "w": "2-1/2 hoses",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2034",
+  "d": "AIR-TIP non-marring crevice tool + utility nozzle (2 pc)",
+  "t": "kit",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2035",
+  "d": "AIR-TIP cross brush tool",
+  "t": "brush",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "49-90-2019A",
+  "d": "AIR-TIP automotive kit w/ crevice tools, utility nozzle and bag (4 pc)",
+  "t": "kit",
+  "c": "1-1/4 to 2-1/2 in",
+  "w": "AIR-TIP sizes",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Milwaukee",
+  "sys": "AIR-TIP universal",
+  "m": "0980-20",
+  "d": "M12 AIR-TIP powered utility nozzle (brush roll)",
+  "t": "powered nozzle",
+  "c": "1-1/4, 1-7/8, 2-1/2 in",
+  "w": "Other brands at those sizes; 0885 backpack disputed",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux 2.0 (PLC2.0) Commercial",
+  "d": "Bagless backpack w/ Deluxe 1-1/2 in. tool kit",
+  "t": "Vacuum",
+  "c": "1-1/2 in. (38 mm) hose/wand/tools",
+  "w": "Any 1.5 in. commercial tools (ProTeam-style)",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux 2.0 Cordless",
+  "d": "1-hr lithium bagless backpack",
+  "t": "Vacuum",
+  "c": "1-1/2 in. (38 mm), assumed same as 2.0 kit",
+  "w": "Prolux 2.0 tool kits",
+  "conf": "Likely",
+  "s": [
+   "1-1/2 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux 2.0",
+  "d": "Replacement extendable wand 27.5-44 in., locking clamp",
+  "t": "Wand",
+  "c": "1-1/2 in. (38 mm)",
+  "w": "Any PLC2.0 w/ standard kit; any 1.5 in. hose w/o handle",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux PLC2.0",
+  "d": "Replacement extendable wand (PLC SKU)",
+  "t": "Wand",
+  "c": "1-1/2 in. (38 mm)",
+  "w": "PLC2.0, any 1.5 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux 2.0",
+  "d": "Standard hose and tool kit (mini turbo, multi-surface, squeegee, wand)",
+  "t": "Hose/tool kit",
+  "c": "1-1/2 in. (38 mm)",
+  "w": "Prolux 2.0 standard",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux 2.0 / backpacks",
+  "d": "Inch-and-a-half hose and tool kit for backpack vacuums",
+  "t": "Hose/tool kit",
+  "c": "1-1/2 in. (38 mm)",
+  "w": "Prolux 2.0 Commercial; generic 1.5 in. backpacks",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux 2.0",
+  "d": "Squeegee floor tool",
+  "t": "Attachment",
+  "c": "Likely 1-1/2 in.",
+  "w": "Prolux 2.0",
+  "conf": "Verify",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux X8 Pro (PLCX8P)",
+  "d": "Commercial backpack w/ deluxe 1-1/2 in. tool kit",
+  "t": "Vacuum",
+  "c": "1-1/2 in. (38 mm)",
+  "w": "1.5 in. tools",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux X8 Lite",
+  "d": "Light-commercial backpack w/ premium tool kit (Wessel Werk RD285 floor tool, mini turbo)",
+  "t": "Vacuum",
+  "c": "Not stated; residential kit likely 32 mm",
+  "w": "32 mm tools if confirmed",
+  "conf": "Verify",
+  "s": [
+   "32 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux 10qt (PLC10)",
+  "d": "Commercial 10 qt backpack, 1-1/2 in. tool kit",
+  "t": "Vacuum",
+  "c": "38 mm adjustable wand and hose",
+  "w": "1.5 in. commercial tools",
+  "conf": "Confirmed",
+  "s": [
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux 10qt",
+  "d": "Replacement hose",
+  "t": "Hose",
+  "c": "1-1/2 in. (38 mm)",
+  "w": "Other brands' 1.5 in. wands/tools",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux 10qt",
+  "d": "Multi-surface 14 in. floor tool, ProTeam-grade",
+  "t": "Attachment",
+  "c": "1-1/2 in. wand opening",
+  "w": "ProTeam and most commercial 1.5 in. wands",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Backpack",
+  "m": "Prolux XForce Pro",
+  "d": "Commercial bagless backpack, 1.5 in. attachment kit",
+  "t": "Vacuum",
+  "c": "1.5 in. (38 mm)",
+  "w": "1.5 in. tools",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Canister",
+  "m": "Prolux Tritan",
+  "d": "Bagged canister, 12 A, sealed HEPA",
+  "t": "Vacuum",
+  "c": "Not stated (residential, likely 32 mm); old = friction fit, new = button lock",
+  "w": "Tritan tools of matching generation",
+  "conf": "Verify",
+  "s": [
+   "32 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Universal",
+  "m": "32 mm (any brand)",
+  "d": "Mini turbo head (air-driven)",
+  "t": "Attachment",
+  "c": "32 mm (standard)",
+  "w": "Any vacuum with 32 mm wand or hose",
+  "conf": "Confirmed",
+  "s": [
+   "32 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Universal",
+  "m": "32 mm (any brand)",
+  "d": "Deluxe hardwood / squeegee floor tool",
+  "t": "Attachment",
+  "c": "32 mm",
+  "w": "Any 32 mm hose or wand",
+  "conf": "Confirmed",
+  "s": [
+   "32 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Universal",
+  "m": "32 mm (any brand)",
+  "d": "2 generic aftermarket 32 mm extension wands",
+  "t": "Wand",
+  "c": "32 mm",
+  "w": "Generic 32 mm tools",
+  "conf": "Confirmed",
+  "s": [
+   "32 mm"
+  ]
+ },
+ {
+  "b": "Prolux",
+  "sys": "Central",
+  "m": "Prolux CV12000 + any 1.5 in. inlet",
+  "d": "30 ft universal central vac hose kit w/ multi-surface tools",
+  "t": "Hose kit",
+  "c": "1.5 in. inlet",
+  "w": "Prolux, Electrolux, Honeywell, Vacumaid, Beam, Hoover, Aggressor, NuTone central systems",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 1-7/8 in.",
+  "m": "DXVA19-2500",
+  "d": "1-7/8 in. x 7 ft. ULTRA Durable Hose",
+  "t": "Hose",
+  "c": "1-7/8 in.",
+  "w": "DXV04T, DXV06G, DXV10SB",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 1-7/8 in.",
+  "m": "DXVA19-2515",
+  "d": "Extra Long 15 ft. Vacuum Hose for 1-7/8 in.",
+  "t": "Hose",
+  "c": "1-7/8 in.",
+  "w": "DXV04T, DXV06G, DXV10SB",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 1-7/8 in.",
+  "m": "DXVA19-1400",
+  "d": "1-7/8 in. Crevice Nozzle Attachment",
+  "t": "Attachment",
+  "c": "1-7/8 in.",
+  "w": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 1-7/8 in.",
+  "m": "DXVA19-1900",
+  "d": "1-7/8 in. Floor Brush Attachment",
+  "t": "Attachment",
+  "c": "1-7/8 in.",
+  "w": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 1-7/8 in.",
+  "m": "DXVA13-4333",
+  "d": "1-7/8 in. Car Cleaning Nozzle Attachment",
+  "t": "Attachment",
+  "c": "1-7/8 in.",
+  "w": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 1-7/8 in.",
+  "m": "DXVA13-4364",
+  "d": "1-7/8 in. Car Cleaning Flexible Claw Nozzle",
+  "t": "Attachment",
+  "c": "1-7/8 in.",
+  "w": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 2-1/2 in.",
+  "m": "DXVA19-2501",
+  "d": "2-1/2 in. x 7 ft. ULTRA Durable Hose",
+  "t": "Hose",
+  "c": "2-1/2 in.",
+  "w": "DXV12P, DXV16PA; DXV212P (verify)",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 2-1/2 in.",
+  "m": "DXVA08-2502",
+  "d": "2-1/2 in. Extension Wand",
+  "t": "Extension",
+  "c": "2-1/2 in.",
+  "w": "DXV12P, DXV16PA, DXV212P; DXV04T, DXV06G, DXV10SB via DXVA11-2100",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 2-1/2 in.",
+  "m": "DXVA08-2503",
+  "d": "2-1/2 in. Utility Nozzle Attachment",
+  "t": "Attachment",
+  "c": "2-1/2 in.",
+  "w": "DXV12P, DXV16PA, DXV212P; DXV04T, DXV06G, DXV10SB via DXVA11-2100",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 adapters",
+  "m": "DXVA08-2718",
+  "d": "2-1/2 in. to 1-7/8 in. Accessory Hose Adapter",
+  "t": "Adapter",
+  "c": "2-1/2 in. \u2192 1-7/8 in.",
+  "w": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-7/8 in. attachments (DXVA19-1400, DXVA19-1900, DXVA13-4333, DXVA13-4364) or DXVA19-2780",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 adapters",
+  "m": "DXVA11-2100",
+  "d": "1-7/8 in. to 2-1/2 in. Accessory Hose Adapter",
+  "t": "Adapter",
+  "c": "1-7/8 in. \u2192 2-1/2 in.",
+  "w": "Vacs: DXV04T, DXV06G, DXV10SB \u2192 DXVA08-2502, DXVA08-2503",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 adapters",
+  "m": "DXVA08-2712",
+  "d": "2-1/2 in. to 1-1/4 in. Accessory Hose Adapter",
+  "t": "Adapter",
+  "c": "2-1/2 in. \u2192 1-1/4 in.",
+  "w": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-1/4 in. attachments / small tool ports",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 adapters",
+  "m": "DXVA15-1100",
+  "d": "Multi-Fit Accessory Attachment Hose Adapter",
+  "t": "Adapter",
+  "c": "Stepped 2-1/2, 1-7/8, 1-1/4 in.",
+  "w": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Shop vac \u2014 adapters",
+  "m": "DXVA13-0801",
+  "d": "1.25\u20132.5 in. Car Cleaning Accessory Kit",
+  "t": "Attachment kit",
+  "c": "1-1/4 to 2-1/2 in.",
+  "w": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Vac to power tool",
+  "m": "DXVA19-2780",
+  "d": "Adapter 1-7/8 in. Hose to 1-2/3 in. Power Tools",
+  "t": "Adapter",
+  "c": "1-7/8 in. \u2192 1-2/3 in. tool port",
+  "w": "Vacs: DXV04T, DXV06G, DXV10SB (direct); DXV12P, DXV16PA, DXV212P (stack with DXVA08-2718). Tools: DeWalt sanders, miter saws, table saws with 1-2/3 in. ports",
+  "conf": "Confirmed",
+  "s": [
+   "1-2/3 in",
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Dust extractor (AirLock)",
+  "m": "DWV2759",
+  "d": "Dust Extractor Accessory Kit (5-Piece)",
+  "t": "Attachment kit",
+  "c": "1-1/4 in. / 35 mm",
+  "w": "DWV010, DWV015, DCV585B",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "35 mm"
+  ]
+ },
+ {
+  "b": "DeWalt",
+  "sys": "Dust extractor (AirLock)",
+  "m": "DWV9000 (not on HD results)",
+  "d": "AirLock Universal Quick Connector",
+  "t": "Adapter",
+  "c": "1-1/4 in. / 35 mm AirLock",
+  "w": "DWV010, DWV015, DCV585B \u2192 DeWalt miter saws, table saws, sanders, routers, track saws",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in",
+   "35 mm"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Dust collector",
+  "m": "DC3474",
+  "d": "7.4A induction rolling dust collector, 600 CFM, 15-gal bag, wall-mountable",
+  "t": "Dust collector",
+  "c": "4 in. inlet (single)",
+  "w": "28200/28221/28250 4 in. hoses; DCA001 to 2-1/2 in.; DCA013 cuff; DCA024-026 magnetic",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Dust collector",
+  "m": "DC3401",
+  "d": "5.7A brushed rolling dust collector, 660 CFM, 12-gal bag, wall-mountable",
+  "t": "Dust collector",
+  "c": "4 in. inlet (single)",
+  "w": "Standard 4 in. hose (28200/28221); DCA001 reducer for 2-1/2 in. tools",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Dust collector",
+  "m": "DC1300",
+  "d": "1,300 CFM 14A collector, 50-gal bag, mobile base",
+  "t": "Dust collector",
+  "c": "Dual 4 in. inlets",
+  "w": "4 in. hoses; DCA005 T / DCA003 Y; DC1300-AF1 canister",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Dust collector",
+  "m": "3403",
+  "d": "1,500 CFM 16A collector, 50-gal bag (older model)",
+  "t": "Dust collector",
+  "c": "Dual 4 in. inlets",
+  "w": "28200/28221 'made specifically for' 3403; DC1300-AF1 canister",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Hose",
+  "m": "28200",
+  "d": "4 in. x 10 ft universal dust collection hose",
+  "t": "Hose",
+  "c": "4 in. cuff ends",
+  "w": "3403/DC1300/DC3401/DC3474; DCA001/DCA004/DCA014",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Hose",
+  "m": "28221",
+  "d": "4 in. x 20 ft universal dust extractor hose",
+  "t": "Hose",
+  "c": "4 in. cuff ends",
+  "w": "Same as 28200",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Hose",
+  "m": "28250",
+  "d": "4 in. x 50 ft universal dust extractor hose",
+  "t": "Hose",
+  "c": "4 in.",
+  "w": "WEN 4 in. collectors and fittings",
+  "conf": "Likely",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Hose",
+  "m": "DCA251",
+  "d": "2-1/2 in. x 10 ft universal dust hose",
+  "t": "Hose",
+  "c": "2-1/2 in.",
+  "w": "Shop vacs w/ 2-1/2 in. hose ports; DCA001 to 4 in.; DCA021 cyclone lid",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Hose",
+  "m": "DCA252",
+  "d": "2-1/2 in. x 20 ft universal dust hose",
+  "t": "Hose",
+  "c": "2-1/2 in.",
+  "w": "Same as DCA251",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Hose",
+  "m": "DCA016",
+  "d": "4 in. x 36 in. flexible sculptable dust hose (segmented)",
+  "t": "Hose",
+  "c": "4 in.",
+  "w": "4 in. ports/blast gates",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Hose",
+  "m": "DCA018",
+  "d": "2-1/2 in. x 36 in. flexible sculptable dust hose",
+  "t": "Hose",
+  "c": "2-1/2 in.",
+  "w": "2-1/2 in. ports",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Hose",
+  "m": "DCA023",
+  "d": "1-1/4 in. x 10 ft dust hose kit w/ 4 reducers (2-1/2>1-1/2, 2-1/4>1-1/2, 2x 1-3/4>1-1/2, 1-3/16>1)",
+  "t": "Hose kit",
+  "c": "1-1/4 in. hose; stepped reducers",
+  "w": "Small tool ports (belt/palm/spindle sanders), shop vacs",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA001",
+  "d": "4 in. to 2-1/2 in. cone reducer (ABS)",
+  "t": "Reducer",
+  "c": "4 in. side 94 mm ID/100 mm OD; 2-1/2 in. side 58 mm ID/63 mm OD",
+  "w": "4 in. hoses/collectors to 2-1/2 in. tools/hoses",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in",
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA002",
+  "d": "2-1/2 in. to 1-1/2 in. cone reducer",
+  "t": "Reducer",
+  "c": "2-1/2 in. to 1-1/2 in.",
+  "w": "1-1/2 in. ports (scroll saws, spindle sanders) to 2-1/2 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA003",
+  "d": "4 in. Y-fitting splitter",
+  "t": "Y fitting",
+  "c": "4 in. x3",
+  "w": "4 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA005",
+  "d": "4 in. T-fitting splitter",
+  "t": "T fitting",
+  "c": "4 in. x3",
+  "w": "4 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA004",
+  "d": "4 in. 90-degree elbow (94 mm ID/100 mm OD)",
+  "t": "Elbow",
+  "c": "4 in.",
+  "w": "28200/28221",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA006",
+  "d": "4 in. blast gate (plastic)",
+  "t": "Blast gate",
+  "c": "4 in.",
+  "w": "4 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA007",
+  "d": "2-1/2 in. blast gate (plastic)",
+  "t": "Blast gate",
+  "c": "2-1/2 in.",
+  "w": "2-1/2 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA008",
+  "d": "4 in. locking aluminum blast gate",
+  "t": "Blast gate",
+  "c": "4 in.",
+  "w": "4 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA009",
+  "d": "2-1/2 in. locking aluminum blast gate",
+  "t": "Blast gate",
+  "c": "2-1/2 in.",
+  "w": "2-1/2 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA010",
+  "d": "4 in. steel hose clamps, 10-pack (to 113 mm)",
+  "t": "Clamp",
+  "c": "4 in.",
+  "w": "4 in. hoses/ports",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA011",
+  "d": "2-1/2 in. steel hose clamps, 10-pack",
+  "t": "Clamp",
+  "c": "2-1/2 in.",
+  "w": "2-1/2 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA013",
+  "d": "4 in. flexible rubber dust cuff (101 mm ID / 114.5 mm OD)",
+  "t": "Cuff",
+  "c": "4 in.",
+  "w": "Most 4 in. ports, gates, adapters",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA012",
+  "d": "2-1/2 in. flexible rubber dust cuff",
+  "t": "Cuff",
+  "c": "2-1/2 in.",
+  "w": "2-1/2 in. ports",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA024",
+  "d": "4 in. magnetic dust hose coupling (steel clamp)",
+  "t": "Magnetic QC",
+  "c": "4 in. magnetic",
+  "w": "DCA025 connector; WEN 4 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA025",
+  "d": "4 in. magnetic dust collection hose connector",
+  "t": "Magnetic QC",
+  "c": "4 in. magnetic",
+  "w": "DCA024; WEN 4 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA026",
+  "d": "4 in. magnetic quick-connect set",
+  "t": "Magnetic QC",
+  "c": "4 in. magnetic",
+  "w": "All WEN 4 in. hoses; DCA028",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Fitting",
+  "m": "DCA027",
+  "d": "2-1/2 in. magnetic quick-connect set",
+  "t": "Magnetic QC",
+  "c": "2-1/2 in. magnetic",
+  "w": "WEN 2-1/2 in. hoses",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Accessory",
+  "m": "DCA015",
+  "d": "22 in. floor sweep for 4 in. hoses",
+  "t": "Floor sweep",
+  "c": "4 in.",
+  "w": "28200/28221; DCA013",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Accessory",
+  "m": "DCA028",
+  "d": "Magnetic floor sweeping kit w/ 12x9.5 in. hatch, blast gate",
+  "t": "Floor sweep",
+  "c": "4 in. magnetic",
+  "w": "DCA024/DCA025/DCA026",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Separator",
+  "m": "DCA022",
+  "d": "21 in. cyclone separator lid, 4 in. ports, fits 30-gal metal can (lip <=20-3/4 in.)",
+  "t": "Cyclone lid",
+  "c": "4 in. in/out + internal 90 elbow",
+  "w": "DC3401/DC3474/DC1300 via 4 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Separator",
+  "m": "DCA021",
+  "d": "12 in. cyclone separator lid, 2-1/2 in. ports, fits 5-gal bucket (lip <=11-3/4 in.)",
+  "t": "Cyclone lid",
+  "c": "2-1/2 in. in/out",
+  "w": "VC4710/VC9209 need 1-1/4 to 2-1/2 in. adapter",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Shop vac part",
+  "m": "VC4710-041",
+  "d": "Replacement hose for VC4710",
+  "t": "Hose",
+  "c": "1-1/4 in. (per HD vac spec)",
+  "w": "VC4710; likely VC9209",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Planer",
+  "m": "PL1252",
+  "d": "12.5 in. 2-blade benchtop planer",
+  "t": "Tool",
+  "c": "2 in. dust port",
+  "w": "Needs 2 in. to 4 in. or 2-1/2 in. adapter; DCA014 is not a clean 2 in. step",
+  "conf": "Confirmed",
+  "s": [
+   "2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Planer",
+  "m": "PL1303",
+  "d": "13 in. 3-blade benchtop planer",
+  "t": "Tool",
+  "c": "2-1/2 in. and 4 in. dust ports",
+  "w": "Direct to 4 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in",
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Planer",
+  "m": "PL1337",
+  "d": "13 in. 2-speed spiral planer",
+  "t": "Tool",
+  "c": "Combination 2-1/2 in. and 4 in. port",
+  "w": "Direct",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in",
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Jointer",
+  "m": "JT630H",
+  "d": "6 in. spiral benchtop jointer",
+  "t": "Tool",
+  "c": "2-1/2 in. dust port",
+  "w": "DCA001 to 4 in.; Printables 1794744 4 in. replacement",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Jointer",
+  "m": "JT3062",
+  "d": "6 in. 2-blade benchtop jointer",
+  "t": "Tool",
+  "c": "2-1/2 in. dust port",
+  "w": "DCA001 to 4 in.",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Jointer",
+  "m": "JT833H",
+  "d": "8 in. spiral jointer, extendable table",
+  "t": "Tool",
+  "c": "2-1/2 in. and 4 in. ports",
+  "w": "JT833H-044 dust adapter",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in",
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Jointer",
+  "m": "JT1020H / JT1224H",
+  "d": "10 in. / 12 in. spiral jointers",
+  "t": "Tool",
+  "c": "2-1/2 in. and 4 in. ports",
+  "w": "Direct to 4 in.",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in",
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Band saw",
+  "m": "BA3962",
+  "d": "10 in. 2-speed band saw w/ stand",
+  "t": "Tool",
+  "c": "3-in-1 stepped port (1-3/4, 2-3/4, 4 in.)",
+  "w": "4 in. hose or 1-3/4 in. vac",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Band saw",
+  "m": "BA1487",
+  "d": "14 in. 2-speed band saw",
+  "t": "Tool",
+  "c": "3-in-1 port (1-3/4, 2-3/4, 4 in.)",
+  "w": "4 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Band saw",
+  "m": "BA3959",
+  "d": "9 in. benchtop band saw",
+  "t": "Tool",
+  "c": "2-1/2 in. dust port",
+  "w": "DCA251 / DCA001",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Band saw",
+  "m": "BA1411",
+  "d": "14 in. 1 HP industrial band saw",
+  "t": "Tool",
+  "c": "4 in. dust port",
+  "w": "Direct to 4 in.",
+  "conf": "Confirmed",
+  "s": [
+   "4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Scroll saw",
+  "m": "3922 / 3923 / 3921 / LL2156",
+  "d": "16 in. and 21 in. scroll saws",
+  "t": "Tool",
+  "c": "1-1/2 in. dust port",
+  "w": "DCA002 or DCA023 reducers to vac",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Table saw",
+  "m": "TT1015",
+  "d": "10 in. 2 HP benchtop jobsite saw",
+  "t": "Tool",
+  "c": "2-1/2 in. dust port",
+  "w": "DCA251 hose / DCA001",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Spindle sander",
+  "m": "6524 / AT6535",
+  "d": "Oscillating belt & spindle sanders",
+  "t": "Tool",
+  "c": "1-1/2 in. dust port",
+  "w": "DCA002 / DCA023",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Spindle sander",
+  "m": "HA5932",
+  "d": "5A portable oscillating spindle sander",
+  "t": "Tool",
+  "c": "1-1/2 in. dust port (HA5932-003)",
+  "w": "Shop vac 1-1/4 in. via adapter",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Disc sander",
+  "m": "65812",
+  "d": "12 in. benchtop disc sander",
+  "t": "Tool",
+  "c": "2 in. dust port (incl. 2-1/2 in. hose)",
+  "w": "2-1/2 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "2 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Belt/disc sander",
+  "m": "6502T",
+  "d": "4x36 belt / 6 in. disc sander",
+  "t": "Tool",
+  "c": "2.25 in. dust port",
+  "w": "No WEN fitting for 2-1/4 in. except DCA023 reducer to 1-1/2 in.",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/4 in"
+  ]
+ },
+ {
+  "b": "WEN",
+  "sys": "Belt sander",
+  "m": "HB321V / HB632V / HB6319 / 20418",
+  "d": "3x21 / 3x18 handheld belt sanders",
+  "t": "Tool",
+  "c": "1-1/4 in. port, 1-7/16 in. OD",
+  "w": "WEN 1-1/4 in. vac hose (friction fit)",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "18V LXT cordless wet/dry dust extractor",
+  "m": "XCV11Z",
+  "d": "18V LXT Brushless 2 gal HEPA portable wet/dry dust extractor/vacuum (tool only)",
+  "t": "dust extractor",
+  "c": "1 in. hose (140G04-3, 1\" x 6.5')",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "140G04-3",
+  "d": "Flexible anti-static hose, 1\" x 6.5'",
+  "t": "hose",
+  "c": "1 in. x 6.5 ft hose",
+  "w": "XCV11Z",
+  "conf": "Confirmed",
+  "s": [
+   "1 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "195548-6",
+  "d": "Cuff joint adapter, 38 mm to 22 mm",
+  "t": "adapter",
+  "c": "38 mm cuff to 22 mm cuff",
+  "w": "XCV11",
+  "conf": "Confirmed",
+  "s": [
+   "22 mm",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "36V (18V X2) LXT cordless backpack vac",
+  "m": "XCV17Z",
+  "d": "36V (18V X2) LXT Brushless 1.6 gal HEPA backpack dry vacuum (tool only)",
+  "t": "vacuum",
+  "c": "1-1/4 in. hose (199453-9, 1-1/4\" x 39\")",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "199453-9",
+  "d": "Flexible anti-static hose, 1-1/4\" x 39\"",
+  "t": "hose",
+  "c": "1-1/4 in. x 39 in. hose",
+  "w": "XCV17",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "143787-2",
+  "d": "Flexible anti-static hose, 1\" x 39\"",
+  "t": "hose",
+  "c": "1 in. x 39 in. hose",
+  "w": "XCV05, XCV09",
+  "conf": "Confirmed",
+  "s": [
+   "1 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "152992-0",
+  "d": "Flexible hose 1\" x 59\" with tool cuff adapters 22 mm (417765-1), 24 mm (424379-9), 38 mm (417766-9)",
+  "t": "hose",
+  "c": "1 in. x 59 in. hose",
+  "w": "XCV05ZX, XCV10ZX",
+  "conf": "Confirmed",
+  "s": [
+   "1 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "417765-1",
+  "d": "Tool cuff adapter, 22 mm for 1\" hose",
+  "t": "adapter",
+  "c": "22 mm tool cuff for 1 in. hose",
+  "w": "1 in. Makita dust extraction hoses",
+  "conf": "Confirmed",
+  "s": [
+   "1 in",
+   "22 mm"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "424379-9",
+  "d": "Tool cuff adapter, 24 mm for 1\" hose (thread-on)",
+  "t": "adapter",
+  "c": "24 mm tool cuff for 1 in. hose",
+  "w": "1 in. Makita dust extraction hoses",
+  "conf": "Confirmed",
+  "s": [
+   "1 in",
+   "24 mm"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "417766-9",
+  "d": "Tool cuff adapter, 38 mm for 1\" hose",
+  "t": "adapter",
+  "c": "38 mm tool cuff for 1 in. hose",
+  "w": "1 in. Makita dust extraction hoses",
+  "conf": "Confirmed",
+  "s": [
+   "1 in",
+   "38 mm"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Corded dust extractor",
+  "m": "VC4210L",
+  "d": "11 gal wet/dry HEPA dust extractor/vacuum, AWS capable",
+  "t": "dust extractor",
+  "c": "1-1/4 in. hose (P-84084, 1-1/4\" x 13')",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "P-84084",
+  "d": "Anti-static hose 1-1/4\" x 13' with Quick-Click cuff",
+  "t": "hose",
+  "c": "1-1/4 in. x 13 ft hose, Quick-Click cuff",
+  "w": "VC4210L",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "W107418678",
+  "d": "15/16\" hose cuff adapter (included with VC4210L)",
+  "t": "adapter",
+  "c": "15/16 in. hose cuff",
+  "w": "VC4210L",
+  "conf": "Confirmed",
+  "s": [
+   "15/16 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "W107418688",
+  "d": "1-3/4\" hose cuff adapter (included with VC4210L)",
+  "t": "adapter",
+  "c": "1-3/4 in. hose cuff",
+  "w": "VC4210L",
+  "conf": "Confirmed",
+  "s": [
+   "1-3/4 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Corded dust extractor",
+  "m": "VC2512L",
+  "d": "Class L compact dust extractor, 25 L tank, 120 VAC",
+  "t": "dust extractor",
+  "c": "1-1/4 in. x 11 ft hose",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "40V max XGT cordless wet/dry dust extractor",
+  "m": "GCV01Z",
+  "d": "40V max XGT Brushless 2.1 gal wet/dry dust extractor/vacuum (tool only)",
+  "t": "dust extractor",
+  "c": "1-1/4 in. hose (199493-7, 1-1/4\" x 5.6')",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "40V max XGT cordless wet/dry dust extractor",
+  "m": "GCV03Z",
+  "d": "40V max XGT Brushless 4 gal wet/dry dust extractor/vacuum (tool only)",
+  "t": "dust extractor",
+  "c": "1-1/4 in. hose (199493-7, 1-1/4\" x 5.6')",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Makita",
+  "sys": "Accessory",
+  "m": "199493-7",
+  "d": "Anti-static hose, 1-1/4\" x 5.6' (page also says 5-1/2')",
+  "t": "hose",
+  "c": "1-1/4 in. x 5.6 ft hose",
+  "w": "GCV01Z, GCV03Z",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Wet/dry vac",
+  "m": "CMXEVBE17595",
+  "d": "16 gal 6.5 peak HP wet/dry shop vac with attachments",
+  "t": "vacuum",
+  "c": "Page lists both 2.5 in. dia. hose and 1-7/8 in. x 7 ft hose",
+  "w": "",
+  "conf": "Verify",
+  "s": [
+   "1-7/8 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Wet/dry vac",
+  "m": "CMXEVBE17594",
+  "d": "12 gal 6.0 peak HP wet/dry vac with attachments",
+  "t": "vacuum",
+  "c": "2-1/2 in. x 7 ft Pos-I-Lock Dual-Flex hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Wet/dry vac",
+  "m": "CMXEVBE17590",
+  "d": "9 gal 4.25 peak HP wet/dry vac with attachments",
+  "t": "vacuum",
+  "c": "1-7/8 in. x 7 ft Pos-I-Lock hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Wet/dry vac",
+  "m": "CMXEVBE17250",
+  "d": "2.5 gal 2.5 peak HP portable wet/dry vac",
+  "t": "vacuum",
+  "c": "1-1/4 in. x 5 ft friction fit hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "V20 cordless wet/dry vac",
+  "m": "CMCV002B",
+  "d": "V20 cordless 2 gal wet/dry vac (tool only), 7 ft 8 in hose",
+  "t": "vacuum",
+  "c": "1-1/4 in. hose and accessory diameter",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38761",
+  "d": "1-7/8 in. x 7 ft Pos-I-Lock wet/dry vac hose",
+  "t": "hose",
+  "c": "1-7/8 in. x 7 ft Pos-I-Lock",
+  "w": "Craftsman and most vacs using a 1-7/8 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38804",
+  "d": "1-7/8 in. x 10 ft extra durable hose kit with adapters (1-7/8 cuff, 2-1/2 friction, 2-1/2 locking, current vac, red-tab legacy vac)",
+  "t": "hose",
+  "c": "1-7/8 in. x 10 ft hose; fits 1-7/8 and 2-1/2 in. vacs",
+  "w": "CMXEVBE17595 (suggested pairing)",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38758",
+  "d": "2-1/2 in. x 13 ft locking wet/dry vac hose kit",
+  "t": "hose",
+  "c": "2-1/2 in. x 13 ft locking",
+  "w": "Craftsman vacs with locking ports and most 2-1/2 in. vacs",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38759",
+  "d": "2-1/2 in. x 20 ft locking wet/dry vac hose kit",
+  "t": "hose",
+  "c": "2-1/2 in. x 20 ft locking",
+  "w": "Craftsman and most vacs using a 2-1/2 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38676",
+  "d": "1-7/8 in. utility nozzle",
+  "t": "nozzle",
+  "c": "1-7/8 in.",
+  "w": "Craftsman and most vacs with a 1-7/8 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38675",
+  "d": "1-7/8 in. extension wand, 21 in.",
+  "t": "accessory",
+  "c": "1-7/8 in.",
+  "w": "Craftsman and most vacs with a 1-7/8 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38725",
+  "d": "1-7/8 in. dusting brush",
+  "t": "nozzle",
+  "c": "1-7/8 in.",
+  "w": "Craftsman and most vacs with a 1-7/8 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38639",
+  "d": "2-1/2 in. hose grip handle with bleeder valve",
+  "t": "accessory",
+  "c": "2-1/2 in.",
+  "w": "Craftsman and most vacs with a 2-1/2 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38620",
+  "d": "2-1/2 in. car nozzle",
+  "t": "nozzle",
+  "c": "2-1/2 in.",
+  "w": "Craftsman and most vacs with a 2-1/2 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Craftsman",
+  "sys": "Accessory",
+  "m": "CMXZVBE38640",
+  "d": "2-1/2 in. 4-piece gutter cleaning kit",
+  "t": "accessory",
+  "c": "2-1/2 in.",
+  "w": "Craftsman and most vacs with a 2-1/2 in. hose",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Wet/dry vac",
+  "m": "5430162",
+  "d": "5 gal 4 peak HP stainless steel wet/dry vac",
+  "t": "vacuum",
+  "c": "1-1/4 in. x 7 ft hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Wet/dry vac",
+  "m": "5430542",
+  "d": "5 gal Ultra Quiet (Whisper Series) stainless steel 4.5 peak HP wet/dry vac",
+  "t": "vacuum",
+  "c": "1-7/8 in. dia. x 7 ft hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Wet/dry vac",
+  "m": "5761311",
+  "d": "12 gal 6.0 peak HP stainless steel wet/dry vac",
+  "t": "vacuum",
+  "c": "1-1/2 in. x 7 ft Lock-On hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Wet/dry vac",
+  "m": "8252605",
+  "d": "16 gal 6.5 peak HP SVX2 wet/dry utility vac",
+  "t": "vacuum",
+  "c": "2-1/2 in. x 8 ft Lock-On hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Wet/dry vac",
+  "m": "9627806",
+  "d": "16 gal 6.5 peak HP stainless steel Contractor Series SVX2 wet/dry vac",
+  "t": "vacuum",
+  "c": "1-1/2 in. x 12 ft Lock-On hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Accessory",
+  "m": "90503",
+  "d": "8 ft x 2.5 in. Lock-On hose (included with 8252605)",
+  "t": "hose",
+  "c": "2-1/2 in. x 8 ft Lock-On",
+  "w": "8252605",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Accessory",
+  "m": "90684",
+  "d": "2.5 in. extension wands (pair, included with 8252605)",
+  "t": "accessory",
+  "c": "2-1/2 in.",
+  "w": "8252605",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Accessory",
+  "m": "9050533",
+  "d": "8 ft x 1-1/2 in. hose",
+  "t": "hose",
+  "c": "1-1/2 in. x 8 ft; fits 1-1/2 in. friction or locking inlets",
+  "w": "Shop-Vac vacs with 1-1/2 in. inlets",
+  "conf": "Likely",
+  "s": [
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Accessory",
+  "m": "9051233",
+  "d": "8 ft crushproof hose with ends, 1-1/4 in.",
+  "t": "hose",
+  "c": "1-1/4 in. x 8 ft",
+  "w": "9653606, 9303511",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Accessory",
+  "m": "9198133",
+  "d": "1-1/2 in. x 12 ft premium crush-resistant hose with adapter",
+  "t": "hose",
+  "c": "1-1/2 in. x 12 ft; fits 1-1/4, 1-1/2 and 2-1/2 in. friction or locking inlets",
+  "w": "Vacs with 1-1/4, 1-1/2 or 2-1/2 in. inlets",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "1-1/2 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Accessory",
+  "m": "9068500",
+  "d": "2-1/2 in. to 1-1/4 in. conversion adapter (part no. from listing URL)",
+  "t": "adapter",
+  "c": "2-1/2 in. hose to 1-1/4 in. accessories",
+  "w": "Vacs with a 2-1/2 in. hose",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Accessory",
+  "m": "9066600",
+  "d": "Hose handle grip, 2-1/2 in.",
+  "t": "accessory",
+  "c": "2-1/2 in. hose end",
+  "w": "Shop-Vac vacs with a 2-1/2 in. hose",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Shop-Vac",
+  "sys": "Accessory",
+  "m": "9196600",
+  "d": "1-1/2 in. wet/dry nozzle with 1-1/4 in. adapter, 10 in.",
+  "t": "nozzle",
+  "c": "1-1/2 in. wands; 1-1/4 in. with adapter",
+  "w": "1-1/2 in. and 1-1/4 in. extension wands",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "1-1/2 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Wet/dry vac",
+  "m": "VBV1210",
+  "d": "12 gal 5 peak HP wet/dry vac with detachable blower",
+  "t": "vacuum",
+  "c": "2-1/2 in. x 7 ft Secure Fit hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Wet/dry vac",
+  "m": "VJH1612PF 0201",
+  "d": "Professional Beast Series 16 gal 6.5 peak HP wet/dry vac",
+  "t": "vacuum",
+  "c": "2-1/2 in. x 7 ft premium hose",
+  "w": "",
+  "conf": "Confirmed",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Wet/dry vac",
+  "m": "VOC507PF",
+  "d": "5 gal 3 peak HP wet/dry vac, converts to blower",
+  "t": "vacuum",
+  "c": "1-1/4 in. hose",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Wet/dry vac",
+  "m": "VJF608PF 0201",
+  "d": "Professional 6 gal 3.5 peak HP wet/dry vac",
+  "t": "vacuum",
+  "c": "1-7/8 in. hose",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Wet/dry vac",
+  "m": "VWM510",
+  "d": "5 gal wall-mount wet/dry vac with remote handle",
+  "t": "vacuum",
+  "c": "1-7/8 in. hoses (11 ft standard, 10 ft flexible)",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Accessory",
+  "m": "V78H7",
+  "d": "1-7/8 in. x 8 ft wet/dry vac hose with adapters",
+  "t": "hose",
+  "c": "1-7/8 in. x 8 ft",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Accessory",
+  "m": "V21A",
+  "d": "2-1/2 in. to 1-1/4 in. adapter",
+  "t": "adapter",
+  "c": "2-1/2 in. tools to 1-1/4 in. system",
+  "w": "Most 2-1/2 in. and 1-1/4 in. Vacmaster hose systems",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Accessory",
+  "m": "V78AB",
+  "d": "1-7/8 in. to 1-1/4 in. adapter",
+  "t": "adapter",
+  "c": "1-7/8 in. to 1-1/4 in.",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Accessory",
+  "m": "V78TAB",
+  "d": "1-7/8 in. power tool adapter",
+  "t": "adapter",
+  "c": "1-7/8 in.",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "1-7/8 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Accessory",
+  "m": "V2TAB",
+  "d": "2-1/2 in. tool adapter",
+  "t": "adapter",
+  "c": "2-1/2 in.",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "2-1/2 in"
+  ]
+ },
+ {
+  "b": "Vacmaster",
+  "sys": "Accessory",
+  "m": "V12CCB",
+  "d": "1-1/4 in. car claw nozzle with adapter for 2-1/2 in.",
+  "t": "nozzle",
+  "c": "1-1/4 in. nozzle; adapter for 2-1/2 in.",
+  "w": "",
+  "conf": "Likely",
+  "s": [
+   "1-1/4 in",
+   "2-1/2 in"
+  ]
+ }
+]

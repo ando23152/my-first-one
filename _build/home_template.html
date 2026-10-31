@@ -3,7 +3,7 @@
 <meta name="description" content="Custom 3D printing and replacement parts in Modesto, CA. True Part Fabrication designs and makes compatible tool and vacuum parts, brackets, jigs, fixtures, and small-batch runs for businesses across the Modesto–Stockton corridor.">
 <link rel="icon" type="image/png" href="data:image/png;base64,{{ICON}}">
 <link rel="apple-touch-icon" href="data:image/png;base64,{{ICON}}">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"True Part Fabrication LLC","description":"Custom 3D printing, replacement parts and small-batch manufacturing","email":"nsottero@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Modesto","addressRegion":"CA","addressCountry":"US"},"areaServed":["Modesto","Ceres","Turlock","Manteca","Tracy","Stockton"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"True Part Fabrication LLC","description":"Custom 3D printing, replacement parts and small-batch manufacturing","address":{"@type":"PostalAddress","addressLocality":"Modesto","addressRegion":"CA","addressCountry":"US"},"areaServed":["Modesto","Ceres","Turlock","Manteca","Tracy","Stockton"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -67,12 +67,12 @@ nav.main .btn{height:42px;padding:0 20px;font-size:.88rem}
 .hero .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .hero-shot{position:relative;margin-top:0}
 .hero-shot img{width:100%;max-width:100%;height:auto;display:block;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%)}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:-40px;position:relative;background:linear-gradient(to bottom,rgba(7,7,8,0),var(--bg) 40%)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:-40px;position:relative;background:linear-gradient(to bottom,rgba(7,7,8,0),var(--bg) 40%)}
 .facts div{padding:28px 24px;border-right:1px solid var(--line)}
 .facts div:last-child{border-right:0}
 .facts b{display:block;font-family:var(--f-display);font-stretch:106%;font-weight:500;font-size:1.1rem;line-height:1;letter-spacing:-.01em}
 .facts span{display:block;margin-top:8px;color:var(--muted);font-size:.88rem}
-@media (max-width:860px){.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(2){border-right:0}.facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media (max-width:860px){.facts{grid-template-columns:1fr}.facts div{border-right:0;border-bottom:1px solid var(--line)}.facts div:last-child{border-bottom:0}}
 
 /* brand strip */
 .brands{padding-block:40px;border-bottom:1px solid var(--line)}
@@ -157,7 +157,7 @@ section{padding-block:120px}
 .chip{height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:500 .8rem var(--f-body);cursor:pointer;transition:all .2s}
 .chip:hover{color:var(--ink);border-color:#3a3a40}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.chip i{font-style:normal;opacity:.55;margin-left:4px;font-variant-numeric:tabular-nums}
+.chip i{font-style:normal;opacity:.85;margin-left:4px;font-variant-numeric:tabular-nums}
 .list{border-top:1px solid var(--line)}
 .row{display:grid;grid-template-columns:130px minmax(0,1.4fr) minmax(0,1fr) minmax(0,1.3fr) auto;gap:20px;align-items:center;padding:18px 4px;border-bottom:1px solid var(--line);transition:background .2s}
 .row:hover{background:var(--surface)}
@@ -280,12 +280,11 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
       <a class="btn ghost" href="#parts">Browse compatible parts</a>
     </div>
   </div>
-  <figure class="hero-shot" style="margin-inline:0;margin-bottom:0"><img src="{{IMG_HERO}}" alt="Rendering of 3D-printed replacement parts on a dark surface" width="1600" height="900"></figure>
+  <figure class="hero-shot" style="margin-inline:0;margin-bottom:0"><img fetchpriority="high" src="{{IMG_HERO}}" alt="Rendering of 3D-printed replacement parts on a dark surface" width="1600" height="900"></figure>
   <div class="wrap">
     <div class="facts">
       <div><b>Free reprint</b><span>If it doesn't fit, we print it again</span></div>
       <div><b>300 mm³</b><span>Largest single part</span></div>
-      <div><b>3 printers</b><span>Enclosed, running in parallel</span></div>
       <div><b>Modesto, CA</b><span>On-site measuring nearby</span></div>
     </div>
   </div>
@@ -294,7 +293,7 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
 <div class="brands">
   <div class="wrap">
     <p>Compatible parts for</p>
-    <div class="row"><span>DeWalt</span><span>Milwaukee</span><span>Ryobi</span><span>Ridgid</span><span>WEN</span><span>Shark</span><span>Prolux</span><span>Samsung</span><span>Hampton Bay</span></div>
+    <div class="row"><span>DeWalt</span><span>Milwaukee</span><span>Ryobi</span><span>Ridgid</span><span>Makita</span><span>Craftsman</span><span>Shop-Vac</span><span>Vacmaster</span><span>WEN</span><span>Shark</span><span>Prolux</span><span>Samsung</span><span>Hampton Bay</span></div>
   </div>
 </div>
 
@@ -366,7 +365,7 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
       <h2>Parts we make, <em class="s">made to order.</em></h2>
       <p>Aftermarket replacement parts and accessories that fit popular tool, vacuum, and appliance brands. Request one and we'll confirm fit and price. Images marked "Sample image" show the part type, not the exact part.</p>
     </div>
-    <div class="parts-top"><h3>Popular parts</h3><a class="btn ghost" href="https://www.ebay.com/usr/sottero" target="_blank" rel="noopener">Shop ready-made parts on eBay <span class="ar">↗</span></a></div>
+    <div class="parts-top"><h3>Popular parts</h3><a class="btn ghost" href="https://www.ebay.com/usr/truepartfabrication" target="_blank" rel="noopener">Shop ready-made parts on eBay <span class="ar">↗</span></a></div>
     <div class="feat" id="feat"></div>
 
     <div class="index">
@@ -421,7 +420,6 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
     </div>
     <p class="note">Heat limits are typical published ranges and vary by brand and print settings.</p>
     <div class="shop">
-      <div><div class="k">Printers</div><p>Creality K2 Pro, Creality K2, Elegoo Centauri Carbon</p><small>Three enclosed printers running in parallel</small></div>
       <div><div class="k">Largest part</div><p>300 × 300 × 300 mm</p><small>Bigger parts can be printed in sections</small></div>
       <div><div class="k">Design &amp; measuring</div><p>Shapr3D CAD, digital calipers</p><small>Filament dried before every critical print</small></div>
     </div>
@@ -455,11 +453,11 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
     <div class="info">
       <div class="label">Request a quote</div>
       <h2>Tell us <em class="s">what broke.</em></h2>
-      <p>Describe the part and what it does, then send the summary to us by email with a photo of the part. We reply with questions or a written quote.</p>
-      <div class="ci"><b>Email</b><span>nsottero@gmail.com</span></div>
+      <p>Describe the part and what it does, then email the request to us with a photo of the part. We reply with questions or a written quote.</p>
+      <div class="ci"><b>Email</b><span><a href="mailto:ando23152@gmail.com?subject=Quote%20request">Email us a quote request</a></span></div>
       <div class="ci"><b>Location</b><span>Modesto, California</span></div>
       <div class="ci"><b>Serving</b><span>Modesto, Ceres, Turlock, Manteca, Tracy, Stockton, and shipping statewide</span></div>
-      <div class="ci"><b>Shop on eBay</b><span><a href="https://www.ebay.com/usr/sottero" target="_blank" rel="noopener">ebay.com/usr/sottero</a></span></div>
+      <div class="ci"><b>Shop on eBay</b><span><a href="https://www.ebay.com/usr/truepartfabrication" target="_blank" rel="noopener">Shop True Part Fabrication on eBay</a></span></div>
     </div>
     <form id="qf" novalidate>
       <div class="f"><label for="q-name">Name</label><input id="q-name" autocomplete="name" placeholder="Jordan Diaz"></div>
@@ -470,7 +468,8 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
       <div class="f"><label for="q-qty">Quantity</label><input id="q-qty" inputmode="numeric" value="1"></div>
       <div class="f"><label for="q-when">Needed by</label><input id="q-when" type="date"></div>
       <div class="f full"><label for="q-desc">Describe the part</label><textarea id="q-desc" placeholder="Example: The hose cuff on our 16-gallon shop vac cracked where it locks into the tank. 2-1/2 in. hose. I still have the broken piece."></textarea></div>
-      <p class="err" id="q-err" hidden>Add your name, a way to reach you, and a short description of the part.</p>
+      <div class="f full"><label class="agree" for="q-terms"><input type="checkbox" id="q-terms"> <span>I've read and agree to the <a href="{{TERMS}}">Terms of Service</a>.</span></label></div>
+      <p class="err" id="q-err" role="alert" hidden>Add your name, a way to reach you, and a short description of the part.</p>
       <div class="f full"><button class="btn" type="submit">Prepare my request <span class="ar">→</span></button></div>
       <div class="out" id="q-out" hidden>
         <pre id="q-text"></pre>
@@ -486,7 +485,7 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
     <div class="foot">
       <div><img src="data:image/png;base64,{{LOGO}}" alt="True Part Fabrication" width="800" height="493"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
       <div><h4>Explore</h4><ul><li><a href="#services">Services</a></li><li><a href="#business">For business</a></li><li><a href="#parts">Compatible parts</a></li><li><a href="#process">Process</a></li><li><a href="#about">About</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="#quote">Request a quote</a></li><li><span style="color:var(--muted)">nsottero@gmail.com</span></li><li><a href="https://www.ebay.com/usr/sottero" target="_blank" rel="noopener">eBay store</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="#quote">Request a quote</a></li><li><a href="https://www.ebay.com/usr/truepartfabrication" target="_blank" rel="noopener">eBay store</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
@@ -546,16 +545,17 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
   function v(id){return document.getElementById(id).value.trim()}
   f.addEventListener('submit',function(e){
     e.preventDefault();
-    if(!v('q-name')||!v('q-contact')||!v('q-desc')){err.hidden=false;out.hidden=true;return}
+    if(!v('q-name')||!v('q-contact')||!v('q-desc')){err.textContent='Add your name, a way to reach you, and a short description of the part.';err.hidden=false;out.hidden=true;return}
+    if(!document.getElementById('q-terms').checked){err.textContent='Please read and agree to the Terms of Service before sending a request.';err.hidden=false;out.hidden=true;return}
     err.hidden=true;
     var lines=['Quote request — True Part Fabrication','','Name: '+v('q-name')];
     if(v('q-co'))lines.push('Company: '+v('q-co'));
     lines.push('Contact: '+v('q-contact'),'Type of work: '+v('q-type'),'Quantity: '+(v('q-qty')||'1'));
     if(v('q-when'))lines.push('Needed by: '+v('q-when'));
-    lines.push('','Description:',v('q-desc'),'','(Please attach a photo of the part)');
+    lines.push('','Description:',v('q-desc'),'','Agreed to the Terms of Service: yes','(Please attach a photo of the part)');
     txt.textContent=lines.join('\n');out.hidden=false;
-    st.textContent='Open it in your email app, or copy it and email it to us. Attach a photo of the part.';
-    document.getElementById('q-mail').href='mailto:nsottero@gmail.com?subject='+encodeURIComponent('Quote request: '+v('q-type'))+'&body='+encodeURIComponent(txt.textContent);
+    st.textContent='Open it in your email app to send it to us, or copy it. Attach a photo of the part.';
+    document.getElementById('q-mail').href='mailto:ando23152@gmail.com?subject='+encodeURIComponent('Quote request: '+v('q-type'))+'&body='+encodeURIComponent(txt.textContent);
   });
   document.getElementById('q-copy').addEventListener('click',function(){
     var t=txt.textContent;
