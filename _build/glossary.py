@@ -192,7 +192,7 @@ TERMS.append({
 })
 
 for _t in [
- {"slug": "prototype", "term": "Prototype", "cat": "Design",
+ {"slug": "prototyping", "term": "Prototype", "cat": "Design",
   "short": "An early working version of a part or product, made to test its fit, function, or look before committing to production.",
   "body": ["A printed prototype lets you hold the part, try it on the equipment, and find problems while they're still cheap to fix.",
            "Because nothing has to be tooled, a design can go through several versions in days instead of weeks. Each version is modeled in CAD, so changes carry forward cleanly.",
@@ -212,7 +212,7 @@ for _t in [
            "Printed enclosures are made to the exact size of the board or device and can include mounting tabs, snap-fit lids, and cable strain relief.",
            "We make enclosures for low-voltage electronics and prototypes. Housings for mains-voltage electrical equipment, and anything that must meet an electrical safety code, are outside what we make."],
   "quote": "Send the board or device dimensions, where each connector or button sits, and where it will be mounted, indoors or outdoors.",
-  "related": ["asa", "prototype", "cad", "heat-deflection-temperature"]},
+  "related": ["asa", "prototyping", "cad", "heat-deflection-temperature"]},
  {"slug": "roller", "term": "Roller and wheel (replacement)", "cat": "Parts",
   "short": "A small plastic roller, wheel, or glide that lets a rack, drawer, or tray move, often the first part to crack or wear.",
   "body": ["Dishwasher rack rollers, drawer glides, and tray wheels are small parts that wear out or break, and they're often sold only as part of a whole assembly.",
