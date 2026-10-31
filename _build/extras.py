@@ -182,8 +182,8 @@ def pricing(c):
 </div>
 {cta(c)}
 </main>"""
-    return B.doc(c, B.head(c, "3D Printing Prices & How Quotes Work | True Part Fabrication",
-                           "How custom 3D printing and replacement part prices are set: size, material, design work, quantity, and turnaround. Most business jobs run $75 to $800+. Modesto, CA.",
+    return B.doc(c, B.head(c, "Custom Part Pricing & How Quotes Work | True Part Fabrication",
+                           "How custom part manufacturing and replacement part prices are set: size, material, design work, quantity, and turnaround. Most business jobs run $75 to $800+. Modesto, CA.",
                            [B.crumbs_ld([("Home", ""), ("Pricing", "pricing/")])]), body)
 
 # ---------------- SERVICES ----------------
@@ -221,8 +221,8 @@ def services_index(c):
 <div class="wrap" style="padding-block:48px 90px"><div class="cards2">{cards}</div></div>
 {cta(c)}
 </main>"""
-    return B.doc(c, B.head(c, "3D Printing Services in Modesto, CA | True Part Fabrication",
-                           "Replacement parts, custom fabrication, electronics enclosures, and small-batch manufacturing, 3D printed in Modesto for the Central Valley.",
+    return B.doc(c, B.head(c, "Custom Manufacturing Services in Modesto, CA | True Part Fabrication",
+                           "Replacement parts, custom fabrication, electronics enclosures, and small-batch manufacturing, made in Modesto for the Central Valley.",
                            [B.crumbs_ld([("Home", ""), ("Services", "services/")])]), body)
 
 def service_page(c, svc):
@@ -264,7 +264,7 @@ def reorder(c):
 <p style="margin-top:26px;color:var(--muted);max-width:62ch">Reorders are priced the same as your last order unless the quantity, material, or turnaround changes; we'll confirm before printing. Ordering for the first time? Use the <a href="{c.link('', 'quote')}" style="color:var(--ink)">quote form</a>.</p>
 </div>
 </main>"""
-    return B.doc(c, B.head(c, "Reorder a Part | True Part Fabrication", "Reorder a 3D-printed part by part ID. Your model is on file, so the reorder matches the first run.",
+    return B.doc(c, B.head(c, "Reorder a Part | True Part Fabrication", "Reorder a part by part ID. Your model is on file, so the reorder matches the first run.",
                            [B.crumbs_ld([("Home", ""), ("Reorder", "reorder/")])]), body)
 
 # ---------------- PROJECTS ----------------
@@ -282,7 +282,7 @@ def projects(c):
 <p style="margin-top:28px;color:var(--muted)">Until then, see the kinds of parts we make in the <a href="{c.link('parts/')}" style="color:var(--ink)">parts catalog</a> and our <a href="{c.link('services/')}" style="color:var(--ink)">services</a>.</p>
 </div>
 </main>"""
-    return B.doc(c, B.head(c, "Projects | True Part Fabrication", "Real 3D printing and replacement part jobs from True Part Fabrication in Modesto, CA. First projects posted after we open January 1, 2027.",
+    return B.doc(c, B.head(c, "Projects | True Part Fabrication", "Real custom manufacturing and replacement part jobs from True Part Fabrication in Modesto, CA. First projects posted after we open January 1, 2027.",
                            [B.crumbs_ld([("Home", ""), ("Projects", "projects/")])]), body)
 
 # ---------------- SEARCH ----------------

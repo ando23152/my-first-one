@@ -148,8 +148,8 @@ def home_es(c):
     body = f"""<main id="main">
 <div class="page-hero"><div class="wrap">
   <div class="label">En español</div>
-  <h1>Piezas de repuesto e impresión 3D a medida en Modesto, CA</h1>
-  <p class="lead">Diseñamos e imprimimos en 3D piezas de repuesto, soportes, plantillas y lotes pequeños para negocios y talleres del Valle Central. Si la pieza no queda, la reimprimimos gratis.</p>
+  <h1>Piezas de repuesto y manufactura a medida en Modesto, CA</h1>
+  <p class="lead">Diseñamos y fabricamos piezas de repuesto, soportes, plantillas y lotes pequeños para negocios y talleres del Valle Central. Si la pieza no queda, la reimprimimos gratis.</p>
   <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px"><a class="btn" href="{L('es/', 'cotizar')}">Pedir cotización <span class="ar">→</span></a><a class="btn ghost" href="{L('es/piezas/')}">Ver catálogo de piezas</a></div>
 </div></div>
 
@@ -193,8 +193,8 @@ def home_es(c):
 </main>
 {FORM_JS}"""
     org = dict(B.ORG); org["availableLanguage"] = ["English", "Spanish"]
-    t = "Piezas de repuesto e impresión 3D en Modesto, CA | True Part Fabrication"
-    d = "Diseñamos e imprimimos en 3D piezas de repuesto, soportes, plantillas y lotes pequeños para negocios en Modesto, Turlock, Stockton y el Valle Central. Reimpresión gratis si no queda."
+    t = "Piezas de repuesto y manufactura a medida en Modesto, CA | True Part Fabrication"
+    d = "Diseñamos y fabricamos piezas de repuesto, soportes, plantillas y lotes pequeños para negocios en Modesto, Turlock, Stockton y el Valle Central. Reimpresión gratis si no queda."
     return doc_es(c, B.head(c, t, d, [org]), body)
 
 def faq_es(c):
@@ -210,7 +210,7 @@ def faq_es(c):
 </main>"""
     faqld = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es",
              "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ_ES]}
-    return doc_es(c, B.head(c, "Preguntas frecuentes sobre impresión 3D y piezas | True Part Fabrication",
+    return doc_es(c, B.head(c, "Preguntas frecuentes sobre manufactura y piezas | True Part Fabrication",
                             "Respuestas sobre cotizaciones, precios, tiempos de entrega, materiales, garantía de ajuste y lo que True Part Fabrication puede hacer en Modesto, CA.",
                             [faqld, B.crumbs_ld([("Inicio", "es/"), ("Preguntas frecuentes", "es/preguntas-frecuentes/")])]), body)
 

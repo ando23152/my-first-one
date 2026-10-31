@@ -224,11 +224,11 @@ def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensu
 
 ORG = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": BASE + "/#business", "name": "True Part Fabrication LLC",
        "url": BASE + "/", "logo": BASE + "/assets/img/logo-dark.png", "image": BASE + "/assets/img/og-image.jpg",
-       "description": "Custom 3D printing, replacement parts, and small-batch manufacturing in Modesto, California.",
+       "description": "Custom part manufacturing, replacement parts, and small-batch production in Modesto, California.",
        "address": {"@type": "PostalAddress", "addressLocality": "Modesto", "addressRegion": "CA", "addressCountry": "US"},
        "areaServed": ["Modesto", "Ceres", "Turlock", "Manteca", "Tracy", "Stockton", "Stanislaus County", "San Joaquin County"],
        "sameAs": [EBAY],
-       "knowsAbout": ["3D printing", "Replacement parts", "Reverse engineering", "Jigs and fixtures", "Small-batch manufacturing"]}
+       "knowsAbout": ["Additive manufacturing", "Replacement parts", "Reverse engineering", "Jigs and fixtures", "Small-batch manufacturing"]}
 
 def crumbs_ld(items):
     return {"@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -248,7 +248,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="{BASE}/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="True Part Fabrication logo over 3D-printed parts">
+<meta property="og:image:alt" content="True Part Fabrication logo over custom manufactured parts">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#070708">
 <script>try{{var t=localStorage.getItem("tpf-theme");if(t==="light")document.documentElement.setAttribute("data-tpf-theme","light")}}catch(e){{}}</script>
@@ -353,7 +353,7 @@ def feat_cards(c):
     for m in CAT["feat"]:
         it = next((x for x in CAT["items"] if x["oem"] == m), None)
         if not it: continue
-        out.append(f"""<article class="pc"><div class="ph"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Sample image of a 3D-printed {it['i']}" width="640" height="480" loading="lazy"><span>Sample image</span></div>
+        out.append(f"""<article class="pc"><div class="ph"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Sample image of a custom manufactured {it['i']}" width="640" height="480" loading="lazy"><span>Sample image</span></div>
 <div class="bd"><div class="br">Fits {esc(it['b'])}</div><h4><a href="{c.link('parts/' + it['slug'] + '/')}">{esc(it['n'])}</a></h4><div class="rp">{esc(rp(it))}</div><div class="ft">{esc('Fits ' + it['f']) if it['f'] else 'Ask us to confirm your model'}</div>
 <a class="go" href="{c.link('', 'quote')}" data-part="{esc(part_text(it))}">Request this part →</a></div></article>""")
     return "\n".join(out)
@@ -419,7 +419,7 @@ def home(c, art=False):
     about_more = f'''<div class="about-more">
           <div><b>Company</b><span>True Part Fabrication LLC, a California company based in Modesto</span></div>
           <div><b>Opening</b><span>January 1, 2027. Quote requests welcome now; hours posted at opening</span></div>
-          <div><b>In the shop</b><span>Enclosed 3D printers, parts up to 300 mm, CAD modeling, digital calipers</span></div>
+          <div><b>In the shop</b><span>Enclosed additive manufacturing equipment, parts up to 300 mm, CAD modeling, precision measuring</span></div>
           <div><b>On site</b><span>Measuring at your location across Modesto, Ceres, Turlock, Manteca, Tracy, and Stockton</span></div>
           <div><b>Guarantee</b><span><a href="{c.link('terms/')}">Free reprint</a> if a part doesn't fit</span></div>
           <div><b>See more</b><span><a href="{c.link('projects/')}">Projects</a> · <a href="{c.link('pricing/')}">Pricing</a> · <a href="{c.link('services/')}">Services</a></span></div>
@@ -445,8 +445,8 @@ def home(c, art=False):
 </section>
 
 <section id="quote\"""", 1)
-    title = "Custom 3D Printing & Replacement Parts in Modesto, CA | True Part Fabrication"
-    desc = "True Part Fabrication designs and 3D prints replacement parts, custom brackets, jigs, fixtures, and small-batch runs for businesses in Modesto, Turlock, Stockton, and the Central Valley. Free reprint if it doesn't fit."
+    title = "Custom Part Manufacturing & Replacement Parts in Modesto, CA | True Part Fabrication"
+    desc = "True Part Fabrication designs and manufactures replacement parts, custom brackets, jigs, fixtures, and small-batch runs for businesses in Modesto, Turlock, Stockton, and the Central Valley. Free reprint if it doesn't fit."
     org = dict(ORG)
     web = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE, "url": BASE + "/"}
     script = TPL[TPL.index('<script id="cat-data"'):]
@@ -493,7 +493,7 @@ def parts(c):
 </div></section>
 </main>"""
     title = "Compatible Replacement Parts for DeWalt, Milwaukee, Ryobi & More | True Part Fabrication"
-    desc = f"Browse {len(items)} made-to-order aftermarket parts: dust adapters, nozzles, brushes, clips, and fittings that fit DeWalt, Milwaukee, Ryobi, RIDGID, WEN, Shark, and more. 3D printed in Modesto, CA."
+    desc = f"Browse {len(items)} made-to-order aftermarket parts: dust adapters, nozzles, brushes, clips, and fittings that fit DeWalt, Milwaukee, Ryobi, RIDGID, WEN, Shark, and more. Made to order in Modesto, CA."
     lds = [crumbs_ld([("Home", ""), ("Compatible parts", "parts/")]),
            {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Compatible replacement parts", "url": BASE + "/parts/", "isPartOf": {"@id": BASE + "/#business"}}]
     return doc(c, head(c, title, desc, lds), body)
@@ -530,8 +530,8 @@ def faq(c):
     strip = lambda s: re.sub("<[^>]+>", "", s).strip()
     faqld = {"@context": "https://schema.org", "@type": "FAQPage",
              "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in items]}
-    return doc(c, head(c, "3D Printing & Replacement Parts FAQ | True Part Fabrication",
-                       "Answers about quotes, pricing, turnaround, materials, fit guarantee, and what True Part Fabrication can make. Custom 3D printing in Modesto, CA.",
+    return doc(c, head(c, "Custom Manufacturing & Replacement Parts FAQ | True Part Fabrication",
+                       "Answers about quotes, pricing, turnaround, materials, fit guarantee, and what True Part Fabrication can make. Custom part manufacturing in Modesto, CA.",
                        [faqld, crumbs_ld([("Home", ""), ("FAQ", "faq/")])]), body)
 
 # ---------------- GLOSSARY ----------------
@@ -546,7 +546,7 @@ def gloss_index(c):
     body = f"""<main id="main">
 <div class="page-hero"><div class="wrap">
   {crumbs(c, [('Home', ''), ('Glossary', 'glossary/')])}
-  <h1>3D printing and replacement parts glossary</h1>
+  <h1>Manufacturing and replacement parts glossary</h1>
   <p class="lead">Plain-English definitions of the materials, fits, and manufacturing terms that come up when you order a custom or replacement part, and what each one means for your part.</p>
   <div class="terms-strip">{jump}</div>
 </div></div>
@@ -555,8 +555,8 @@ def gloss_index(c):
 </main>"""
     setld = {"@context": "https://schema.org", "@type": "DefinedTermSet", "name": "True Part Fabrication glossary", "url": BASE + "/glossary/",
              "hasDefinedTerm": [{"@type": "DefinedTerm", "name": t["term"], "description": t["short"], "url": BASE + "/glossary/" + t["slug"] + "/"} for t in TERMS]}
-    return doc(c, head(c, "3D Printing Glossary: Materials, Fits & Terms | True Part Fabrication",
-                       f"{len(TERMS)} plain-English definitions of 3D printing and replacement part terms: PETG, ASA, tolerance, infill, reverse engineering, hose sizes, and more.",
+    return doc(c, head(c, "Manufacturing Glossary: Materials, Fits & Terms | True Part Fabrication",
+                       f"{len(TERMS)} plain-English definitions of manufacturing and replacement part terms: PETG, ASA, tolerance, infill, reverse engineering, hose sizes, and more.",
                        [setld, crumbs_ld([("Home", ""), ("Glossary", "glossary/")])]), body)
 
 def gloss_page(c, t):
@@ -580,7 +580,7 @@ def gloss_page(c, t):
   <aside class="side">
     <div class="box"><h2>Related terms</h2><ul>{rel}</ul></div>
     {f'<div class="box"><h2>More in {t["cat"]}</h2><ul>{more}</ul></div>' if more else ''}
-    <div class="box"><h2>Need a part?</h2><p>We design and 3D print replacement parts in Modesto, CA. Free reprint if it doesn't fit.</p><a class="btn ghost" href="{c.link('parts/')}" style="height:40px;font-size:.85rem">Browse compatible parts</a></div>
+    <div class="box"><h2>Need a part?</h2><p>We design and manufacture replacement parts in Modesto, CA. Free reprint if it doesn't fit.</p><a class="btn ghost" href="{c.link('parts/')}" style="height:40px;font-size:.85rem">Browse compatible parts</a></div>
   </aside>
 </div>
 </main>"""
@@ -624,7 +624,7 @@ TERMS_SECTIONS = [
  ("Parts we don't make", ["We don't make parts where a failure could hurt someone, including safety-critical, life-safety, or load-bearing parts; pressurized or air-pressure parts; electrical parts and housings; automotive braking or steering parts; child-safety, medical, or pool-safety items; code-compliance parts; and parts that contact food or drink.", "We may decline any job, and we'll tell you why."]),
  ("Your information and designs", ["You're responsible for the accuracy of the measurements, photos, drawings, and files you send, and for describing how the part will be used.", "By sending us a part, drawing, or file, you confirm you have the right to have it reproduced or modified for your own use. We keep your part's model on file so we can reprint it for you; we don't sell it or make it for others without your permission."]),
  ("Fit guarantee", ["If a part we make doesn't fit the equipment described in your quote, tell us within 30 days of delivery. Send your measurements or the part, and we'll adjust the model and reprint it at no charge.", "The fit guarantee covers fit. It doesn't cover parts used outside the conditions described in your quote (for example, higher heat or load), parts that were modified after delivery, or problems caused by incorrect measurements or information you provided. In those cases we'll quote a corrected part."]),
- ("Intended use", ["You're responsible for confirming that a part is suitable for your equipment and use, and for installing it correctly. 3D-printed parts have different properties from molded parts; we'll recommend a material, but final suitability is your decision."]),
+ ("Intended use", ["You're responsible for confirming that a part is suitable for your equipment and use, and for installing it correctly. Additively manufactured (3D-printed) parts have different properties from molded parts; we'll recommend a material, but final suitability is your decision."]),
  ("Limitation of liability", ["To the extent the law allows, our total liability for any part or job is limited to the amount you paid for it, and we aren't liable for indirect or consequential losses such as downtime or lost profits. Nothing in these terms limits rights you have under law that can't be waived."]),
  ("Governing law", ["These terms are governed by the laws of the State of California."]),
  ("Changes and contact", ["We may update these terms. The version in effect when you approve a quote applies to that job. Questions about these terms: use the email link in the quote section of our home page."]),

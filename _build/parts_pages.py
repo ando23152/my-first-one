@@ -98,7 +98,7 @@ def part_page(c, it, items, hose):
 <div class="page-hero"><div class="wrap">
   {B.crumbs(c, crumbs_list)}
   <h1>{esc(it['n'])}</h1>
-  <p class="lead">A compatible aftermarket replacement for {esc(b)} {esc(ref)}, 3D printed to order in Modesto, CA. Fit is {status} for the models listed. Free reprint if it doesn't fit.</p>
+  <p class="lead">A compatible aftermarket replacement for {esc(b)} {esc(ref)}, manufactured to order in Modesto, CA. Fit is {status} for the models listed. Free reprint if it doesn't fit.</p>
   {price}
 </div></div>
 <div class="wrap">
@@ -111,7 +111,7 @@ def part_page(c, it, items, hose):
       </div>
       <p class="note">Send your equipment's model number with the request so we can confirm the fit before we print. Not sure of a size? Use the <a href="{c.link('guides/how-to-measure-a-part/')}">measuring guide</a>. Prices and turnaround are in your written quote; see the <a href="{c.link('faq/')}">FAQ</a> and our <a href="{c.link('terms/')}">Terms of Service</a>.</p>
     </div>
-    <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of a 3D-printed {esc(KIND.get(it['i'], it['i']).lower())}" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
+    <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of a custom manufactured {esc(KIND.get(it['i'], it['i']).lower())}" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
   </div>
   {f'<div class="head" style="margin:10px 0 22px"><div class="label">More {esc(b)} parts</div></div><div class="rel">{rel}</div>' if rel else ''}
   <p class="legal" style="margin:44px 0 90px">This is a compatible aftermarket part made by True Part Fabrication, not a genuine {esc(b)} part. {esc(b)} and its part and model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>
@@ -120,7 +120,7 @@ def part_page(c, it, items, hose):
     t_ref = f" for {b} {ref}" if ref else f" for {b}"
     title = f"{it['n']}{t_ref} | True Part Fabrication"
     if len(title) > 95: title = f"{it['n']}{t_ref}"
-    desc = f"Aftermarket {it['n'][0].lower() + it['n'][1:]} that {'replaces' if it['oem'] else 'fits'} {b} {ref}." + (f" Fits {fit}." if fit else "") + f" 3D printed in {it['mat']} in Modesto, CA. Free reprint if it doesn't fit."
+    desc = f"Aftermarket {it['n'][0].lower() + it['n'][1:]} that {'replaces' if it['oem'] else 'fits'} {b} {ref}." + (f" Fits {fit}." if fit else "") + f" Made in {it['mat']} in Modesto, CA. Free reprint if it doesn't fit."
     lds = [B.crumbs_ld(crumbs_list)]
     if it.get("price"):
         lds.append({"@context": "https://schema.org", "@type": "Product", "name": it["n"], "description": desc,

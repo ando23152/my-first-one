@@ -274,13 +274,13 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
   <div class="wrap hero-inner">
     <img class="hero-logo" src="data:image/png;base64,{{LOGO}}" alt="True Part Fabrication logo: a 3D printer frame forming the letters TPF" width="800" height="493">
     <h1>The part that fits. <em class="s">Designed and made in Modesto.</em></h1>
-    <p class="lede">Replacement parts, custom components, and small production runs, modeled to your part and printed in engineering materials. Fix the equipment you already own instead of replacing it.</p>
+    <p class="lede">Replacement parts, custom components, and small production runs, modeled to your part and manufactured in engineering-grade materials. Fix the equipment you already own instead of replacing it.</p>
     <div class="actions">
       <a class="btn" href="#quote">Start a quote <span class="ar">→</span></a>
       <a class="btn ghost" href="#parts">Browse compatible parts</a>
     </div>
   </div>
-  <figure class="hero-shot" style="margin-inline:0;margin-bottom:0"><img fetchpriority="high" src="{{IMG_HERO}}" alt="Rendering of 3D-printed replacement parts on a dark surface" width="1600" height="900"></figure>
+  <figure class="hero-shot" style="margin-inline:0;margin-bottom:0"><img fetchpriority="high" src="{{IMG_HERO}}" alt="Rendering of custom manufactured replacement parts on a dark surface" width="1600" height="900"></figure>
   <div class="wrap">
     <div class="facts">
       <div><b>Free reprint</b><span>If it doesn't fit, we print it again</span></div>
@@ -432,7 +432,7 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
     <div class="about">
       <div class="copy">
         <p class="big">True Part Fabrication is a California manufacturing and product development company. We combine <em>technology, craftsmanship, and customer-focused service</em> to make useful parts more accessible and reduce unnecessary replacement costs.</p>
-        <p class="m">Founded by three partners, we specialize in precision 3D printing, functional replacement parts, custom fabrication, and new product solutions. Over time we plan to grow into electronics, proprietary products, and advanced manufacturing.</p>
+        <p class="m">Founded by three partners, we specialize in precision additive manufacturing, functional replacement parts, custom fabrication, and new product solutions. Over time we plan to grow into electronics, proprietary products, and advanced manufacturing.</p>
         <div class="team">
           <div><h3>Sales &amp; quoting</h3><p>Your first contact for quotes, orders, and accounts.</p></div>
           <div><h3>Printing &amp; operations</h3><p>Models parts in CAD, runs the printers, and checks every part for fit.</p></div>
@@ -509,7 +509,7 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
   }
   function card(it){
     var c=el('article','pc'),ph=el('div','ph'),im=document.createElement('img');
-    im.src=IMG[it.i];im.alt='Sample image of a 3D-printed '+it.i;ph.appendChild(im);ph.appendChild(el('span',null,'Sample image'));c.appendChild(ph);
+    im.src=IMG[it.i];im.alt='Sample image of a custom manufactured '+it.i;ph.appendChild(im);ph.appendChild(el('span',null,'Sample image'));c.appendChild(ph);
     var bd=el('div','bd');bd.appendChild(el('div','br','Fits '+it.b));bd.appendChild(el('h4',null,it.n));bd.appendChild(el('div','rp',rp(it)));
     bd.appendChild(el('div','ft',it.f?'Fits '+it.f:'Ask us to confirm your model'));
     var g=el('button','go','Request this part →');g.type='button';g.addEventListener('click',function(){request(it)});bd.appendChild(g);

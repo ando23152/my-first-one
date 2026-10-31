@@ -186,7 +186,7 @@ def material_picker(c):
                    for n, s, h, f, uv, t, fl, st, w, co, best in MATS)
     links = {n: c.link("glossary/" + s + "/") for n, s, *_ in MATS}
     body = f"""<main id="main">
-{page_hero(c, [('Home',''),('Resources','resources/'),('Material picker','tools/material-picker/')], 'Which 3D printing material should I use?',
+{page_hero(c, [('Home',''),('Resources','resources/'),('Material picker','tools/material-picker/')], 'Which material should I use for my part?',
   'Answer five quick questions about where your part lives and how it\'s used. You\'ll get a recommended material, the reasons, and a backup option. Compare all six materials in the chart below.')}
 <section style="padding-block:44px 40px"><div class="wrap picker">
   <form id="mp" onsubmit="return false">{qs}</form>
@@ -222,9 +222,9 @@ document.getElementById('mp-quote').setAttribute('data-part','Material picker su
 document.getElementById('mp').addEventListener('change',pick);pick();}})();
 </script>"""
     lds = [B.crumbs_ld([("Home", ""), ("Resources", "resources/"), ("Material picker", "tools/material-picker/")]),
-           {"@context": "https://schema.org", "@type": "WebApplication", "name": "3D printing material picker", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": B.BASE + "/tools/material-picker/"}]
-    return B.doc(c, B.head(c, "Which 3D Printing Material? PLA vs PETG vs ASA vs ABS vs Nylon | Material Picker",
-                           "Free material picker and comparison chart for 3D printed parts. Compare PLA, PETG, ASA, ABS, carbon-fiber nylon, and TPU for heat, sun, toughness, flexibility, and cost.", lds), body)
+           {"@context": "https://schema.org", "@type": "WebApplication", "name": "Part material picker", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": B.BASE + "/tools/material-picker/"}]
+    return B.doc(c, B.head(c, "Which Material for Your Part? PLA vs PETG vs ASA vs ABS vs Nylon | Material Picker",
+                           "Free material picker and comparison chart for custom manufactured parts. Compare PLA, PETG, ASA, ABS, carbon-fiber nylon, and TPU for heat, sun, toughness, flexibility, and cost.", lds), body)
 
 # ---------------- MEASURING GUIDE ----------------
 SVG_OD = """<svg viewBox="0 0 480 200" role="img" aria-label="Calipers measuring the outside diameter of a hose cuff"><rect x="40" y="70" width="210" height="80" rx="6" fill="#1d1d22" stroke="#e9e8e4" stroke-width="1.5"/><rect x="250" y="82" width="160" height="56" rx="4" fill="#2a2a30" stroke="#e9e8e4" stroke-width="1.5"/><path d="M40 40h240v14H40zM40 54v16M266 54v16" stroke="#e3262f" stroke-width="3" fill="none"/><rect x="40" y="34" width="250" height="20" fill="none" stroke="#e3262f" stroke-width="2"/><path d="M40 160v20M250 160v20" stroke="#ff3b43" stroke-width="1.5"/><path d="M44 174h202" stroke="#ff3b43" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/><text x="145" y="196" text-anchor="middle" fill="#e9e8e4" font-family="JetBrains Mono, monospace" font-size="13">OD (outside diameter)</text><text x="330" y="115" text-anchor="middle" fill="#b9b9bf" font-family="JetBrains Mono, monospace" font-size="12">hose</text><defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#ff3b43"/></marker></defs></svg>"""
@@ -245,7 +245,7 @@ def measure_guide(c):
     items = "".join(f'<li><div><h2>{esc(t)}</h2>{h.format(**fmt).replace("<a href=", "<a style=\"color:var(--ink)\" href=")}{("<figure>" + s + "</figure>") if s else ""}</div></li>' for t, h, s in STEPS)
     body = f"""<main id="main">
 {page_hero(c, [('Home',''),('Resources','resources/'),('How to measure a part','guides/how-to-measure-a-part/')], 'How to measure a part for a replacement',
-  'Eight steps to photograph and measure a broken or discontinued part so it can be modeled and 3D printed. No special tools needed, though digital calipers help.')}
+  'Eight steps to photograph and measure a broken or discontinued part so it can be modeled and manufactured. No special tools needed, though digital calipers help.')}
 <section style="padding-block:40px 80px"><div class="wrap"><ol class="howto" style="padding:0;margin:0">{items}</ol>
 <div class="explain" style="max-width:900px">
   <div><h3>Why accuracy matters</h3><p>Printed parts are made to your numbers. See how {G(c,'tolerance','tolerance')} and {G(c,'fit-types','fit types')} affect the result.</p></div>
@@ -254,11 +254,11 @@ def measure_guide(c):
 </div></div></section>
 {cta(c, 'Ready to send it?', 'Attach your photos and measurements to a quote request. We reply with questions or a written quote.')}
 </main>"""
-    howto = {"@context": "https://schema.org", "@type": "HowTo", "name": "How to measure a part for a 3D-printed replacement",
-             "description": "Photograph and measure a broken or discontinued part so it can be modeled and 3D printed.",
+    howto = {"@context": "https://schema.org", "@type": "HowTo", "name": "How to measure a part for a custom replacement",
+             "description": "Photograph and measure a broken or discontinued part so it can be modeled and manufactured.",
              "tool": [{"@type": "HowToTool", "name": "Digital calipers"}, {"@type": "HowToTool", "name": "Ruler"}, {"@type": "HowToTool", "name": "Phone camera"}],
              "step": [{"@type": "HowToStep", "position": i + 1, "name": t, "text": re.sub("<[^>]+>", " ", h.format(**fmt)).strip()} for i, (t, h, s) in enumerate(STEPS)]}
-    return B.doc(c, B.head(c, "How to Measure a Part for a 3D-Printed Replacement | True Part Fabrication",
+    return B.doc(c, B.head(c, "How to Measure a Part for a Custom Replacement | True Part Fabrication",
                            "Step-by-step guide to photographing and measuring a broken or discontinued part with calipers or a ruler, including hose cuffs, holes, and hole spacing.",
                            [howto, B.crumbs_ld([("Home", ""), ("Resources", "resources/"), ("How to measure a part", "guides/how-to-measure-a-part/")])], og_type="article"), body)
 
@@ -299,22 +299,22 @@ def brand_page(c, b):
 {cta(c, f"Don't see your {esc(b)} part?", 'Send a photo and the model number. If it\'s plastic and not safety-critical, we can usually make it.')}
 </main>"""
     title = f"Compatible {b} Replacement Parts & Accessories | True Part Fabrication"
-    desc = f"Made-to-order aftermarket parts that fit {b} {cat}: {len(items)} compatible parts" + (", plus hose and port sizes" if hose else "") + ". 3D printed in Modesto, CA, with a free reprint if it doesn't fit."
+    desc = f"Made-to-order aftermarket parts that fit {b} {cat}: {len(items)} compatible parts" + (", plus hose and port sizes" if hose else "") + ". Made to order in Modesto, CA, with a free reprint if it doesn't fit."
     return B.doc(c, B.head(c, title, desc, [B.crumbs_ld([("Home", ""), ("Resources", "resources/"), (b + " parts", "brands/" + slug + "/")])]), body)
 
 # ---------------- INDUSTRY PAGES ----------------
 INDS = [
- ("food-processing", "Food processing", "3D printed parts for food processing plants",
+ ("food-processing", "Food processing", "Custom parts for food processing plants",
   "When a plastic bracket, guide, or sensor mount breaks on a processing line, waiting weeks for an OEM part means downtime. We make non-food-contact replacement and custom parts for food processing plants across the Central Valley.",
   ["Sensor and photo-eye mounts", "Line-side holders and organizers", "Guides, spacers, and bumpers", "Label and sign holders", "Cable and hose management clips", "Jigs for changeovers and setup"],
   "Everything we make for food plants stays outside the food zone. Parts that touch food or drink need certified materials and finishes, so we don't make them, and we'll tell you if a part crosses that line.",
   ["food-contact", "petg", "fixture", "small-batch-manufacturing"]),
- ("agriculture", "Agriculture", "3D printed parts for farms and agricultural equipment",
+ ("agriculture", "Agriculture", "Custom parts for farms and agricultural equipment",
   "Growers, packers, and equipment dealers in Stanislaus and San Joaquin counties lose time to small plastic parts: covers, clips, spacers, and mounts that are discontinued or sold only in big assemblies. We model and print them in materials that handle sun, dust, and heat.",
   ["Equipment covers and caps", "Clips, spacers, and bushings", "Sensor and monitor mounts", "Hose and line organizers", "Cab organizers and phone mounts", "Labels, tags, and holders"],
   "Outdoor and in-cab parts get ASA by default, so they hold up to UV and summer heat. We don't make pressurized, load-bearing, or safety-critical parts.",
   ["asa", "uv-resistance", "heat-deflection-temperature", "reverse-engineering"]),
- ("warehouse-cold-storage", "Warehouse & cold storage", "3D printed parts for warehouses and cold storage",
+ ("warehouse-cold-storage", "Warehouse & cold storage", "Custom parts for warehouses and cold storage",
   "Distribution centers and cold storage facilities run on small fixtures: scanner holsters, label holders, cable guides, and organizers. We make them to fit your racks, carts, and equipment, in materials that stay tough in the cold.",
   ["Scanner and handheld holsters", "Rack and bin label holders", "Cable guides and cord wraps", "Charging-station organizers", "Cart and tote accessories", "Door and dock bumpers"],
   "PLA turns brittle in freezers, so cold-room parts get PETG or carbon-fiber nylon. Tell us the temperature range and we'll pick the material.",
@@ -349,7 +349,7 @@ def industry_page(c, ind):
 </div></section>
 {cta(c, 'Have a part that keeps breaking?', 'Send a photo or the part itself. We\'ll reply with questions or a written quote.')}
 </main>"""
-    svc = {"@context": "https://schema.org", "@type": "Service", "name": h1, "serviceType": "Custom 3D printing and replacement parts", "areaServed": B.ORG["areaServed"], "provider": {"@id": B.BASE + "/#business"}, "url": B.BASE + "/industries/" + slug + "/"}
+    svc = {"@context": "https://schema.org", "@type": "Service", "name": h1, "serviceType": "Custom part manufacturing and replacement parts", "areaServed": B.ORG["areaServed"], "provider": {"@id": B.BASE + "/#business"}, "url": B.BASE + "/industries/" + slug + "/"}
     return B.doc(c, B.head(c, f"{h1} | Modesto & Central Valley | True Part Fabrication",
                            f"{intro[:150].rsplit(' ',1)[0]}…", [svc, B.crumbs_ld([("Home", ""), ("Resources", "resources/"), (name, "industries/" + slug + "/")])]), body)
 
@@ -373,8 +373,8 @@ def resources(c):
 </div>
 {cta(c)}
 </main>"""
-    return B.doc(c, B.head(c, "Free 3D Printing & Replacement Part Resources | True Part Fabrication",
-                           "Free hose size finder, material picker, measuring guide, glossary, and FAQ for replacement and custom 3D printed parts.",
+    return B.doc(c, B.head(c, "Free Manufacturing & Replacement Part Resources | True Part Fabrication",
+                           "Free hose size finder, material picker, measuring guide, glossary, and FAQ for replacement and custom manufactured parts.",
                            [B.crumbs_ld([("Home", ""), ("Resources", "resources/")])]), body)
 
 def pages():
