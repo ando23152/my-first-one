@@ -31,7 +31,7 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 .page-hero p.lead{color:var(--muted);font-size:1.05rem;max-width:44em;margin-top:18px}
 .article{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:64px;padding-block:56px 100px}
 .article .body{display:grid;gap:20px;max-width:68ch}
-.article .body p{color:#cfcfd3}
+.article .body p{color:var(--ink)}
 .article .def{font-family:var(--f-serif);font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.35;color:var(--ink)}
 .callout{border:1px solid rgba(227,38,47,.4);background:linear-gradient(135deg,rgba(227,38,47,.12),rgba(227,38,47,.02));border-radius:6px;padding:22px 24px}
 .callout .k{font:500 .7rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent-hi)}
@@ -66,7 +66,7 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 .fitbadge{display:inline-block;margin-left:8px;font:.62rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line);border-radius:999px;padding:2px 7px;vertical-align:2px}
 .prose{max-width:68ch;padding-block:48px 100px;display:grid;gap:16px}
 .prose h2{font-size:1.25rem;margin-top:18px}
-.prose p,.prose li{color:#cfcfd3}
+.prose p,.prose li{color:var(--ink)}
 .cta-band{border-top:1px solid var(--line);padding-block:72px;text-align:center}
 .cta-band h2{font-size:clamp(1.5rem,2.6vw,2.2rem)}
 .cta-band p{color:var(--muted);margin:14px auto 26px;max-width:40em}
