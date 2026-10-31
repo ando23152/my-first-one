@@ -185,6 +185,43 @@
   // r20: copy part number
   document.addEventListener('click',function(e){var b=e.target.closest('[data-copytext]');if(!b)return;var st=b.parentNode.querySelector('.tstat'),t=b.getAttribute('data-copytext');try{navigator.clipboard.writeText(t).then(function(){if(st)st.textContent='Copied '+t+'.'},function(){if(st)st.textContent=t})}catch(err){if(st)st.textContent=t}});
 
+  // r1/r2: catalog show-all and Esc to clear
+  (function(){var more=document.getElementById('cat-more'),list=document.getElementById('plist');if(!more||!list)return;var all=document.createElement('button');all.type='button';all.className='btn ghost';all.style.marginLeft='10px';
+    all.textContent=document.documentElement.lang==='es'?'Ver todas':'Show all';more.insertAdjacentElement('afterend',all);
+    function sync(){all.hidden=more.hidden}new MutationObserver(sync).observe(more,{attributes:true});sync();
+    all.addEventListener('click',function(){var n=0;for(var i=0;i<30&&!more.hidden;i++){more.click();n++}all.hidden=true});
+    var q=document.getElementById('cat-q');if(q)q.addEventListener('keydown',function(e){if(e.key==='Escape'&&q.value){q.value='';q.dispatchEvent(new Event('input'))}})})();
+  // r3/r4: hose finder clear + download view
+  (function(){var t=document.getElementById('hf');if(!t)return;var row=document.querySelector('.filters .row1');if(!row)return;
+    var cl=document.createElement('button');cl.type='button';cl.className='tbtn';cl.textContent='Clear filters';
+    var dl=document.createElement('button');dl.type='button';dl.className='tbtn';dl.textContent='Download this view (CSV)';
+    var st=document.getElementById('hf-cl');row.insertBefore(cl,st);row.insertBefore(dl,st);
+    cl.addEventListener('click',function(){var q=document.getElementById('hf-q'),g=document.getElementById('hf-g');q.value='';g.value='All';['b','s'].forEach(function(k){var a=document.querySelector('.filters .chip[data-f="'+k+'"][data-v="All"]');if(a)a.click()});q.dispatchEvent(new Event('input'));g.dispatchEvent(new Event('change'))});
+    dl.addEventListener('click',function(){var rows=[['Brand','Model','Item','Type','Sizes','Works with','Confidence']];[].forEach.call(t.tBodies[0].rows,function(r){if(r.hidden)return;var c=r.cells;
+      rows.push([c[0].textContent,c[1].textContent,c[2].childNodes[0].textContent,r.dataset.g,[].map.call(c[3].querySelectorAll('.sz'),function(s){return s.childNodes[0].textContent}).join('; '),c[4].textContent,c[5].textContent])});
+      var csv=rows.map(function(r){return r.map(function(v){v=String(v).trim();return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}).join(',')}).join('\r\n');
+      var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='TPF-hose-sizes.csv';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);if(st)st.textContent=(rows.length-1)+' rows downloaded.'})})();
+  // r8/r9: dates can't be in the past; quantities are whole numbers
+  (function(){var d=new Date(),iso=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');document.querySelectorAll('input[type=date]').forEach(function(i){i.min=iso});
+    document.querySelectorAll('#q-qty,#r-qty,#e-qty,#ab-qty').forEach(function(i){i.setAttribute('inputmode','numeric');i.addEventListener('change',function(){var v=i.value.replace(/[^\d]/g,'');if(i.value&&!v){i.value='1'}else if(v)i.value=String(Math.max(1,parseInt(v,10)))})})})();
+  // r12: home catalog search opens the full catalog
+  (function(){var f=document.getElementById('cat-full'),q=document.getElementById('cat-q');if(!f||!q||document.getElementById('plist'))return;var base=f.getAttribute('href');function u(){f.href=base+(q.value.trim()?'?q='+encodeURIComponent(q.value.trim()):'')}q.addEventListener('input',u);u()})();
+  // r15: FAQ answers can be linked to directly
+  (function(){var d=document.querySelectorAll('.faq details[id]');if(!d.length)return;function openHash(){var h=location.hash.slice(1);if(!h)return;var t=document.getElementById(h);if(t&&t.tagName==='DETAILS'){t.open=true;t.scrollIntoView({block:'start'})}}openHash();addEventListener('hashchange',openHash)})();
+  // r21: after opening day the banner says so
+  (function(){if(new Date()<new Date(2027,0,1))return;var o=document.querySelector('.opening .wrap');if(!o)return;var es=document.documentElement.lang==='es',a=o.querySelector('a');var href=a?a.getAttribute('href'):'#';
+    o.innerHTML=(es?'Ya abrimos en Modesto · ':'Now open in Modesto · ')+'<a href="'+href+'">'+(es?'Pida una cotización':'Request a quote')+'</a>'})();
+  // r22/r23: adapter builder notes same-size ends and shows metric
+  (function(){var f=document.getElementById('ab'),sum=document.getElementById('ab-sum');if(!f||!sum)return;var MM={"15/16 in":"23.8 mm","1 in":"25.4 mm","1-1/4 in":"31.8 mm","1-3/8 in":"34.9 mm","1-1/2 in":"38.1 mm","1-3/4 in":"44.5 mm","1-7/8 in":"47.6 mm","2 in":"50.8 mm","2-1/4 in":"57.2 mm","2-1/2 in":"63.5 mm","4 in":"101.6 mm","22 mm":"0.87 in","24 mm":"0.94 in","32 mm":"1.26 in","35 mm":"1.38 in","36 mm":"1.42 in","38 mm":"1.50 in"};
+    var note=document.createElement('p');note.className='ab-note';note.setAttribute('aria-live','polite');sum.insertAdjacentElement('afterend',note);
+    function upd(){var a=document.getElementById('a-size').value,b=document.getElementById('b-size').value,t=[];if(a===b&&a!=='other')t.push('Both ends are the same size, so this is a straight coupler. If the ends fit differently (one over, one into), set "Fit on that end" for each.');
+      [a,b].forEach(function(s,i){if(MM[s])t.push((i?'End B: ':'End A: ')+s+' = '+MM[s]+'.')});note.textContent=t.join(' ')}
+    f.addEventListener('change',upd);f.addEventListener('input',upd);upd()})();
+  // r25: request list shows a running total
+  (function(){var ul=document.getElementById('rl-items');if(!ul)return;var tot=document.createElement('p');tot.className='rl-total';tot.setAttribute('role','status');ul.insertAdjacentElement('afterend',tot);
+    function u(){var L=[];try{L=JSON.parse(localStorage.getItem('tpf-list')||'[]')}catch(e){}var n=L.reduce(function(s,x){return s+(x.q||1)},0);tot.textContent=L.length?(L.length+(L.length===1?' part, ':' parts, ')+n+' pieces in total.'):''}
+    new MutationObserver(u).observe(ul,{childList:true});ul.addEventListener('change',function(){setTimeout(u,0)});u()})();
+
   // quote form
   var f=document.getElementById('qf');
   if(f&&!window.TPF_HOME){

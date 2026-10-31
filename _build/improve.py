@@ -218,3 +218,93 @@ def post(h):
     h = h.replace('<a class="brand" href="', '<a class="brand" data-x href="', 1)
     h = re.sub(r'(<a class="brand" data-x href="[^"]*"[^>]*>)<img ', r'\1<img fetchpriority="high" ', h, 1).replace('<a class="brand" data-x ', '<a class="brand" ', 1)
     return h
+
+# ================= third 25-round pass =================
+IMP_CSS += r"""
+.swipe{display:none;font-size:.85rem;color:var(--faint);margin:0 0 8px}
+@media (max-width:760px){.swipe{display:block}}
+.stypes{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.stypes button{font:500 .85rem var(--f-body);color:var(--ink);background:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.stypes button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.faq .a .alink{font:500 .78rem var(--f-mono);color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.faq details{scroll-margin-top:110px}
+.noscript{border:1px solid var(--accent);border-radius:8px;padding:14px 18px;margin:18px 0;color:var(--ink)}
+@media (max-width:760px){.chip,.chips button,.stypes button,.tbtn{min-height:44px}.terms-strip a,.az a{padding-block:10px}}
+.rl-total{color:var(--muted);margin-top:14px}
+.ab-note{color:var(--muted);font-size:.92rem;margin-top:10px}
+"""
+
+IMP_JS += r"""
+  // r1/r2: catalog show-all and Esc to clear
+  (function(){var more=document.getElementById('cat-more'),list=document.getElementById('plist');if(!more||!list)return;var all=document.createElement('button');all.type='button';all.className='btn ghost';all.style.marginLeft='10px';
+    all.textContent=document.documentElement.lang==='es'?'Ver todas':'Show all';more.insertAdjacentElement('afterend',all);
+    function sync(){all.hidden=more.hidden}new MutationObserver(sync).observe(more,{attributes:true});sync();
+    all.addEventListener('click',function(){var n=0;for(var i=0;i<30&&!more.hidden;i++){more.click();n++}all.hidden=true});
+    var q=document.getElementById('cat-q');if(q)q.addEventListener('keydown',function(e){if(e.key==='Escape'&&q.value){q.value='';q.dispatchEvent(new Event('input'))}})})();
+  // r3/r4: hose finder clear + download view
+  (function(){var t=document.getElementById('hf');if(!t)return;var row=document.querySelector('.filters .row1');if(!row)return;
+    var cl=document.createElement('button');cl.type='button';cl.className='tbtn';cl.textContent='Clear filters';
+    var dl=document.createElement('button');dl.type='button';dl.className='tbtn';dl.textContent='Download this view (CSV)';
+    var st=document.getElementById('hf-cl');row.insertBefore(cl,st);row.insertBefore(dl,st);
+    cl.addEventListener('click',function(){var q=document.getElementById('hf-q'),g=document.getElementById('hf-g');q.value='';g.value='All';['b','s'].forEach(function(k){var a=document.querySelector('.filters .chip[data-f="'+k+'"][data-v="All"]');if(a)a.click()});q.dispatchEvent(new Event('input'));g.dispatchEvent(new Event('change'))});
+    dl.addEventListener('click',function(){var rows=[['Brand','Model','Item','Type','Sizes','Works with','Confidence']];[].forEach.call(t.tBodies[0].rows,function(r){if(r.hidden)return;var c=r.cells;
+      rows.push([c[0].textContent,c[1].textContent,c[2].childNodes[0].textContent,r.dataset.g,[].map.call(c[3].querySelectorAll('.sz'),function(s){return s.childNodes[0].textContent}).join('; '),c[4].textContent,c[5].textContent])});
+      var csv=rows.map(function(r){return r.map(function(v){v=String(v).trim();return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}).join(',')}).join('\r\n');
+      var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='TPF-hose-sizes.csv';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);if(st)st.textContent=(rows.length-1)+' rows downloaded.'})})();
+  // r8/r9: dates can't be in the past; quantities are whole numbers
+  (function(){var d=new Date(),iso=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');document.querySelectorAll('input[type=date]').forEach(function(i){i.min=iso});
+    document.querySelectorAll('#q-qty,#r-qty,#e-qty,#ab-qty').forEach(function(i){i.setAttribute('inputmode','numeric');i.addEventListener('change',function(){var v=i.value.replace(/[^\d]/g,'');if(i.value&&!v){i.value='1'}else if(v)i.value=String(Math.max(1,parseInt(v,10)))})})})();
+  // r12: home catalog search opens the full catalog
+  (function(){var f=document.getElementById('cat-full'),q=document.getElementById('cat-q');if(!f||!q||document.getElementById('plist'))return;var base=f.getAttribute('href');function u(){f.href=base+(q.value.trim()?'?q='+encodeURIComponent(q.value.trim()):'')}q.addEventListener('input',u);u()})();
+  // r15: FAQ answers can be linked to directly
+  (function(){var d=document.querySelectorAll('.faq details[id]');if(!d.length)return;function openHash(){var h=location.hash.slice(1);if(!h)return;var t=document.getElementById(h);if(t&&t.tagName==='DETAILS'){t.open=true;t.scrollIntoView({block:'start'})}}openHash();addEventListener('hashchange',openHash)})();
+  // r21: after opening day the banner says so
+  (function(){if(new Date()<new Date(2027,0,1))return;var o=document.querySelector('.opening .wrap');if(!o)return;var es=document.documentElement.lang==='es',a=o.querySelector('a');var href=a?a.getAttribute('href'):'#';
+    o.innerHTML=(es?'Ya abrimos en Modesto · ':'Now open in Modesto · ')+'<a href="'+href+'">'+(es?'Pida una cotización':'Request a quote')+'</a>'})();
+  // r22/r23: adapter builder notes same-size ends and shows metric
+  (function(){var f=document.getElementById('ab'),sum=document.getElementById('ab-sum');if(!f||!sum)return;var MM={"15/16 in":"23.8 mm","1 in":"25.4 mm","1-1/4 in":"31.8 mm","1-3/8 in":"34.9 mm","1-1/2 in":"38.1 mm","1-3/4 in":"44.5 mm","1-7/8 in":"47.6 mm","2 in":"50.8 mm","2-1/4 in":"57.2 mm","2-1/2 in":"63.5 mm","4 in":"101.6 mm","22 mm":"0.87 in","24 mm":"0.94 in","32 mm":"1.26 in","35 mm":"1.38 in","36 mm":"1.42 in","38 mm":"1.50 in"};
+    var note=document.createElement('p');note.className='ab-note';note.setAttribute('aria-live','polite');sum.insertAdjacentElement('afterend',note);
+    function upd(){var a=document.getElementById('a-size').value,b=document.getElementById('b-size').value,t=[];if(a===b&&a!=='other')t.push('Both ends are the same size, so this is a straight coupler. If the ends fit differently (one over, one into), set "Fit on that end" for each.');
+      [a,b].forEach(function(s,i){if(MM[s])t.push((i?'End B: ':'End A: ')+s+' = '+MM[s]+'.')});note.textContent=t.join(' ')}
+    f.addEventListener('change',upd);f.addEventListener('input',upd);upd()})();
+  // r25: request list shows a running total
+  (function(){var ul=document.getElementById('rl-items');if(!ul)return;var tot=document.createElement('p');tot.className='rl-total';tot.setAttribute('role','status');ul.insertAdjacentElement('afterend',tot);
+    function u(){var L=[];try{L=JSON.parse(localStorage.getItem('tpf-list')||'[]')}catch(e){}var n=L.reduce(function(s,x){return s+(x.q||1)},0);tot.textContent=L.length?(L.length+(L.length===1?' part, ':' parts, ')+n+' pieces in total.'):''}
+    new MutationObserver(u).observe(ul,{childList:true});ul.addEventListener('change',function(){setTimeout(u,0)});u()})();
+"""
+
+GLOSS_AUTO = [("PETG", "petg"), ("ASA", "asa"), ("TPU", "tpu"), ("CAD", "cad"), ("STEP", None), ("STL", "stl-file"), ("prototypes", "prototyping"), ("Jigs", "jig"), ("jigs", "jig"), ("fixtures", "fixture"), ("brackets", "bracket"), ("Enclosures", "enclosure"), ("enclosures", "enclosure")]
+
+_post2 = post
+def post(h):
+    h = _post2(h)
+    m = re.search(r'<link rel="canonical" href="([^"]+)"', h)
+    path = m.group(1)[len(B.BASE) + 1:] if m else ""
+    # r5: hose finder table caption
+    h = h.replace('<table id="hf">', '<table id="hf"><caption class="sr-only">Hose, wand, and dust port sizes by brand and model</caption>', 1)
+    # r6: swipe hint on phones
+    h = re.sub(r'(<div class="ftable"[^>]*><table id="hf">)', r'<p class="swipe" aria-hidden="true">Swipe the table sideways to see every column →</p>\1', h, 1)
+    # r16: link glossary terms in service page cards (first mention each)
+    if path.startswith("services/") and path != "services/":
+        root = re.search(r'<link rel="stylesheet" href="([^"]*)assets/site\.css', h).group(1)
+        done = set()
+        def lk(mm):
+            seg = mm.group(0)
+            for word, slug in GLOSS_AUTO:
+                if not slug or slug in done: continue
+                new = re.sub(r'(?<![\w/>-])' + re.escape(word) + r'(?![\w<-])', f'<a href="{root}glossary/{slug}/" style="color:inherit">{word}</a>', seg, 1)
+                if new != seg: done.add(slug); seg = new
+            return seg
+        h = re.sub(r'<div class="card"><h3>.*?</ul></div>', lk, h, flags=re.S)
+    # r17: meta descriptions kept to 160 characters
+    def trim(mm):
+        d = html.unescape(mm.group(2))
+        if len(d) <= 160: return mm.group(0)
+        cut = d[:157].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+        return mm.group(1) + esc(cut, quote=True) + '">'
+    h = re.sub(r'(<meta name="description" content=")([^"]*)">', trim, h, 1)
+    h = re.sub(r'(<meta property="og:description" content=")([^"]*)">', trim, h, 1)
+    # r19: tools that need scripts say so when scripts are off
+    if any(path.startswith(p) for p in ("tools/", "search/", "request-list/")):
+        h = h.replace('<main id="main">', '<main id="main"><noscript><div class="wrap"><p class="noscript">This tool needs JavaScript. You can still <a href="' + ('../' * path.count('/')) + 'quote/" style="color:var(--ink)">request a quote</a> and describe what you need.</p></div></noscript>', 1)
+    return h

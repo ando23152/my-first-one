@@ -291,8 +291,9 @@ def brand_page(c, b):
     htab = ""
     if hose:
         trs = "".join(f'<tr><td class="mo">{esc(r["mc"])}</td><td>{esc(r["d"])}</td><td>{"".join(f"<span class=sz>{esc(s)}</span>" for s in r["s"])}</td><td><span class="cf {r["conf"] or "na"}">{esc(r["conf"] or "Unrated")}</span></td></tr>' for r in hose[:24])
+        more_link = (f'<p style="margin-top:12px"><a href="{c.link("tools/hose-size-finder/")}?brand={esc(b).replace(" ","%20")}" style="color:var(--ink)">See all {len([r for r in HOSE if r["b"] == b])} {esc(b)} sizes and accessories in the finder →</a></p>')
         htab = f"""<div class="head" style="margin:72px 0 24px"><div class="label">Hose and port sizes</div><h2>{esc(b)} <em class="s">connection sizes</em></h2><p>Published hose and port sizes for {esc(b)} {esc(cat)}. See the full <a href="{c.link('tools/hose-size-finder/')}" style="color:var(--ink)">hose size finder</a> for accessories and other brands.</p></div>
-<div class="ftable"><table style="min-width:640px"><thead><tr><th>Model</th><th>Item</th><th>Size</th><th>Confidence</th></tr></thead><tbody>{trs}</tbody></table></div>"""
+<div class="ftable"><table style="min-width:640px"><thead><tr><th>Model</th><th>Item</th><th>Size</th><th>Confidence</th></tr></thead><tbody>{trs}</tbody></table></div>{more_link}"""
     body = f"""<main id="main">
 {page_hero(c, [('Home',''),('Resources','resources/'),(b + ' parts','brands/' + slug + '/')], f'Compatible parts for {b} {cat}', esc(intro))}
 <section style="padding-block:44px 100px"><div class="wrap">

@@ -336,7 +336,7 @@ def footer(c):
       <div><h4>Explore</h4><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('tools/adapter-builder/')}">Adapter builder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
       <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li><li><a href="{L('request-list/')}">Request list</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li><li><a href="{L('sitemap/')}">Site map</a></li></ul></div>
     </div>
-    <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
+    <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span><a href="{L('business/')}" style="color:inherit;text-decoration:none">Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</a></span></div>
   </div>
 </footer>
 <script src="{c.asset('site.js')}?v=10" defer></script>"""
@@ -506,6 +506,8 @@ def home(c, art=False, raw=False):
     main = main.replace('<div class="r"><a class="btn" id="q-mail" href="#">Open in email</a>', '<div class="r"><a class="btn" id="q-mail" href="#">Open in email</a>', 1)
     main = main.replace('''        <div class="r"><a class="btn" id="q-mail"''', '''        <div class="next"><h3>What happens next</h3><ol><li>Send the email with a photo of the part.</li><li>We reply with questions or a written quote: material, price, and turnaround.</li><li>You approve, we model and print, and the part is checked for fit before it ships.</li></ol></div>
         <div class="r"><a class="btn" id="q-mail"''', 1)
+    main = main.replace('id="cat-more"', 'id="cat-more"', 1)
+    main = re.sub(r'(<button[^>]*id="cat-more"[^>]*>.*?</button>)', lambda m: m.group(1) + '<a class="btn ghost" id="cat-full" href="' + c.link('parts/') + '" style="margin-left:10px">Open the full catalog <span class="ar">→</span></a>', main, count=1, flags=re.S)
     if raw: return main, script
     main = main + '\n<script>window.TPF_HOME=1</script>\n' + script
     return doc(c, head(c, title, desc, [org, web]), main, art_index=art)
@@ -603,7 +605,8 @@ def FAQS(c):
     ]
 def faq(c):
     items = FAQS(c)
-    det = "\n".join(f"<details{' open' if i == 0 else ''}><summary>{esc(q)}</summary><div class=\"a\">{a}</div></details>" for i, (q, a) in enumerate(items))
+    def _fid(q): return "q-" + re.sub(r"[^a-z0-9]+", "-", q.lower()).strip("-")[:48]
+    det = "\n".join(f"<details id=\"{_fid(q)}\"{' open' if i == 0 else ''}><summary>{esc(q)}</summary><div class=\"a\">{a}<p><a class=\"alink\" href=\"#{_fid(q)}\">Link to this answer</a></p></div></details>" for i, (q, a) in enumerate(items))
     body = f"""<main id="main">
 <div class="page-hero"><div class="wrap">
   {crumbs(c, [('Home', ''), ('FAQ', 'faq/')])}

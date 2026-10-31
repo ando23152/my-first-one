@@ -52,7 +52,7 @@
   </div>
 </header>
 <div class="mnav" id="mnav" hidden><div class="wrap"><nav aria-label="Menu"><ul><li><a href="../#services">Services</a></li><li><a href="../#business">For business</a></li><li><a href="../parts/">Parts catalog</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../#process">Process</a></li><li><a href="../resources/">Resources</a></li><li><a href="../faq/">FAQ</a></li><li><a href="../#about">About</a></li><li><a href="../reorder/">Reorder a part</a></li><li><a href="../search/">Search</a></li><li><a href="../es/">Español</a></li></ul><a class="btn" href="../#quote">Request a quote <span class="ar">→</span></a><div class="theme-row" role="group" aria-label="Theme"><span>Theme</span><button type="button" data-set-theme="dark" aria-pressed="false">Blue</button><button type="button" data-set-theme="black" aria-pressed="false">Black</button><button type="button" data-set-theme="light" aria-pressed="false">Light</button></div></nav></div></div>
-<main id="main">
+<main id="main"><noscript><div class="wrap"><p class="noscript">This tool needs JavaScript. You can still <a href="../quote/" style="color:var(--ink)">request a quote</a> and describe what you need.</p></div></noscript>
 <div class="page-hero"><div class="wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Home</a><span aria-hidden="true">/</span><span aria-current="page">Search</span></nav>
   <h1>Search the site</h1>
@@ -61,6 +61,7 @@
 <div class="wrap" style="padding-block:40px 90px">
   <form class="sbox" id="sform" role="search"><label for="sq" style="position:absolute;left:-9999px">Search</label><input id="sq" type="search" placeholder="Try 49-90-2018, Makita, or bracket" autocomplete="off" autofocus><button class="btn" type="submit">Search</button></form>
   <div class="pop" id="spop"><span>Popular searches</span><button type="button">Milwaukee 49-90-2018</button><button type="button">DeWalt DWV9000</button><button type="button">Makita</button><button type="button">dust adapter</button><button type="button">bracket</button><button type="button">PETG</button><button type="button">2-1/2 in</button></div>
+  <div class="stypes" id="stypes" role="group" aria-label="Filter results by type" hidden><button type="button" data-t="All" aria-pressed="true">All</button><button type="button" data-t="Parts" aria-pressed="false">Parts</button><button type="button" data-t="Pages" aria-pressed="false">Pages</button><button type="button" data-t="Glossary" aria-pressed="false">Glossary</button><button type="button" data-t="FAQ" aria-pressed="false">FAQ</button></div>
   <p id="scount" role="status" style="color:var(--faint);margin-top:14px;font-size:.9rem"></p>
   <ul class="sres" id="sres"></ul>
   <a id="sq-quote" href="../quote/" hidden>quote</a>
@@ -75,13 +76,17 @@
   function mark(el,text,words){var re=new RegExp('('+words.filter(function(w){return w.length>1}).map(function(w){return w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|')+')','ig');if(!words.some(function(w){return w.length>1})){el.textContent=text;return}
     text.split(re).forEach(function(part,i){if(i%2){var m=document.createElement('mark');m.textContent=part;el.appendChild(m)}else el.appendChild(document.createTextNode(part))})}
   var pop=document.getElementById('spop');if(pop)pop.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;q.value=b.textContent;q.dispatchEvent(new Event('input'));q.focus()});
+  var TF='All',tbox=document.getElementById('stypes');function grp(k){return /part$/.test(k)?'Parts':k==='Glossary'?'Glossary':k==='FAQ'?'FAQ':'Pages'}
+  if(tbox)tbox.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;TF=b.getAttribute('data-t');[].forEach.call(tbox.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x===b)});run()});
   function run(){
-    var v=norm(q.value).trim();out.innerHTML='';if(pop)pop.hidden=!!v;
+    var v=norm(q.value).trim();out.innerHTML='';if(pop)pop.hidden=!!v;if(tbox)tbox.hidden=!v;
     if(!v){st.textContent='';return}
-    var words=v.split(/\s+/),res=[];
-    IDX.forEach(function(r){var ok=words.every(function(w){return r._a.indexOf(w)>-1});if(!ok)return;var s=0;words.forEach(function(w){if(r._t.indexOf(w)>-1)s+=3});if(r.k!=='Glossary'&&r.k.indexOf('part')<0)s+=1;res.push([s,r])});
+    var words=v.split(/\s+/),res=[],loose=false;
+    function collect(any){res=[];IDX.forEach(function(r){if(TF!=='All'&&grp(r.k)!==TF)return;var hits=words.filter(function(w){return r._a.indexOf(w)>-1}).length;var ok=any?hits>0:hits===words.length;if(!ok)return;var s=hits*2;words.forEach(function(w){if(r._t.indexOf(w)>-1)s+=3});if(r.k!=='Glossary'&&r.k.indexOf('part')<0)s+=1;res.push([s,r])})}
+    collect(false);if(!res.length&&words.length>1){collect(true);loose=res.length>0}
+    IDX.forEach(function(r){var ok=false;if(!ok)return;var s=0;words.forEach(function(w){if(r._t.indexOf(w)>-1)s+=3});if(r.k!=='Glossary'&&r.k.indexOf('part')<0)s+=1;res.push([s,r])});
     res.sort(function(a,b){return b[0]-a[0]});
-    st.textContent=res.length+(res.length===1?' result':' results');
+    st.textContent=res.length+(res.length===1?' result':' results')+(loose?' (no exact match, showing results for any of your words)':'')+(TF!=='All'?' in '+TF:'');
     res.slice(0,60).forEach(function(x){var r=x[1],li=document.createElement('li'),a=document.createElement('a');a.href=r.u;
       var k=document.createElement('span');k.textContent=r.k;var h=document.createElement('h3');mark(h,r.t,words);var p=document.createElement('p');mark(p,r.d,words);
       a.appendChild(k);a.appendChild(h);a.appendChild(p);li.appendChild(a);out.appendChild(li)});
@@ -100,7 +105,7 @@
       <div><h4>Explore</h4><ul><li><a href="../services/">Services</a></li><li><a href="../business/">For business</a></li><li><a href="../parts/">Compatible parts</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../projects/">Projects</a></li><li><a href="../process/">Process</a></li><li><a href="../resources/">Resources</a></li><li><a href="../tools/hose-size-finder/">Hose size finder</a></li><li><a href="../tools/adapter-builder/">Adapter builder</a></li><li><a href="../glossary/">Glossary</a></li><li><a href="../faq/">FAQ</a></li></ul></div>
       <div><h4>Contact</h4><ul><li><a href="../quote/">Request a quote</a></li><li><a href="../reorder/">Reorder a part</a></li><li><a href="../request-list/">Request list</a></li><li><a href="https://www.ebay.com/usr/truepartfabrication" target="_blank" rel="noopener">eBay store<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="../search/">Search</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../terms/">Terms of Service</a></li><li><a href="../sitemap/">Site map</a></li></ul></div>
     </div>
-    <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
+    <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span><a href="../business/" style="color:inherit;text-decoration:none">Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</a></span></div>
   </div>
 </footer>
 <script src="../assets/site.js?v=10" defer></script>

@@ -327,13 +327,17 @@ SEARCH_JS = r"""<script>
   function mark(el,text,words){var re=new RegExp('('+words.filter(function(w){return w.length>1}).map(function(w){return w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|')+')','ig');if(!words.some(function(w){return w.length>1})){el.textContent=text;return}
     text.split(re).forEach(function(part,i){if(i%2){var m=document.createElement('mark');m.textContent=part;el.appendChild(m)}else el.appendChild(document.createTextNode(part))})}
   var pop=document.getElementById('spop');if(pop)pop.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;q.value=b.textContent;q.dispatchEvent(new Event('input'));q.focus()});
+  var TF='All',tbox=document.getElementById('stypes');function grp(k){return /part$/.test(k)?'Parts':k==='Glossary'?'Glossary':k==='FAQ'?'FAQ':'Pages'}
+  if(tbox)tbox.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;TF=b.getAttribute('data-t');[].forEach.call(tbox.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x===b)});run()});
   function run(){
-    var v=norm(q.value).trim();out.innerHTML='';if(pop)pop.hidden=!!v;
+    var v=norm(q.value).trim();out.innerHTML='';if(pop)pop.hidden=!!v;if(tbox)tbox.hidden=!v;
     if(!v){st.textContent='';return}
-    var words=v.split(/\s+/),res=[];
-    IDX.forEach(function(r){var ok=words.every(function(w){return r._a.indexOf(w)>-1});if(!ok)return;var s=0;words.forEach(function(w){if(r._t.indexOf(w)>-1)s+=3});if(r.k!=='Glossary'&&r.k.indexOf('part')<0)s+=1;res.push([s,r])});
+    var words=v.split(/\s+/),res=[],loose=false;
+    function collect(any){res=[];IDX.forEach(function(r){if(TF!=='All'&&grp(r.k)!==TF)return;var hits=words.filter(function(w){return r._a.indexOf(w)>-1}).length;var ok=any?hits>0:hits===words.length;if(!ok)return;var s=hits*2;words.forEach(function(w){if(r._t.indexOf(w)>-1)s+=3});if(r.k!=='Glossary'&&r.k.indexOf('part')<0)s+=1;res.push([s,r])})}
+    collect(false);if(!res.length&&words.length>1){collect(true);loose=res.length>0}
+    IDX.forEach(function(r){var ok=false;if(!ok)return;var s=0;words.forEach(function(w){if(r._t.indexOf(w)>-1)s+=3});if(r.k!=='Glossary'&&r.k.indexOf('part')<0)s+=1;res.push([s,r])});
     res.sort(function(a,b){return b[0]-a[0]});
-    st.textContent=res.length+(res.length===1?' result':' results');
+    st.textContent=res.length+(res.length===1?' result':' results')+(loose?' (no exact match, showing results for any of your words)':'')+(TF!=='All'?' in '+TF:'');
     res.slice(0,60).forEach(function(x){var r=x[1],li=document.createElement('li'),a=document.createElement('a');a.href=r.u;
       var k=document.createElement('span');k.textContent=r.k;var h=document.createElement('h3');mark(h,r.t,words);var p=document.createElement('p');mark(p,r.d,words);
       a.appendChild(k);a.appendChild(h);a.appendChild(p);li.appendChild(a);out.appendChild(li)});
@@ -353,6 +357,7 @@ def search(c):
 <div class="wrap" style="padding-block:40px 90px">
   <form class="sbox" id="sform" role="search"><label for="sq" style="position:absolute;left:-9999px">Search</label><input id="sq" type="search" placeholder="Try 49-90-2018, Makita, or bracket" autocomplete="off" autofocus><button class="btn" type="submit">Search</button></form>
   <div class="pop" id="spop"><span>Popular searches</span><button type="button">Milwaukee 49-90-2018</button><button type="button">DeWalt DWV9000</button><button type="button">Makita</button><button type="button">dust adapter</button><button type="button">bracket</button><button type="button">PETG</button><button type="button">2-1/2 in</button></div>
+  <div class="stypes" id="stypes" role="group" aria-label="Filter results by type" hidden><button type="button" data-t="All" aria-pressed="true">All</button><button type="button" data-t="Parts" aria-pressed="false">Parts</button><button type="button" data-t="Pages" aria-pressed="false">Pages</button><button type="button" data-t="Glossary" aria-pressed="false">Glossary</button><button type="button" data-t="FAQ" aria-pressed="false">FAQ</button></div>
   <p id="scount" role="status" style="color:var(--faint);margin-top:14px;font-size:.9rem"></p>
   <ul class="sres" id="sres"></ul>
   <a id="sq-quote" href="{c.link('', 'quote')}" hidden>quote</a>
@@ -494,7 +499,7 @@ def request_list(c):
 {hero(c, [('Home',''),('Request list','request-list/')], 'Your request list', 'Collect several parts while you browse, then send them to us in one quote request. Set a quantity for each part. The list is saved on this device.')}
 <div class="wrap" style="padding-block:40px 90px">
   <ul class="rl-items" id="rl-items"></ul>
-  <p id="rl-empty" style="color:var(--muted);margin-top:18px" hidden>Your list is empty. Use <b>+ Add to list</b> on any part in the <a href="{c.link('parts/')}" style="color:var(--ink)">parts catalog</a>, a brand page, or a part page.</p>
+  <p id="rl-empty" style="color:var(--muted);margin-top:18px" hidden>Your list is empty. Use <b>+ Add to list</b> on any part in the <a href="{c.link('parts/')}" style="color:var(--ink)">parts catalog</a>, a brand page, or a part page, or design a custom piece in the <a href="{c.link('tools/adapter-builder/')}" style="color:var(--ink)">adapter builder</a>.</p>
   <div id="rl-send" hidden>
     <h2 style="font-size:1.3rem;margin:44px 0 18px">Send the list</h2>
     <form class="xform" id="rl-form" novalidate>
@@ -525,7 +530,7 @@ def request_list(c):
   function text(){{var L=get(),out=['Quote request (request list) — True Part Fabrication','','Name: '+v('rl-name')];if(v('rl-co'))out.push('Company: '+v('rl-co'));out.push('Contact: '+v('rl-contact'));if(v('rl-when'))out.push('Needed by: '+v('rl-when'));out.push('','Parts:');
     L.forEach(function(x,i){{out.push((i+1)+'. Qty '+(x.q||1)+' — '+x.t.replace(/^Compatible part: |^Pieza compatible: /,'').replace(/\\n/g,' — '))}});if(v('rl-notes'))out.push('','Notes:',v('rl-notes'));out.push('','Agreed to the Terms of Service: yes','(Please attach photos of the parts or equipment if you have them)');return out.join('\\n')}}
   function check(){{var er=document.getElementById('rl-err');if(!v('rl-name')||!v('rl-contact')){{er.textContent='Add your name and a way to reach you.';er.hidden=false;return false}}if(!document.getElementById('rl-terms').checked){{er.textContent='Please read and agree to the Terms of Service before sending.';er.hidden=false;return false}}er.hidden=true;return true}}
-  document.getElementById('rl-form').addEventListener('submit',function(e){{e.preventDefault();if(!check())return;location.href='mailto:{QUOTE_TO}?subject='+encodeURIComponent('Quote request: '+get().length+' parts')+'&body='+encodeURIComponent(text());st.textContent='Your email app opened with the request. Send it to finish.'}});
+  document.getElementById('rl-form').addEventListener('submit',function(e){{e.preventDefault();if(!check())return;location.href='mailto:{QUOTE_TO}?subject='+encodeURIComponent('Quote request: '+get().length+' parts'+(v('rl-co')?' ('+v('rl-co')+')':''))+'&body='+encodeURIComponent(text());st.textContent='Your email app opened with the request. Send it to finish.'}});
   document.getElementById('rl-copy').addEventListener('click',function(){{if(!check())return;var t=text();try{{navigator.clipboard.writeText(t).then(function(){{st.textContent='Copied. Paste it into an email to us.'}},function(){{st.textContent='Copy did not work in this browser.'}})}}catch(e){{st.textContent='Copy did not work in this browser.'}}}});
   document.getElementById('rl-clear').addEventListener('click',function(){{set([]);draw();st.textContent='List cleared.'}});
   document.getElementById('rl-print').addEventListener('click',function(){{window.print()}});
