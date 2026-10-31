@@ -176,3 +176,17 @@ TERMS = [
   quote="We don't make food-contact parts. If your part touches food or drink, we'll tell you and point you toward a certified supplier.",
   related=["aftermarket-part","petg","fdm-3d-printing"]),
 ]
+
+TERMS.append({
+ "slug": "bracket",
+ "term": "Bracket (custom mount)",
+ "cat": "Parts",
+ "short": "A part that holds one thing to another, such as a sensor to a frame, a scanner to a cart, or a tool to a wall.",
+ "body": [
+  "Brackets and mounts are among the most common custom parts businesses need, because off-the-shelf ones rarely match the exact hole spacing, angle, or clearance of a machine.",
+  "A printed bracket is modeled in CAD from your measurements or a sample, so it fits the equipment you have. Holes, slots, and angles can be placed exactly where they're needed, and the bracket can be thickened where the original bent or cracked.",
+  "Material depends on where it goes: PETG for general indoor use, ASA for sun and heat, and carbon-fiber nylon where stiffness matters. We don't make brackets that carry a load where a failure could hurt someone."
+ ],
+ "quote": "Send the hole spacing, the size of what it holds, and a photo of where it mounts, and we can quote a bracket that fits the first time.",
+ "related": ["fixture", "cad", "petg", "asa"]
+})

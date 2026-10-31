@@ -371,7 +371,7 @@ def home(c, art=False):
     for nm, sl in [("DeWalt","dewalt"),("Milwaukee","milwaukee"),("Ryobi","ryobi"),("Ridgid","ridgid"),("Makita","makita"),("Craftsman","craftsman"),("Shop-Vac","shop-vac"),("Vacmaster","vacmaster"),("WEN","wen"),("Shark","shark"),("Prolux","prolux"),("Samsung","samsung"),("Hampton Bay","hampton-bay")]:
         main = main.replace("<span>" + nm + "</span>", '<a href="' + c.link("brands/" + sl + "/") + '">' + nm + "</a>", 1)
     TAGS = [("Dust adapters","tools/hose-size-finder/"),("Hose fittings","glossary/dust-port-hose-sizes/"),("Clips &amp; covers","parts/"),("Rollers","brands/samsung/"),
-            ("Brackets","industries/industrial-shops/"),("Jigs &amp; fixtures","glossary/jig/"),("Prototypes","tools/material-picker/"),("Organizers","industries/warehouse-cold-storage/"),
+            ("Brackets","glossary/bracket/"),("Jigs &amp; fixtures","glossary/jig/"),("Prototypes","tools/material-picker/"),("Organizers","industries/warehouse-cold-storage/"),
             ("Enclosures","glossary/asa/"),("No tooling","glossary/small-batch-manufacturing/"),("No 1,000-unit minimums","glossary/small-batch-manufacturing/"),("Repeat orders","faq/")]
     for t_, p_ in TAGS:
         main = main.replace("<li>" + t_ + "</li>", "<li>" + A(p_, t_) + "</li>", 1)
