@@ -94,7 +94,9 @@ def menu(c, es=False):
         items.append((("Llamar " if es else "Call ") + PHONE, tel(PHONE)))
     lis = "".join(f'<li><a href="{h}">{esc(t)}</a></li>' for t, h in items)
     btn = f'<button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="mnav" aria-label="{label}">{MENU_SVG}</button>'
-    panel = f'<div class="mnav" id="mnav" hidden><div class="wrap"><nav aria-label="{label}"><ul>{lis}</ul><a class="btn" href="{cta[1]}">{esc(cta[0])} <span class="ar">→</span></a></nav></div></div>'
+    tl = ("Tema", "Azul", "Negro", "Claro") if es else ("Theme", "Blue", "Black", "Light")
+    themes = f'<div class="theme-row" role="group" aria-label="{tl[0]}"><span>{tl[0]}</span><button type="button" data-set-theme="dark" aria-pressed="false">{tl[1]}</button><button type="button" data-set-theme="black" aria-pressed="false">{tl[2]}</button><button type="button" data-set-theme="light" aria-pressed="false">{tl[3]}</button></div>'
+    panel = f'<div class="mnav" id="mnav" hidden><div class="wrap"><nav aria-label="{label}"><ul>{lis}</ul><a class="btn" href="{cta[1]}">{esc(cta[0])} <span class="ar">→</span></a>{themes}</nav></div></div>'
     return btn, panel
 
 MENU_JS = r"""

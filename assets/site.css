@@ -538,6 +538,21 @@ a.card{text-decoration:none;transition:border-color .2s}a.card:hover{border-colo
 .theme-btn{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:border-color .2s}
 .theme-btn:hover{border-color:var(--accent)}
 .theme-btn svg{width:18px;height:18px}
-.theme-btn .sun{display:none}
+.theme-btn .sun,.theme-btn .dot{display:none}
+:root[data-tpf-theme="black"] .theme-btn .dot{display:block}
+:root[data-tpf-theme="black"] .theme-btn .moon{display:none}
+/* ---- black theme (the original look) ---- */
+:root[data-tpf-theme="black"]{--bg:#070708;--surface:#0f0f11;--surface-2:#16161a;--line:#232328;--accent-hi:#ff3b43}
+:root[data-tpf-theme="black"] header.scrolled{background:rgba(7,7,8,.82)}
+:root[data-tpf-theme="black"] .facts{background:linear-gradient(to bottom,rgba(7,7,8,0),var(--bg) 40%)}
+:root[data-tpf-theme="black"] .btn.ghost,:root[data-tpf-theme="black"] .row button,:root[data-tpf-theme="black"] .steps .n,:root[data-tpf-theme="black"] .sz,:root[data-tpf-theme="black"] .mq label.o{border-color:#3a3a40}
+:root[data-tpf-theme="black"] .pc:hover,:root[data-tpf-theme="black"] .res:hover,:root[data-tpf-theme="black"] .gcard:hover,:root[data-tpf-theme="black"] .chip:hover{border-color:#3a3a40}
+:root[data-tpf-theme="black"] .dots i{color:#3a3a40}
+:root[data-tpf-theme="black"] .hero-shot{padding-inline:0!important;max-width:none!important;margin-top:0!important}
+:root[data-tpf-theme="black"] .hero-shot img{border-radius:0!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%)!important;mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%)!important}
+.theme-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.theme-row span{width:100%;font:500 .7rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.theme-row button{font:500 .95rem var(--f-body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer}
+.theme-row button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}
 :root[data-tpf-theme="light"] .theme-btn .sun{display:block}
 :root[data-tpf-theme="light"] .theme-btn .moon{display:none}

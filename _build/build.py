@@ -130,7 +130,22 @@ LIGHT_CSS = r"""
 .theme-btn{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:border-color .2s}
 .theme-btn:hover{border-color:var(--accent)}
 .theme-btn svg{width:18px;height:18px}
-.theme-btn .sun{display:none}
+.theme-btn .sun,.theme-btn .dot{display:none}
+:root[data-tpf-theme="black"] .theme-btn .dot{display:block}
+:root[data-tpf-theme="black"] .theme-btn .moon{display:none}
+/* ---- black theme (the original look) ---- */
+:root[data-tpf-theme="black"]{--bg:#070708;--surface:#0f0f11;--surface-2:#16161a;--line:#232328;--accent-hi:#ff3b43}
+:root[data-tpf-theme="black"] header.scrolled{background:rgba(7,7,8,.82)}
+:root[data-tpf-theme="black"] .facts{background:linear-gradient(to bottom,rgba(7,7,8,0),var(--bg) 40%)}
+:root[data-tpf-theme="black"] .btn.ghost,:root[data-tpf-theme="black"] .row button,:root[data-tpf-theme="black"] .steps .n,:root[data-tpf-theme="black"] .sz,:root[data-tpf-theme="black"] .mq label.o{border-color:#3a3a40}
+:root[data-tpf-theme="black"] .pc:hover,:root[data-tpf-theme="black"] .res:hover,:root[data-tpf-theme="black"] .gcard:hover,:root[data-tpf-theme="black"] .chip:hover{border-color:#3a3a40}
+:root[data-tpf-theme="black"] .dots i{color:#3a3a40}
+:root[data-tpf-theme="black"] .hero-shot{padding-inline:0!important;max-width:none!important;margin-top:0!important}
+:root[data-tpf-theme="black"] .hero-shot img{border-radius:0!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%)!important;mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%)!important}
+.theme-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.theme-row span{width:100%;font:500 .7rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.theme-row button{font:500 .95rem var(--f-body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer}
+.theme-row button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}
 :root[data-tpf-theme="light"] .theme-btn .sun{display:block}
 :root[data-tpf-theme="light"] .theme-btn .moon{display:none}
 """
@@ -142,14 +157,19 @@ def css():
 JS = r"""
 (function(){
   var root=document.documentElement,tb=document.getElementById('theme-btn'),meta=document.querySelector('meta[name="theme-color"]');
+  var NAMES={dark:'Blue',black:'Black',light:'Light'},NEXT={dark:'black',black:'light',light:'dark'},COL={dark:'#0A3161',black:'#070708',light:'#ffffff'};
+  function cur(){var a=root.getAttribute('data-tpf-theme');return a==='light'||a==='black'?a:'dark'}
   function applyTheme(t){
-    if(t==='light')root.setAttribute('data-tpf-theme','light');else root.removeAttribute('data-tpf-theme');
-    document.querySelectorAll('img[data-light]').forEach(function(i){if(!i.getAttribute('data-dark'))i.setAttribute('data-dark',i.getAttribute('src'));var want=t==='light'?i.getAttribute('data-light'):i.getAttribute('data-dark');if(i.getAttribute('src')!==want)i.setAttribute('src',want)});
-    if(tb)tb.setAttribute('aria-label',t==='light'?'Switch to dark theme':'Switch to light theme');
-    if(meta)meta.setAttribute('content',t==='light'?'#ffffff':'#0A3161');
+    if(t==='light'||t==='black')root.setAttribute('data-tpf-theme',t);else{root.removeAttribute('data-tpf-theme');t='dark'}
+    document.querySelectorAll('img[data-light]').forEach(function(i){if(!i.getAttribute('data-dark'))i.setAttribute('data-dark',i.getAttribute('src'));var want=i.getAttribute('data-'+t)||i.getAttribute('data-dark');if(i.getAttribute('src')!==want)i.setAttribute('src',want)});
+    if(tb){tb.setAttribute('aria-label','Theme: '+NAMES[t]+'. Switch to '+NAMES[NEXT[t]]);tb.setAttribute('title','Theme: '+NAMES[t])}
+    document.querySelectorAll('[data-set-theme]').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-set-theme')===t)});
+    if(meta)meta.setAttribute('content',COL[t]);
   }
-  applyTheme(root.getAttribute('data-tpf-theme')==='light'?'light':'dark');
-  if(tb)tb.addEventListener('click',function(){var t=root.getAttribute('data-tpf-theme')==='light'?'dark':'light';applyTheme(t);try{localStorage.setItem('tpf-theme',t)}catch(e){}});
+  function setTheme(t){applyTheme(t);try{localStorage.setItem('tpf-theme',t)}catch(e){}}
+  applyTheme(cur());
+  if(tb)tb.addEventListener('click',function(){setTheme(NEXT[cur()])});
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-set-theme]');if(b)setTheme(b.getAttribute('data-set-theme'))});
   var hdr=document.getElementById('hdr');
   function onS(){hdr.classList.toggle('scrolled',scrollY>24)}addEventListener('scroll',onS,{passive:true});onS();
   function store(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}
@@ -253,14 +273,14 @@ def head(c, title, desc, lds=(), og_type="website"):
 <meta property="og:image:alt" content="True Part Fabrication logo over custom manufactured parts">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0A3161">
-<script>try{{var t=localStorage.getItem("tpf-theme");if(t==="light")document.documentElement.setAttribute("data-tpf-theme","light")}}catch(e){{}}</script>
+<script>try{{var t=localStorage.getItem("tpf-theme");if(t==="light"||t==="black")document.documentElement.setAttribute("data-tpf-theme",t)}}catch(e){{}}</script>
 <link rel="icon" type="image/png" sizes="32x32" href="{c.asset('img/favicon-32.png')}">
 <link rel="icon" type="image/png" sizes="48x48" href="{c.asset('img/favicon-48.png')}">
 <link rel="apple-touch-icon" href="{c.asset('img/icon-180.png')}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="{c.asset('site.css')}?v=8">
+<link rel="stylesheet" href="{c.asset('site.css')}?v=10">
 """
     return h + "\n".join(ld(x) for x in lds)
 
@@ -281,7 +301,7 @@ def header(c):
       <a class="l" href="{L('resources/')}">Resources</a>
       <a class="l" href="{L('faq/')}">FAQ</a>
       <a class="l" href="{L('', 'about')}">About</a>
-      <button class="theme-btn" type="button" id="theme-btn" aria-label="Switch to light theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="theme-btn" type="button" id="theme-btn" aria-label="Theme"><svg class="dot" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="currentColor"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="icon-l s" href="{L('search/')}" aria-label="Search the site">{X.SEARCH_SVG}</a>
       <a class="btn" href="{L('', 'quote')}">Request a quote</a>
       {mb}
@@ -304,21 +324,22 @@ def footer(c):
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
 </footer>
-<script src="{c.asset('site.js')}?v=8" defer></script>"""
+<script src="{c.asset('site.js')}?v=10" defer></script>"""
 
 SWAP = re.compile(r'<img([^>]*?) src="([^"]*assets/img/)(logo-dark\.png|hero\.jpg|svc-[a-z]+\.jpg|sample-[a-z]+\.jpg)"')
 def swapimgs(h):
     def r(m):
         name = m.group(3)
         light = "logo-light.png" if name == "logo-dark.png" else name.replace(".jpg", "-light.jpg")
-        return '<img' + m.group(1) + ' src="' + m.group(2) + name + '" data-light="' + m.group(2) + light + '"'
+        black = "logo-black.png" if name == "logo-dark.png" else name.replace(".jpg", "-black.jpg")
+        return '<img' + m.group(1) + ' src="' + m.group(2) + name + '" data-light="' + m.group(2) + light + '" data-black="' + m.group(2) + black + '"'
     return SWAP.sub(r, h)
 def a11y(h):
     h = h.replace('logo-dark.png"', 'logo-dark.png?v=9"')
     h = h.replace('<div class="ftable">', '<div class="ftable" tabindex="0" role="region" aria-label="Scrollable table">')
     return h.replace('<div class="tbl">', '<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table">')
 def webp(h):
-    h = re.sub(r"(assets/img/(?:hero|svc-[a-z]+|sample-[a-z]+)(?:-light)?)\.jpg", r"\1.webp?v=6", h)
+    h = re.sub(r"(assets/img/(?:hero|svc-[a-z]+|sample-[a-z]+)(?:-light|-black)?)\.jpg", r"\1.webp?v=6", h)
     return h.replace(".replace('.jpg','-light.jpg')", ".replace('.webp','-light.webp')")
 def doc(c, headhtml, body, art_index=False):
     return a11y(webp(swapimgs(_doc(c, headhtml, body, art_index))))
@@ -454,7 +475,7 @@ def home(c, art=False):
     web = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE, "url": BASE + "/"}
     script = TPL[TPL.index('<script id="cat-data"'):]
     sample = json.dumps({k: c.asset('img/sample-' + k + '.jpg') for k in ['adapter','nozzle','brush','separator','clip','roller']})
-    script = script.replace("im.src=IMG[it.i];", "im.src=IMG[it.i];im.setAttribute('data-light',IMG[it.i].replace('.jpg','-light.jpg'));")
+    script = script.replace("im.src=IMG[it.i];", "var s0=IMG[it.i],th=document.documentElement.getAttribute('data-tpf-theme');im.setAttribute('data-dark',s0);im.setAttribute('data-light',s0.replace('.webp','-light.webp'));im.setAttribute('data-black',s0.replace('.webp','-black.webp'));im.src=(th==='light'||th==='black')?im.getAttribute('data-'+th):s0;")
     script = script.replace("bd.appendChild(el('h4',null,it.n));", "var h4=el('h4');var ha=el('a',null,it.n);ha.href=it.u;h4.appendChild(ha);bd.appendChild(h4);")
     script = script.replace("r.appendChild(el('div','n',it.n));", "var nd=el('div','n');var na=el('a',null,it.n);na.href=it.u;nd.appendChild(na);r.appendChild(nd);")
     CATU = {"feat": CAT["feat"], "items": [dict(x, u=c.link("parts/" + x["slug"] + "/")) for x in CAT["items"]]}

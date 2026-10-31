@@ -18,14 +18,14 @@
 <meta property="og:image:alt" content="True Part Fabrication logo over custom manufactured parts">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0A3161">
-<script>try{var t=localStorage.getItem("tpf-theme");if(t==="light")document.documentElement.setAttribute("data-tpf-theme","light")}catch(e){}</script>
+<script>try{var t=localStorage.getItem("tpf-theme");if(t==="light"||t==="black")document.documentElement.setAttribute("data-tpf-theme",t)}catch(e){}</script>
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="../../assets/img/favicon-48.png">
 <link rel="apple-touch-icon" href="../../assets/img/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=8">
+<link rel="stylesheet" href="../../assets/site.css?v=10">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://truepart-fabrication.onrender.com/es/"}, {"@type": "ListItem", "position": 2, "name": "Catálogo de piezas", "item": "https://truepart-fabrication.onrender.com/es/piezas/"}]}</script>
 <link rel="alternate" hreflang="en" href="https://truepart-fabrication.onrender.com/">
 <link rel="alternate" hreflang="es" href="https://truepart-fabrication.onrender.com/es/">
@@ -36,7 +36,7 @@
 <div class="opening" role="note"><div class="wrap">Abrimos el 1 de enero de 2027 <span aria-hidden="true">·</span> <a href="../../es/#cotizar">Ya aceptamos solicitudes de cotización</a></div></div>
 <header id="hdr">
   <div class="wrap bar">
-    <a class="brand" href="../../es/" aria-label="True Part Fabrication, inicio en español"><img src="../../assets/img/logo-dark.png?v=9" data-light="../../assets/img/logo-light.png" alt="True Part Fabrication" width="800" height="493"></a>
+    <a class="brand" href="../../es/" aria-label="True Part Fabrication, inicio en español"><img src="../../assets/img/logo-dark.png?v=9" data-light="../../assets/img/logo-light.png" data-black="../../assets/img/logo-black.png" alt="True Part Fabrication" width="800" height="493"></a>
     <nav class="main" aria-label="Principal">
       <a class="l" href="../../es/#servicios">Servicios</a>
       <a class="l" href="../../es/#industrias">Industrias</a>
@@ -44,13 +44,13 @@
       <a class="l" href="../../es/preguntas-frecuentes/">Preguntas</a>
       <a class="l" href="../../es/piezas/">Piezas</a>
       <a class="l lang-link" href="../../" hreflang="en" lang="en">English</a>
-      <button class="theme-btn" type="button" id="theme-btn" aria-label="Cambiar tema"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="theme-btn" type="button" id="theme-btn" aria-label="Cambiar tema"><svg class="dot" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="currentColor"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="btn" href="../../es/#cotizar">Pedir cotización</a>
       <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="mnav" aria-label="Menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </nav>
   </div>
 </header>
-<div class="mnav" id="mnav" hidden><div class="wrap"><nav aria-label="Menú"><ul><li><a href="../../es/#servicios">Servicios</a></li><li><a href="../../es/#industrias">Industrias</a></li><li><a href="../../es/#proceso">Cómo funciona</a></li><li><a href="../../es/piezas/">Catálogo de piezas</a></li><li><a href="../../es/preguntas-frecuentes/">Preguntas frecuentes</a></li><li><a href="../../">English</a></li></ul><a class="btn" href="../../es/#cotizar">Pedir cotización <span class="ar">→</span></a></nav></div></div>
+<div class="mnav" id="mnav" hidden><div class="wrap"><nav aria-label="Menú"><ul><li><a href="../../es/#servicios">Servicios</a></li><li><a href="../../es/#industrias">Industrias</a></li><li><a href="../../es/#proceso">Cómo funciona</a></li><li><a href="../../es/piezas/">Catálogo de piezas</a></li><li><a href="../../es/preguntas-frecuentes/">Preguntas frecuentes</a></li><li><a href="../../">English</a></li></ul><a class="btn" href="../../es/#cotizar">Pedir cotización <span class="ar">→</span></a><div class="theme-row" role="group" aria-label="Tema"><span>Tema</span><button type="button" data-set-theme="dark" aria-pressed="false">Azul</button><button type="button" data-set-theme="black" aria-pressed="false">Negro</button><button type="button" data-set-theme="light" aria-pressed="false">Claro</button></div></nav></div></div>
 <main id="main">
 <div class="page-hero"><div class="wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../es/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Catálogo de piezas</span></nav>
@@ -466,13 +466,13 @@ Reemplaza Vacmaster V12CCB">Solicitar</a></div>
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div><img src="../../assets/img/logo-dark.png?v=9" data-light="../../assets/img/logo-light.png" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Piezas de repuesto, fabricación a medida y producción en lotes pequeños en Modesto, California.</p></div>
+      <div><img src="../../assets/img/logo-dark.png?v=9" data-light="../../assets/img/logo-light.png" data-black="../../assets/img/logo-black.png" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Piezas de repuesto, fabricación a medida y producción en lotes pequeños en Modesto, California.</p></div>
       <div><h4>Explorar</h4><ul><li><a href="../../es/#servicios">Servicios</a></li><li><a href="../../es/#industrias">Industrias</a></li><li><a href="../../es/preguntas-frecuentes/">Preguntas frecuentes</a></li><li><a href="../../es/piezas/">Catálogo de piezas</a></li><li><a href="../../tools/hose-size-finder/" hreflang="en">Tamaños de manguera (inglés)</a></li><li><a href="../../" hreflang="en" lang="en">English</a></li></ul></div>
       <div><h4>Contacto</h4><ul><li><a href="../../es/#cotizar">Pedir cotización</a></li><li><a href="https://www.ebay.com/usr/truepartfabrication" target="_blank" rel="noopener">Tienda en eBay</a></li><li><a href="../../privacy/" hreflang="en">Privacidad (inglés)</a></li><li><a href="../../terms/" hreflang="en">Términos de servicio (inglés)</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
 </footer>
-<script src="../../assets/site.js?v=8" defer></script>
+<script src="../../assets/site.js?v=10" defer></script>
 </body>
 </html>
