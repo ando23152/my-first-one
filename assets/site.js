@@ -5,7 +5,7 @@
     if(t==='light')root.setAttribute('data-tpf-theme','light');else root.removeAttribute('data-tpf-theme');
     document.querySelectorAll('img[data-light]').forEach(function(i){if(!i.getAttribute('data-dark'))i.setAttribute('data-dark',i.getAttribute('src'));var want=t==='light'?i.getAttribute('data-light'):i.getAttribute('data-dark');if(i.getAttribute('src')!==want)i.setAttribute('src',want)});
     if(tb)tb.setAttribute('aria-label',t==='light'?'Switch to dark theme':'Switch to light theme');
-    if(meta)meta.setAttribute('content',t==='light'?'#ffffff':'#142D49');
+    if(meta)meta.setAttribute('content',t==='light'?'#ffffff':'#0A3161');
   }
   applyTheme(root.getAttribute('data-tpf-theme')==='light'?'light':'dark');
   if(tb)tb.addEventListener('click',function(){var t=root.getAttribute('data-tpf-theme')==='light'?'dark':'light';applyTheme(t);try{localStorage.setItem('tpf-theme',t)}catch(e){}});

@@ -22,7 +22,7 @@ EXTRA_CSS = r"""
 /* ---- resources ---- */
 .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .res{display:grid;gap:12px;align-content:start;padding:28px;border:1px solid var(--line);border-radius:8px;background:var(--surface);text-decoration:none;transition:border-color .2s,transform .3s var(--ease)}
-.res:hover{border-color:#4A6A92;transform:translateY(-2px)}
+.res:hover{border-color:#5578A8;transform:translateY(-2px)}
 .res .k{font:500 .7rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent-hi)}
 .res h3{font-family:var(--f-body);font-stretch:100%;font-weight:600;font-size:1.15rem;text-transform:none;letter-spacing:0;line-height:1.3}
 .res p{color:var(--muted);font-size:.95rem}
@@ -38,7 +38,7 @@ EXTRA_CSS = r"""
 .ftable td{font-size:.9rem;color:var(--muted)}
 .ftable td.mo{font-family:var(--f-mono);font-size:.84rem;color:var(--ink);white-space:nowrap}
 .ftable td.br{font:500 .72rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-hi);white-space:nowrap}
-.sz{display:inline-block;font:500 .74rem var(--f-mono);color:var(--ink);border:1px solid #4A6A92;border-radius:999px;padding:3px 9px;margin:0 4px 4px 0;white-space:nowrap}
+.sz{display:inline-block;font:500 .74rem var(--f-mono);color:var(--ink);border:1px solid #5578A8;border-radius:999px;padding:3px 9px;margin:0 4px 4px 0;white-space:nowrap}
 .cf{font:.68rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 8px;white-space:nowrap}
 .cf.Confirmed{color:#7fe0a0;border:1px solid rgba(127,224,160,.4)}
 .cf.Likely{color:#f0c46a;border:1px solid rgba(240,196,106,.4)}
@@ -60,7 +60,7 @@ EXTRA_CSS = r"""
 .mq legend{font:600 1rem var(--f-body);padding:0 6px;color:var(--ink)}
 .mq .opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .mq input{position:absolute;opacity:0;pointer-events:none}
-.mq label.o{cursor:pointer;border:1px solid #4A6A92;border-radius:999px;padding:9px 15px;font-size:.9rem;color:var(--ink);transition:all .2s;text-transform:none;letter-spacing:0;font-family:var(--f-body)}
+.mq label.o{cursor:pointer;border:1px solid #5578A8;border-radius:999px;padding:9px 15px;font-size:.9rem;color:var(--ink);transition:all .2s;text-transform:none;letter-spacing:0;font-family:var(--f-body)}
 .mq input:checked+label.o{background:var(--accent);border-color:var(--accent);color:#fff}
 .mq input:focus-visible+label.o{outline:2px solid var(--accent-hi);outline-offset:2px}
 .result{position:sticky;top:120px;border:1px solid rgba(227,38,47,.45);border-radius:8px;padding:28px;background:linear-gradient(135deg,rgba(227,38,47,.14),rgba(227,38,47,.02))}
@@ -72,7 +72,7 @@ EXTRA_CSS = r"""
 @media (max-width:960px){.picker{grid-template-columns:1fr}.result{position:static}}
 .cmp td{font-size:.92rem}
 .dots{letter-spacing:2px;color:var(--accent-hi);font-size:.9rem;white-space:nowrap}
-.dots i{color:#4A6A92;font-style:normal}
+.dots i{color:#5578A8;font-style:normal}
 .howto{counter-reset:s;display:grid;gap:22px;max-width:900px}
 .howto li{list-style:none;display:grid;grid-template-columns:56px 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--line)}
 .howto li::before{counter-increment:s;content:counter(s,decimal-leading-zero);display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--accent);border-radius:50%;font:500 .8rem var(--f-mono);color:var(--accent-hi)}
@@ -228,8 +228,8 @@ document.getElementById('mp').addEventListener('change',pick);pick();}})();
 
 # ---------------- MEASURING GUIDE ----------------
 SVG_OD = """<svg viewBox="0 0 480 200" role="img" aria-label="Calipers measuring the outside diameter of a hose cuff"><rect x="40" y="70" width="210" height="80" rx="6" fill="#1d1d22" stroke="#e9e8e4" stroke-width="1.5"/><rect x="250" y="82" width="160" height="56" rx="4" fill="#2a2a30" stroke="#e9e8e4" stroke-width="1.5"/><path d="M40 40h240v14H40zM40 54v16M266 54v16" stroke="#e3262f" stroke-width="3" fill="none"/><rect x="40" y="34" width="250" height="20" fill="none" stroke="#e3262f" stroke-width="2"/><path d="M40 160v20M250 160v20" stroke="#ff3b43" stroke-width="1.5"/><path d="M44 174h202" stroke="#ff3b43" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/><text x="145" y="196" text-anchor="middle" fill="#e9e8e4" font-family="JetBrains Mono, monospace" font-size="13">OD (outside diameter)</text><text x="330" y="115" text-anchor="middle" fill="#b9b9bf" font-family="JetBrains Mono, monospace" font-size="12">hose</text><defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#ff3b43"/></marker></defs></svg>"""
-SVG_CC = """<svg viewBox="0 0 480 200" role="img" aria-label="Measuring hole spacing center to center"><rect x="40" y="50" width="400" height="100" rx="8" fill="#1d1d22" stroke="#e9e8e4" stroke-width="1.5"/><circle cx="120" cy="100" r="18" fill="#142D49" stroke="#e9e8e4" stroke-width="1.5"/><circle cx="360" cy="100" r="18" fill="#142D49" stroke="#e9e8e4" stroke-width="1.5"/><path d="M120 100h240" stroke="#ff3b43" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M120 34v32M360 34v32" stroke="#ff3b43" stroke-width="1.5"/><path d="M124 40h232" stroke="#ff3b43" stroke-width="1.5" marker-start="url(#b)" marker-end="url(#b)"/><text x="240" y="30" text-anchor="middle" fill="#e9e8e4" font-family="JetBrains Mono, monospace" font-size="13">center to center</text><text x="240" y="182" text-anchor="middle" fill="#b9b9bf" font-family="JetBrains Mono, monospace" font-size="12">= edge to edge + one hole diameter</text><defs><marker id="b" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#ff3b43"/></marker></defs></svg>"""
-SVG_PH = """<svg viewBox="0 0 480 200" role="img" aria-label="Photo setup: part beside a ruler on a plain background"><rect x="20" y="20" width="440" height="160" rx="10" fill="#e9e8e4"/><rect x="150" y="60" width="150" height="80" rx="10" fill="#e3262f"/><circle cx="225" cy="100" r="20" fill="#e9e8e4"/><rect x="60" y="150" width="360" height="18" fill="#c9a24a"/><g stroke="#3a2a10" stroke-width="1.5">""" + "".join(f'<path d="M{60+i*18} 150v{8 if i%5 else 14}"/>' for i in range(21)) + """</g><text x="240" y="44" text-anchor="middle" fill="#142D49" font-family="JetBrains Mono, monospace" font-size="13">plain background · ruler in frame · straight on</text></svg>"""
+SVG_CC = """<svg viewBox="0 0 480 200" role="img" aria-label="Measuring hole spacing center to center"><rect x="40" y="50" width="400" height="100" rx="8" fill="#1d1d22" stroke="#e9e8e4" stroke-width="1.5"/><circle cx="120" cy="100" r="18" fill="#0A3161" stroke="#e9e8e4" stroke-width="1.5"/><circle cx="360" cy="100" r="18" fill="#0A3161" stroke="#e9e8e4" stroke-width="1.5"/><path d="M120 100h240" stroke="#ff3b43" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M120 34v32M360 34v32" stroke="#ff3b43" stroke-width="1.5"/><path d="M124 40h232" stroke="#ff3b43" stroke-width="1.5" marker-start="url(#b)" marker-end="url(#b)"/><text x="240" y="30" text-anchor="middle" fill="#e9e8e4" font-family="JetBrains Mono, monospace" font-size="13">center to center</text><text x="240" y="182" text-anchor="middle" fill="#b9b9bf" font-family="JetBrains Mono, monospace" font-size="12">= edge to edge + one hole diameter</text><defs><marker id="b" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#ff3b43"/></marker></defs></svg>"""
+SVG_PH = """<svg viewBox="0 0 480 200" role="img" aria-label="Photo setup: part beside a ruler on a plain background"><rect x="20" y="20" width="440" height="160" rx="10" fill="#e9e8e4"/><rect x="150" y="60" width="150" height="80" rx="10" fill="#e3262f"/><circle cx="225" cy="100" r="20" fill="#e9e8e4"/><rect x="60" y="150" width="360" height="18" fill="#c9a24a"/><g stroke="#3a2a10" stroke-width="1.5">""" + "".join(f'<path d="M{60+i*18} 150v{8 if i%5 else 14}"/>' for i in range(21)) + """</g><text x="240" y="44" text-anchor="middle" fill="#0A3161" font-family="JetBrains Mono, monospace" font-size="13">plain background · ruler in frame · straight on</text></svg>"""
 STEPS = [
  ("Gather what you have", "<p>The original part is the best reference, even broken. You'll also want:</p><ul><li>Digital calipers if you have them, or a ruler with millimeter marks</li><li>Your phone camera</li><li>The make and model of the equipment the part came from</li></ul>", ""),
  ("Photograph it with a scale", "<p>Lay the part on a plain, light background with a ruler beside it. Shoot straight on from the front, side, and top, plus a close-up of anything that clips, threads, or slides into something else.</p>", SVG_PH),

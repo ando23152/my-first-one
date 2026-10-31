@@ -99,7 +99,7 @@ def footer_es(c):
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
 </footer>
-<script src="{c.asset('site.js')}?v=7" defer></script>"""
+<script src="{c.asset('site.js')}?v=8" defer></script>"""
 
 def doc_es(c, headhtml, body):
     alt = f'<link rel="alternate" hreflang="en" href="{B.BASE}/">\n<link rel="alternate" hreflang="es" href="{B.BASE}/es/">\n<link rel="alternate" hreflang="x-default" href="{B.BASE}/">'
