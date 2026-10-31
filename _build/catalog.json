@@ -1,1 +1,1785 @@
-{"items": [{"b": "DeWalt", "oem": "DWH052", "n": "1-1/8 in. Hex Breaker Dust Collector", "f": "", "mat": "PETG", "pp": true, "i": "separator"}, {"b": "DeWalt", "oem": "DXVA13-4364", "n": "1-7/8 in. Car Cleaning Flexible Claw Nozzle", "f": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "DeWalt", "oem": "DXVA13-4333", "n": "1-7/8 in. Car Cleaning Nozzle Attachment", "f": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "DeWalt", "oem": "DXVA19-1400", "n": "1-7/8 in. Crevice Nozzle Attachment", "f": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "DeWalt", "oem": "DXVA19-1900", "n": "1-7/8 in. Floor Brush Attachment", "f": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "DeWalt", "oem": "DXVA11-2100", "n": "1-7/8 in. to 2-1/2 in. Accessory Hose Adapter", "f": "Vacs: DXV04T, DXV06G, DXV10SB \u2192 DXVA08-2502, DXVA08-2503", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "DeWalt", "oem": "DXVA13-0801", "n": "1.25\u20132.5 in. Car Cleaning Accessory Kit", "f": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P", "mat": "PETG", "pp": true, "i": "clip"}, {"b": "DeWalt", "oem": "DXVA08-2503", "n": "2-1/2 in. Utility Nozzle Attachment", "f": "DXV12P, DXV16PA, DXV212P; DXV04T, DXV06G, DXV10SB via DXVA11-2100", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "DeWalt", "oem": "DXVA08-2712", "n": "2-1/2 in. to 1-1/4 in. Accessory Hose Adapter", "f": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-1/4 in. attachments / small tool ports", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "DeWalt", "oem": "DXVA08-2718", "n": "2-1/2 in. to 1-7/8 in. Accessory Hose Adapter", "f": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-7/8 in. attachments (DXVA19-1400, DXVA19-1900, DXVA13-4333, DXVA13-4364) or DXVA19-2780", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "DeWalt", "oem": "DXVA19-2780", "n": "Adapter 1-7/8 in. Hose to 1-2/3 in. Power Tools", "f": "Vacs: DXV04T, DXV06G, DXV10SB (direct); DXV12P, DXV16PA, DXV212P (stack with DXVA08-2718). Tools: DeWalt sanders, miter saws, table saws wit\u2026", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "DeWalt", "oem": "DWV2759", "n": "Dust Extractor Accessory Kit (5-Piece)", "f": "DWV010, DWV015, DCV585B", "mat": "PETG", "pp": true, "i": "separator"}, {"b": "DeWalt", "oem": "DWH205DH", "n": "Dust Extractor for DCH263 SDS Plus D-Handle", "f": "DCH263", "mat": "PETG", "pp": true, "i": "separator"}, {"b": "DeWalt", "oem": "DXVCS001", "n": "Dust Separator for Wet/Dry Vacuums", "f": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P", "mat": "PETG", "pp": true, "i": "separator"}, {"b": "DeWalt", "oem": "DWV9190", "n": "Large Hose Adapter", "f": "", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "DeWalt", "oem": "DXVA15-1100", "n": "Multi-Fit Accessory Attachment Hose Adapter", "f": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "DeWalt", "oem": "DWH304DH", "n": "Multi-Surface Dust Extractor", "f": "", "mat": "PETG", "pp": true, "i": "separator"}, {"b": "DeWalt", "oem": "DWH079D", "n": "SDS Rotary Hammer Dust Box Evacuator", "f": "", "mat": "PETG", "pp": true, "i": "clip"}, {"b": "DeWalt", "oem": "DWV9000", "n": "Universal Quick Connector", "f": "", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "Milwaukee", "oem": "49-90-2017", "n": "1-1/4 in round brush", "f": "0880/0970/0960 class", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-1988", "n": "1-7/8 in crevice tool 7-1/2 in", "f": "1-7/8 hoses 49-90-1996/1984/1986", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-1983", "n": "1-7/8 in curved nozzle", "f": "1-7/8 hoses", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-1982", "n": "1-7/8 in floor brush (reversible)", "f": "1-7/8 hoses 49-90-1996/1984/1986", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2011", "n": "1-7/8 in floor utility nozzle", "f": "0920-20", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-1981", "n": "1-7/8 in round brush", "f": "1-7/8 hoses 49-90-1996/1984/1986; M18 2 gal only if 1-7/8 hose", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-1985", "n": "1-7/8 in wet floor nozzle 9-1/2 in squeegee", "f": "1-7/8 hoses 49-90-1996/1984/1986", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-2008", "n": "2-1/2 in crevice tool", "f": "0930-22HD", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-2002", "n": "2-1/2 in floor brush", "f": "2-1/2 hoses 49-90-2004/2006", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2009", "n": "2-1/2 in floor utility nozzle", "f": "0930-22HD", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-2033", "n": "2-1/2 in magnetic utility nozzle", "f": "2-1/2 hoses", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-2039", "n": "2-1/2 in rocking utility nozzle w/ brushes", "f": "2-1/2 hoses", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2001", "n": "2-1/2 in round brush", "f": "2-1/2 hoses", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2005", "n": "2-1/2 in wet floor nozzle", "f": "2-1/2 hoses", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-2028", "n": "2-in-1 utility brush", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2023Y", "n": "3-in-1 crevice and brush tool", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2026", "n": "4-in-1 right angle tool (5 pc)", "f": "AIR-TIP sizes", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-2043", "n": "Automotive detail brush", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2019A", "n": "Automotive kit w/ crevice tools, utility nozzle and bag (4 pc)", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-2046", "n": "Boiler coil cleaning brush", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2041", "n": "Bucket topper dust collector", "f": "AIR-TIP sizes", "mat": "PETG", "pp": false, "i": "separator"}, {"b": "Milwaukee", "oem": "49-90-2040", "n": "Claw utility nozzle w/ brushes", "f": "Milwaukee + other brands at those sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2200", "n": "Compact debris separator (6 ft 1-7/8 expandable hose + multi-fit adapter)", "f": "Any common wet/dry vac; mounting clips for 0910/0920/0930; 49-90-2201 caster kit", "mat": "PETG", "pp": true, "i": "separator"}, {"b": "Milwaukee", "oem": "49-90-2044", "n": "Compact dust collector", "f": "Any wet/dry brand at those sizes", "mat": "PETG", "pp": false, "i": "separator"}, {"b": "Milwaukee", "oem": "49-90-2024", "n": "Conduit line puller (3 pc)", "f": "AIR-TIP sizes; bundled w/ 0880-20", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-2035", "n": "Cross brush tool", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2047", "n": "Debris scraper", "f": "AIR-TIP sizes", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "0990-20", "n": "Dedicated debris separator (between head and tank)", "f": "NEXUS 0910/0914/0915/0920/0930", "mat": "PETG / PA-CF", "pp": false, "i": "separator"}, {"b": "Milwaukee", "oem": "49-90-2022", "n": "Dust collector (wall suction funnel)", "f": "Any brand at those sizes; 0970 PACKOUT 2.5 gal, M12 FUEL 1.6 gal", "mat": "PETG", "pp": false, "i": "separator"}, {"b": "Milwaukee", "oem": "49-90-2030Y", "n": "Flexible long reach crevice tool", "f": "AIR-TIP sizes; Milwaukee suggests for 0888", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-1991", "n": "Hose & accessory adapter kit (2-1/2>1-7/8 accessory; 2-1/2>2-1/2/1-7/8 hose; 1-7/8>1-7/8 hose)", "f": "Milwaukee 1-7/8 and 2-1/2 hoses/tools; other brands (Ridgid)", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "Milwaukee", "oem": "49-90-1959", "n": "Hose clip adapter (extractor)", "f": "0888 ; 5317-DE, 49-40-6110, 5318-DE", "mat": "PETG / PA-CF", "pp": false, "i": "clip"}, {"b": "Milwaukee", "oem": "49-90-1992", "n": "Hose-to-drain adapter kit (garden hose to drain)", "f": "0910, 0920, 0930 (6/9/12 gal)", "mat": "TPU / PETG", "pp": false, "i": "adapter"}, {"b": "Milwaukee", "oem": "49-90-2043P", "n": "Kit (cross brush, 2-in-1 brush, rocking nozzle, compact organizer)", "f": "Other wet/dry brands", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2027", "n": "Low-profile pivoting brush", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2032", "n": "Magnetic utility nozzle", "f": "AIR-TIP sizes", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Milwaukee", "oem": "49-90-2034", "n": "Non-marring crevice tool + utility nozzle (2 pc)", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "clip"}, {"b": "Milwaukee", "oem": "49-90-2038", "n": "Rocking utility nozzle w/ brushes", "f": "Milwaukee + other brands at those sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2021", "n": "Rotating corner brush", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2020", "n": "Swiveling palm brush", "f": "AIR-TIP sizes", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Milwaukee", "oem": "49-90-2018", "n": "Vacuum power tool adapter (3 steps 1.22-1.41 in OD)", "f": "0880-20, 0882-20, 0940-20, 0960-20, 0970-20; most tool dust ports", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "RYOBI", "oem": "A323G01", "n": "1-1/4 in. crevice tool + utility nozzle", "f": "PCL733, PCL734, P3240", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "RYOBI", "oem": "A32SS02N", "n": "1-3/8 in. accessory kit: crevice tool, floor nozzle, dust brush", "f": "PWV200, PWV201", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RYOBI", "oem": "A326G01", "n": "1-7/8 in. 4-pc kit: crevice tool, floor nozzle, 2 extension wands", "f": "RY40WD01, PCL735, P770", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "RYOBI", "oem": "A3210G01", "n": "1-7/8 in. 6-pc kit: 2 wands, crevice, car nozzle, floor nozzle w/ squeegee + brush", "f": "RY40WD01, PCL735, P770", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RYOBI", "oem": "A32K02", "n": "4-pc wet/dry hand vac kit: crevice, squeegee, dust brush, accessory adaptor", "f": "PCL702", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RYOBI", "oem": "A32UA05", "n": "Car nozzle, 3-3/8 in. opening", "f": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RYOBI", "oem": "A32UA01", "n": "Crevice tool", "f": "All RYOBI wet/dry vacs + most brands", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RYOBI", "oem": "A32UA04", "n": "Dust brush (triangular)", "f": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RYOBI", "oem": "A32UA03", "n": "Flexible extended micro-crevice tool, 14 in.", "f": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RYOBI", "oem": "A32UA02", "n": "Flexible micro-crevice tool (rubber)", "f": "All RYOBI wet/dry vacs + most brands", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RYOBI", "oem": "A32UA07", "n": "Floor head, 10 in. wide", "f": "All RYOBI wet/dry vacs + most brands", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "RYOBI", "oem": "A32UA06", "n": "Micro-crevice tool (16 bendable straws)", "f": "PCL732, PCL733, PCL734, PCL735, PWV200, RY40WD01", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RYOBI", "oem": "A326G01N", "n": "P770 6 Gal. accessory kit: 1-7/8 in. crevice tool, floor nozzle, 2x15 in. wands", "f": "P770; likely PCL735, RY40WD01", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "RYOBI", "oem": "A21CCV1", "n": "Sander vacuum adaptor", "f": "PCL416 Corner Cat sander; 1-1/4 in. vacs (PCL732/733/734)", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "RYOBI", "oem": "A32K04", "n": "Stick vac accessory kit: crevice, dust brush, micro crevice, adaptor", "f": "PCL720, PBLSV716, PBLSV717, PCL704", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RYOBI", "oem": "A32UAK1", "n": "Universal Fit accessories kit (3-piece)", "f": "", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "RYOBI", "oem": "A32AD01", "n": "Wet/dry vacuum adapter (step adapter)", "f": "All RYOBI wet/dry vacs; tool dust ports", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "RIDGID", "oem": "VT1781", "n": "1-7/8 in. car nozzle", "f": "RIDGID 1-7/8 in. vacs", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RIDGID", "oem": "VT1702", "n": "1-7/8 in. crevice tool", "f": "RIDGID 1-7/8 in. vacs", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RIDGID", "oem": "VT1712", "n": "1-7/8 in. crevice/dusting brush combo", "f": "RIDGID 1-7/8 in. vacs", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RIDGID", "oem": "VT1701", "n": "1-7/8 in. dusting brush", "f": "RIDGID 1-7/8 in. vacs", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RIDGID", "oem": "VT1714", "n": "1-7/8 in. floor brush", "f": "RIDGID 1-7/8 in. vacs", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RIDGID", "oem": "VT1709", "n": "1-7/8 in. utility nozzle", "f": "RIDGID 1-7/8 in. vacs", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RIDGID", "oem": "VT1710", "n": "1-7/8 in. wet nozzle (squeegee)", "f": "RIDGID 1-7/8 in. vacs", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RIDGID", "oem": "VT2575", "n": "12-pc heavy-duty cleaning kit, stainless wands", "f": "Most RIDGID 1-7/8 and 2-1/2 in. vacs; WD06701 WD09701 WD16350", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "RIDGID", "oem": "VT2505", "n": "2-1/2 in. hose grip with bleeder valve", "f": "2-1/2 in. RIDGID hoses/wands", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "RIDGID", "oem": "LA2503", "n": "2-1/2 in. locking car nozzle", "f": "RIDGID 2-1/2 in. vacs", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RIDGID", "oem": "LA2502", "n": "2-1/2 in. locking crevice tool", "f": "RIDGID 2-1/2 in. vacs", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RIDGID", "oem": "LA2514", "n": "2-1/2 in. locking floor brush", "f": "RIDGID 2-1/2 in. vacs", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RIDGID", "oem": "LA2501", "n": "2-1/2 in. locking round dusting brush", "f": "RIDGID 2-1/2 in. vacs", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "RIDGID", "oem": "LA2509", "n": "2-1/2 in. locking utility nozzle", "f": "All RIDGID 2-1/2 in. hose vacs", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RIDGID", "oem": "LA2510", "n": "2-1/2 in. locking wet nozzle", "f": "RIDGID 2-1/2 in. vacs", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RIDGID", "oem": "VT2525", "n": "2-1/2 in. muffler/diffuser with adapter", "f": "4-20 gal RIDGID vacs with blower port", "mat": "PETG", "pp": false, "i": "adapter"}, {"b": "RIDGID", "oem": "VT1407", "n": "2-1/2 in. power tool adaptor (stepped, trimmable)", "f": "LA2520 LA2521 LA2522 LA2570 hoses; miter saws, sanders, benchtop tools", "mat": "PETG / PA-CF", "pp": false, "i": "clip"}, {"b": "RIDGID", "oem": "VT1755", "n": "3-pc hose/accessory adapter kit", "f": "All RIDGID vacs; bridges all three hose sizes", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "RIDGID", "oem": "VT2540", "n": "Claw nozzle", "f": "RIDGID vacs", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "RIDGID", "oem": "VT2519", "n": "Hose-to-drain adapter", "f": "10-20 gal RIDGID vacs with drain port", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "RIDGID", "oem": "VT2530", "n": "Multi-surface carpet/hard floor nozzle", "f": "RIDGID vacs with 2-1/2 or 1-1/4 hose/wand", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "RIDGID", "oem": "VT2571", "n": "Turbo beater bar kit", "f": "Select RIDGID vacs", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "WEN", "oem": "DCA021", "n": "12 in. cyclone separator lid, 2-1/2 in. ports, fits 5-gal bucket (lip <=11-3/4 in.)", "f": "VC4710/VC9209 need 1-1/4 to 2-1/2 in. adapter", "mat": "PETG / PA-CF", "pp": false, "i": "separator"}, {"b": "WEN", "oem": "DCA007", "n": "2-1/2 in. blast gate (plastic)", "f": "2-1/2 in. hoses", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA012", "n": "2-1/2 in. flexible rubber dust cuff", "f": "2-1/2 in. ports", "mat": "TPU / PETG", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA009", "n": "2-1/2 in. locking aluminum blast gate", "f": "2-1/2 in. hoses", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA002", "n": "2-1/2 in. to 1-1/2 in. cone reducer", "f": "1-1/2 in. ports (scroll saws, spindle sanders) to 2-1/2 in. hose", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA022", "n": "21 in. cyclone separator lid, 4 in. ports, fits 30-gal metal can (lip <=20-3/4 in.)", "f": "DC3401/DC3474/DC1300 via 4 in. hose", "mat": "PETG / PA-CF", "pp": false, "i": "separator"}, {"b": "WEN", "oem": "DCA015", "n": "22 in. floor sweep for 4 in. hoses", "f": "28200/28221; DCA013", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "WEN", "oem": "DCA004", "n": "4 in. 90-degree elbow (94 mm ID/100 mm OD)", "f": "28200/28221", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA005", "n": "4 in. T-fitting splitter", "f": "4 in. hoses", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA003", "n": "4 in. Y-fitting splitter", "f": "4 in. hoses", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA006", "n": "4 in. blast gate (plastic)", "f": "4 in. hoses", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA013", "n": "4 in. flexible rubber dust cuff (101 mm ID / 114.5 mm OD)", "f": "Most 4 in. ports, gates, adapters", "mat": "TPU / PETG", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA008", "n": "4 in. locking aluminum blast gate", "f": "4 in. hoses", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA001", "n": "4 in. to 2-1/2 in. cone reducer (ABS)", "f": "4 in. hoses/collectors to 2-1/2 in. tools/hoses", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA014", "n": "5-step modular reducer/adapter set (4, 2-1/2, 1-3/4, 1-1/2, 1-1/4 in.)", "f": "28200, 28221, DCA251, DCA252", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "PL1326-0R42", "n": "Dust chute adapter for PL1326 & PL1303", "f": "PL1326, PL1303", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "WEN", "oem": "DCA028", "n": "Magnetic floor sweeping kit w/ 12x9.5 in. hatch, blast gate", "f": "DCA024/DCA025/DCA026", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "255FLIH380", "n": "8in crevice tool", "f": "", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Shark", "oem": "X11FC500", "n": "Crevice / dusting brush / upholstery tool set", "f": "NV500, NV501, NV502, NV560", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "673FFJ200", "n": "Crevice tool", "f": "", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Shark", "oem": "619FJ140", "n": "Crevice tool", "f": "", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Shark", "oem": "353CH1000", "n": "Crevice tool", "f": "IX141 / CH-series", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Shark", "oem": "112FFJ", "n": "Crevice tool + dusting brush set", "f": "NV350, NV351, NV352, NV355, NV356E, NV357, NV360, NV370, UV440", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "158FLI650", "n": "Duster crevice tool", "f": "", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Shark", "oem": "189FLI680", "n": "Duster crevice tool", "f": "", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Shark", "oem": "210FLIH380", "n": "Duster crevice tool", "f": "", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Shark", "oem": "623FJ140", "n": "Duster crevice tool", "f": "", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Shark", "oem": "621FJ140", "n": "Flexible crevice tool", "f": "", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Shark", "oem": "219FLIN800", "n": "Pet multi-tool", "f": "NV800, NV801, NV803, NV810", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Shark", "oem": "629FJ140", "n": "Pet multi-tool", "f": "", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Shark", "oem": "354CH1000CE", "n": "Pet multi-tool", "f": "Shark Pet cordless IX141 / CH-series", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Shark", "oem": "123KY1000A", "n": "Robot self-cleaning brushroll", "f": "RV1001, RV1001AE, RV1000S, UR1000SR", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "167KKU2500", "n": "Robot self-cleaning brushroll", "f": "2500-series AI robots", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "278KKU2800", "n": "Robot self-cleaning brushroll", "f": "AV2820S, AV2820AE, RV2820AE", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "1171FK870", "n": "Robot side brushes", "f": "ION robots (RV7xx/RV8xx)", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "166KKU2500", "n": "Self-cleaning brushroll", "f": "2500-series", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "102KY1000", "n": "Side brush (aftermarket-referenced)", "f": "R101AE, RV1001, RV1001AE, UR1005AE, AV2501S, RV2520A0US, UR2500SR", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "1539FC3000", "n": "Soft brushroll ( front roller)", "f": "AZ3000, AZ3000C, AZ3000W, AZ3002, AZ3002C, LA555, LA700, LA702, UV900", "mat": "PETG", "pp": true, "i": "roller"}, {"b": "Shark", "oem": "406GP2300", "n": "Triple side brush (single)", "f": "RV2300-series", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "58MMSB2PK", "n": "Triple side brushes (2)", "f": "Matrix / AI 2300-series", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "153HG2300", "n": "Triple side brushes (2)", "f": "RV2300-series", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Shark", "oem": "240FLIN850", "n": "Under-appliance wand", "f": "", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Shark", "oem": "632FJ140", "n": "Under-appliance wand", "f": "", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Shark", "oem": "HVUAW300 / 138FLIV300", "n": "Under-appliance wand (36in adjustable)", "f": "HV300 / HV320 series", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Shark", "oem": "159FLI650", "n": "Upholstery tool", "f": "", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Shark", "oem": "627FJ140", "n": "Upholstery tool", "f": "", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Shark", "oem": "1365FC200", "n": "Wall mount", "f": "", "mat": "PETG", "pp": false, "i": "clip"}, {"b": "Prolux", "oem": "", "n": "Canister latches, springs and latch pins", "f": "CTX", "mat": "PETG", "pp": false, "i": "clip", "for": "Prolux CTX"}, {"b": "Prolux", "oem": "", "n": "Combination floor tool - NEW STYLE", "f": "New Tritan", "mat": "PETG", "pp": false, "i": "nozzle", "for": "Prolux Tritan"}, {"b": "Prolux", "oem": "", "n": "Multi-surface 14 in. floor tool", "f": "ProTeam and most commercial 1.5 in. wands", "mat": "PETG", "pp": false, "i": "nozzle", "for": "Prolux 10qt"}, {"b": "Prolux", "oem": "", "n": "Squeegee floor tool", "f": "Prolux 2.0", "mat": "PETG", "pp": false, "i": "nozzle", "for": "Prolux 2.0"}, {"b": "Prolux", "oem": "", "n": "Tool caddy (wand-mounted)", "f": "Tritan (old style), RS4", "mat": "PETG", "pp": false, "i": "clip", "for": "Prolux Tritan"}, {"b": "Samsung", "oem": "DJ98-01130A", "n": "Accessory crevice tool (VS9000RL)", "f": "VS20T7512N7 (Jet 75)", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Samsung", "oem": "DJ64-01328B", "n": "Button brush (VS9000RL, dark chrome)", "f": "VS20T7512N7 (Jet 75)", "mat": "PETG", "pp": true, "i": "brush"}, {"b": "Samsung", "oem": "VCA-SAD95/AA", "n": "Combination tool", "f": "Samsung Jet stick (models not listed)", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Samsung", "oem": "DA67-02512A", "n": "Convenience door handle mounting cap, left", "f": "", "mat": "PETG", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DD61-00497A", "n": "Dishrack slide rail holder", "f": "", "mat": "ASA / PA-CF", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DA61-04195A", "n": "Door stopper, left", "f": "Samsung & Kenmore refrigerators (review: RSG257AARS)", "mat": "PETG", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DA63-06911A", "n": "Drawer slide rail cover (full length)", "f": "", "mat": "PETG", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "VCA-SAF95/VAA", "n": "Flex tool (Chrometal Black)", "f": "Jet Stick (models not listed)", "mat": "PETG / PA-CF", "pp": false, "i": "adapter"}, {"b": "Samsung", "oem": "DA67-02787B", "n": "Freezer door handle end cap", "f": "", "mat": "PETG", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DA67-02291A", "n": "Freezer door handle end cap, left (gray)", "f": "RFG237AAPN", "mat": "PETG", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DA67-02292A", "n": "Freezer door handle end cap, right", "f": "", "mat": "PETG", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DA67-02787C", "n": "Freezer handle cap", "f": "", "mat": "PETG", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "VCA-SAR95/AA", "n": "Long-reach crevice tool", "f": "Samsung Jet stick (models not listed)", "mat": "PETG", "pp": false, "i": "nozzle"}, {"b": "Samsung", "oem": "DD66-00023A", "n": "Lower rack roller", "f": "DW80J3020, DW80K5050, DW80K7050, DW80R5060/5061, DW80F600UT, DW80F800UW, DW7933LRA, DMT300RF/400RH/610RH/800RH, DMR57LF/77LH/78AH (54 models\u2026", "mat": "ASA / PA-CF", "pp": false, "i": "roller"}, {"b": "Samsung", "oem": "DD61-00472A", "n": "Lower rack tine holder", "f": "DW80J7550US", "mat": "ASA / PA-CF", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DD66-00076A", "n": "Lower roller (basket)", "f": "DW80J7550US", "mat": "ASA / PA-CF", "pp": false, "i": "roller"}, {"b": "Samsung", "oem": "DD61-00473A", "n": "Rack holder tine clip", "f": "DW80J7550US", "mat": "ASA / PA-CF", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DD61-00351A", "n": "Rack roller holder", "f": "DW80J7550US", "mat": "ASA / PA-CF", "pp": false, "i": "roller"}, {"b": "Samsung", "oem": "DD61-00469A", "n": "Rack tine holder", "f": "DW80J7550US", "mat": "ASA / PA-CF", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DD61-00348A", "n": "Tine holder, back", "f": "24-inch Samsung dishwashers (models not listed)", "mat": "ASA / PA-CF", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "DD61-00216A", "n": "Tine row clip", "f": "", "mat": "ASA / PA-CF", "pp": false, "i": "clip"}, {"b": "Samsung", "oem": "VCA-SAK90/GL", "n": "Tool kit (gray; white = VCA-SAK90W)", "f": "Jet 90/75/70 (EU)", "mat": "PETG", "pp": true, "i": "nozzle"}, {"b": "Samsung", "oem": "DA63-08459A", "n": "Tray/support rollers (dispenser tray)", "f": "RF23HCEDBSG, RF28HFEDBSG, RF28HFEDTSG", "mat": "ASA / PA-CF", "pp": false, "i": "roller"}, {"b": "Hampton Bay", "oem": "", "n": "Battery cover for universal kit remotes (70830, 98101, 98130, 98108)", "f": "Universal kit remotes; 70830 has the dimmer dipswitch in battery bay", "mat": "PETG", "pp": false, "i": "clip", "for": "70830"}, {"b": "Hampton Bay", "oem": "", "n": "Battery door / cover for UC7078T handheld remote", "f": "UC7078T remotes (and look-alike clones)", "mat": "PETG", "pp": false, "i": "clip", "for": "UC7078T"}, {"b": "Hampton Bay", "oem": "", "n": "Battery door / cover for UC7083T handheld remote (dipswitch bay)", "f": "UC7083T remotes", "mat": "PETG", "pp": false, "i": "clip", "for": "UC7083T"}, {"b": "Hampton Bay", "oem": "", "n": "Ceiling fan remote wall holder, plastic, new", "f": "UC7078T (Hampton Bay) and FAN-HD (Harbor Breeze) remotes; buyer review says 'close-enough-fit' on other remotes", "mat": "PETG", "pp": false, "i": "clip", "for": "UC7078T"}], "feat": ["49-90-2022", "0990-20", "49-90-2200", "DWV9000", "49-90-2024", "DWV2759"]}
+{
+ "items": [
+  {
+   "b": "DeWalt",
+   "oem": "DWH052",
+   "n": "1-1/8 in. Hex Breaker Dust Collector",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "separator"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA13-4364",
+   "n": "1-7/8 in. Car Cleaning Flexible Claw Nozzle",
+   "f": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA13-4333",
+   "n": "1-7/8 in. Car Cleaning Nozzle Attachment",
+   "f": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA19-1400",
+   "n": "1-7/8 in. Crevice Nozzle Attachment",
+   "f": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA19-1900",
+   "n": "1-7/8 in. Floor Brush Attachment",
+   "f": "DXV04T, DXV06G, DXV10SB; DXV12P, DXV16PA, DXV212P via DXVA08-2718",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA11-2100",
+   "n": "1-7/8 in. to 2-1/2 in. Accessory Hose Adapter",
+   "f": "Vacs: DXV04T, DXV06G, DXV10SB \u2192 DXVA08-2502, DXVA08-2503",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA13-0801",
+   "n": "1.25\u20132.5 in. Car Cleaning Accessory Kit",
+   "f": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P",
+   "mat": "PETG",
+   "pp": true,
+   "i": "clip"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA08-2503",
+   "n": "2-1/2 in. Utility Nozzle Attachment",
+   "f": "DXV12P, DXV16PA, DXV212P; DXV04T, DXV06G, DXV10SB via DXVA11-2100",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA08-2712",
+   "n": "2-1/2 in. to 1-1/4 in. Accessory Hose Adapter",
+   "f": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-1/4 in. attachments / small tool ports",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA08-2718",
+   "n": "2-1/2 in. to 1-7/8 in. Accessory Hose Adapter",
+   "f": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-7/8 in. attachments (DXVA19-1400, DXVA19-1900, DXVA13-4333, DXVA13-4364) or DXVA19-2780",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA19-2780",
+   "n": "Adapter 1-7/8 in. Hose to 1-2/3 in. Power Tools",
+   "f": "Vacs: DXV04T, DXV06G, DXV10SB (direct); DXV12P, DXV16PA, DXV212P (stack with DXVA08-2718). Tools: DeWalt sanders, miter saws, table saws wit\u2026",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DWV2759",
+   "n": "Dust Extractor Accessory Kit (5-Piece)",
+   "f": "DWV010, DWV015, DCV585B",
+   "mat": "PETG",
+   "pp": true,
+   "i": "separator"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DWH205DH",
+   "n": "Dust Extractor for DCH263 SDS Plus D-Handle",
+   "f": "DCH263",
+   "mat": "PETG",
+   "pp": true,
+   "i": "separator"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVCS001",
+   "n": "Dust Separator for Wet/Dry Vacuums",
+   "f": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P",
+   "mat": "PETG",
+   "pp": true,
+   "i": "separator"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DWV9190",
+   "n": "Large Hose Adapter",
+   "f": "",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DXVA15-1100",
+   "n": "Multi-Fit Accessory Attachment Hose Adapter",
+   "f": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DWH304DH",
+   "n": "Multi-Surface Dust Extractor",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "separator"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DWH079D",
+   "n": "SDS Rotary Hammer Dust Box Evacuator",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "clip"
+  },
+  {
+   "b": "DeWalt",
+   "oem": "DWV9000",
+   "n": "Universal Quick Connector",
+   "f": "",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2017",
+   "n": "1-1/4 in round brush",
+   "f": "0880/0970/0960 class",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-1988",
+   "n": "1-7/8 in crevice tool 7-1/2 in",
+   "f": "1-7/8 hoses 49-90-1996/1984/1986",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-1983",
+   "n": "1-7/8 in curved nozzle",
+   "f": "1-7/8 hoses",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-1982",
+   "n": "1-7/8 in floor brush (reversible)",
+   "f": "1-7/8 hoses 49-90-1996/1984/1986",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2011",
+   "n": "1-7/8 in floor utility nozzle",
+   "f": "0920-20",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-1981",
+   "n": "1-7/8 in round brush",
+   "f": "1-7/8 hoses 49-90-1996/1984/1986; M18 2 gal only if 1-7/8 hose",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-1985",
+   "n": "1-7/8 in wet floor nozzle 9-1/2 in squeegee",
+   "f": "1-7/8 hoses 49-90-1996/1984/1986",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2008",
+   "n": "2-1/2 in crevice tool",
+   "f": "0930-22HD",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2002",
+   "n": "2-1/2 in floor brush",
+   "f": "2-1/2 hoses 49-90-2004/2006",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2009",
+   "n": "2-1/2 in floor utility nozzle",
+   "f": "0930-22HD",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2033",
+   "n": "2-1/2 in magnetic utility nozzle",
+   "f": "2-1/2 hoses",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2039",
+   "n": "2-1/2 in rocking utility nozzle w/ brushes",
+   "f": "2-1/2 hoses",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2001",
+   "n": "2-1/2 in round brush",
+   "f": "2-1/2 hoses",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2005",
+   "n": "2-1/2 in wet floor nozzle",
+   "f": "2-1/2 hoses",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2028",
+   "n": "2-in-1 utility brush",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2023Y",
+   "n": "3-in-1 crevice and brush tool",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2026",
+   "n": "4-in-1 right angle tool (5 pc)",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2043",
+   "n": "Automotive detail brush",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2019A",
+   "n": "Automotive kit w/ crevice tools, utility nozzle and bag (4 pc)",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2046",
+   "n": "Boiler coil cleaning brush",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2041",
+   "n": "Bucket topper dust collector",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": false,
+   "i": "separator"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2040",
+   "n": "Claw utility nozzle w/ brushes",
+   "f": "Milwaukee + other brands at those sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2200",
+   "n": "Compact debris separator (6 ft 1-7/8 expandable hose + multi-fit adapter)",
+   "f": "Any common wet/dry vac; mounting clips for 0910/0920/0930; 49-90-2201 caster kit",
+   "mat": "PETG",
+   "pp": true,
+   "i": "separator"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2044",
+   "n": "Compact dust collector",
+   "f": "Any wet/dry brand at those sizes",
+   "mat": "PETG",
+   "pp": false,
+   "i": "separator"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2024",
+   "n": "Conduit line puller (3 pc)",
+   "f": "AIR-TIP sizes; bundled w/ 0880-20",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2035",
+   "n": "Cross brush tool",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2047",
+   "n": "Debris scraper",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "0990-20",
+   "n": "Dedicated debris separator (between head and tank)",
+   "f": "NEXUS 0910/0914/0915/0920/0930",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "separator"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2022",
+   "n": "Dust collector (wall suction funnel)",
+   "f": "Any brand at those sizes; 0970 PACKOUT 2.5 gal, M12 FUEL 1.6 gal",
+   "mat": "PETG",
+   "pp": false,
+   "i": "separator"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2030Y",
+   "n": "Flexible long reach crevice tool",
+   "f": "AIR-TIP sizes; Milwaukee suggests for 0888",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-1991",
+   "n": "Hose & accessory adapter kit (2-1/2>1-7/8 accessory; 2-1/2>2-1/2/1-7/8 hose; 1-7/8>1-7/8 hose)",
+   "f": "Milwaukee 1-7/8 and 2-1/2 hoses/tools; other brands (Ridgid)",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-1959",
+   "n": "Hose clip adapter (extractor)",
+   "f": "0888 ; 5317-DE, 49-40-6110, 5318-DE",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-1992",
+   "n": "Hose-to-drain adapter kit (garden hose to drain)",
+   "f": "0910, 0920, 0930 (6/9/12 gal)",
+   "mat": "TPU / PETG",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2043P",
+   "n": "Kit (cross brush, 2-in-1 brush, rocking nozzle, compact organizer)",
+   "f": "Other wet/dry brands",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2027",
+   "n": "Low-profile pivoting brush",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2032",
+   "n": "Magnetic utility nozzle",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2034",
+   "n": "Non-marring crevice tool + utility nozzle (2 pc)",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "clip"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2038",
+   "n": "Rocking utility nozzle w/ brushes",
+   "f": "Milwaukee + other brands at those sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2021",
+   "n": "Rotating corner brush",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2020",
+   "n": "Swiveling palm brush",
+   "f": "AIR-TIP sizes",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Milwaukee",
+   "oem": "49-90-2018",
+   "n": "Vacuum power tool adapter (3 steps 1.22-1.41 in OD)",
+   "f": "0880-20, 0882-20, 0940-20, 0960-20, 0970-20; most tool dust ports",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A323G01",
+   "n": "1-1/4 in. crevice tool + utility nozzle",
+   "f": "PCL733, PCL734, P3240",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32SS02N",
+   "n": "1-3/8 in. accessory kit: crevice tool, floor nozzle, dust brush",
+   "f": "PWV200, PWV201",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A326G01",
+   "n": "1-7/8 in. 4-pc kit: crevice tool, floor nozzle, 2 extension wands",
+   "f": "RY40WD01, PCL735, P770",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A3210G01",
+   "n": "1-7/8 in. 6-pc kit: 2 wands, crevice, car nozzle, floor nozzle w/ squeegee + brush",
+   "f": "RY40WD01, PCL735, P770",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32K02",
+   "n": "4-pc wet/dry hand vac kit: crevice, squeegee, dust brush, accessory adaptor",
+   "f": "PCL702",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32UA05",
+   "n": "Car nozzle, 3-3/8 in. opening",
+   "f": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32UA01",
+   "n": "Crevice tool",
+   "f": "All RYOBI wet/dry vacs + most brands",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32UA04",
+   "n": "Dust brush (triangular)",
+   "f": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32UA03",
+   "n": "Flexible extended micro-crevice tool, 14 in.",
+   "f": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32UA02",
+   "n": "Flexible micro-crevice tool (rubber)",
+   "f": "All RYOBI wet/dry vacs + most brands",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32UA07",
+   "n": "Floor head, 10 in. wide",
+   "f": "All RYOBI wet/dry vacs + most brands",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32UA06",
+   "n": "Micro-crevice tool (16 bendable straws)",
+   "f": "PCL732, PCL733, PCL734, PCL735, PWV200, RY40WD01",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A326G01N",
+   "n": "P770 6 Gal. accessory kit: 1-7/8 in. crevice tool, floor nozzle, 2x15 in. wands",
+   "f": "P770; likely PCL735, RY40WD01",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A21CCV1",
+   "n": "Sander vacuum adaptor",
+   "f": "PCL416 Corner Cat sander; 1-1/4 in. vacs (PCL732/733/734)",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32K04",
+   "n": "Stick vac accessory kit: crevice, dust brush, micro crevice, adaptor",
+   "f": "PCL720, PBLSV716, PBLSV717, PCL704",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32UAK1",
+   "n": "Universal Fit accessories kit (3-piece)",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "RYOBI",
+   "oem": "A32AD01",
+   "n": "Wet/dry vacuum adapter (step adapter)",
+   "f": "All RYOBI wet/dry vacs; tool dust ports",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT1781",
+   "n": "1-7/8 in. car nozzle",
+   "f": "RIDGID 1-7/8 in. vacs",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT1702",
+   "n": "1-7/8 in. crevice tool",
+   "f": "RIDGID 1-7/8 in. vacs",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT1712",
+   "n": "1-7/8 in. crevice/dusting brush combo",
+   "f": "RIDGID 1-7/8 in. vacs",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT1701",
+   "n": "1-7/8 in. dusting brush",
+   "f": "RIDGID 1-7/8 in. vacs",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT1714",
+   "n": "1-7/8 in. floor brush",
+   "f": "RIDGID 1-7/8 in. vacs",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT1709",
+   "n": "1-7/8 in. utility nozzle",
+   "f": "RIDGID 1-7/8 in. vacs",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT1710",
+   "n": "1-7/8 in. wet nozzle (squeegee)",
+   "f": "RIDGID 1-7/8 in. vacs",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT2575",
+   "n": "12-pc heavy-duty cleaning kit, stainless wands",
+   "f": "Most RIDGID 1-7/8 and 2-1/2 in. vacs; WD06701 WD09701 WD16350",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT2505",
+   "n": "2-1/2 in. hose grip with bleeder valve",
+   "f": "2-1/2 in. RIDGID hoses/wands",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "LA2503",
+   "n": "2-1/2 in. locking car nozzle",
+   "f": "RIDGID 2-1/2 in. vacs",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "LA2502",
+   "n": "2-1/2 in. locking crevice tool",
+   "f": "RIDGID 2-1/2 in. vacs",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "LA2514",
+   "n": "2-1/2 in. locking floor brush",
+   "f": "RIDGID 2-1/2 in. vacs",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "LA2501",
+   "n": "2-1/2 in. locking round dusting brush",
+   "f": "RIDGID 2-1/2 in. vacs",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "LA2509",
+   "n": "2-1/2 in. locking utility nozzle",
+   "f": "All RIDGID 2-1/2 in. hose vacs",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "LA2510",
+   "n": "2-1/2 in. locking wet nozzle",
+   "f": "RIDGID 2-1/2 in. vacs",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT2525",
+   "n": "2-1/2 in. muffler/diffuser with adapter",
+   "f": "4-20 gal RIDGID vacs with blower port",
+   "mat": "PETG",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT1407",
+   "n": "2-1/2 in. power tool adaptor (stepped, trimmable)",
+   "f": "LA2520 LA2521 LA2522 LA2570 hoses; miter saws, sanders, benchtop tools",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT1755",
+   "n": "3-pc hose/accessory adapter kit",
+   "f": "All RIDGID vacs; bridges all three hose sizes",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT2540",
+   "n": "Claw nozzle",
+   "f": "RIDGID vacs",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT2519",
+   "n": "Hose-to-drain adapter",
+   "f": "10-20 gal RIDGID vacs with drain port",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT2530",
+   "n": "Multi-surface carpet/hard floor nozzle",
+   "f": "RIDGID vacs with 2-1/2 or 1-1/4 hose/wand",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "RIDGID",
+   "oem": "VT2571",
+   "n": "Turbo beater bar kit",
+   "f": "Select RIDGID vacs",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA021",
+   "n": "12 in. cyclone separator lid, 2-1/2 in. ports, fits 5-gal bucket (lip <=11-3/4 in.)",
+   "f": "VC4710/VC9209 need 1-1/4 to 2-1/2 in. adapter",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "separator"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA007",
+   "n": "2-1/2 in. blast gate (plastic)",
+   "f": "2-1/2 in. hoses",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA012",
+   "n": "2-1/2 in. flexible rubber dust cuff",
+   "f": "2-1/2 in. ports",
+   "mat": "TPU / PETG",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA009",
+   "n": "2-1/2 in. locking aluminum blast gate",
+   "f": "2-1/2 in. hoses",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA002",
+   "n": "2-1/2 in. to 1-1/2 in. cone reducer",
+   "f": "1-1/2 in. ports (scroll saws, spindle sanders) to 2-1/2 in. hose",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA022",
+   "n": "21 in. cyclone separator lid, 4 in. ports, fits 30-gal metal can (lip <=20-3/4 in.)",
+   "f": "DC3401/DC3474/DC1300 via 4 in. hose",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "separator"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA015",
+   "n": "22 in. floor sweep for 4 in. hoses",
+   "f": "28200/28221; DCA013",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA004",
+   "n": "4 in. 90-degree elbow (94 mm ID/100 mm OD)",
+   "f": "28200/28221",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA005",
+   "n": "4 in. T-fitting splitter",
+   "f": "4 in. hoses",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA003",
+   "n": "4 in. Y-fitting splitter",
+   "f": "4 in. hoses",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA006",
+   "n": "4 in. blast gate (plastic)",
+   "f": "4 in. hoses",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA013",
+   "n": "4 in. flexible rubber dust cuff (101 mm ID / 114.5 mm OD)",
+   "f": "Most 4 in. ports, gates, adapters",
+   "mat": "TPU / PETG",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA008",
+   "n": "4 in. locking aluminum blast gate",
+   "f": "4 in. hoses",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA001",
+   "n": "4 in. to 2-1/2 in. cone reducer (ABS)",
+   "f": "4 in. hoses/collectors to 2-1/2 in. tools/hoses",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA014",
+   "n": "5-step modular reducer/adapter set (4, 2-1/2, 1-3/4, 1-1/2, 1-1/4 in.)",
+   "f": "28200, 28221, DCA251, DCA252",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "PL1326-0R42",
+   "n": "Dust chute adapter for PL1326 & PL1303",
+   "f": "PL1326, PL1303",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "WEN",
+   "oem": "DCA028",
+   "n": "Magnetic floor sweeping kit w/ 12x9.5 in. hatch, blast gate",
+   "f": "DCA024/DCA025/DCA026",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "255FLIH380",
+   "n": "8in crevice tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "X11FC500",
+   "n": "Crevice / dusting brush / upholstery tool set",
+   "f": "NV500, NV501, NV502, NV560",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "673FFJ200",
+   "n": "Crevice tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "619FJ140",
+   "n": "Crevice tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "353CH1000",
+   "n": "Crevice tool",
+   "f": "IX141 / CH-series",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "112FFJ",
+   "n": "Crevice tool + dusting brush set",
+   "f": "NV350, NV351, NV352, NV355, NV356E, NV357, NV360, NV370, UV440",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "158FLI650",
+   "n": "Duster crevice tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "189FLI680",
+   "n": "Duster crevice tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "210FLIH380",
+   "n": "Duster crevice tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "623FJ140",
+   "n": "Duster crevice tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "621FJ140",
+   "n": "Flexible crevice tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "219FLIN800",
+   "n": "Pet multi-tool",
+   "f": "NV800, NV801, NV803, NV810",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "629FJ140",
+   "n": "Pet multi-tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "354CH1000CE",
+   "n": "Pet multi-tool",
+   "f": "Shark Pet cordless IX141 / CH-series",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "123KY1000A",
+   "n": "Robot self-cleaning brushroll",
+   "f": "RV1001, RV1001AE, RV1000S, UR1000SR",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "167KKU2500",
+   "n": "Robot self-cleaning brushroll",
+   "f": "2500-series AI robots",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "278KKU2800",
+   "n": "Robot self-cleaning brushroll",
+   "f": "AV2820S, AV2820AE, RV2820AE",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "1171FK870",
+   "n": "Robot side brushes",
+   "f": "ION robots (RV7xx/RV8xx)",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "166KKU2500",
+   "n": "Self-cleaning brushroll",
+   "f": "2500-series",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "102KY1000",
+   "n": "Side brush (aftermarket-referenced)",
+   "f": "R101AE, RV1001, RV1001AE, UR1005AE, AV2501S, RV2520A0US, UR2500SR",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "1539FC3000",
+   "n": "Soft brushroll ( front roller)",
+   "f": "AZ3000, AZ3000C, AZ3000W, AZ3002, AZ3002C, LA555, LA700, LA702, UV900",
+   "mat": "PETG",
+   "pp": true,
+   "i": "roller"
+  },
+  {
+   "b": "Shark",
+   "oem": "406GP2300",
+   "n": "Triple side brush (single)",
+   "f": "RV2300-series",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "58MMSB2PK",
+   "n": "Triple side brushes (2)",
+   "f": "Matrix / AI 2300-series",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "153HG2300",
+   "n": "Triple side brushes (2)",
+   "f": "RV2300-series",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Shark",
+   "oem": "240FLIN850",
+   "n": "Under-appliance wand",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "632FJ140",
+   "n": "Under-appliance wand",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "HVUAW300 / 138FLIV300",
+   "n": "Under-appliance wand (36in adjustable)",
+   "f": "HV300 / HV320 series",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "159FLI650",
+   "n": "Upholstery tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "627FJ140",
+   "n": "Upholstery tool",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shark",
+   "oem": "1365FC200",
+   "n": "Wall mount",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Prolux",
+   "oem": "",
+   "n": "Canister latches, springs and latch pins",
+   "f": "CTX",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip",
+   "for": "Prolux CTX"
+  },
+  {
+   "b": "Prolux",
+   "oem": "",
+   "n": "Combination floor tool - NEW STYLE",
+   "f": "New Tritan",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle",
+   "for": "Prolux Tritan"
+  },
+  {
+   "b": "Prolux",
+   "oem": "",
+   "n": "Multi-surface 14 in. floor tool",
+   "f": "ProTeam and most commercial 1.5 in. wands",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle",
+   "for": "Prolux 10qt"
+  },
+  {
+   "b": "Prolux",
+   "oem": "",
+   "n": "Squeegee floor tool",
+   "f": "Prolux 2.0",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle",
+   "for": "Prolux 2.0"
+  },
+  {
+   "b": "Prolux",
+   "oem": "",
+   "n": "Tool caddy (wand-mounted)",
+   "f": "Tritan (old style), RS4",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip",
+   "for": "Prolux Tritan"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DJ98-01130A",
+   "n": "Accessory crevice tool (VS9000RL)",
+   "f": "VS20T7512N7 (Jet 75)",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DJ64-01328B",
+   "n": "Button brush (VS9000RL, dark chrome)",
+   "f": "VS20T7512N7 (Jet 75)",
+   "mat": "PETG",
+   "pp": true,
+   "i": "brush"
+  },
+  {
+   "b": "Samsung",
+   "oem": "VCA-SAD95/AA",
+   "n": "Combination tool",
+   "f": "Samsung Jet stick (models not listed)",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DA67-02512A",
+   "n": "Convenience door handle mounting cap, left",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DD61-00497A",
+   "n": "Dishrack slide rail holder",
+   "f": "",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DA61-04195A",
+   "n": "Door stopper, left",
+   "f": "Samsung & Kenmore refrigerators (review: RSG257AARS)",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DA63-06911A",
+   "n": "Drawer slide rail cover (full length)",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "VCA-SAF95/VAA",
+   "n": "Flex tool (Chrometal Black)",
+   "f": "Jet Stick (models not listed)",
+   "mat": "PETG / PA-CF",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DA67-02787B",
+   "n": "Freezer door handle end cap",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DA67-02291A",
+   "n": "Freezer door handle end cap, left (gray)",
+   "f": "RFG237AAPN",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DA67-02292A",
+   "n": "Freezer door handle end cap, right",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DA67-02787C",
+   "n": "Freezer handle cap",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "VCA-SAR95/AA",
+   "n": "Long-reach crevice tool",
+   "f": "Samsung Jet stick (models not listed)",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DD66-00023A",
+   "n": "Lower rack roller",
+   "f": "DW80J3020, DW80K5050, DW80K7050, DW80R5060/5061, DW80F600UT, DW80F800UW, DW7933LRA, DMT300RF/400RH/610RH/800RH, DMR57LF/77LH/78AH (54 models\u2026",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "roller"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DD61-00472A",
+   "n": "Lower rack tine holder",
+   "f": "DW80J7550US",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DD66-00076A",
+   "n": "Lower roller (basket)",
+   "f": "DW80J7550US",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "roller"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DD61-00473A",
+   "n": "Rack holder tine clip",
+   "f": "DW80J7550US",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DD61-00351A",
+   "n": "Rack roller holder",
+   "f": "DW80J7550US",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "roller"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DD61-00469A",
+   "n": "Rack tine holder",
+   "f": "DW80J7550US",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DD61-00348A",
+   "n": "Tine holder, back",
+   "f": "24-inch Samsung dishwashers (models not listed)",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DD61-00216A",
+   "n": "Tine row clip",
+   "f": "",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "clip"
+  },
+  {
+   "b": "Samsung",
+   "oem": "VCA-SAK90/GL",
+   "n": "Tool kit (gray; white = VCA-SAK90W)",
+   "f": "Jet 90/75/70 (EU)",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Samsung",
+   "oem": "DA63-08459A",
+   "n": "Tray/support rollers (dispenser tray)",
+   "f": "RF23HCEDBSG, RF28HFEDBSG, RF28HFEDTSG",
+   "mat": "ASA / PA-CF",
+   "pp": false,
+   "i": "roller"
+  },
+  {
+   "b": "Hampton Bay",
+   "oem": "",
+   "n": "Battery cover for universal kit remotes (70830, 98101, 98130, 98108)",
+   "f": "Universal kit remotes; 70830 has the dimmer dipswitch in battery bay",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip",
+   "for": "70830"
+  },
+  {
+   "b": "Hampton Bay",
+   "oem": "",
+   "n": "Battery door / cover for UC7078T handheld remote",
+   "f": "UC7078T remotes (and look-alike clones)",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip",
+   "for": "UC7078T"
+  },
+  {
+   "b": "Hampton Bay",
+   "oem": "",
+   "n": "Battery door / cover for UC7083T handheld remote (dipswitch bay)",
+   "f": "UC7083T remotes",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip",
+   "for": "UC7083T"
+  },
+  {
+   "b": "Hampton Bay",
+   "oem": "",
+   "n": "Ceiling fan remote wall holder, plastic, new",
+   "f": "UC7078T (Hampton Bay) and FAN-HD (Harbor Breeze) remotes; buyer review says 'close-enough-fit' on other remotes",
+   "mat": "PETG",
+   "pp": false,
+   "i": "clip",
+   "for": "UC7078T"
+  },
+  {
+   "b": "Makita",
+   "oem": "195548-6",
+   "n": "Cuff joint adapter, 38 mm to 22 mm",
+   "f": "Makita XCV11 dust extractor",
+   "mat": "TPU",
+   "pp": true,
+   "i": "adapter"
+  },
+  {
+   "b": "Makita",
+   "oem": "417765-1",
+   "n": "22 mm tool cuff adapter for 1 in. hose",
+   "f": "Makita 1 in. dust extraction hoses",
+   "mat": "TPU",
+   "pp": true,
+   "i": "adapter"
+  },
+  {
+   "b": "Makita",
+   "oem": "424379-9",
+   "n": "24 mm thread-on tool cuff adapter for 1 in. hose",
+   "f": "Makita 1 in. dust extraction hoses",
+   "mat": "TPU",
+   "pp": true,
+   "i": "adapter"
+  },
+  {
+   "b": "Makita",
+   "oem": "417766-9",
+   "n": "38 mm tool cuff adapter for 1 in. hose",
+   "f": "Makita 1 in. dust extraction hoses",
+   "mat": "TPU",
+   "pp": true,
+   "i": "adapter"
+  },
+  {
+   "b": "Makita",
+   "oem": "W107418678",
+   "n": "15/16 in. hose cuff adapter",
+   "f": "Makita VC4210L dust extractor (1-1/4 in. hose)",
+   "mat": "TPU",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Makita",
+   "oem": "W107418688",
+   "n": "1-3/4 in. hose cuff adapter",
+   "f": "Makita VC4210L dust extractor (1-1/4 in. hose)",
+   "mat": "TPU",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Craftsman",
+   "oem": "CMXZVBE38676",
+   "n": "1-7/8 in. utility nozzle",
+   "f": "Craftsman and most vacs with a 1-7/8 in. hose",
+   "mat": "PETG",
+   "pp": true,
+   "i": "nozzle"
+  },
+  {
+   "b": "Craftsman",
+   "oem": "CMXZVBE38725",
+   "n": "1-7/8 in. dusting brush",
+   "f": "Craftsman and most vacs with a 1-7/8 in. hose",
+   "mat": "PETG",
+   "pp": false,
+   "i": "brush"
+  },
+  {
+   "b": "Craftsman",
+   "oem": "CMXZVBE38639",
+   "n": "2-1/2 in. hose grip handle with bleeder valve",
+   "f": "Craftsman and most vacs with a 2-1/2 in. hose",
+   "mat": "PETG",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Craftsman",
+   "oem": "CMXZVBE38620",
+   "n": "2-1/2 in. car nozzle",
+   "f": "Craftsman and most vacs with a 2-1/2 in. hose",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Shop-Vac",
+   "oem": "9068500",
+   "n": "2-1/2 in. to 1-1/4 in. conversion adapter",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "adapter"
+  },
+  {
+   "b": "Shop-Vac",
+   "oem": "9066600",
+   "n": "2-1/2 in. hose handle grip",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Shop-Vac",
+   "oem": "9196600",
+   "n": "1-1/2 in. wet/dry nozzle with 1-1/4 in. step",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  },
+  {
+   "b": "Vacmaster",
+   "oem": "V21A",
+   "n": "2-1/2 in. to 1-1/4 in. adapter",
+   "f": "",
+   "mat": "PETG",
+   "pp": true,
+   "i": "adapter"
+  },
+  {
+   "b": "Vacmaster",
+   "oem": "V78AB",
+   "n": "1-7/8 in. to 1-1/4 in. adapter",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Vacmaster",
+   "oem": "V78TAB",
+   "n": "1-7/8 in. power tool adapter",
+   "f": "",
+   "mat": "TPU",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Vacmaster",
+   "oem": "V2TAB",
+   "n": "2-1/2 in. tool adapter",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "adapter"
+  },
+  {
+   "b": "Vacmaster",
+   "oem": "V12CCB",
+   "n": "1-1/4 in. car claw nozzle",
+   "f": "",
+   "mat": "PETG",
+   "pp": false,
+   "i": "nozzle"
+  }
+ ],
+ "feat": [
+  "49-90-2022",
+  "0990-20",
+  "49-90-2200",
+  "DWV9000",
+  "49-90-2024",
+  "DWV2759"
+ ]
+}
