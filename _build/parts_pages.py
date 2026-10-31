@@ -101,7 +101,7 @@ def part_page(c, it, items, hose):
             ("Material", mat_html(c, it["mat"])),
             ("Type", esc(KIND.get(it["i"], it["i"].title())))]
     if sizes:
-        rows.append(("Size", "".join(f'<span class="sz">{esc(s)}</span> ' for s in sizes) + f' <a href="{c.link("tools/hose-size-finder/")}?brand={esc(b).replace(" ","%20")}" style="color:var(--ink);font-size:.88rem">All {esc(b)} sizes</a>'))
+        rows.append(("Size", "".join(f'<span class="sz">{esc(s)}</span> ' for s in sizes) + f' <a href="{c.link("tools/hose-size-finder/")}?brand={esc(b).replace(" ","%20")}" style="color:var(--ink);font-size:.88rem;white-space:nowrap">All {esc(b)} sizes</a>'))
     rows.append(("Made in", "Modesto, California, to order"))
     spec = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in rows)
     price = ""

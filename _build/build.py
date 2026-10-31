@@ -98,6 +98,7 @@ td.m a:hover{border-color:var(--accent)}
 .secpage > section{padding-top:40px}
 .hero-shot img{-webkit-mask-image:none!important;mask-image:none!important;border-radius:14px}
 .hero-shot{padding-inline:clamp(16px,3vw,40px);max-width:1630px;margin-inline:auto!important;margin-top:20px!important}
+.facts{margin-top:clamp(16px,3vw,28px)}
 """
 
 LIGHT_CSS = r"""
@@ -142,6 +143,7 @@ LIGHT_CSS = r"""
 :root[data-tpf-theme="black"] .pc:hover,:root[data-tpf-theme="black"] .res:hover,:root[data-tpf-theme="black"] .gcard:hover,:root[data-tpf-theme="black"] .chip:hover{border-color:#3a3a40}
 :root[data-tpf-theme="black"] .dots i{color:#3a3a40}
 :root[data-tpf-theme="black"] .hero-shot{padding-inline:0!important;max-width:none!important;margin-top:0!important}
+:root[data-tpf-theme="black"] .facts{margin-top:-40px}
 :root[data-tpf-theme="black"] .hero-shot img{border-radius:0!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%)!important;mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%)!important}
 .theme-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 .theme-row span{width:100%;font:500 .7rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
@@ -294,7 +296,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="{c.asset('site.css')}?v=10">
+<link rel="stylesheet" href="{c.asset('site.css')}?v=11">
 """
     return h + "\n".join(ld(x) for x in lds)
 
