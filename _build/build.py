@@ -194,9 +194,13 @@ JS = r"""
     function render(){var v=q.value.trim().toLowerCase(),n=0,shown=0;
       rows.forEach(function(r){var ok=(brand==='All'||r.getAttribute('data-b')===brand)&&(!fit.checked||r.getAttribute('data-fit')==='1')&&(!v||r.getAttribute('data-k').indexOf(v)>-1);if(ok)n++;var show=ok&&shown<limit;if(show)shown++;r.hidden=!show});
       more.hidden=n<=limit;more.textContent=(list.getAttribute('data-more')||'Show more')+' ('+(n-limit)+')';empty.hidden=n>0;count.textContent=n+' '+(n===1?(list.getAttribute('data-one')||'part'):(list.getAttribute('data-many')||'parts'));}
-    function syncURL(){try{var p=new URLSearchParams();if(brand!=='All')p.set('brand',brand);if(q.value.trim())p.set('q',q.value.trim());if(!fit.checked)p.set('all','1');var qs=p.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:''))}catch(e){}}
+    function syncURL(){try{var p=new URLSearchParams();if(brand!=='All')p.set('brand',brand);if(q.value.trim())p.set('q',q.value.trim());if(!fit.checked)p.set('all','1');if(srt&&srt.value)p.set('sort',srt.value);var qs=p.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:''))}catch(e){}}
+    var srt=document.getElementById('cat-sort'),orig=rows.slice();
+    function key(r,k){if(k==='name')return r.querySelector('.n').textContent.trim().toLowerCase();if(k==='brand')return (r.getAttribute('data-b')+' '+r.querySelector('.n').textContent).toLowerCase();if(k==='pn')return r.querySelector('.o').textContent.replace(/^\S+\s+\S+\s+/,'').toLowerCase();return ''}
+    function applySort(){var k=srt?srt.value:'';rows=k?orig.slice().sort(function(a,b){return key(a,k).localeCompare(key(b,k),undefined,{numeric:true})}):orig.slice();rows.forEach(function(r){list.appendChild(r)})}
+    if(srt)srt.addEventListener('change',function(){applySort();limit=40;render()});
     var rr=render;render=function(){rr();syncURL()};
-    try{var P=new URLSearchParams(location.search);if(P.get('q'))q.value=P.get('q');if(P.get('all')==='1')fit.checked=false;var pb=P.get('brand');if(pb){var ch=[].find.call(document.querySelectorAll('#cat-chips .chip'),function(x){return x.getAttribute('data-b').toLowerCase()===pb.toLowerCase()});if(ch){brand=ch.getAttribute('data-b');document.querySelectorAll('#cat-chips .chip').forEach(function(k){k.setAttribute('aria-pressed',k===ch)})}}}catch(e){}
+    try{var P=new URLSearchParams(location.search);if(P.get('q'))q.value=P.get('q');if(P.get('all')==='1')fit.checked=false;if(srt&&P.get('sort')){srt.value=P.get('sort');applySort()}var pb=P.get('brand');if(pb){var ch=[].find.call(document.querySelectorAll('#cat-chips .chip'),function(x){return x.getAttribute('data-b').toLowerCase()===pb.toLowerCase()});if(ch){brand=ch.getAttribute('data-b');document.querySelectorAll('#cat-chips .chip').forEach(function(k){k.setAttribute('aria-pressed',k===ch)})}}}catch(e){}
     q.addEventListener('input',function(){limit=40;render()});fit.addEventListener('change',function(){limit=40;render()});more.addEventListener('click',function(){limit+=60;render()});render();
   }
 @@MENU@@
@@ -281,6 +285,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 <link rel="icon" type="image/png" sizes="32x32" href="{c.asset('img/favicon-32.png')}">
 <link rel="icon" type="image/png" sizes="48x48" href="{c.asset('img/favicon-48.png')}">
 <link rel="apple-touch-icon" href="{c.asset('img/icon-180.png')}">
+<link rel="manifest" href="{c.asset('manifest.webmanifest')}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -339,7 +344,14 @@ def swapimgs(h):
         black = "logo-black.png" if name == "logo-dark.png" else name.replace(".jpg", "-black.jpg")
         return '<img' + m.group(1) + ' src="' + m.group(2) + name + '" data-light="' + m.group(2) + light + '" data-black="' + m.group(2) + black + '"'
     return SWAP.sub(r, h)
+MM = {"15/16 in": "23.8 mm", "1 in": "25.4 mm", "1-1/4 in": "31.8 mm", "1-3/8 in": "34.9 mm", "1-1/2 in": "38.1 mm", "1-2/3 in": "42.3 mm", "1-3/4 in": "44.5 mm",
+      "1-7/8 in": "47.6 mm", "2 in": "50.8 mm", "2-1/4 in": "57.2 mm", "2-1/2 in": "63.5 mm", "4 in": "101.6 mm",
+      "22 mm": "0.87 in", "24 mm": "0.94 in", "32 mm": "1.26 in", "35 mm": "1.38 in", "36 mm": "1.42 in", "38 mm": "1.50 in"}
+def _sz(m):
+    v = m.group(1); alt = MM.get(html.unescape(v))
+    return f'<span class="sz">{v}<small> · {alt}</small></span>' if alt else m.group(0)
 def a11y(h):
+    h = re.sub(r'<span class=(?:"sz"|sz)>([^<]+)</span>', _sz, h)
     h = h.replace('logo-dark.png"', 'logo-dark.png?v=9"')
     h = h.replace('<div class="ftable">', '<div class="ftable" tabindex="0" role="region" aria-label="Scrollable table">')
     return h.replace('<div class="tbl">', '<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table">')
@@ -510,8 +522,10 @@ def parts(c):
   <div class="tools">
     <div class="search"><svg viewBox="0 0 16 16" fill="none" stroke="var(--muted)" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg><label for="cat-q" style="position:absolute;left:-9999px">Search parts</label><input id="cat-q" type="search" placeholder="Search part number, model, or name"></div>
     <label class="toggle" for="fit-only"><input type="checkbox" id="fit-only" checked> Confirmed fit only</label>
+    <label class="sortbox" for="cat-sort">Sort<select id="cat-sort"><option value="">Featured</option><option value="name">Name A–Z</option><option value="brand">Brand A–Z</option><option value="pn">Part number</option></select></label>
     <span id="cat-count" style="color:var(--faint);font-size:.88rem;margin-left:auto"></span>
   </div>
+  <div class="recent" id="recent" hidden><div class="head" style="margin:0 0 14px"><div class="label">Recently viewed</div></div><div class="rel" id="recent-list" style="margin-bottom:28px"></div></div>
   <div class="chips" id="cat-chips" role="group" aria-label="Filter by brand" style="margin-bottom:22px">{chips}</div>
   <div class="list" id="plist">
 {chr(10).join(rows)}
@@ -698,6 +712,9 @@ def build(mode, root):
         for f in os.listdir("/home/claude/site/assets/img"):
             shutil.copy("/home/claude/site/assets/img/" + f, root + "/assets/img/" + f)
     write(root, "assets/site.css", css())
+    write(root, "assets/manifest.webmanifest", json.dumps({"name": "True Part Fabrication", "short_name": "True Part", "description": "Custom part manufacturing and replacement parts in Modesto, CA.",
+        "start_url": "../", "scope": "../", "display": "standalone", "background_color": "#0A3161", "theme_color": "#0A3161",
+        "icons": [{"src": "img/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}]}, indent=1))
     write(root, "assets/site.js", JS.replace("@@MENU@@", __import__("extras").MENU_JS + __import__("extras").LIST_JS).replace("@@DRAFT@@", __import__("extras").DRAFT_JS))
     import tools, parts_pages
     parts_pages.assign_slugs(CAT["items"])

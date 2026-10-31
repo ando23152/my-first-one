@@ -376,6 +376,7 @@ def es_catalog(c):
   <div class="tools">
     <div class="search"><svg viewBox="0 0 16 16" fill="none" stroke="var(--muted)" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg><label for="cat-q" style="position:absolute;left:-9999px">Buscar piezas</label><input id="cat-q" type="search" placeholder="Número de pieza, modelo o nombre"></div>
     <label class="toggle" for="fit-only"><input type="checkbox" id="fit-only" checked> Solo ajuste confirmado</label>
+    <label class="sortbox" for="cat-sort">Ordenar<select id="cat-sort"><option value="">Destacadas</option><option value="name">Nombre A–Z</option><option value="brand">Marca A–Z</option><option value="pn">Número de pieza</option></select></label>
     <span id="cat-count" style="color:var(--faint);font-size:.88rem;margin-left:auto"></span>
   </div>
   <div class="chips" id="cat-chips" role="group" aria-label="Filtrar por marca" style="margin-bottom:22px">{chips}</div>
@@ -558,7 +559,7 @@ def adapter_builder(c):
   function go(){{var t='Custom adapter\\nEnd A: '+end('a')+'\\nEnd B: '+end('b')+'\\nMaterial: '+mat()+'\\nQuantity: '+(parseInt(v('ab-qty'),10)||1);
     sum.textContent=t;req.setAttribute('data-part',t);var ad=document.querySelector('#ab-req + .add-list');if(ad){{ad.setAttribute('data-add',t)}}}}
   f.addEventListener('input',go);f.addEventListener('change',go);
-  try{{var P=new URLSearchParams(location.search);['a','b'].forEach(function(p){{var s=P.get(p);if(s){{var sel=document.getElementById(p+'-size');[].forEach.call(sel.options,function(o){{if(o.value===s||o.text===s)sel.value=o.value}})}}}})}}catch(e){{}}
+  try{{var P=new URLSearchParams(location.search);['a','b'].forEach(function(p){{var s=P.get(p);if(s){{var sel=document.getElementById(p+'-size');[].forEach.call(sel.options,function(o){{if(o.value===s||o.text===s)sel.value=o.value}})}}var m=P.get(p+'m');if(m)document.getElementById(p+'-model').value=m}})}}catch(e){{}}
   go();
 }})();
 </script>"""
@@ -578,4 +579,23 @@ EX_CSS += r"""
 nav.main .btn{white-space:nowrap}
 @media (max-width:480px){nav.main{gap:8px}.list-pill{padding:0 10px;height:38px}nav.main .btn{padding:0 12px;font-size:.78rem;height:38px}.menu-btn{width:38px;height:38px}}
 @media (max-width:360px){.list-pill::before{content:""!important;margin:0!important}}
+"""
+
+LIST_JS += r"""
+  // ---- recently viewed parts ----
+  var RK='tpf-recent',rc=document.getElementById('recent');
+  function getR(){try{return JSON.parse(localStorage.getItem(RK)||'[]')}catch(e){return []}}
+  if(rc){var me=rc.getAttribute('data-me'),R=getR().filter(function(x){return x.u!==location.pathname});
+    if(R.length){var box=document.getElementById('recent-list');R.slice(0,6).forEach(function(x){var a=document.createElement('a');a.href=x.u;a.textContent=x.n;var sp=document.createElement('span');sp.textContent=x.r;a.appendChild(sp);box.appendChild(a)});rc.hidden=false}
+    if(me){var parts=me.split('|'),A=getR().filter(function(x){return x.u!==location.pathname});A.unshift({u:location.pathname,n:parts[0],r:parts[1]||''});try{localStorage.setItem(RK,JSON.stringify(A.slice(0,8)))}catch(e){}}}
+  // ---- print + share ----
+  document.addEventListener('click',function(e){
+    var pb=e.target.closest('[data-print]');if(pb){window.print();return}
+    var sb=e.target.closest('[data-share]');if(!sb)return;var st=sb.parentNode.querySelector('.tstat'),u=location.href.split('#')[0],t=sb.getAttribute('data-title')||document.title;
+    if(navigator.share){navigator.share({title:t,url:u}).catch(function(){})}
+    else{try{navigator.clipboard.writeText(u).then(function(){if(st)st.textContent='Link copied.'},function(){if(st)st.textContent=u})}catch(err){if(st)st.textContent=u}}
+  });
+  // ---- faster page loads: prefetch internal links on hover or touch ----
+  var pf={};function pre(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||a.target||a.hasAttribute('download'))return;var h=a.href.split('#')[0];if(!h||pf[h]||a.origin!==location.origin||h===location.href.split('#')[0]||/^mailto:|^tel:/.test(a.getAttribute('href')))return;pf[h]=1;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l)}
+  document.addEventListener('mouseover',pre,{passive:true});document.addEventListener('touchstart',pre,{passive:true});
 """

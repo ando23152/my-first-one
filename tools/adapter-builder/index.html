@@ -21,6 +21,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="../../assets/img/favicon-48.png">
 <link rel="apple-touch-icon" href="../../assets/img/icon-180.png">
+<link rel="manifest" href="../../assets/manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -91,7 +92,7 @@
   function go(){var t='Custom adapter\nEnd A: '+end('a')+'\nEnd B: '+end('b')+'\nMaterial: '+mat()+'\nQuantity: '+(parseInt(v('ab-qty'),10)||1);
     sum.textContent=t;req.setAttribute('data-part',t);var ad=document.querySelector('#ab-req + .add-list');if(ad){ad.setAttribute('data-add',t)}}
   f.addEventListener('input',go);f.addEventListener('change',go);
-  try{var P=new URLSearchParams(location.search);['a','b'].forEach(function(p){var s=P.get(p);if(s){var sel=document.getElementById(p+'-size');[].forEach.call(sel.options,function(o){if(o.value===s||o.text===s)sel.value=o.value})}})}catch(e){}
+  try{var P=new URLSearchParams(location.search);['a','b'].forEach(function(p){var s=P.get(p);if(s){var sel=document.getElementById(p+'-size');[].forEach.call(sel.options,function(o){if(o.value===s||o.text===s)sel.value=o.value})}var m=P.get(p+'m');if(m)document.getElementById(p+'-model').value=m})}catch(e){}
   go();
 })();
 </script>

@@ -39,6 +39,22 @@ def mat_html(c, m):
     return " or ".join(out)
 
 PART_CSS = r"""
+.acts2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.tbtn{font:600 .85rem var(--f-body);background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;height:38px;padding:0 16px;cursor:pointer}
+.tbtn:hover{border-color:var(--accent)}
+.tstat{color:var(--muted);font-size:.88rem}
+.sz small{font-weight:400;opacity:.75}
+.sortbox{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.88rem}
+.sortbox select{font:400 .9rem var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 12px}
+@media print{
+  .opening,header,footer,.mnav,.to-top,.acts,.acts2,.add-list,.cta-band,.recent,.rel,.head:has(+ .rel),.list-pill,#list-live,.crumbs{display:none!important}
+  body{zoom:1!important;background:#fff!important;color:#000!important}
+  :root{--bg:#fff;--surface:#fff;--ink:#000;--muted:#222;--faint:#444;--line:#bbb}
+  .page-hero{padding-block:0 12px!important;border-bottom:1px solid #bbb}
+  .pp{grid-template-columns:1fr 260px!important;gap:24px!important;padding-block:16px!important}
+  .pp .spec,.pp .fig{break-inside:avoid}
+  main::after{content:"True Part Fabrication · Modesto, CA · " attr(data-url);display:block;margin-top:24px;font-size:11px;color:#444}
+}
 /* ---- part pages ---- */
 .pp{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:56px;padding-block:48px 90px;align-items:start}
 .pp .spec{border:1px solid var(--line);border-radius:8px;overflow:hidden}
@@ -94,7 +110,7 @@ def part_page(c, it, items, hose):
     same += [x for x in items if x is not it and x["b"] == b and x not in same]
     rel = "".join(f'<a href="{c.link(url(x))}">{esc(x["n"])}<span>{esc(B.rp(x))}</span></a>' for x in same[:6])
     status = "confirmed" if fit else "not yet confirmed"
-    body = f"""<main id="main">
+    body = f"""<main id="main" data-url="{B.BASE}/{url(it)}">
 <div class="page-hero"><div class="wrap">
   {B.crumbs(c, crumbs_list)}
   <h1>{esc(it['n'])}</h1>
@@ -109,11 +125,13 @@ def part_page(c, it, items, hose):
         <a class="btn" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request this part <span class="ar">→</span></a>
         <a class="btn ghost" href="{EBAY_SEARCH + esc(re.sub(r'[^A-Za-z0-9-]+', '+', ref).strip('+'))}" target="_blank" rel="noopener">Check our eBay store <span class="ar">↗</span></a>
       </div>
+      <div class="acts2"><button type="button" class="tbtn" data-print>Print spec sheet</button><button type="button" class="tbtn" data-share data-title="{esc(it['n'])}">Share this part</button><span class="tstat" role="status"></span></div>
       <p class="note">Send your equipment's model number with the request so we can confirm the fit before we print. Not sure of a size? Use the <a href="{c.link('guides/how-to-measure-a-part/')}">measuring guide</a>. Prices and turnaround are in your written quote; see the <a href="{c.link('faq/')}">FAQ</a> and our <a href="{c.link('terms/')}">Terms of Service</a>.</p>
     </div>
     <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of a custom manufactured {esc(KIND.get(it['i'], it['i']).lower())}" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
   </div>
   {f'<div class="head" style="margin:10px 0 22px"><div class="label">More {esc(b)} parts</div></div><div class="rel">{rel}</div>' if rel else ''}
+  <div class="recent" id="recent" data-me="{esc(it['n'])}|{esc(B.rp(it))}" hidden><div class="head" style="margin:44px 0 18px"><div class="label">Recently viewed</div></div><div class="rel" id="recent-list"></div></div>
   <p class="legal" style="margin:44px 0 90px">This is a compatible aftermarket part made by True Part Fabrication, not a genuine {esc(b)} part. {esc(b)} and its part and model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>
 </div>
 </main>"""

@@ -22,6 +22,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="../../assets/img/favicon-48.png">
 <link rel="apple-touch-icon" href="../../assets/img/icon-180.png">
+<link rel="manifest" href="../../assets/manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -62,6 +63,7 @@
   <div class="tools">
     <div class="search"><svg viewBox="0 0 16 16" fill="none" stroke="var(--muted)" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg><label for="cat-q" style="position:absolute;left:-9999px">Buscar piezas</label><input id="cat-q" type="search" placeholder="Número de pieza, modelo o nombre"></div>
     <label class="toggle" for="fit-only"><input type="checkbox" id="fit-only" checked> Solo ajuste confirmado</label>
+    <label class="sortbox" for="cat-sort">Ordenar<select id="cat-sort"><option value="">Destacadas</option><option value="name">Nombre A–Z</option><option value="brand">Marca A–Z</option><option value="pn">Número de pieza</option></select></label>
     <span id="cat-count" style="color:var(--faint);font-size:.88rem;margin-left:auto"></span>
   </div>
   <div class="chips" id="cat-chips" role="group" aria-label="Filtrar por marca" style="margin-bottom:22px"><button class="chip" type="button" data-b="All" aria-pressed="true">Todas<i>196</i></button><button class="chip" type="button" data-b="DeWalt" aria-pressed="false">DeWalt<i>19</i></button><button class="chip" type="button" data-b="Milwaukee" aria-pressed="false">Milwaukee<i>41</i></button><button class="chip" type="button" data-b="RYOBI" aria-pressed="false">RYOBI<i>17</i></button><button class="chip" type="button" data-b="RIDGID" aria-pressed="false">RIDGID<i>22</i></button><button class="chip" type="button" data-b="WEN" aria-pressed="false">WEN<i>17</i></button><button class="chip" type="button" data-b="Shark" aria-pressed="false">Shark<i>30</i></button><button class="chip" type="button" data-b="Prolux" aria-pressed="false">Prolux<i>5</i></button><button class="chip" type="button" data-b="Samsung" aria-pressed="false">Samsung<i>23</i></button><button class="chip" type="button" data-b="Hampton Bay" aria-pressed="false">Hampton Bay<i>4</i></button><button class="chip" type="button" data-b="Makita" aria-pressed="false">Makita<i>6</i></button><button class="chip" type="button" data-b="Craftsman" aria-pressed="false">Craftsman<i>4</i></button><button class="chip" type="button" data-b="Shop-Vac" aria-pressed="false">Shop-Vac<i>3</i></button><button class="chip" type="button" data-b="Vacmaster" aria-pressed="false">Vacmaster<i>5</i></button></div>

@@ -393,6 +393,22 @@ td.m a:hover{border-color:var(--accent)}
 .ind-list li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
 @media (max-width:600px){.ind-list{grid-template-columns:1fr}}
 
+.acts2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.tbtn{font:600 .85rem var(--f-body);background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;height:38px;padding:0 16px;cursor:pointer}
+.tbtn:hover{border-color:var(--accent)}
+.tstat{color:var(--muted);font-size:.88rem}
+.sz small{font-weight:400;opacity:.75}
+.sortbox{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.88rem}
+.sortbox select{font:400 .9rem var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 12px}
+@media print{
+  .opening,header,footer,.mnav,.to-top,.acts,.acts2,.add-list,.cta-band,.recent,.rel,.head:has(+ .rel),.list-pill,#list-live,.crumbs{display:none!important}
+  body{zoom:1!important;background:#fff!important;color:#000!important}
+  :root{--bg:#fff;--surface:#fff;--ink:#000;--muted:#222;--faint:#444;--line:#bbb}
+  .page-hero{padding-block:0 12px!important;border-bottom:1px solid #bbb}
+  .pp{grid-template-columns:1fr 260px!important;gap:24px!important;padding-block:16px!important}
+  .pp .spec,.pp .fig{break-inside:avoid}
+  main::after{content:"True Part Fabrication · Modesto, CA · " attr(data-url);display:block;margin-top:24px;font-size:11px;color:#444}
+}
 /* ---- part pages ---- */
 .pp{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:56px;padding-block:48px 90px;align-items:start}
 .pp .spec{border:1px solid var(--line);border-radius:8px;overflow:hidden}

@@ -116,7 +116,8 @@ def hose_finder(c):
         if part:
             ask = f'<a class="ask" href="{c.link("", "quote")}" data-part="{esc(B.part_text(part))}">Request ours →</a>'
         else:
-            ask = f'<a class="ask" href="{c.link("", "quote")}" data-part="{esc("Adapter or fitting for " + r["b"] + " " + r["mc"] + " (" + ", ".join(r["s"]) + ")")}">Get an adapter →</a>'
+            from urllib.parse import quote as _q
+            ask = f'<a class="ask" href="{c.link("tools/adapter-builder/")}?a={_q(r["s"][0])}&amp;am={_q(r["b"] + " " + r["mc"])}">Get an adapter →</a>'
         k = " ".join([r["b"], r["mc"], r["d"], r["c"], r["w"], r["sys"]]).lower()
         rows.append(f"""<tr data-b="{esc(r['b'])}" data-s="{esc('|'.join(r['s']))}" data-g="{esc(r['g'])}" data-k="{esc(k)}"><td class="br">{esc(r['b'])}</td><td class="mo">{esc(r['mc'])}</td><td>{esc(r['d'])}<br><span style="color:var(--faint);font-size:.8rem">{esc(r['g'])}</span></td><td>{''.join(f'<span class="sz">{esc(s)}</span>' for s in r['s'])}<div style="font-size:.8rem;margin-top:4px">{esc(r['c'])}</div></td><td>{esc(r['w'] or '—')}</td><td><span class="cf {conf}">{esc(r['conf'] or 'Unrated')}</span></td><td>{ask}</td></tr>""")
     bchips = '<button class="chip sm" type="button" data-f="b" data-v="All" aria-pressed="true">All brands</button>' + "".join(f'<button class="chip sm" type="button" data-f="b" data-v="{esc(b)}" aria-pressed="false">{esc(b)}</button>' for b in brands)
