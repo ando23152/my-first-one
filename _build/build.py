@@ -12,7 +12,7 @@ from glossary import TERMS
 BASE = "https://truepart-fabrication.onrender.com"
 INDEX = False          # False while on the temporary Render address: pages carry noindex
 SITE = "True Part Fabrication"
-EMAIL = "nsottero@gmail.com"
+EMAIL = ""
 EBAY = "https://www.ebay.com/usr/truepartfabrication"
 SRC = "/home/claude/site_src"
 TPL = open("/home/claude/v2/template.html").read()
