@@ -315,7 +315,7 @@ def a11y(h):
     h = h.replace('<div class="ftable">', '<div class="ftable" tabindex="0" role="region" aria-label="Scrollable table">')
     return h.replace('<div class="tbl">', '<div class="tbl" tabindex="0" role="region" aria-label="Scrollable table">')
 def webp(h):
-    h = re.sub(r"(assets/img/(?:hero|svc-[a-z]+|sample-[a-z]+)(?:-light)?)\.jpg", r"\1.webp", h)
+    h = re.sub(r"(assets/img/(?:hero|svc-[a-z]+|sample-[a-z]+)(?:-light)?)\.jpg", r"\1.webp?v=5", h)
     return h.replace(".replace('.jpg','-light.jpg')", ".replace('.webp','-light.webp')")
 def doc(c, headhtml, body, art_index=False):
     return a11y(webp(swapimgs(_doc(c, headhtml, body, art_index))))
