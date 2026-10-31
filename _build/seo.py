@@ -123,6 +123,12 @@ def post(h):
     pre = mm.group(1) if mm else "assets/"
     pl = "".join(f'<link rel="preload" href="{pre}fonts/{f}" as="font" type="font/woff2" crossorigin>\n' for f in PRELOAD)
     h = re.sub(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">\s*<link rel="preconnect" href="https://fonts\.gstatic\.com" crossorigin>\s*<link rel="stylesheet" href="https://fonts\.googleapis\.com/[^"]*">\n?', pl, h)
+    # opening banner as a labelled landmark
+    h = re.sub(r'<div class="opening" role="note"><div class="wrap">(.*?)</div></div>', lambda m: '<aside class="opening" aria-label="' + ('Apertura' if '<html lang="es"' in h else 'Opening') + '"><div class="wrap">' + m.group(1) + '</div></aside>', h, count=1, flags=re.S)
+    # catalog: give the part rows (h3) a section heading
+    if path in ("parts/", "es/piezas/") and 'id="plist-h"' not in h:
+        lbl = "Lista de piezas" if path.startswith("es/") else "All parts"
+        h = h.replace('<div class="list" id="plist"', f'<h2 id="plist-h" class="sr-only">{lbl}</h2>\n  <div class="list" id="plist"', 1)
     # brand pages: list their parts as structured data
     if path.startswith("brands/") and path != "brands/":
         main = h[h.find('<main'):h.find('</main>')]
@@ -134,3 +140,54 @@ def post(h):
             ld = {"@context": "https://schema.org", "@type": "ItemList", "name": html.unescape(re.sub(r"<[^>]+>", "", re.search(r"<h1[^>]*>(.*?)</h1>", h, re.S).group(1))).strip() if "<h1" in h else "Parts", "itemListElement": items}
             h = h.replace("</head>", B.ld(ld) + "\n</head>", 1)
     return h
+
+# ---------- unique copy for each part page ----------
+KIND_COPY = {
+    "adapter": ("What this part does", "An adapter joins two hoses, wands, tools or ports that don't connect on their own. This one is made to the same connection sizes as the {b} {ref}, so it fits where the original does."),
+    "nozzle": ("What this part does", "A nozzle or tool attachment goes on the end of a wand or hose for a specific cleaning job. This one is made to the same connection as the {b} {ref}, so it attaches the way the original does."),
+    "brush": ("What this part does", "A brush attachment goes on the end of a wand or hose for dusting and loosening debris. This one is made to the same connection as the {b} {ref}, so it attaches the way the original does."),
+    "separator": ("What this part does", "Dust separators and collectors catch dust and debris before it reaches the vacuum, filter or work area. This one is made to the same fit as the {b} {ref}."),
+    "clip": ("What this part does", "Clips, caps, covers and holders are small parts that crack, snap or get lost, and are often hard to buy on their own. This one is made to the same shape and fit as the {b} {ref}."),
+    "roller": ("What this part does", "Rollers and wheels wear out or break long before the rest of the machine. This one is made to the same size and fit as the {b} {ref}."),
+}
+MAT_COPY = {
+    "PETG": ("petg", "PETG is tough and slightly flexible, and it holds up to moisture and common cleaners, which makes it a good everyday material for vacuum and shop parts."),
+    "TPU": ("tpu", "TPU is a flexible, rubber-like material. It grips, seals and bends without cracking."),
+    "ASA": ("asa", "ASA resists sunlight and heat better than most plastics, so it suits parts used outdoors or in hot spaces."),
+    "PA-CF": ("pa-cf", "PA-CF is nylon reinforced with carbon fiber. It is stiff and strong for parts that take load or wear."),
+    "PLA": ("pla", "PLA is rigid and holds fine detail. It suits indoor parts that stay away from heat."),
+    "ABS": ("abs", "ABS is tough and handles more heat than PLA, the same family of plastic many original parts are molded from."),
+}
+
+def part_about(c, it, sizes, kind_label):
+    e = html.escape
+    b, ref = it["b"], (it["oem"] or it.get("for", ""))
+    head, txt = KIND_COPY.get(it["i"], ("What this part does", "This part is made to the same fit as the {b} {ref}."))
+    out = [f'<h2>{head}</h2><p>{e(txt.format(b=b, ref=ref))}</p>']
+    if it["f"]:
+        out.append(f'<h2>Will it fit?</h2><p>Confirmed to fit: {e(it["f"])}. Not on the list? Send your model number with the request and we\'ll check before we make it.</p>')
+    else:
+        out.append(f'<h2>Will it fit?</h2><p>We haven\'t confirmed this part on a real {e(b)} machine yet. Send your model number, or a photo with a ruler, and we\'ll confirm the fit before we make it. Not sure how to measure? Use the <a href="{c.link("guides/how-to-measure-a-part/")}">measuring guide</a>.</p>')
+    if sizes:
+        out.append(f'<p>Connection size: {e(", ".join(sizes))} (see <a href="{c.link("glossary/dust-port-hose-sizes/")}">how hose and port sizes are measured</a>). Every {e(b)} hose, wand and port size we know is in the <a href="{c.link("tools/hose-size-finder/")}?brand={e(b).replace(" ", "%20")}">hose size finder</a>.</p>')
+    if it["i"] == "adapter":
+        out.append(f'<p>Need two sizes this part doesn\'t join? The <a href="{c.link("tools/adapter-builder/")}">adapter builder</a> makes one to order, and the guide to <a href="{c.link("glossary/fit-types/")}">fit types</a> explains slip-over versus slide-in ends.</p>')
+    mats = [m.strip() for m in it["mat"].split("/")]
+    mc = [MAT_COPY[m] for m in mats if m in MAT_COPY]
+    if mc:
+        sl, t = mc[0]
+        out.append(f'<h2>Material</h2><p>Made in <a href="{c.link("glossary/" + sl + "/")}">{e(mats[0])}</a>. {e(t)}' + (f' Also available in {e(" or ".join(mats[1:]))}; tell us in your request.' if len(mats) > 1 else '') + f' Compare materials in the <a href="{c.link("tools/material-picker/")}">material picker</a>.</p>')
+    out.append(f'<h2>Questions</h2><dl class="pq"><dt>Is this a genuine {e(b)} part?</dt><dd>No. It is a compatible <a href="{c.link("glossary/aftermarket-part/")}">aftermarket part</a> that we design and make in Modesto, California.</dd>'
+               f'<dt>What if it doesn\'t fit?</dt><dd>Tell us within 30 days of delivery and we\'ll adjust it and make a new one at no charge. See the <a href="{c.link("terms/")}">Terms of Service</a>.</dd>'
+               f'<dt>Can I order more than one?</dt><dd>Yes. Set a quantity in your <a href="{c.link("request-list/")}">cart</a>, or ask about <a href="{c.link("services/small-batch-manufacturing/")}">small-batch runs</a> for larger orders.</dd></dl>')
+    return '<section class="about-part prose" aria-label="About this part">' + "".join(out) + '</section>'
+
+PART_CSS = """
+.about-part{max-width:760px;margin:10px 0 44px}
+.about-part h2{font-size:1.15rem;margin:28px 0 8px}
+.about-part p{margin:0 0 10px;color:var(--muted)}
+.about-part a{color:var(--ink)}
+.about-part .pq dt{font-weight:600;color:var(--ink);margin-top:14px}
+.about-part .pq dd{margin:4px 0 0;color:var(--muted)}
+.foot .fh{margin:0 0 14px;font:500 .68rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+"""

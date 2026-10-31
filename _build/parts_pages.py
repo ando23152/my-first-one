@@ -139,6 +139,7 @@ def part_page(c, it, items, hose):
     </div>
     <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of a {esc(KIND.get(it['i'], it['i']).lower())} like this {esc(b)} {esc(ref)} replacement" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>
   </div>
+  {__import__('seo').part_about(c, it, sizes, KIND.get(it['i'], it['i']))}
   {f'<div class="head" style="margin:10px 0 22px"><div class="label">More {esc(b)} parts</div></div><div class="rel">{rel}</div>' if rel else ''}
   <div class="recent" id="recent" data-me="{esc(it['n'])}|{esc(B.rp(it))}" hidden><div class="head" style="margin:44px 0 18px"><div class="label">Recently viewed</div></div><div class="rel" id="recent-list"></div></div>
   {pn}
