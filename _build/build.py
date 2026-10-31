@@ -79,8 +79,9 @@ td.m a:hover{border-color:var(--accent)}
 """
 
 def css():
+    import tools
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
-    return base + EXTRA_CSS
+    return base + EXTRA_CSS + tools.EXTRA_CSS
 
 JS = r"""
 (function(){
@@ -208,7 +209,7 @@ def header(c):
       <a class="l" href="{L('', 'business')}">For business</a>
       <a class="l" href="{L('', 'parts')}">Parts</a>
       <a class="l" href="{L('', 'process')}">Process</a>
-      <a class="l" href="{L('glossary/')}">Glossary</a>
+      <a class="l" href="{L('resources/')}">Resources</a>
       <a class="l" href="{L('faq/')}">FAQ</a>
       <a class="l" href="{L('', 'about')}">About</a>
       <a class="btn" href="{L('', 'quote')}">Request a quote</a>
@@ -222,7 +223,7 @@ def footer(c):
   <div class="wrap">
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
-      <div><h4>Explore</h4><ul><li><a href="{L('', 'services')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="{L('', 'services')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
       <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><span style="color:var(--muted)">{EMAIL}</span></li><li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('privacy/')}">Privacy</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
@@ -291,6 +292,21 @@ def home(c, art=False):
         f'<p class="note">Heat limits are typical published ranges and vary by brand and print settings. See <a href="{c.link("glossary/heat-deflection-temperature/")}" style="color:var(--muted)">heat deflection temperature</a>.</p>')
     # learn strip before quote
     strip = "".join(f'<a href="{c.link("glossary/" + s + "/")}">{esc(GLOSS[s]["term"].split(" (")[0])}</a>' for s in ["petg", "asa", "tolerance", "infill", "reverse-engineering", "dust-port-hose-sizes", "small-batch-manufacturing", "fit-types"])
+    tools_sec = f"""<section id="tools" style="border-top:1px solid var(--line);padding-block:100px">
+  <div class="wrap">
+    <div class="head"><div class="label">Free tools</div><h2>Size it, pick it, <em class="s">measure it.</em></h2><p>Free resources to help you find the right fit and get an accurate quote the first time.</p></div>
+    <div class="res-grid">
+      <a class="res" href="{c.link('tools/hose-size-finder/')}"><div class="k">Tool</div><h3>Hose &amp; dust port size finder</h3><p>Look up hose and port sizes for hundreds of wet/dry vacs, collectors, and tools.</p><span class="go">Find a size →</span></a>
+      <a class="res" href="{c.link('tools/material-picker/')}"><div class="k">Tool</div><h3>Material picker</h3><p>Five questions to the right material, plus a PLA vs PETG vs ASA comparison.</p><span class="go">Pick a material →</span></a>
+      <a class="res" href="{c.link('guides/how-to-measure-a-part/')}"><div class="k">Guide</div><h3>How to measure a part</h3><p>Photograph and measure a broken part so we can model it right the first time.</p><span class="go">Read the guide →</span></a>
+    </div>
+  </div>
+</section>
+
+"""
+    main = main.replace('<section id="quote"', tools_sec + '<section id="quote"', 1)
+    for nm, sl in [("Food processing", "food-processing"), ("Agriculture", "agriculture"), ("Warehouse &amp; cold storage", "warehouse-cold-storage"), ("Industrial shops", "industrial-shops")]:
+        main = main.replace("<div><h3>" + nm + "</h3>", '<div><h3><a href="' + c.link("industries/" + sl + "/") + '" style="color:inherit;text-decoration:none">' + nm + "</a></h3>", 1)
     main = main.replace('<section id="quote"', f"""<section id="learn" style="border-top:1px solid var(--line);padding-block:80px">
   <div class="wrap">
     <div class="head" style="margin-bottom:0">
@@ -482,7 +498,9 @@ def build(mode, root):
             shutil.copy("/home/claude/site/assets/img/" + f, root + "/assets/img/" + f)
     write(root, "assets/site.css", css())
     write(root, "assets/site.js", JS)
+    import tools
     pages = {"": lambda c: home(c, art=(mode == "art")), "parts/": parts, "faq/": faq, "glossary/": gloss_index, "privacy/": privacy}
+    pages.update(tools.pages())
     for p, fn in pages.items():
         write(root, p + "index.html", fn(Ctx(mode, p)))
     for t in TERMS:
