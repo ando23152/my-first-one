@@ -86,10 +86,11 @@ def menu(c, es=False):
                  ("Catálogo de piezas", L('es/piezas/')), ("Preguntas frecuentes", L('es/preguntas-frecuentes/')), ("English", L(''))]
         cta = ("Pedir cotización", L('es/', 'cotizar')); label = "Menú"
     else:
-        items = [("Services", L('services/')), ("For business", L('', 'business')), ("Parts catalog", L('parts/')), ("Pricing", L('pricing/')),
-                 ("Process", L('', 'process')), ("Resources", L('resources/')), ("FAQ", L('faq/')), ("About", L('', 'about')),
+        H = L('')
+        items = [("Services", H + '#services'), ("For business", H + '#business'), ("Parts catalog", L('parts/')), ("Pricing", L('pricing/')),
+                 ("Process", H + '#process'), ("Resources", L('resources/')), ("FAQ", L('faq/')), ("About", H + '#about'),
                  ("Reorder a part", L('reorder/')), ("Search", L('search/')), ("Español", L('es/'))]
-        cta = ("Request a quote", L('', 'quote')); label = "Menu"
+        cta = ("Request a quote", H + '#quote'); label = "Menu"
     if PHONE:
         items.append((("Llamar " if es else "Call ") + PHONE, tel(PHONE)))
     lis = "".join(f'<li><a href="{h}">{esc(t)}</a></li>' for t, h in items)
@@ -463,7 +464,7 @@ LIST_JS = r"""
   document.addEventListener('keydown',function(e){if(e.key!=='/'||e.ctrlKey||e.metaKey||e.altKey)return;var tg=e.target;if(tg&&(tg.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(tg.tagName)))return;
     var box=document.getElementById('sq')||document.getElementById('cat-q')||document.getElementById('hf-q');e.preventDefault();if(box){box.focus();box.select&&box.select()}else{var s=document.querySelector('a.icon-l.s');if(s)location.href=s.href}});
   var tt=document.createElement('button');tt.type='button';tt.className='to-top';tt.hidden=true;tt.setAttribute('aria-label',ES?'Volver arriba':'Back to top');tt.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
-  document.body.appendChild(tt);tt.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'});var m=document.getElementById('main');if(m){m.setAttribute('tabindex','-1');m.focus({preventScroll:true})}});
+  document.body.appendChild(tt);tt.addEventListener('click',function(){scrollTo({top:0,behavior:innerWidth<=900?'smooth':'instant'});var m=document.getElementById('main');if(m){m.setAttribute('tabindex','-1');m.focus({preventScroll:true})}});
   addEventListener('scroll',function(){tt.hidden=scrollY<1200},{passive:true});
 """
 

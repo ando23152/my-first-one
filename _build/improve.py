@@ -76,8 +76,8 @@ def post(h):
     m = re.search(r'<link rel="canonical" href="([^"]+)"', h)
     path = m.group(1)[len(B.BASE) + 1:] if m else ""
     # r2: mark the current section in the main menu
-    sect = next((k for k in ("services/", "resources/", "faq/", "parts/", "tools/", "glossary/", "guides/", "brands/", "industries/") if path.startswith(k)), None)
-    target = {"tools/": "resources/", "glossary/": "resources/", "guides/": "resources/", "brands/": "parts/", "industries/": None}.get(sect, sect)
+    sect = next((k for k in ("services/", "resources/", "faq/", "parts/", "tools/", "glossary/", "guides/", "brands/", "industries/", "business/", "process/", "about/", "materials/") if path.startswith(k)), None)
+    target = {"tools/": "resources/", "glossary/": "resources/", "guides/": "resources/", "brands/": "parts/", "industries/": "business/", "materials/": "process/"}.get(sect, sect)
     if target:
         def cur(mm):
             href = mm.group(1)
@@ -106,7 +106,7 @@ def sitemap_page(c, pages):
     import tools as T
     L = c.link
     def ul(items): return "<ul>" + "".join(f'<li><a href="{L(p)}">{esc(t)}</a></li>' for t, p in items) + "</ul>"
-    main = [("Home", ""), ("Services", "services/"), ("Pricing", "pricing/"), ("Projects", "projects/"), ("FAQ", "faq/"), ("Request a quote", "#quote"),
+    main = [("Home", ""), ("Services", "services/"), ("Pricing", "pricing/"), ("Projects", "projects/"), ("FAQ", "faq/"), ("Request a quote", "quote/"), ("For business", "business/"), ("Process", "process/"), ("Materials", "materials/"), ("About", "about/"),
             ("Reorder a part", "reorder/"), ("Request list", "request-list/"), ("Search", "search/"), ("Terms of Service", "terms/"), ("Privacy", "privacy/"), ("Español", "es/")]
     main = [(t, p) if not p.startswith("#") else (t, "") for t, p in main]
     import extras as X

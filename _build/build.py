@@ -95,6 +95,7 @@ td.m a:hover{border-color:var(--accent)}
 .statement p.sub a,.svc + .svc a,.scope li a,.quote .info p a,.steps p a{color:var(--ink)}
 
 @media (min-width:861px){.shop{grid-template-columns:repeat(2,1fr)}}
+.secpage > section{padding-top:40px}
 .hero-shot img{-webkit-mask-image:none!important;mask-image:none!important;border-radius:14px}
 .hero-shot{padding-inline:clamp(16px,3vw,40px);max-width:1630px;margin-inline:auto!important;margin-top:20px!important}
 """
@@ -180,7 +181,7 @@ JS = r"""
     var b=e.target.closest('[data-part]');if(!b)return;
     var text=b.getAttribute('data-part');
     var form=document.getElementById('qf');
-    if(form){fill(text);e.preventDefault();document.getElementById('quote').scrollIntoView({behavior:'smooth'})}
+    if(form){fill(text);e.preventDefault();document.getElementById('quote').scrollIntoView({behavior:innerWidth<=900?'smooth':'instant',block:'start'})}
     else{store('tpf-part',text)}
   });
   function fill(t){var d=document.getElementById('q-desc');if(!d){var e=document.getElementById('e-desc');if(e){e.value=t+'\nMi modelo: ';}return}document.getElementById('q-type').value='Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
@@ -240,6 +241,8 @@ class Ctx:
         self.root = "../" * self.depth
     def link(self, p, anchor=""):
         # p: "" (home), "parts/", "glossary/pla/" ...
+        if not p and anchor in SECTION_PAGES:
+            p, anchor = SECTION_PAGES[anchor], ""
         if self.mode == "art":
             target = (p + "index.html")
         else:
@@ -251,6 +254,7 @@ class Ctx:
         return (url or "./") + (("#" + anchor) if anchor else "")
     def asset(self, a): return self.root + "assets/" + a
 
+SECTION_PAGES = {"quote": "quote/", "business": "business/", "process": "process/", "materials": "materials/", "about": "about/", "services": "services/", "parts": "parts/"}
 def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>"
 
 ORG = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": BASE + "/#business", "name": "True Part Fabrication LLC",
@@ -402,7 +406,7 @@ def feat_cards(c):
     return "\n".join(out)
 
 # ---------------- HOME ----------------
-def home(c, art=False):
+def home(c, art=False, raw=False):
     main = re.search(r'(<main id="top">.*?</main>)', TPL, re.S).group(1)
     main = main.replace('<main id="top">', '<main id="main">').replace('{{TERMS}}', c.link('terms/'))
     # img data URIs -> files
@@ -502,8 +506,39 @@ def home(c, art=False):
     main = main.replace('<div class="r"><a class="btn" id="q-mail" href="#">Open in email</a>', '<div class="r"><a class="btn" id="q-mail" href="#">Open in email</a>', 1)
     main = main.replace('''        <div class="r"><a class="btn" id="q-mail"''', '''        <div class="next"><h3>What happens next</h3><ol><li>Send the email with a photo of the part.</li><li>We reply with questions or a written quote: material, price, and turnaround.</li><li>You approve, we model and print, and the part is checked for fit before it ships.</li></ol></div>
         <div class="r"><a class="btn" id="q-mail"''', 1)
+    if raw: return main, script
     main = main + '\n<script>window.TPF_HOME=1</script>\n' + script
     return doc(c, head(c, title, desc, [org, web]), main, art_index=art)
+
+# ---------------- SECTION PAGES (own page per menu item) ----------------
+SECTION_META = {
+ "business": ("For business", "Custom Parts for Businesses in the Central Valley | True Part Fabrication", "Replacement and custom parts for food processing, agriculture, warehouses, cold storage, and industrial shops in Modesto, Turlock, Stockton, and the Central Valley."),
+ "process": ("Process", "How It Works: From Broken Part to Perfect Fit | True Part Fabrication", "Our six-step process: you tell us, we measure, we model, you approve the quote, we print, and it fits, or we reprint it free."),
+ "materials": ("Materials", "Materials We Print: PLA, PETG, ASA, Nylon & TPU | True Part Fabrication", "Engineering materials for custom and replacement parts, with typical heat limits, strengths, and where each one fits best."),
+ "about": ("About", "About True Part Fabrication | Modesto, CA", "True Part Fabrication is a California manufacturing and product development company in Modesto, making replacement parts, custom components, and small-batch runs."),
+ "quote": ("Request a quote", "Request a Quote | True Part Fabrication", "Describe your part and get a written quote with material, price, and turnaround. Free reprint if it doesn't fit."),
+}
+def section_page(c, sid):
+    main, script = home(c, raw=True)
+    m = re.search(r'(<section id="' + sid + r'"[^>]*>.*?</section>)', main, re.S)
+    sec = m.group(1).replace(' style="border-top:1px solid var(--line)"', '', 1)
+    name, title, desc = SECTION_META[sid]
+    # each page gets one h1: promote the section's first h2, or add one
+    if "<h2" in sec:
+        i = sec.index("<h2"); j = sec.index("</h2>", i)
+        sec = sec[:i] + "<h1" + sec[i+3:j] + "</h1>" + sec[j+5:]
+    else:
+        sec = sec.replace('<div class="label">About us</div></div>', '<div class="label">About us</div><h1>About True Part Fabrication</h1></div>', 1)
+    extra = ""
+    if sid == "quote":
+        qs = script[script.index("var f=document.getElementById('qf')"):]
+        qs = qs[:qs.rindex("})();")]
+        extra = "\n<script>window.TPF_HOME=1</script>\n<script>(function(){\n" + qs + "\n})();</script>"
+    body = f'''<main id="main" class="secpage">
+<div class="wrap" style="padding-top:28px">{crumbs(c, [('Home', ''), (name, sid + '/')])}</div>
+{sec}
+</main>{extra}'''
+    return doc(c, head(c, title, desc, [crumbs_ld([("Home", ""), (name, sid + "/")])]), body)
 
 # ---------------- PARTS ----------------
 def parts(c):
@@ -735,6 +770,8 @@ def build(mode, root):
     parts_pages.assign_slugs(CAT["items"])
     pages = {"": lambda c: home(c, art=(mode == "art")), "parts/": parts, "faq/": faq, "glossary/": gloss_index, "privacy/": privacy, "terms/": terms}
     pages.update(tools.pages())
+    for _sid in SECTION_META:
+        pages[_sid + "/"] = (lambda c, _sid=_sid: section_page(c, _sid))
     pages.update(parts_pages.pages())
     import es, extras
     pages.update(es.pages())

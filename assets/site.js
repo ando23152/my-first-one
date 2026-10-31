@@ -23,7 +23,7 @@
     var b=e.target.closest('[data-part]');if(!b)return;
     var text=b.getAttribute('data-part');
     var form=document.getElementById('qf');
-    if(form){fill(text);e.preventDefault();document.getElementById('quote').scrollIntoView({behavior:'smooth'})}
+    if(form){fill(text);e.preventDefault();document.getElementById('quote').scrollIntoView({behavior:innerWidth<=900?'smooth':'instant',block:'start'})}
     else{store('tpf-part',text)}
   });
   function fill(t){var d=document.getElementById('q-desc');if(!d){var e=document.getElementById('e-desc');if(e){e.value=t+'\nMi modelo: ';}return}document.getElementById('q-type').value='Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
@@ -113,7 +113,7 @@
   document.addEventListener('keydown',function(e){if(e.key!=='/'||e.ctrlKey||e.metaKey||e.altKey)return;var tg=e.target;if(tg&&(tg.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(tg.tagName)))return;
     var box=document.getElementById('sq')||document.getElementById('cat-q')||document.getElementById('hf-q');e.preventDefault();if(box){box.focus();box.select&&box.select()}else{var s=document.querySelector('a.icon-l.s');if(s)location.href=s.href}});
   var tt=document.createElement('button');tt.type='button';tt.className='to-top';tt.hidden=true;tt.setAttribute('aria-label',ES?'Volver arriba':'Back to top');tt.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
-  document.body.appendChild(tt);tt.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'});var m=document.getElementById('main');if(m){m.setAttribute('tabindex','-1');m.focus({preventScroll:true})}});
+  document.body.appendChild(tt);tt.addEventListener('click',function(){scrollTo({top:0,behavior:innerWidth<=900?'smooth':'instant'});var m=document.getElementById('main');if(m){m.setAttribute('tabindex','-1');m.focus({preventScroll:true})}});
   addEventListener('scroll',function(){tt.hidden=scrollY<1200},{passive:true});
 
   // ---- recently viewed parts ----

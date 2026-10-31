@@ -20,7 +20,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}@media (max-width:900px){html{scroll-behavior:smooth}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
 .wrap{max-width:1240px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
@@ -504,7 +504,7 @@ footer{border-top:1px solid var(--line);padding-block:64px 48px}
   function request(it){
     document.getElementById('q-type').value='Replacement part';
     document.getElementById('q-desc').value='Compatible part: '+it.n+'\n'+rp(it)+'\nMy model: ';
-    document.getElementById('quote').scrollIntoView({behavior:'smooth'});
+    document.getElementById('quote').scrollIntoView({behavior:innerWidth<=900?'smooth':'instant',block:'start'});
     setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600);
   }
   function card(it){
