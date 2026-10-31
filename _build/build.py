@@ -268,6 +268,7 @@ ORG = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": BASE +
        "priceRange": "$$", "currenciesAccepted": "USD", "knowsAbout": ["Additive manufacturing", "Replacement parts", "Reverse engineering", "Jigs and fixtures", "Small-batch manufacturing"]}
 
 ORG["logo"] = {"@type": "ImageObject", "url": BASE + "/assets/img/logo-dark.png", "width": 800, "height": 493}
+ORG["areaServed"] = ORG["areaServed"] + [{"@type": "Country", "name": "United States"}]
 ORG["contactPoint"] = [{"@type": "ContactPoint", "telephone": "+1-209-554-4800", "contactType": "customer service", "areaServed": "US-CA"}]
 
 def crumbs_ld(items):
@@ -605,7 +606,7 @@ def FAQS(c):
      ("Are printed parts as strong as the original?", f"<p>Often, yes, and sometimes stronger, if the material and {G('print-orientation','print orientation')} are right. We choose materials like {G('petg','PETG')}, {G('asa','ASA')}, or {G('pa-cf','carbon-fiber nylon')} for the job and can thicken the spot where the original failed. We'll tell you honestly if a printed part isn't a good fit for your use.</p>"),
      ("What parts won't you make?", f"<p>We don't make parts where a failure could hurt someone: safety-critical, load-bearing, pressurized, electrical, braking or steering, child-safety, medical, pool-safety, or code-compliance parts. We also don't make {G('food-contact','food-contact parts')}.</p>"),
      ("Do you make repeat orders and small batches?", f"<p>Yes. We keep your part's model on file, so reorders match the first run. Five or five hundred, with no molds and no large minimums. See {G('small-batch-manufacturing','small-batch manufacturing')}.</p>"),
-     ("Where are you located, and do you ship?", "<p>We're in Modesto, California, and serve Modesto, Ceres, Turlock, Manteca, Tracy, and Stockton, including on-site measuring for parts that can't come off the machine. We also ship statewide.</p>"),
+     ("Where are you located, and do you ship?", "<p>We're in Modesto, California, and serve Modesto, Ceres, Turlock, Manteca, Tracy, and Stockton, including on-site measuring for parts that can't come off the machine. We also ship anywhere in the United States.</p>"),
      ("Are your parts genuine brand parts?", f"<p>No. They're compatible {G('aftermarket-part','aftermarket parts')} that we design and make. Brand names and part numbers are used only to show what a part fits.</p>"),
      ("Can I buy parts without a quote?", f'<p>Some ready-made parts are available in our <a href="{EBAY}" target="_blank" rel="noopener">eBay store</a>. Everything else is made to order.</p>'),
     ] + __import__("seo2").extra_faqs(c)

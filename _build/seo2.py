@@ -223,7 +223,7 @@ def extra_faqs(c):
 def llms_txt():
     T = _T()
     lines = ["# True Part Fabrication", "",
-             "> True Part Fabrication LLC makes compatible aftermarket replacement parts, custom parts, and small production runs in Modesto, California. Opening January 1, 2027. Phone (209) 554-4800.", "",
+             "> True Part Fabrication LLC makes compatible aftermarket replacement parts, custom parts, and small production runs in Modesto, California. Opening January 1, 2027. Ships anywhere in the United States. Phone (209) 554-4800.", "",
              "Parts are plastic, made to order, and not genuine brand parts. We do not make safety-critical, pressurized, electrical, braking or steering, child-safety, medical, pool, code-compliance, or food-contact parts.", "",
              "## Main pages",
              f"- [Services]({B.BASE}/services/): replacement parts, custom fabrication, electronics enclosures, small-batch manufacturing",

@@ -58,7 +58,7 @@ FAQ_ES = [
  ("¿Las piezas impresas son tan fuertes como las originales?", "Muchas veces sí, y a veces más, si el material y la orientación de impresión son los correctos. Elegimos materiales como PETG, ASA o nylon con fibra de carbono según el trabajo, y podemos reforzar el punto donde falló la original. Le diremos con honestidad si una pieza impresa no conviene para su uso."),
  ("¿Qué piezas no hacen?", "No hacemos piezas cuya falla pueda lastimar a alguien: críticas para la seguridad, de soporte de carga, a presión, eléctricas, de frenos o dirección, de seguridad infantil, médicas, de seguridad para albercas o para cumplir códigos. Tampoco hacemos piezas que tocan alimentos."),
  ("¿Hacen pedidos repetidos y lotes pequeños?", "Sí. Guardamos el modelo de su pieza, así los pedidos siguientes salen iguales. Cinco o quinientas, sin moldes ni mínimos grandes."),
- ("¿Dónde están y hacen envíos?", "Estamos en Modesto, California, y atendemos Modesto, Ceres, Turlock, Manteca, Tracy y Stockton, incluso con medición en su sitio para piezas que no se pueden quitar de la máquina. También enviamos a todo el estado."),
+ ("¿Dónde están y hacen envíos?", "Estamos en Modesto, California, y atendemos Modesto, Ceres, Turlock, Manteca, Tracy y Stockton, incluso con medición en su sitio para piezas que no se pueden quitar de la máquina. También enviamos a todo Estados Unidos."),
  ("¿Sus piezas son originales de la marca?", "No. Son piezas compatibles (de reemplazo) que diseñamos y fabricamos nosotros. Los nombres de marca y números de pieza se usan solo para indicar con qué son compatibles."),
  ("¿Hablan español?", "Sí. Puede escribirnos en español y le responderemos en español. Nuestros Términos de servicio y el catálogo de piezas están en inglés por ahora."),
 ]
