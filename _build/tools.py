@@ -148,12 +148,16 @@ def hose_finder(c):
   </div>
   <p class="legal">Researched October 2026 from manufacturer and retailer listings. Brand names and model numbers belong to their owners and are used only to describe fit. True Part Fabrication is not affiliated with any brand listed. Always confirm sizes on your own equipment.</p>
 </div></section>
+<div class="wrap" style="padding-bottom:40px"><div class="callout" style="max-width:760px"><div class="k">Adapter builder</div><p>Found both sizes? <a href="{c.link('tools/adapter-builder/')}" style="color:var(--ink);font-weight:600">Build your adapter</a>: pick the two ends and request it in one step.</p></div></div>
 {cta(c, 'Need an adapter that fits both ends?', 'Tell us the vacuum and the tool, or send measurements. We\'ll make an adapter sized to your exact hose and port.')}
 </main>
 <script>
 (function(){{var t=document.getElementById('hf'),rows=[].slice.call(t.tBodies[0].rows),q=document.getElementById('hf-q'),g=document.getElementById('hf-g'),cnt=document.getElementById('hf-count'),em=document.getElementById('hf-empty'),f={{b:'All',s:'All'}};
 document.querySelectorAll('.filters .chip').forEach(function(c){{c.addEventListener('click',function(){{var k=c.getAttribute('data-f');f[k]=c.getAttribute('data-v');document.querySelectorAll('.filters .chip[data-f="'+k+'"]').forEach(function(x){{x.setAttribute('aria-pressed',x===c)}});go()}})}});
 function go(){{var v=q.value.trim().toLowerCase().replace(/\\s+/g,' '),n=0;rows.forEach(function(r){{var ok=(f.b==='All'||r.dataset.b===f.b)&&(f.s==='All'||r.dataset.s.split('|').indexOf(f.s)>-1)&&(g.value==='All'||r.dataset.g===g.value)&&(!v||r.dataset.k.indexOf(v)>-1);r.hidden=!ok;if(ok)n++}});cnt.textContent=n+(n===1?' item':' items');em.hidden=n>0}}
+function sync(){{try{{var p=new URLSearchParams();if(f.b!=='All')p.set('brand',f.b);if(f.s!=='All')p.set('size',f.s);if(g.value!=='All')p.set('type',g.value);if(q.value.trim())p.set('q',q.value.trim());var s=p.toString();history.replaceState(null,'',location.pathname+(s?'?'+s:''))}}catch(e){{}}}}
+var go0=go;go=function(){{go0();sync()}};
+try{{var P=new URLSearchParams(location.search);if(P.get('q'))q.value=P.get('q');if(P.get('type'))g.value=P.get('type');['b:brand','s:size'].forEach(function(kv){{var k=kv.split(':')[0],val=P.get(kv.split(':')[1]);if(!val)return;var ch=[].find.call(document.querySelectorAll('.filters .chip[data-f="'+k+'"]'),function(x){{return x.getAttribute('data-v').toLowerCase()===val.toLowerCase()}});if(ch){{f[k]=ch.getAttribute('data-v');document.querySelectorAll('.filters .chip[data-f="'+k+'"]').forEach(function(x){{x.setAttribute('aria-pressed',x===ch)}})}}}})}}catch(e){{}}
 q.addEventListener('input',go);g.addEventListener('change',go);var h=(location.hash||'').slice(1);if(h){{var b=document.querySelector('.filters .chip[data-f="b"][data-v="'+decodeURIComponent(h).replace(/-/g,' ')+'"]')||[].find.call(document.querySelectorAll('.filters .chip[data-f="b"]'),function(x){{return x.getAttribute('data-v').toLowerCase().replace(/\\s+/g,'-')===h}});if(b)b.click()}}go()}})();
 </script>"""
     title = "Shop-Vac Hose & Dust Port Size Finder | DeWalt, Milwaukee, Ryobi, RIDGID, WEN"
@@ -356,6 +360,7 @@ def industry_page(c, ind):
 # ---------------- RESOURCES HUB ----------------
 def resources(c):
     cards = [("Tool", "Hose & dust port size finder", f"Look up hose and port sizes for {len(HOSE)} vacs, collectors, accessories, and tools.", "tools/hose-size-finder/"),
+             ("Tool", "Adapter builder", "Pick any two hose or port sizes and request an adapter made to fit both.", "tools/adapter-builder/"),
              ("Tool", "Material picker", "Answer five questions and get the right material for your part, with a full comparison chart.", "tools/material-picker/"),
              ("Guide", "How to measure a part", "Photograph and measure a broken part so it can be modeled and printed.", "guides/how-to-measure-a-part/"),
              ("Reference", "Glossary", f"{len(B.TERMS)} plain-English definitions of printing, material, and fit terms.", "glossary/"),

@@ -297,6 +297,8 @@ def search_index(c):
     for t, u, d in [("How pricing works", "pricing/", "What sets the price of a part, typical jobs, and ways to lower the cost."),
                     ("Reorder a part", "reorder/", "Reorder by part ID."), ("Frequently asked questions", "faq/", "Quotes, pricing, turnaround, materials, fit guarantee."),
                     ("Hose and dust port size finder", "tools/hose-size-finder/", "Look up hose, wand, and dust port sizes for vacs, collectors, and tools."),
+                    ("Adapter builder", "tools/adapter-builder/", "Build a custom adapter between any two hose or dust port sizes."),
+                    ("Request list", "request-list/", "Send several parts in one quote request."),
                     ("Material picker", "tools/material-picker/", "Five questions to the right material: PLA, PETG, ASA, TPU, nylon."),
                     ("How to measure a part", "guides/how-to-measure-a-part/", "Photograph and measure a broken part for an accurate quote."),
                     ("Terms of Service", "terms/", "Quotes, orders, aftermarket parts, fit guarantee."), ("Privacy", "privacy/", "How we handle your information."),
@@ -394,3 +396,186 @@ def pages():
     for s in SERVICES:
         p["services/" + s[0] + "/"] = (lambda c, s=s: service_page(c, s))
     return p
+
+# ================= functionality upgrades =================
+EX_CSS += r"""
+/* ---- request list ---- */
+.list-pill{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--accent);color:var(--ink);text-decoration:none;font:600 .85rem var(--f-body)}
+.list-pill b{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:999px;background:var(--accent);color:#fff;font-size:.75rem;padding:0 6px}
+.list-pill[hidden]{display:none!important}
+.add-list{font:600 .8rem var(--f-body);height:34px;padding:0 14px;border-radius:999px;border:1px dashed var(--line);background:transparent;color:var(--ink);cursor:pointer;margin-left:8px;white-space:nowrap}
+.add-list:hover{border-color:var(--accent)}
+.add-list[aria-pressed="true"]{border-style:solid;border-color:var(--accent)}
+.acts .add-list,.pp .add-list{height:46px;padding:0 20px;font-size:.92rem;margin-left:0}
+.row .add-list{grid-column:auto}
+.rl-items{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rl-items li{display:grid;grid-template-columns:1fr 110px auto;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.rl-items .t{white-space:pre-line;color:var(--ink)}
+.rl-items input{font:400 1rem var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 12px;width:100%}
+.rl-items button{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;height:36px;padding:0 14px;cursor:pointer;font:600 .8rem var(--f-body)}
+.rl-items button:hover{border-color:var(--accent)}
+@media (max-width:600px){.rl-items li{grid-template-columns:1fr auto}.rl-items .t{grid-column:1/-1}}
+@media (max-width:900px){.list-pill{height:38px;padding:0 12px;font-size:0;gap:0}.list-pill b{font-size:.75rem}.list-pill::before{content:"List";font:600 .8rem var(--f-body);margin-right:6px}}
+/* ---- to top ---- */
+.to-top{position:fixed;right:18px;bottom:18px;z-index:30;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 24px -10px rgba(0,0,0,.5)}
+.to-top[hidden]{display:none}
+.to-top:hover{border-color:var(--accent)}
+/* ---- adapter builder ---- */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:900px}
+.ab fieldset{border:1px solid var(--line);border-radius:8px;padding:22px;margin:0;background:var(--surface);display:grid;gap:14px}
+.ab legend{font:500 .72rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-hi);padding:0 6px}
+.ab label{display:grid;gap:6px;font:500 .8rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ab select,.ab input{font:400 1rem var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:11px 12px;text-transform:none;letter-spacing:0}
+.ab .full{grid-column:1/-1}
+.ab-out{max-width:900px;margin-top:22px}
+.ab-out pre{white-space:pre-wrap;font:500 .95rem var(--f-mono);color:var(--ink);margin:10px 0 0}
+@media (max-width:700px){.ab{grid-template-columns:1fr}}
+.draft-note{font-size:.85rem;color:var(--faint);margin-top:6px}
+.draft-note button{background:none;border:0;color:var(--ink);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+"""
+
+LIST_JS = r"""
+  // ---- request list ----
+  var LK='tpf-list',ES=document.documentElement.lang==='es';
+  function getL(){try{return JSON.parse(localStorage.getItem(LK)||'[]')}catch(e){return []}}
+  function setL(a){try{localStorage.setItem(LK,JSON.stringify(a))}catch(e){}updPill();document.dispatchEvent(new CustomEvent('tpf-list'))}
+  function inL(t){return getL().some(function(x){return x.t===t})}
+  function updPill(){var p=document.getElementById('list-pill'),n=getL().length;if(!p)return;p.hidden=n===0;var b=document.getElementById('list-n');if(b)b.textContent=n;p.setAttribute('aria-label',(ES?'Lista de solicitud: ':'Request list: ')+n+(ES?' piezas':n===1?' part':' parts'))}
+  function lbl(on){return on?(ES?'✓ En la lista':'✓ On list'):(ES?'+ Lista':'+ Add to list')}
+  document.querySelectorAll('a[data-part]').forEach(function(a){
+    if(a.closest('.pc'))return;
+    var b=document.createElement('button');b.type='button';b.className='add-list';var t=a.getAttribute('data-part');b.setAttribute('data-add',t);
+    var on=inL(t);b.textContent=lbl(on);b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?(ES?'Quitar de la lista: ':'Remove from request list: '):(ES?'Añadir a la lista: ':'Add to request list: '))+t.split('\n')[0].replace(/^[^:]*: /,''));
+    a.insertAdjacentElement('afterend',b);
+  });
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-add]');if(!b)return;var t=b.getAttribute('data-add'),L=getL(),i=L.findIndex(function(x){return x.t===t});
+    if(i>-1)L.splice(i,1);else L.push({t:t,q:1});setL(L);
+    document.querySelectorAll('[data-add]').forEach(function(x){var on=inL(x.getAttribute('data-add'));x.textContent=lbl(on);x.setAttribute('aria-pressed',on)});
+    var st=document.getElementById('list-live');if(st)st.textContent=i>-1?(ES?'Quitado de la lista.':'Removed from your request list.'):(ES?'Añadido a la lista.':'Added to your request list.');});
+  if(!document.getElementById('list-live')){var lv=document.createElement('div');lv.id='list-live';lv.setAttribute('role','status');lv.style.cssText='position:absolute;left:-9999px';document.body.appendChild(lv)}
+  updPill();
+  // ---- shortcuts: "/" to search, back to top ----
+  document.addEventListener('keydown',function(e){if(e.key!=='/'||e.ctrlKey||e.metaKey||e.altKey)return;var tg=e.target;if(tg&&(tg.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(tg.tagName)))return;
+    var box=document.getElementById('sq')||document.getElementById('cat-q')||document.getElementById('hf-q');e.preventDefault();if(box){box.focus();box.select&&box.select()}else{var s=document.querySelector('a.icon-l.s');if(s)location.href=s.href}});
+  var tt=document.createElement('button');tt.type='button';tt.className='to-top';tt.hidden=true;tt.setAttribute('aria-label',ES?'Volver arriba':'Back to top');tt.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  document.body.appendChild(tt);tt.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'});var m=document.getElementById('main');if(m){m.setAttribute('tabindex','-1');m.focus({preventScroll:true})}});
+  addEventListener('scroll',function(){tt.hidden=scrollY<1200},{passive:true});
+"""
+
+DRAFT_JS = r"""
+  // ---- save form drafts on this device ----
+  ['qf','qf-es','rl-form'].concat([].map.call(document.querySelectorAll('form.xform[id]'),function(f){return f.id})).forEach(function(id){
+    var f=document.getElementById(id);if(!f)return;var key='tpf-draft-'+id,ES2=document.documentElement.lang==='es';
+    var fields=[].filter.call(f.querySelectorAll('input,textarea,select'),function(x){return x.id&&x.type!=='checkbox'&&x.type!=='hidden'&&x.type!=='file'});
+    try{var d=JSON.parse(localStorage.getItem(key)||'null');if(d&&Date.now()-d._t<14*864e5){fields.forEach(function(x){if(d[x.id]!=null&&!x.value)x.value=d[x.id]})}}catch(e){}
+    function save(){var d={_t:Date.now()},any=false;fields.forEach(function(x){if(x.value){d[x.id]=x.value;any=true}});try{if(any)localStorage.setItem(key,JSON.stringify(d));else localStorage.removeItem(key)}catch(e){}}
+    f.addEventListener('input',save);f.addEventListener('change',save);
+    var note=document.createElement('p');note.className='draft-note full';note.style.gridColumn='1/-1';note.innerHTML=(ES2?'Lo que escribe se guarda en este dispositivo. ':'What you type is saved on this device until you send it. ')+'<button type="button">'+(ES2?'Borrar formulario':'Clear form')+'</button>';
+    f.appendChild(note);note.querySelector('button').addEventListener('click',function(){fields.forEach(function(x){if(x.tagName!=='SELECT')x.value=''});try{localStorage.removeItem(key)}catch(e){}});
+  });
+"""
+
+def request_list(c):
+    body = f"""<main id="main">
+{hero(c, [('Home',''),('Request list','request-list/')], 'Your request list', 'Collect several parts while you browse, then send them to us in one quote request. Set a quantity for each part. The list is saved on this device.')}
+<div class="wrap" style="padding-block:40px 90px">
+  <ul class="rl-items" id="rl-items"></ul>
+  <p id="rl-empty" style="color:var(--muted);margin-top:18px" hidden>Your list is empty. Use <b>+ Add to list</b> on any part in the <a href="{c.link('parts/')}" style="color:var(--ink)">parts catalog</a>, a brand page, or a part page.</p>
+  <div id="rl-send" hidden>
+    <h2 style="font-size:1.3rem;margin:44px 0 18px">Send the list</h2>
+    <form class="xform" id="rl-form" novalidate>
+      <label for="rl-name">Your name<input id="rl-name" autocomplete="name" required></label>
+      <label for="rl-co">Company<input id="rl-co" autocomplete="organization"></label>
+      <label for="rl-contact">Phone or email<input id="rl-contact" required></label>
+      <label for="rl-when">Needed by<input id="rl-when" placeholder="Date, or 'no rush'"></label>
+      <label class="full" for="rl-notes">Notes (optional)<textarea id="rl-notes" placeholder="Equipment model numbers, colors, delivery address"></textarea></label>
+      <label class="agree full" for="rl-terms"><input type="checkbox" id="rl-terms"> <span>I've read and agree to the <a href="{c.link('terms/')}">Terms of Service</a>.</span></label>
+      <p class="xerr" id="rl-err" role="alert" hidden></p>
+      <div class="full" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Open in my email <span class="ar">→</span></button><button class="btn ghost" type="button" id="rl-copy">Copy request</button><button class="btn ghost" type="button" id="rl-clear">Clear list</button><span id="rl-st" role="status" style="color:var(--muted);font-size:.92rem"></span></div>
+    </form>
+  </div>
+</div>
+</main>
+<script>
+(function(){{
+  var LK='tpf-list',ul=document.getElementById('rl-items'),em=document.getElementById('rl-empty'),sd=document.getElementById('rl-send'),st=document.getElementById('rl-st');
+  function get(){{try{{return JSON.parse(localStorage.getItem(LK)||'[]')}}catch(e){{return []}}}}
+  function set(a){{try{{localStorage.setItem(LK,JSON.stringify(a))}}catch(e){{}}var p=document.getElementById('list-pill'),b=document.getElementById('list-n');if(p){{p.hidden=a.length===0}}if(b)b.textContent=a.length}}
+  function draw(){{var L=get();ul.textContent='';em.hidden=L.length>0;sd.hidden=L.length===0;
+    L.forEach(function(x,i){{var li=document.createElement('li'),t=document.createElement('div');t.className='t';t.textContent=x.t.replace(/^Compatible part: |^Pieza compatible: /,'');
+      var lab=document.createElement('label');lab.style.cssText='display:grid;gap:4px;font:500 .7rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--faint)';lab.textContent='Qty';var q=document.createElement('input');q.type='number';q.min='1';q.value=x.q||1;q.setAttribute('aria-label','Quantity for '+t.textContent.split('\\n')[0]);lab.appendChild(q);
+      q.addEventListener('change',function(){{var A=get();if(A[i]){{A[i].q=Math.max(1,parseInt(q.value,10)||1);set(A)}}}});
+      var rm=document.createElement('button');rm.type='button';rm.textContent='Remove';rm.setAttribute('aria-label','Remove '+t.textContent.split('\\n')[0]);rm.addEventListener('click',function(){{var A=get();A.splice(i,1);set(A);draw();st.textContent='Removed.'}});
+      li.appendChild(t);li.appendChild(lab);li.appendChild(rm);ul.appendChild(li)}})}}
+  function v(id){{return document.getElementById(id).value.trim()}}
+  function text(){{var L=get(),out=['Quote request (request list) — True Part Fabrication','','Name: '+v('rl-name')];if(v('rl-co'))out.push('Company: '+v('rl-co'));out.push('Contact: '+v('rl-contact'));if(v('rl-when'))out.push('Needed by: '+v('rl-when'));out.push('','Parts:');
+    L.forEach(function(x,i){{out.push((i+1)+'. Qty '+(x.q||1)+' — '+x.t.replace(/^Compatible part: |^Pieza compatible: /,'').replace(/\\n/g,' — '))}});if(v('rl-notes'))out.push('','Notes:',v('rl-notes'));out.push('','Agreed to the Terms of Service: yes','(Please attach photos of the parts or equipment if you have them)');return out.join('\\n')}}
+  function check(){{var er=document.getElementById('rl-err');if(!v('rl-name')||!v('rl-contact')){{er.textContent='Add your name and a way to reach you.';er.hidden=false;return false}}if(!document.getElementById('rl-terms').checked){{er.textContent='Please read and agree to the Terms of Service before sending.';er.hidden=false;return false}}er.hidden=true;return true}}
+  document.getElementById('rl-form').addEventListener('submit',function(e){{e.preventDefault();if(!check())return;location.href='mailto:{QUOTE_TO}?subject='+encodeURIComponent('Quote request: '+get().length+' parts')+'&body='+encodeURIComponent(text());st.textContent='Your email app opened with the request. Send it to finish.'}});
+  document.getElementById('rl-copy').addEventListener('click',function(){{if(!check())return;var t=text();try{{navigator.clipboard.writeText(t).then(function(){{st.textContent='Copied. Paste it into an email to us.'}},function(){{st.textContent='Copy did not work in this browser.'}})}}catch(e){{st.textContent='Copy did not work in this browser.'}}}});
+  document.getElementById('rl-clear').addEventListener('click',function(){{set([]);draw();st.textContent='List cleared.'}});
+  draw();
+}})();
+</script>"""
+    return B.doc(c, B.head(c, "Request List | True Part Fabrication", "Collect several compatible parts and send them in one quote request.", [B.crumbs_ld([("Home", ""), ("Request list", "request-list/")])]), body)
+
+AB_SIZES = ["22 mm", "24 mm", "15/16 in", "1 in", "1-1/4 in", "32 mm", "35 mm", "36 mm", "1-3/8 in", "1-1/2 in", "38 mm", "1-3/4 in", "1-7/8 in", "2 in", "2-1/4 in", "2-1/2 in", "4 in"]
+def adapter_builder(c):
+    opts = "".join(f"<option>{s}</option>" for s in AB_SIZES) + "<option value=\"other\">Other: I'll send measurements</option>"
+    kinds = "<option>Vacuum hose end (cuff)</option><option>Power tool dust port</option><option>Dust collector port or fitting</option><option>Vacuum wand or accessory</option><option>Other</option>"
+    def side(p, title, dsize):
+        o = opts.replace(f"<option>{dsize}</option>", f"<option selected>{dsize}</option>")
+        return f"""<fieldset><legend>{title}</legend>
+<label for="{p}-kind">What it connects to<select id="{p}-kind">{kinds}</select></label>
+<label for="{p}-size">Size<select id="{p}-size">{o}</select></label>
+<label for="{p}-fit">Fit on that end<select id="{p}-fit"><option>Slips over it (fits outside)</option><option>Slides into it (fits inside)</option><option>Not sure</option></select></label>
+<label for="{p}-model">Brand and model (optional)<input id="{p}-model" placeholder="e.g. Makita XCV11, DeWalt DWE6423"></label>
+</fieldset>"""
+    ab_lead = "Pick the two things you want to connect, and we'll make an adapter sized to both. Not sure of a size? Look it up in the <a href=\"" + c.link('tools/hose-size-finder/') + "\" style=\"color:var(--ink)\">hose size finder</a> or use the <a href=\"" + c.link('guides/how-to-measure-a-part/') + "\" style=\"color:var(--ink)\">measuring guide</a>."
+    body = f"""<main id="main">
+{hero(c, [('Home',''),('Resources','resources/'),('Adapter builder','tools/adapter-builder/')], 'Adapter builder', ab_lead)}
+<div class="wrap" style="padding-block:40px 90px">
+  <form class="ab" id="ab" novalidate>
+    {side('a', 'End A', '1-1/4 in')}
+    {side('b', 'End B', '2-1/2 in')}
+    <fieldset class="full"><legend>Options</legend>
+      <label for="ab-mat">Material<select id="ab-mat"><option value="auto">Recommend for me</option><option>PETG (rigid, general use)</option><option>TPU (flexible, grips like rubber)</option><option>ASA (outdoors, heat and sun)</option></select></label>
+      <label for="ab-qty">Quantity<input id="ab-qty" type="number" min="1" value="1"></label>
+    </fieldset>
+  </form>
+  <div class="callout ab-out" aria-live="polite"><div class="k">Your adapter</div><pre id="ab-sum"></pre>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px"><a class="btn" id="ab-req" href="{c.link('', 'quote')}" data-part="">Request this adapter <span class="ar">→</span></a></div>
+  </div>
+  <p class="legal" style="margin-top:28px">Sizes are nominal. We confirm the exact fit from your model numbers or measurements before printing, and reprint free if it doesn't fit. Adapters are for dust collection and vacuum use only, not for pressurized air or water.</p>
+</div>
+</main>
+<script>
+(function(){{
+  var f=document.getElementById('ab'),sum=document.getElementById('ab-sum'),req=document.getElementById('ab-req');
+  function v(id){{var e=document.getElementById(id);return e?e.value.trim():''}}
+  function end(p){{var s=v(p+'-size');s=s==='other'?'size to be measured':s;var m=v(p+'-model');return v(p+'-kind')+', '+s+', '+v(p+'-fit').toLowerCase().replace(/ \\(.*\\)/,'')+(m?' ('+m+')':'')}}
+  function mat(){{var m=v('ab-mat');if(m!=='auto')return m.split(' (')[0];var k=v('a-kind')+v('b-kind');return /tool dust port/i.test(k)?'TPU on the tool end, PETG body (recommended)':'PETG (recommended)'}}
+  function go(){{var t='Custom adapter\\nEnd A: '+end('a')+'\\nEnd B: '+end('b')+'\\nMaterial: '+mat()+'\\nQuantity: '+(parseInt(v('ab-qty'),10)||1);
+    sum.textContent=t;req.setAttribute('data-part',t);var ad=document.querySelector('#ab-req + .add-list');if(ad){{ad.setAttribute('data-add',t)}}}}
+  f.addEventListener('input',go);f.addEventListener('change',go);
+  try{{var P=new URLSearchParams(location.search);['a','b'].forEach(function(p){{var s=P.get(p);if(s){{var sel=document.getElementById(p+'-size');[].forEach.call(sel.options,function(o){{if(o.value===s||o.text===s)sel.value=o.value}})}}}})}}catch(e){{}}
+  go();
+}})();
+</script>"""
+    howto = {"@context": "https://schema.org", "@type": "WebApplication", "name": "Vacuum and dust collection adapter builder", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any",
+             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": B.BASE + "/tools/adapter-builder/"}
+    return B.doc(c, B.head(c, "Vacuum Hose & Dust Port Adapter Builder | True Part Fabrication",
+                           "Build a custom adapter between any two vacuum hose, dust port, or dust collector sizes: 1-1/4, 1-7/8, 2-1/2, 4 in., 35 mm, and more. Made to order in Modesto, CA.",
+                           [howto, B.crumbs_ld([("Home", ""), ("Resources", "resources/"), ("Adapter builder", "tools/adapter-builder/")])]), body)
+
+_old_pages = pages
+def pages():
+    p = _old_pages()
+    p["request-list/"] = request_list
+    p["tools/adapter-builder/"] = adapter_builder
+    return p
+EX_CSS += r"""
+nav.main .btn{white-space:nowrap}
+@media (max-width:480px){nav.main{gap:8px}.list-pill{padding:0 10px;height:38px}nav.main .btn{padding:0 12px;font-size:.78rem;height:38px}.menu-btn{width:38px;height:38px}}
+@media (max-width:360px){.list-pill::before{content:""!important;margin:0!important}}
+"""

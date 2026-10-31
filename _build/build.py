@@ -183,6 +183,7 @@ JS = r"""
     else{store('tpf-part',text)}
   });
   function fill(t){var d=document.getElementById('q-desc');if(!d){var e=document.getElementById('e-desc');if(e){e.value=t+'\nMi modelo: ';}return}document.getElementById('q-type').value='Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
+@@DRAFT@@
   var pending=take('tpf-part');if(pending)fill(pending);
   // parts filter
   var list=document.getElementById('plist');
@@ -193,6 +194,9 @@ JS = r"""
     function render(){var v=q.value.trim().toLowerCase(),n=0,shown=0;
       rows.forEach(function(r){var ok=(brand==='All'||r.getAttribute('data-b')===brand)&&(!fit.checked||r.getAttribute('data-fit')==='1')&&(!v||r.getAttribute('data-k').indexOf(v)>-1);if(ok)n++;var show=ok&&shown<limit;if(show)shown++;r.hidden=!show});
       more.hidden=n<=limit;more.textContent=(list.getAttribute('data-more')||'Show more')+' ('+(n-limit)+')';empty.hidden=n>0;count.textContent=n+' '+(n===1?(list.getAttribute('data-one')||'part'):(list.getAttribute('data-many')||'parts'));}
+    function syncURL(){try{var p=new URLSearchParams();if(brand!=='All')p.set('brand',brand);if(q.value.trim())p.set('q',q.value.trim());if(!fit.checked)p.set('all','1');var qs=p.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:''))}catch(e){}}
+    var rr=render;render=function(){rr();syncURL()};
+    try{var P=new URLSearchParams(location.search);if(P.get('q'))q.value=P.get('q');if(P.get('all')==='1')fit.checked=false;var pb=P.get('brand');if(pb){var ch=[].find.call(document.querySelectorAll('#cat-chips .chip'),function(x){return x.getAttribute('data-b').toLowerCase()===pb.toLowerCase()});if(ch){brand=ch.getAttribute('data-b');document.querySelectorAll('#cat-chips .chip').forEach(function(k){k.setAttribute('aria-pressed',k===ch)})}}}catch(e){}
     q.addEventListener('input',function(){limit=40;render()});fit.addEventListener('change',function(){limit=40;render()});more.addEventListener('click',function(){limit+=60;render()});render();
   }
 @@MENU@@
@@ -303,6 +307,7 @@ def header(c):
       <a class="l" href="{L('', 'about')}">About</a>
       <button class="theme-btn" type="button" id="theme-btn" aria-label="Theme"><svg class="dot" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="currentColor"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="icon-l s" href="{L('search/')}" aria-label="Search the site">{X.SEARCH_SVG}</a>
+      <a class="list-pill" id="list-pill" href="{L('request-list/')}" hidden>Request list <b id="list-n">0</b></a>
       <a class="btn" href="{L('', 'quote')}">Request a quote</a>
       {mb}
     </nav>
@@ -693,7 +698,7 @@ def build(mode, root):
         for f in os.listdir("/home/claude/site/assets/img"):
             shutil.copy("/home/claude/site/assets/img/" + f, root + "/assets/img/" + f)
     write(root, "assets/site.css", css())
-    write(root, "assets/site.js", JS.replace("@@MENU@@", __import__("extras").MENU_JS))
+    write(root, "assets/site.js", JS.replace("@@MENU@@", __import__("extras").MENU_JS + __import__("extras").LIST_JS).replace("@@DRAFT@@", __import__("extras").DRAFT_JS))
     import tools, parts_pages
     parts_pages.assign_slugs(CAT["items"])
     pages = {"": lambda c: home(c, art=(mode == "art")), "parts/": parts, "faq/": faq, "glossary/": gloss_index, "privacy/": privacy, "terms/": terms}
