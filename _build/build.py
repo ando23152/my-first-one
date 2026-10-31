@@ -48,7 +48,7 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 .gloss-group h2{font-size:1.2rem;margin-bottom:22px}
 .gloss-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .gcard{display:grid;gap:8px;padding:22px;border:1px solid var(--line);border-radius:6px;background:var(--surface);text-decoration:none;transition:border-color .2s,transform .3s var(--ease)}
-.gcard:hover{border-color:#3a3a40;transform:translateY(-2px)}
+.gcard:hover{border-color:#4A6A92;transform:translateY(-2px)}
 .gcard h3{font-family:var(--f-body);font-stretch:100%;font-weight:600;font-size:1.02rem;text-transform:none;letter-spacing:0;line-height:1.3}
 .gcard p{color:var(--muted);font-size:.9rem}
 .gcard span{font:.72rem var(--f-mono);color:var(--accent-hi);letter-spacing:.08em}
@@ -144,7 +144,7 @@ JS = r"""
     if(t==='light')root.setAttribute('data-tpf-theme','light');else root.removeAttribute('data-tpf-theme');
     document.querySelectorAll('img[data-light]').forEach(function(i){if(!i.getAttribute('data-dark'))i.setAttribute('data-dark',i.getAttribute('src'));var want=t==='light'?i.getAttribute('data-light'):i.getAttribute('data-dark');if(i.getAttribute('src')!==want)i.setAttribute('src',want)});
     if(tb)tb.setAttribute('aria-label',t==='light'?'Switch to dark theme':'Switch to light theme');
-    if(meta)meta.setAttribute('content',t==='light'?'#ffffff':'#070708');
+    if(meta)meta.setAttribute('content',t==='light'?'#ffffff':'#142D49');
   }
   applyTheme(root.getAttribute('data-tpf-theme')==='light'?'light':'dark');
   if(tb)tb.addEventListener('click',function(){var t=root.getAttribute('data-tpf-theme')==='light'?'dark':'light';applyTheme(t);try{localStorage.setItem('tpf-theme',t)}catch(e){}});
@@ -250,7 +250,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="True Part Fabrication logo over custom manufactured parts">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#070708">
+<meta name="theme-color" content="#142D49">
 <script>try{{var t=localStorage.getItem("tpf-theme");if(t==="light")document.documentElement.setAttribute("data-tpf-theme","light")}}catch(e){{}}</script>
 <link rel="icon" type="image/png" sizes="32x32" href="{c.asset('img/favicon-32.png')}">
 <link rel="icon" type="image/png" sizes="48x48" href="{c.asset('img/favicon-48.png')}">
