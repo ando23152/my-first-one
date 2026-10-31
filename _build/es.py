@@ -64,7 +64,9 @@ FAQ_ES = [
 ]
 
 def header_es(c):
+    import extras as X
     L = c.link
+    mb, mp = X.menu(c, es=True)
     return f"""<a href="#main" class="skip" style="position:absolute;left:-9999px;top:0;z-index:50;background:var(--accent);color:#fff;padding:10px 16px" onfocus="this.style.left='12px'" onblur="this.style.left='-9999px'">Saltar al contenido</a>
 <div class="opening" role="note"><div class="wrap">Abrimos el 1 de enero de 2027 <span aria-hidden="true">·</span> <a href="{L('es/', 'cotizar')}">Ya aceptamos solicitudes de cotización</a></div></div>
 <header id="hdr">
@@ -75,13 +77,15 @@ def header_es(c):
       <a class="l" href="{L('es/', 'industrias')}">Industrias</a>
       <a class="l" href="{L('es/', 'proceso')}">Cómo funciona</a>
       <a class="l" href="{L('es/preguntas-frecuentes/')}">Preguntas</a>
-      <a class="l" href="{L('parts/')}" hreflang="en">Piezas</a>
+      <a class="l" href="{L('es/piezas/')}">Piezas</a>
       <a class="l lang-link" href="{L('')}" hreflang="en" lang="en">English</a>
       <button class="theme-btn" type="button" id="theme-btn" aria-label="Cambiar tema"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="btn" href="{L('es/', 'cotizar')}">Pedir cotización</a>
+      {mb}
     </nav>
   </div>
-</header>"""
+</header>
+{mp}"""
 
 def footer_es(c):
     L = c.link
@@ -89,7 +93,7 @@ def footer_es(c):
   <div class="wrap">
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Piezas de repuesto, fabricación a medida y producción en lotes pequeños en Modesto, California.</p></div>
-      <div><h4>Explorar</h4><ul><li><a href="{L('es/', 'servicios')}">Servicios</a></li><li><a href="{L('es/', 'industrias')}">Industrias</a></li><li><a href="{L('es/preguntas-frecuentes/')}">Preguntas frecuentes</a></li><li><a href="{L('parts/')}" hreflang="en">Catálogo de piezas (inglés)</a></li><li><a href="{L('tools/hose-size-finder/')}" hreflang="en">Tamaños de manguera (inglés)</a></li><li><a href="{L('')}" hreflang="en" lang="en">English</a></li></ul></div>
+      <div><h4>Explorar</h4><ul><li><a href="{L('es/', 'servicios')}">Servicios</a></li><li><a href="{L('es/', 'industrias')}">Industrias</a></li><li><a href="{L('es/preguntas-frecuentes/')}">Preguntas frecuentes</a></li><li><a href="{L('es/piezas/')}">Catálogo de piezas</a></li><li><a href="{L('tools/hose-size-finder/')}" hreflang="en">Tamaños de manguera (inglés)</a></li><li><a href="{L('')}" hreflang="en" lang="en">English</a></li></ul></div>
       <div><h4>Contacto</h4><ul><li><a href="{L('es/', 'cotizar')}">Pedir cotización</a></li><li><a href="{B.EBAY}" target="_blank" rel="noopener">Tienda en eBay</a></li><li><a href="{L('privacy/')}" hreflang="en">Privacidad (inglés)</a></li><li><a href="{L('terms/')}" hreflang="en">Términos de servicio (inglés)</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
@@ -146,7 +150,7 @@ def home_es(c):
   <div class="label">En español</div>
   <h1>Piezas de repuesto e impresión 3D a medida en Modesto, CA</h1>
   <p class="lead">Diseñamos e imprimimos en 3D piezas de repuesto, soportes, plantillas y lotes pequeños para negocios y talleres del Valle Central. Si la pieza no queda, la reimprimimos gratis.</p>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px"><a class="btn" href="{L('es/', 'cotizar')}">Pedir cotización <span class="ar">→</span></a><a class="btn ghost" href="{L('parts/')}" hreflang="en">Ver catálogo de piezas (inglés)</a></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px"><a class="btn" href="{L('es/', 'cotizar')}">Pedir cotización <span class="ar">→</span></a><a class="btn ghost" href="{L('es/piezas/')}">Ver catálogo de piezas</a></div>
 </div></div>
 
 <section class="es-sec" id="servicios" style="border-top:0"><div class="wrap">
@@ -183,6 +187,7 @@ def home_es(c):
     <p class="es-err" id="es-err" role="alert" hidden></p>
     <div class="full" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Abrir en mi correo <span class="ar">→</span></button><span id="es-st" role="status" style="color:var(--muted);font-size:.92rem"></span></div>
   </form>
+  <div style="margin-top:40px">{__import__('extras').notify_block(c, es=True)}</div>
   <p style="margin-top:22px;color:var(--muted)">¿Busca una pieza lista? <a href="{B.EBAY}" target="_blank" rel="noopener" style="color:var(--ink)">Compre en la tienda de True Part Fabrication en eBay</a>.</p>
 </div></section>
 </main>

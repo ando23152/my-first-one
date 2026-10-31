@@ -190,3 +190,43 @@ TERMS.append({
  "quote": "Send the hole spacing, the size of what it holds, and a photo of where it mounts, and we can quote a bracket that fits the first time.",
  "related": ["fixture", "cad", "petg", "asa"]
 })
+
+for _t in [
+ {"slug": "prototype", "term": "Prototype", "cat": "Design",
+  "short": "An early working version of a part or product, made to test its fit, function, or look before committing to production.",
+  "body": ["A printed prototype lets you hold the part, try it on the equipment, and find problems while they're still cheap to fix.",
+           "Because nothing has to be tooled, a design can go through several versions in days instead of weeks. Each version is modeled in CAD, so changes carry forward cleanly.",
+           "When the design is right, the same model can go straight into a small-batch run, or be handed off for injection molding if volumes grow large."],
+  "quote": "Send a sketch, a sample, or a rough description of what it needs to do. We'll model a first version and adjust it with you until it works.",
+  "related": ["cad", "small-batch-manufacturing", "fit-types", "tolerance"]},
+ {"slug": "organizer", "term": "Organizer (custom holder or tray)", "cat": "Parts",
+  "short": "A tray, rack, caddy, or holder shaped to fit specific tools, parts, labels, or supplies, so everything has its place.",
+  "body": ["Off-the-shelf bins rarely fit the tools or parts a shop actually uses. A custom organizer is modeled around the real items, with a pocket or slot for each one.",
+           "Common examples are tool holders for a bench or wall, drawer inserts, scanner and tablet holders, label holders for racks, and cable guides.",
+           "For cold storage we use materials that stay tough at low temperatures; for sunny or hot spots, ASA."],
+  "quote": "Tell us what needs to be held and where it goes. A photo of the items next to a ruler is usually enough to start.",
+  "related": ["bracket", "fixture", "petg", "asa"]},
+ {"slug": "enclosure", "term": "Enclosure (custom housing)", "cat": "Parts",
+  "short": "A case or housing that protects a device, sensor, or circuit board and mounts it where it's needed.",
+  "body": ["An enclosure holds a circuit board, sensor, or small device, with openings for connectors, buttons, displays, and ventilation exactly where they need to be.",
+           "Printed enclosures are made to the exact size of the board or device and can include mounting tabs, snap-fit lids, and cable strain relief.",
+           "We make enclosures for low-voltage electronics and prototypes. Housings for mains-voltage electrical equipment, and anything that must meet an electrical safety code, are outside what we make."],
+  "quote": "Send the board or device dimensions, where each connector or button sits, and where it will be mounted, indoors or outdoors.",
+  "related": ["asa", "prototype", "cad", "heat-deflection-temperature"]},
+ {"slug": "roller", "term": "Roller and wheel (replacement)", "cat": "Parts",
+  "short": "A small plastic roller, wheel, or glide that lets a rack, drawer, or tray move, often the first part to crack or wear.",
+  "body": ["Dishwasher rack rollers, drawer glides, and tray wheels are small parts that wear out or break, and they're often sold only as part of a whole assembly.",
+           "A replacement roller is modeled to the original's diameter, width, and axle hole, in a tough material that rolls smoothly.",
+           "We don't make wheels that carry a person or a heavy load, or any part where a failure could cause injury."],
+  "quote": "Send the old roller if you can, or its diameter, width, and axle size, plus the appliance's model number.",
+  "related": ["aftermarket-part", "oem-part", "petg", "tolerance"]},
+ {"slug": "clips-and-covers", "term": "Clips and covers (replacement)", "cat": "Parts",
+  "short": "Small plastic parts that hold things closed or cover an opening, like battery doors, end caps, hose clips, and trim pieces.",
+  "body": ["Clips, latches, caps, and covers break easily and are often hard to buy on their own, so a whole assembly gets replaced for one small piece.",
+           "These parts depend on exact fits, so we model them from the original or careful measurements and test the snap or latch before delivery.",
+           "Common examples are battery covers for remotes, appliance handle end caps, hose and cable clips, and equipment covers."],
+  "quote": "The broken part, even in pieces, is the best reference. Otherwise send clear photos with a ruler and the equipment's model number.",
+  "related": ["fit-types", "tolerance", "aftermarket-part", "petg"]},
+]:
+    if not any(x["slug"] == _t["slug"] for x in TERMS):
+        TERMS.append(_t)

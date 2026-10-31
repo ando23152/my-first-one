@@ -135,7 +135,7 @@ LIGHT_CSS = r"""
 def css():
     import tools, parts_pages
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
-    return base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + LIGHT_CSS
+    return base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + LIGHT_CSS
 
 JS = r"""
 (function(){
@@ -160,7 +160,7 @@ JS = r"""
     if(form){fill(text);e.preventDefault();document.getElementById('quote').scrollIntoView({behavior:'smooth'})}
     else{store('tpf-part',text)}
   });
-  function fill(t){var d=document.getElementById('q-desc');if(!d)return;document.getElementById('q-type').value='Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
+  function fill(t){var d=document.getElementById('q-desc');if(!d){var e=document.getElementById('e-desc');if(e){e.value=t+'\nMi modelo: ';}return}document.getElementById('q-type').value='Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
   var pending=take('tpf-part');if(pending)fill(pending);
   // parts filter
   var list=document.getElementById('plist');
@@ -170,9 +170,10 @@ JS = r"""
     document.querySelectorAll('#cat-chips .chip').forEach(function(c){c.addEventListener('click',function(){brand=c.getAttribute('data-b');limit=40;document.querySelectorAll('#cat-chips .chip').forEach(function(k){k.setAttribute('aria-pressed',k===c)});render()})});
     function render(){var v=q.value.trim().toLowerCase(),n=0,shown=0;
       rows.forEach(function(r){var ok=(brand==='All'||r.getAttribute('data-b')===brand)&&(!fit.checked||r.getAttribute('data-fit')==='1')&&(!v||r.getAttribute('data-k').indexOf(v)>-1);if(ok)n++;var show=ok&&shown<limit;if(show)shown++;r.hidden=!show});
-      more.hidden=n<=limit;more.textContent='Show more ('+(n-limit)+')';empty.hidden=n>0;count.textContent=n+(n===1?' part':' parts');}
+      more.hidden=n<=limit;more.textContent=(list.getAttribute('data-more')||'Show more')+' ('+(n-limit)+')';empty.hidden=n>0;count.textContent=n+' '+(n===1?(list.getAttribute('data-one')||'part'):(list.getAttribute('data-many')||'parts'));}
     q.addEventListener('input',function(){limit=40;render()});fit.addEventListener('change',function(){limit=40;render()});more.addEventListener('click',function(){limit+=60;render()});render();
   }
+@@MENU@@
   // quote form
   var f=document.getElementById('qf');
   if(f&&!window.TPF_HOME){
@@ -262,14 +263,16 @@ def head(c, title, desc, lds=(), og_type="website"):
     return h + "\n".join(ld(x) for x in lds)
 
 def header(c):
+    import extras as X
     L = c.link
+    mb, mp = X.menu(c)
     return f"""<a href="#main" class="skip" style="position:absolute;left:-9999px;top:0;z-index:50;background:var(--accent);color:#fff;padding:10px 16px" onfocus="this.style.left='12px'" onblur="this.style.left='-9999px'">Skip to content</a>
 <div class="opening" role="note"><div class="wrap">Opening January 1, 2027 <span aria-hidden="true">·</span> <a href="{L('', 'quote')}">Quote requests welcome now</a> <span aria-hidden="true">·</span> <a href="{L('es/')}" hreflang="es" lang="es">Español</a></div></div>
 <header id="hdr">
   <div class="wrap bar">
     <a class="brand" href="{L('')}" aria-label="True Part Fabrication home"><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493"></a>
     <nav class="main" aria-label="Main">
-      <a class="l" href="{L('', 'services')}">Services</a>
+      <a class="l" href="{L('services/')}">Services</a>
       <a class="l" href="{L('', 'business')}">For business</a>
       <a class="l" href="{L('', 'parts')}">Parts</a>
       <a class="l" href="{L('', 'process')}">Process</a>
@@ -277,19 +280,24 @@ def header(c):
       <a class="l" href="{L('faq/')}">FAQ</a>
       <a class="l" href="{L('', 'about')}">About</a>
       <button class="theme-btn" type="button" id="theme-btn" aria-label="Switch to light theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <a class="icon-l s" href="{L('search/')}" aria-label="Search the site">{X.SEARCH_SVG}</a>
       <a class="btn" href="{L('', 'quote')}">Request a quote</a>
+      {mb}
     </nav>
   </div>
-</header>"""
+</header>
+{mp}"""
 
 def footer(c):
+    import extras as X
     L = c.link
+    PH = f'<li><a href="{X.tel(X.PHONE)}">Call {X.PHONE}</a></li>' if X.PHONE else ''
     return f"""<footer>
   <div class="wrap">
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
-      <div><h4>Explore</h4><ul><li><a href="{L('', 'services')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
@@ -370,9 +378,9 @@ def home(c, art=False):
         return '<a href="' + c.link(p, frag) + '">' + text + '</a>'
     for nm, sl in [("DeWalt","dewalt"),("Milwaukee","milwaukee"),("Ryobi","ryobi"),("Ridgid","ridgid"),("Makita","makita"),("Craftsman","craftsman"),("Shop-Vac","shop-vac"),("Vacmaster","vacmaster"),("WEN","wen"),("Shark","shark"),("Prolux","prolux"),("Samsung","samsung"),("Hampton Bay","hampton-bay")]:
         main = main.replace("<span>" + nm + "</span>", '<a href="' + c.link("brands/" + sl + "/") + '">' + nm + "</a>", 1)
-    TAGS = [("Dust adapters","tools/hose-size-finder/"),("Hose fittings","glossary/dust-port-hose-sizes/"),("Clips &amp; covers","parts/"),("Rollers","brands/samsung/"),
-            ("Brackets","glossary/bracket/"),("Jigs &amp; fixtures","glossary/jig/"),("Prototypes","tools/material-picker/"),("Organizers","industries/warehouse-cold-storage/"),
-            ("Enclosures","glossary/asa/"),("No tooling","glossary/small-batch-manufacturing/"),("No 1,000-unit minimums","glossary/small-batch-manufacturing/"),("Repeat orders","faq/")]
+    TAGS = [("Dust adapters","tools/hose-size-finder/"),("Hose fittings","glossary/dust-port-hose-sizes/"),("Clips &amp; covers","glossary/clips-and-covers/"),("Rollers","glossary/roller/"),
+            ("Brackets","glossary/bracket/"),("Jigs &amp; fixtures","glossary/jig/"),("Prototypes","glossary/prototype/"),("Organizers","glossary/organizer/"),
+            ("Enclosures","glossary/enclosure/"),("No tooling","glossary/small-batch-manufacturing/"),("No 1,000-unit minimums","glossary/small-batch-manufacturing/"),("Repeat orders","faq/")]
     for t_, p_ in TAGS:
         main = main.replace("<li>" + t_ + "</li>", "<li>" + A(p_, t_) + "</li>", 1)
     for b_, p_, f_ in [("Free reprint","faq/",""),("300 mm³","","materials"),("Modesto, CA","faq/","")]:
@@ -405,6 +413,26 @@ def home(c, art=False):
     main = main.replace('<div class="brands">', tools_sec + '<div class="brands">', 1)
     for nm, sl in [("Food processing", "food-processing"), ("Agriculture", "agriculture"), ("Warehouse &amp; cold storage", "warehouse-cold-storage"), ("Industrial shops", "industrial-shops")]:
         main = main.replace("<div><h3>" + nm + "</h3>", '<div><h3><a href="' + c.link("industries/" + sl + "/") + '" style="color:inherit;text-decoration:none">' + nm + "</a></h3>", 1)
+    import extras as X
+    for k_, s_ in [("Replacement parts","replacement-parts"),("Custom fabrication","custom-fabrication"),("Electronics &amp; products","electronics-enclosures"),("Small-batch runs","small-batch-manufacturing")]:
+        main = re.sub(r'(<div class="k">' + re.escape(k_) + r'</div>.*?</ul>)', lambda m: m.group(1) + '<a class="svc-more" href="' + c.link("services/" + s_ + "/") + '">More about ' + re.sub("<[^>]+>","",k_).replace("&amp;","&").lower() + ' →</a>', main, count=1, flags=re.S)
+    about_more = f'''<div class="about-more">
+          <div><b>Company</b><span>True Part Fabrication LLC, a California company based in Modesto</span></div>
+          <div><b>Opening</b><span>January 1, 2027. Quote requests welcome now; hours posted at opening</span></div>
+          <div><b>In the shop</b><span>Enclosed 3D printers, parts up to 300 mm, CAD modeling, digital calipers</span></div>
+          <div><b>On site</b><span>Measuring at your location across Modesto, Ceres, Turlock, Manteca, Tracy, and Stockton</span></div>
+          <div><b>Guarantee</b><span><a href="{c.link('terms/')}">Free reprint</a> if a part doesn't fit</span></div>
+          <div><b>See more</b><span><a href="{c.link('projects/')}">Projects</a> · <a href="{c.link('pricing/')}">Pricing</a> · <a href="{c.link('services/')}">Services</a></span></div>
+        </div>'''
+    main = main.replace('''        </div>
+      </div>
+      <div class="scope">''', '''        </div>
+        ''' + about_more + '''
+      </div>
+      <div class="scope">''', 1)
+    if X.PHONE:
+        main = main.replace('<div class="ci"><b>Location</b>', f'<div class="ci"><b>Phone</b><span><a href="{X.tel(X.PHONE)}">{X.PHONE}</a></span></div><div class="ci"><b>Location</b>', 1)
+    main = main.replace('<section id="quote"', '<section id="notify" style="border-top:1px solid var(--line);padding-block:72px"><div class="wrap">' + X.notify_block(c) + '</div></section>\n\n<section id="quote"', 1)
     main = main.replace('<section id="quote"', f"""<section id="learn" style="border-top:1px solid var(--line);padding-block:80px">
   <div class="wrap">
     <div class="head" style="margin-bottom:0">
@@ -624,7 +652,7 @@ def notfound(c):
   <div class="label">404</div>
   <h1>We couldn't find that page</h1>
   <p class="lead">It may have moved, or the link may be mistyped. These are good places to start:</p>
-  <div class="terms-strip" style="margin-top:26px"><a href="{c.link('')}">Home</a><a href="{c.link('parts/')}">Compatible parts</a><a href="{c.link('tools/hose-size-finder/')}">Hose size finder</a><a href="{c.link('tools/material-picker/')}">Material picker</a><a href="{c.link('resources/')}">All resources</a><a href="{c.link('', 'quote')}">Request a quote</a></div>
+  <div class="terms-strip" style="margin-top:26px"><a href="{c.link('')}">Home</a><a href="{c.link('parts/')}">Compatible parts</a><a href="{c.link('tools/hose-size-finder/')}">Hose size finder</a><a href="{c.link('tools/material-picker/')}">Material picker</a><a href="{c.link('resources/')}">All resources</a><a href="{c.link('search/')}">Search</a><a href="{c.link('', 'quote')}">Request a quote</a></div>
 </div></div>
 </main>"""
     return doc(c, head(c, "Page not found | True Part Fabrication", "This page couldn't be found.", []), body)
@@ -641,14 +669,15 @@ def build(mode, root):
         for f in os.listdir("/home/claude/site/assets/img"):
             shutil.copy("/home/claude/site/assets/img/" + f, root + "/assets/img/" + f)
     write(root, "assets/site.css", css())
-    write(root, "assets/site.js", JS)
+    write(root, "assets/site.js", JS.replace("@@MENU@@", __import__("extras").MENU_JS))
     import tools, parts_pages
     parts_pages.assign_slugs(CAT["items"])
     pages = {"": lambda c: home(c, art=(mode == "art")), "parts/": parts, "faq/": faq, "glossary/": gloss_index, "privacy/": privacy, "terms/": terms}
     pages.update(tools.pages())
     pages.update(parts_pages.pages())
-    import es
+    import es, extras
     pages.update(es.pages())
+    pages.update(extras.pages())
     for p, fn in pages.items():
         write(root, p + "index.html", fn(Ctx(mode, p)))
     for t in TERMS:
