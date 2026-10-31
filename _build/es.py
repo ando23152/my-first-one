@@ -95,7 +95,7 @@ def footer_es(c):
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Piezas de repuesto, fabricación a medida y producción en lotes pequeños en Modesto, California.</p></div>
       <div><h4>Explorar</h4><ul><li><a href="{L('es/', 'servicios')}">Servicios</a></li><li><a href="{L('es/', 'industrias')}">Industrias</a></li><li><a href="{L('es/preguntas-frecuentes/')}">Preguntas frecuentes</a></li><li><a href="{L('es/piezas/')}">Catálogo de piezas</a></li><li><a href="{L('tools/hose-size-finder/')}" hreflang="en">Tamaños de manguera (inglés)</a></li><li><a href="{L('')}" hreflang="en" lang="en">English</a></li></ul></div>
-      <div><h4>Contacto</h4><ul><li><a href="{L('es/', 'cotizar')}">Pedir cotización</a></li><li><a href="{B.EBAY}" target="_blank" rel="noopener">Tienda en eBay</a></li><li><a href="{L('privacy/')}" hreflang="en">Privacidad (inglés)</a></li><li><a href="{L('terms/')}" hreflang="en">Términos de servicio (inglés)</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="{L('es/', 'cotizar')}">Pedir cotización</a></li><li><a href="tel:+12095544800">Llamar al (209) 554-4800</a></li><li><a href="{B.EBAY}" target="_blank" rel="noopener">Tienda en eBay</a></li><li><a href="{L('privacy/')}" hreflang="en">Privacidad (inglés)</a></li><li><a href="{L('terms/')}" hreflang="en">Términos de servicio (inglés)</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
@@ -176,7 +176,7 @@ def home_es(c):
 </div></section>
 
 <section class="es-sec" id="cotizar"><div class="wrap">
-  <div class="head"><div class="label">Cotización</div><h2>Cuéntenos de <em class="s">su pieza.</em></h2><p>Llene el formulario y se abrirá su correo con la solicitud lista. Adjunte una foto de la pieza y envíela. Respondemos en español.</p></div>
+  <div class="head"><div class="label">Cotización</div><h2>Cuéntenos de <em class="s">su pieza.</em></h2><p>Llene el formulario y se abrirá su correo con la solicitud lista. Adjunte una foto de la pieza y envíela. Respondemos en español. ¿Prefiere hablar? Llame al <a href="tel:+12095544800" style="color:var(--ink)">(209) 554-4800</a>.</p></div>
   <form class="es-form" id="qf-es" data-to="{QUOTE_TO}" novalidate>
     <label for="e-name">Nombre<input id="e-name" autocomplete="name" required></label>
     <label for="e-co">Empresa (opcional)<input id="e-co" autocomplete="organization"></label>

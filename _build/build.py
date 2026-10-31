@@ -264,7 +264,7 @@ ORG = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": BASE +
        "description": "Custom part manufacturing, replacement parts, and small-batch production in Modesto, California.",
        "address": {"@type": "PostalAddress", "addressLocality": "Modesto", "addressRegion": "CA", "addressCountry": "US"},
        "areaServed": ["Modesto", "Ceres", "Turlock", "Manteca", "Tracy", "Stockton", "Stanislaus County", "San Joaquin County"],
-       "sameAs": [EBAY],
+       "sameAs": [EBAY], "telephone": "+1-209-554-4800",
        "knowsAbout": ["Additive manufacturing", "Replacement parts", "Reverse engineering", "Jigs and fixtures", "Small-batch manufacturing"]}
 
 def crumbs_ld(items):
@@ -296,7 +296,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="{c.asset('site.css')}?v=11">
+<link rel="stylesheet" href="{c.asset('site.css')}?v=12">
 """
     return h + "\n".join(ld(x) for x in lds)
 

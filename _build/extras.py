@@ -5,7 +5,7 @@ esc = html.escape
 
 QUOTE_TO = "ando23152@gmail.com"
 NOTIFY_ENDPOINT = ""   # Formspree URL (https://formspree.io/f/XXXX) once Nick creates it; empty = email fallback
-PHONE = ""             # business phone, e.g. "(209) 555-0123"; empty = hidden
+PHONE = "(209) 554-4800"
 
 def tel(p): return "tel:+1" + re.sub(r"\D", "", p)[-10:]
 
