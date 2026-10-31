@@ -29,7 +29,7 @@
   function fill(t){var d=document.getElementById('q-desc');if(!d){var e=document.getElementById('e-desc');if(e){e.value=t+'\nMi modelo: ';}return}document.getElementById('q-type').value=/^Custom adapter/.test(t)?'Custom part or prototype':'Replacement part';d.value=t+'\nMy model: ';setTimeout(function(){document.getElementById('q-name').focus({preventScroll:true})},600)}
 
   // ---- save form drafts on this device ----
-  ['qf','qf-es','rl-form'].concat([].map.call(document.querySelectorAll('form.xform[id]'),function(f){return f.id})).forEach(function(id){
+  ['qf','qf-es','rl-form'].concat([].map.call(document.querySelectorAll('form.xform[id]'),function(f){return f.id})).filter(function(x,i,a){return a.indexOf(x)===i}).forEach(function(id){
     var f=document.getElementById(id);if(!f)return;var key='tpf-draft-'+id,ES2=document.documentElement.lang==='es';
     var fields=[].filter.call(f.querySelectorAll('input,textarea,select'),function(x){return x.id&&x.type!=='checkbox'&&x.type!=='hidden'&&x.type!=='file'});
     try{var d=JSON.parse(localStorage.getItem(key)||'null');if(d&&Date.now()-d._t<14*864e5){fields.forEach(function(x){if(d[x.id]!=null&&!x.value)x.value=d[x.id]})}}catch(e){}
@@ -95,18 +95,18 @@
   function getL(){try{return JSON.parse(localStorage.getItem(LK)||'[]')}catch(e){return []}}
   function setL(a){try{localStorage.setItem(LK,JSON.stringify(a))}catch(e){}updPill();document.dispatchEvent(new CustomEvent('tpf-list'))}
   function inL(t){return getL().some(function(x){return x.t===t})}
-  function updPill(){var p=document.getElementById('list-pill'),n=getL().length;if(!p)return;p.hidden=n===0;var b=document.getElementById('list-n');if(b)b.textContent=n;p.setAttribute('aria-label',(ES?'Lista de solicitud: ':'Request list: ')+n+(ES?' piezas':n===1?' part':' parts'))}
-  function lbl(on){return on?(ES?'✓ En la lista':'✓ On list'):(ES?'+ Lista':'+ Add to list')}
+  function updPill(){var p=document.getElementById('list-pill'),n=getL().length;if(!p)return;p.hidden=n===0;var b=document.getElementById('list-n');if(b)b.textContent=n;p.setAttribute('aria-label',(ES?'Carrito: ':'Cart: ')+n+(ES?' piezas':n===1?' part':' parts'))}
+  function lbl(on){return on?(ES?'✓ En el carrito':'✓ In cart'):(ES?'+ Carrito':'+ Add to cart')}
   document.querySelectorAll('a[data-part]').forEach(function(a){
     if(a.closest('.pc')||a.closest('.stickybar'))return;
     var b=document.createElement('button');b.type='button';b.className='add-list';var t=a.getAttribute('data-part');b.setAttribute('data-add',t);
-    var on=inL(t);b.textContent=lbl(on);b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?(ES?'Quitar de la lista: ':'Remove from request list: '):(ES?'Añadir a la lista: ':'Add to request list: '))+t.split('\n')[0].replace(/^[^:]*: /,''));
+    var on=inL(t);b.textContent=lbl(on);b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?(ES?'Quitar del carrito: ':'Remove from cart: '):(ES?'Añadir al carrito: ':'Add to cart: '))+t.split('\n')[0].replace(/^[^:]*: /,''));
     a.insertAdjacentElement('afterend',b);
   });
   document.addEventListener('click',function(e){var b=e.target.closest('[data-add]');if(!b)return;var t=b.getAttribute('data-add'),L=getL(),i=L.findIndex(function(x){return x.t===t});
     if(i>-1)L.splice(i,1);else L.push({t:t,q:1});setL(L);
     document.querySelectorAll('[data-add]').forEach(function(x){var on=inL(x.getAttribute('data-add'));x.textContent=lbl(on);x.setAttribute('aria-pressed',on)});
-    var st=document.getElementById('list-live');if(st)st.textContent=i>-1?(ES?'Quitado de la lista.':'Removed from your request list.'):(ES?'Añadido a la lista.':'Added to your request list.');});
+    var st=document.getElementById('list-live');if(st)st.textContent=i>-1?(ES?'Quitado del carrito.':'Removed from your cart.'):(ES?'Añadido al carrito.':'Added to your cart.');});
   if(!document.getElementById('list-live')){var lv=document.createElement('div');lv.id='list-live';lv.setAttribute('role','status');lv.style.cssText='position:absolute;left:-9999px';document.body.appendChild(lv)}
   updPill();
   // ---- shortcuts: "/" to search, back to top ----
@@ -219,7 +219,7 @@
     f.addEventListener('change',upd);f.addEventListener('input',upd);upd()})();
   // r25: request list shows a running total
   (function(){var ul=document.getElementById('rl-items');if(!ul)return;var tot=document.createElement('p');tot.className='rl-total';tot.setAttribute('role','status');ul.insertAdjacentElement('afterend',tot);
-    function u(){var L=[];try{L=JSON.parse(localStorage.getItem('tpf-list')||'[]')}catch(e){}var n=L.reduce(function(s,x){return s+(x.q||1)},0);tot.textContent=L.length?(L.length+(L.length===1?' part, ':' parts, ')+n+' pieces in total.'):''}
+    function u(){var L=[];try{L=JSON.parse(localStorage.getItem('tpf-list')||'[]')}catch(e){}var n=L.reduce(function(s,x){return s+(x.q||1)},0);tot.textContent=L.length?(L.length+(L.length===1?' part, ':' parts, ')+n+(n===1?' piece in total.':' pieces in total.')):''}
     new MutationObserver(u).observe(ul,{childList:true});ul.addEventListener('change',function(){setTimeout(u,0)});u()})();
 
   // quote form

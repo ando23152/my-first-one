@@ -305,7 +305,7 @@ def search_index(c):
                     ("Reorder a part", "reorder/", "Reorder by part ID."), ("Frequently asked questions", "faq/", "Quotes, pricing, turnaround, materials, fit guarantee."),
                     ("Hose and dust port size finder", "tools/hose-size-finder/", "Look up hose, wand, and dust port sizes for vacs, collectors, and tools."),
                     ("Adapter builder", "tools/adapter-builder/", "Build a custom adapter between any two hose or dust port sizes."),
-                    ("Request list", "request-list/", "Send several parts in one quote request."),
+                    ("Cart", "request-list/", "Buy priced parts online, or send several parts in one quote request."),
                     ("Material picker", "tools/material-picker/", "Five questions to the right material: PLA, PETG, ASA, TPU, nylon."),
                     ("How to measure a part", "guides/how-to-measure-a-part/", "Photograph and measure a broken part for an accurate quote."),
                     ("Terms of Service", "terms/", "Quotes, orders, aftermarket parts, fit guarantee."), ("Privacy", "privacy/", "How we handle your information."),
@@ -382,7 +382,7 @@ def es_catalog(c):
         k = (it["b"] + " " + it["oem"] + " " + it.get("for", "") + " " + it["n"] + " " + it["f"]).lower()
         badge = "" if it["f"] else '<span class="fitbadge">Ajuste por confirmar</span>'
         ptxt = "Pieza compatible: " + it["n"] + "\n" + rp(it)
-        rows.append(f"""<div class="row" data-b="{esc(it['b'])}" data-fit="{1 if it['f'] else 0}" data-k="{esc(k)}"><div class="b">{esc(it['b'])}</div><h3 class="n" style="font:600 1rem var(--f-body);text-transform:none;letter-spacing:0"><a href="{c.link('parts/' + it['slug'] + '/')}" hreflang="en" lang="en">{esc(it['n'])}</a>{badge}</h3><div class="o">{esc(rp(it))}</div><div class="f">{('Compatible con: <span lang="en">' + esc(it['f']) + '</span>') if it['f'] else 'Pídanos confirmar su modelo'}</div><a class="btn ghost" style="height:34px;padding:0 14px;font-size:.8rem" href="{c.link('es/', 'cotizar')}" data-part="{esc(ptxt)}">Solicitar</a></div>""")
+        rows.append(f"""<div class="row" data-b="{esc(it['b'])}" data-fit="{1 if it['f'] else 0}" data-k="{esc(k)}"><div class="b">{esc(it['b'])}</div><h3 class="n" style="font:600 1rem var(--f-body);text-transform:none;letter-spacing:0"><a href="{c.link('parts/' + it['slug'] + '/')}" hreflang="en" lang="en">{esc(it['n'])}</a>{badge}</h3><div class="o">{esc(rp(it))}{(' · <span class="pr">$' + format(float(it['price']), '.2f') + '</span>') if __import__('shop').buyable(it) else ''}</div><div class="f">{('Compatible con: <span lang="en">' + esc(it['f']) + '</span>') if it['f'] else 'Pídanos confirmar su modelo'}</div><a class="btn ghost" style="height:34px;padding:0 14px;font-size:.8rem" href="{c.link('es/', 'cotizar')}" data-part="{esc(ptxt)}">Solicitar</a></div>""")
     body = f"""<main id="main">
 <div class="page-hero"><div class="wrap">
   {B.crumbs(c, [('Inicio', 'es/'), ('Catálogo de piezas', 'es/piezas/')])}
@@ -434,7 +434,7 @@ EX_CSS += r"""
 .rl-items button{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;height:36px;padding:0 14px;cursor:pointer;font:600 .8rem var(--f-body)}
 .rl-items button:hover{border-color:var(--accent)}
 @media (max-width:600px){.rl-items li{grid-template-columns:1fr auto}.rl-items .t{grid-column:1/-1}}
-@media (max-width:900px){.list-pill{height:38px;padding:0 12px;font-size:0;gap:0}.list-pill b{font-size:.75rem}.list-pill::before{content:"List";font:600 .8rem var(--f-body);margin-right:6px}}
+@media (max-width:900px){.list-pill{height:38px;padding:0 12px;font-size:0;gap:0}.list-pill b{font-size:.75rem}.list-pill::before{content:"Cart";font:600 .8rem var(--f-body);margin-right:6px}}
 /* ---- to top ---- */
 .to-top{position:fixed;right:18px;bottom:18px;z-index:30;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 24px -10px rgba(0,0,0,.5)}
 .to-top[hidden]{display:none}
@@ -459,18 +459,18 @@ LIST_JS = r"""
   function getL(){try{return JSON.parse(localStorage.getItem(LK)||'[]')}catch(e){return []}}
   function setL(a){try{localStorage.setItem(LK,JSON.stringify(a))}catch(e){}updPill();document.dispatchEvent(new CustomEvent('tpf-list'))}
   function inL(t){return getL().some(function(x){return x.t===t})}
-  function updPill(){var p=document.getElementById('list-pill'),n=getL().length;if(!p)return;p.hidden=n===0;var b=document.getElementById('list-n');if(b)b.textContent=n;p.setAttribute('aria-label',(ES?'Lista de solicitud: ':'Request list: ')+n+(ES?' piezas':n===1?' part':' parts'))}
-  function lbl(on){return on?(ES?'✓ En la lista':'✓ On list'):(ES?'+ Lista':'+ Add to list')}
+  function updPill(){var p=document.getElementById('list-pill'),n=getL().length;if(!p)return;p.hidden=n===0;var b=document.getElementById('list-n');if(b)b.textContent=n;p.setAttribute('aria-label',(ES?'Carrito: ':'Cart: ')+n+(ES?' piezas':n===1?' part':' parts'))}
+  function lbl(on){return on?(ES?'✓ En el carrito':'✓ In cart'):(ES?'+ Carrito':'+ Add to cart')}
   document.querySelectorAll('a[data-part]').forEach(function(a){
     if(a.closest('.pc')||a.closest('.stickybar'))return;
     var b=document.createElement('button');b.type='button';b.className='add-list';var t=a.getAttribute('data-part');b.setAttribute('data-add',t);
-    var on=inL(t);b.textContent=lbl(on);b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?(ES?'Quitar de la lista: ':'Remove from request list: '):(ES?'Añadir a la lista: ':'Add to request list: '))+t.split('\n')[0].replace(/^[^:]*: /,''));
+    var on=inL(t);b.textContent=lbl(on);b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?(ES?'Quitar del carrito: ':'Remove from cart: '):(ES?'Añadir al carrito: ':'Add to cart: '))+t.split('\n')[0].replace(/^[^:]*: /,''));
     a.insertAdjacentElement('afterend',b);
   });
   document.addEventListener('click',function(e){var b=e.target.closest('[data-add]');if(!b)return;var t=b.getAttribute('data-add'),L=getL(),i=L.findIndex(function(x){return x.t===t});
     if(i>-1)L.splice(i,1);else L.push({t:t,q:1});setL(L);
     document.querySelectorAll('[data-add]').forEach(function(x){var on=inL(x.getAttribute('data-add'));x.textContent=lbl(on);x.setAttribute('aria-pressed',on)});
-    var st=document.getElementById('list-live');if(st)st.textContent=i>-1?(ES?'Quitado de la lista.':'Removed from your request list.'):(ES?'Añadido a la lista.':'Added to your request list.');});
+    var st=document.getElementById('list-live');if(st)st.textContent=i>-1?(ES?'Quitado del carrito.':'Removed from your cart.'):(ES?'Añadido al carrito.':'Added to your cart.');});
   if(!document.getElementById('list-live')){var lv=document.createElement('div');lv.id='list-live';lv.setAttribute('role','status');lv.style.cssText='position:absolute;left:-9999px';document.body.appendChild(lv)}
   updPill();
   // ---- shortcuts: "/" to search, back to top ----
@@ -483,7 +483,7 @@ LIST_JS = r"""
 
 DRAFT_JS = r"""
   // ---- save form drafts on this device ----
-  ['qf','qf-es','rl-form'].concat([].map.call(document.querySelectorAll('form.xform[id]'),function(f){return f.id})).forEach(function(id){
+  ['qf','qf-es','rl-form'].concat([].map.call(document.querySelectorAll('form.xform[id]'),function(f){return f.id})).filter(function(x,i,a){return a.indexOf(x)===i}).forEach(function(id){
     var f=document.getElementById(id);if(!f)return;var key='tpf-draft-'+id,ES2=document.documentElement.lang==='es';
     var fields=[].filter.call(f.querySelectorAll('input,textarea,select'),function(x){return x.id&&x.type!=='checkbox'&&x.type!=='hidden'&&x.type!=='file'});
     try{var d=JSON.parse(localStorage.getItem(key)||'null');if(d&&Date.now()-d._t<14*864e5){fields.forEach(function(x){if(d[x.id]!=null&&!x.value)x.value=d[x.id]})}}catch(e){}

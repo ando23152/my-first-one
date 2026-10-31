@@ -1,0 +1,1 @@
+{"enabled":false,"endpoint":"","opens":"January 1, 2027","ship":[{"id":"small","label":"Small part","cents":400},{"id":"medium","label":"Medium part","cents":475},{"id":"large","label":"Large part","cents":550}],"pickup":{"label":"Local pickup in Modesto","cents":0},"maxQty":25,"items":{}}

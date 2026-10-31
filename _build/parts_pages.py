@@ -106,7 +106,12 @@ def part_page(c, it, items, hose):
     spec = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in rows)
     price = ""
     if it.get("price"):
-        price = f'<div class="price-tag">From ${it["price"]:.2f}<small>Final price is in your written quote.</small></div>'
+        S = __import__("shop")
+        if S.buyable(it):
+            _how = "Add it to your cart and check out online." if S.CHECKOUT["enabled"] else f"Online checkout opens {S.CHECKOUT['opens']}. Until then, it's quoted at this price."
+            price = f'<div class="price-tag">${it["price"]:.2f}<small>Plus shipping and tax. {_how}</small></div>'
+        else:
+            price = f'<div class="price-tag">From ${it["price"]:.2f}<small>Final price is in your written quote.</small></div>'
     same = [x for x in items if x is not it and x["b"] == b and x["i"] == it["i"]]
     same += [x for x in items if x is not it and x["b"] == b and x not in same]
     rel = "".join(f'<a href="{c.link(url(x))}">{esc(x["n"])}<span>{esc(B.rp(x))}</span></a>' for x in same[:6])

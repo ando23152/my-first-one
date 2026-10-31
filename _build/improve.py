@@ -107,7 +107,7 @@ def sitemap_page(c, pages):
     L = c.link
     def ul(items): return "<ul>" + "".join(f'<li><a href="{L(p)}">{esc(t)}</a></li>' for t, p in items) + "</ul>"
     main = [("Home", ""), ("Services", "services/"), ("Pricing", "pricing/"), ("Projects", "projects/"), ("FAQ", "faq/"), ("Request a quote", "quote/"), ("For business", "business/"), ("Process", "process/"), ("Materials", "materials/"), ("About", "about/"),
-            ("Reorder a part", "reorder/"), ("Request list", "request-list/"), ("Search", "search/"), ("Terms of Service", "terms/"), ("Privacy", "privacy/"), ("Español", "es/")]
+            ("Reorder a part", "reorder/"), ("Cart", "request-list/"), ("Search", "search/"), ("Terms of Service", "terms/"), ("Privacy", "privacy/"), ("Español", "es/")]
     main = [(t, p) if not p.startswith("#") else (t, "") for t, p in main]
     import extras as X
     svc = [(n, "services/" + s + "/") for s, n, *_ in X.SERVICES]
@@ -269,7 +269,7 @@ IMP_JS += r"""
     f.addEventListener('change',upd);f.addEventListener('input',upd);upd()})();
   // r25: request list shows a running total
   (function(){var ul=document.getElementById('rl-items');if(!ul)return;var tot=document.createElement('p');tot.className='rl-total';tot.setAttribute('role','status');ul.insertAdjacentElement('afterend',tot);
-    function u(){var L=[];try{L=JSON.parse(localStorage.getItem('tpf-list')||'[]')}catch(e){}var n=L.reduce(function(s,x){return s+(x.q||1)},0);tot.textContent=L.length?(L.length+(L.length===1?' part, ':' parts, ')+n+' pieces in total.'):''}
+    function u(){var L=[];try{L=JSON.parse(localStorage.getItem('tpf-list')||'[]')}catch(e){}var n=L.reduce(function(s,x){return s+(x.q||1)},0);tot.textContent=L.length?(L.length+(L.length===1?' part, ':' parts, ')+n+(n===1?' piece in total.':' pieces in total.')):''}
     new MutationObserver(u).observe(ul,{childList:true});ul.addEventListener('change',function(){setTimeout(u,0)});u()})();
 """
 

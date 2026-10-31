@@ -156,7 +156,7 @@ def css():
     import tools, parts_pages
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
     import improve
-    return improve.minify_css(base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + improve.IMP_CSS + LIGHT_CSS)
+    return improve.minify_css(base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + __import__('shop').SHOP_CSS + improve.IMP_CSS + LIGHT_CSS)
 
 JS = r"""
 (function(){
@@ -296,7 +296,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="{c.asset('site.css')}?v=12">
+<link rel="stylesheet" href="{c.asset('site.css')}?v=13">
 """
     return h + "\n".join(ld(x) for x in lds)
 
@@ -319,7 +319,7 @@ def header(c):
       <a class="l" href="{L('', 'about')}">About</a>
       <button class="theme-btn" type="button" id="theme-btn" aria-label="Theme"><svg class="dot" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="currentColor"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="icon-l s" href="{L('search/')}" aria-label="Search the site">{X.SEARCH_SVG}</a>
-      <a class="list-pill" id="list-pill" href="{L('request-list/')}" hidden>Request list <b id="list-n">0</b></a>
+      <a class="list-pill" id="list-pill" href="{L('request-list/')}" hidden>Cart <b id="list-n">0</b></a>
       <a class="btn" href="{L('', 'quote')}">Request a quote</a>
       {mb}
     </nav>
@@ -336,12 +336,12 @@ def footer(c):
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
       <div><h4>Explore</h4><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('tools/adapter-builder/')}">Adapter builder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li><li><a href="{L('request-list/')}">Request list</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li><li><a href="{L('sitemap/')}">Site map</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li><li><a href="{L('request-list/')}">Cart</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li><li><a href="{L('sitemap/')}">Site map</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span><a href="{L('business/')}" style="color:inherit;text-decoration:none">Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</a></span></div>
   </div>
 </footer>
-<script src="{c.asset('site.js')}?v=10" defer></script>"""
+<script src="{c.asset('site.js')}?v=13" defer></script>"""
 
 SWAP = re.compile(r'<img([^>]*?) src="([^"]*assets/img/)(logo-dark\.png|hero\.jpg|svc-[a-z]+\.jpg|sample-[a-z]+\.jpg)"')
 def swapimgs(h):
@@ -557,7 +557,7 @@ def parts(c):
     for it in items:
         k = (it["b"] + " " + it["oem"] + " " + it.get("for", "") + " " + it["n"] + " " + it["f"]).lower()
         badge = "" if it["f"] else '<span class="fitbadge">Fit to confirm</span>'
-        rows.append(f"""<div class="row" data-b="{esc(it['b'])}" data-fit="{1 if it['f'] else 0}" data-k="{esc(k)}"><div class="b">{esc(it['b'])}</div><h3 class="n" style="font:600 1rem var(--f-body);text-transform:none;letter-spacing:0"><a href="{c.link('parts/' + it['slug'] + '/')}">{esc(it['n'])}</a>{badge}</h3><div class="o">{esc(rp(it))}</div><div class="f">{esc(it['f'] or 'Ask us to confirm your model')}</div><a class="btn ghost" style="height:34px;padding:0 14px;font-size:.8rem" href="{c.link('', 'quote')}" data-part="{esc(part_text(it))}">Request</a></div>""")
+        rows.append(f"""<div class="row" data-b="{esc(it['b'])}" data-fit="{1 if it['f'] else 0}" data-k="{esc(k)}"><div class="b">{esc(it['b'])}</div><h3 class="n" style="font:600 1rem var(--f-body);text-transform:none;letter-spacing:0"><a href="{c.link('parts/' + it['slug'] + '/')}">{esc(it['n'])}</a>{badge}</h3><div class="o">{esc(rp(it))}{(' · <span class="pr">$' + format(float(it['price']), '.2f') + '</span>') if __import__('shop').buyable(it) else ''}</div><div class="f">{esc(it['f'] or 'Ask us to confirm your model')}</div><a class="btn ghost" style="height:34px;padding:0 14px;font-size:.8rem" href="{c.link('', 'quote')}" data-part="{esc(part_text(it))}">Request</a></div>""")
     body = f"""<main id="main">
 <div class="page-hero"><div class="wrap">
   {crumbs(c, [('Home', ''), ('Compatible parts', 'parts/')])}
@@ -713,11 +713,12 @@ def privacy(c):
   <p>Part photos, measurements, and models you send are used for your job and kept on file so we can reprint your part. Tell us if you'd like them deleted.</p>
   <h2>Third-party services</h2>
   <p>This site loads fonts from Google Fonts, which may log your IP address. Links to our eBay store take you to eBay, which has its own privacy policy.</p>
-  <h2>Contact</h2>
+  @@PAY@@<h2>Contact</h2>
   <p>Questions or deletion requests: contact us through the quote form on our home page.</p>
   <p style="color:var(--faint);font-size:.88rem">Last updated October 2026.</p>
 </div></div>
 </main>"""
+    body = body.replace("@@PAY@@", __import__("shop").PRIVACY_PAY)
     return doc(c, head(c, "Privacy | True Part Fabrication", "How True Part Fabrication handles the information you share with us.", [crumbs_ld([("Home", ""), ("Privacy", "privacy/")])]), body)
 
 
@@ -734,6 +735,8 @@ TERMS_SECTIONS = [
  ("Changes and contact", ["We may update these terms. The version in effect when you approve a quote applies to that job. Questions about these terms: use the email link in the quote section of our home page."]),
 ]
 def terms(c):
+    _on = __import__("shop").TERMS_ONLINE
+    if _on not in TERMS_SECTIONS: TERMS_SECTIONS.insert(2, _on)
     toc = "".join(f'<li><a href="#t{i}" style="color:var(--ink)">{esc(h)}</a></li>' for i, (h, _) in enumerate(TERMS_SECTIONS))
     secs = "".join(f'<h2 id="t{i}">{esc(h)}</h2>' + "".join(f"<p>{esc(p)}</p>" for p in ps) for i, (h, ps) in enumerate(TERMS_SECTIONS))
     body = f"""<main id="main">
@@ -788,6 +791,12 @@ def build(mode, root):
     import es, extras
     pages.update(es.pages())
     pages.update(extras.pages())
+    import shop
+    pages.update(shop.pages())
+    write(root, "assets/prices.json", json.dumps(shop.prices_data(CAT["items"]), ensure_ascii=False, separators=(",", ":")))
+    sp = "/home/claude/site_src/checkout-server/prices.json"
+    if os.path.isdir(os.path.dirname(sp)):
+        open(sp, "w").write(json.dumps(shop.server_prices(CAT["items"]), ensure_ascii=False, indent=1))
     import improve
     pages["sitemap/"] = lambda c: improve.sitemap_page(c, pages)
     for p, fn in pages.items():

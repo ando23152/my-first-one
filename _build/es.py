@@ -80,7 +80,7 @@ def header_es(c):
       <a class="l" href="{L('es/piezas/')}">Piezas</a>
       <a class="l lang-link" href="{L('')}" hreflang="en" lang="en">English</a>
       <button class="theme-btn" type="button" id="theme-btn" aria-label="Cambiar tema"><svg class="dot" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="currentColor"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-      <a class="list-pill" id="list-pill" href="{L('request-list/')}" hidden>Lista <b id="list-n">0</b></a>
+      <a class="list-pill" id="list-pill" href="{L('request-list/')}" hidden>Carrito <b id="list-n">0</b></a>
       <a class="btn" href="{L('es/', 'cotizar')}">Pedir cotización</a>
       {mb}
     </nav>
@@ -100,7 +100,7 @@ def footer_es(c):
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span>Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</span></div>
   </div>
 </footer>
-<script src="{c.asset('site.js')}?v=10" defer></script>"""
+<script src="{c.asset('site.js')}?v=13" defer></script>"""
 
 def doc_es(c, headhtml, body):
     alt = f'<link rel="alternate" hreflang="en" href="{B.BASE}/">\n<link rel="alternate" hreflang="es" href="{B.BASE}/es/">\n<link rel="alternate" hreflang="x-default" href="{B.BASE}/">'
