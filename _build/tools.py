@@ -301,6 +301,7 @@ def brand_page(c, b):
   {f'<div class="list">{rows}</div>' if items else f'<p style="color:var(--muted);max-width:62ch">We don\'t keep a stock list for {esc(b)} yet. Every part is modeled to your hose, port, or tool. Check the sizes below, then <a href="{c.link("", "quote")}" style="color:var(--ink)">request a quote</a> with your model number.</p>'}
   {htab}
   {__import__("seo2").brand_extra(c, b)}
+  {__import__("bm2").brand_models(c, b)}
   <div style="margin-top:44px"><div class="head" style="margin-bottom:14px"><div class="label">Other brands</div></div><div class="terms-strip">{''.join(f'<a href="{c.link("brands/" + v[0] + "/")}">{esc(k)}</a>' for k, v in BRANDS.items() if k != b)}</div></div>
   <p class="legal">These are compatible aftermarket parts made by True Part Fabrication, not genuine {esc(b)} parts. {esc(b)} and its model numbers are trademarks of their owner and are used only to describe fit. True Part Fabrication is not affiliated with or endorsed by {esc(b)}.</p>
 </div></section>
@@ -364,7 +365,8 @@ def industry_page(c, ind):
 
 # ---------------- RESOURCES HUB ----------------
 def resources(c):
-    cards = [("Tool", "Hose & dust port size finder", f"Look up hose and port sizes for {len(HOSE)} vacs, collectors, accessories, and tools.", "tools/hose-size-finder/"),
+    cards = [("Tool", "Will it fit?", "Compare any two vacs, hoses, ports or accessories and see whether you need an adapter.", "tools/will-it-fit/"),
+             ("Tool", "Hose & dust port size finder", f"Look up hose and port sizes for {len(HOSE)} vacs, collectors, accessories, and tools.", "tools/hose-size-finder/"),
              ("Tool", "Adapter builder", "Pick any two hose or port sizes and request an adapter made to fit both.", "tools/adapter-builder/"),
              ("Tool", "Material picker", "Answer five questions and get the right material for your part, with a full comparison chart.", "tools/material-picker/"),
              ("Guide", "How to measure a part", "Photograph and measure a broken part so it can be modeled and printed.", "guides/how-to-measure-a-part/"),
@@ -372,6 +374,8 @@ def resources(c):
              ("Tool", "Inch–mm converter", "Convert caliper readings and print a 1/64-inch fraction chart.", "tools/inch-mm-converter/"),
              ("Tool", "My shop", "Save your equipment and see the sizes and parts that fit it, every visit.", "my-shop/"),
              ("Guide", "Shop vac hose sizes by brand", "The common hose sizes, how to measure, and which sizes each brand uses.", "guides/shop-vac-hose-sizes/"),
+             ("Guide", "Adapter fit problems and fixes", "Loose, tight, won't lock or leaking: causes and fixes.", "guides/vacuum-adapter-fit-problems/"),
+             ("Updates", "What's new", "New tools, guides and size data, with a feed for feed readers.", "whats-new/"),
              ("Guide", "Replacing a discontinued plastic part", "Five ways to find or replace a part the manufacturer no longer sells.", "guides/replacing-a-discontinued-plastic-part/"),
              ("Reference", "Glossary", f"{len(B.TERMS)} plain-English definitions of printing, material, and fit terms.", "glossary/"),
              ("Reference", "FAQ", "Quotes, pricing, turnaround, the fit guarantee, and what we won't make.", "faq/"),

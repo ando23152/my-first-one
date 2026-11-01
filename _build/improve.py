@@ -111,7 +111,7 @@ def sitemap_page(c, pages):
     main = [(t, p) if not p.startswith("#") else (t, "") for t, p in main]
     import extras as X
     svc = [(n, "services/" + s + "/") for s, n, *_ in X.SERVICES]
-    tools = [("Resources hub", "resources/"), ("Hose size finder", "tools/hose-size-finder/"), ("Adapter builder", "tools/adapter-builder/"), ("Material picker", "tools/material-picker/"), ("Size chart", "sizes/"), ("Inch–mm converter", "tools/inch-mm-converter/"), ("My shop", "my-shop/"), ("Shop vac hose sizes by brand", "guides/shop-vac-hose-sizes/"), ("Replacing a discontinued part", "guides/replacing-a-discontinued-plastic-part/"), ("How to measure a part", "guides/how-to-measure-a-part/"), ("Glossary", "glossary/")]
+    tools = [("Resources hub", "resources/"), ("Hose size finder", "tools/hose-size-finder/"), ("Adapter builder", "tools/adapter-builder/"), ("Material picker", "tools/material-picker/"), ("Size chart", "sizes/"), ("Will it fit?", "tools/will-it-fit/"), ("Adapter fit problems", "guides/vacuum-adapter-fit-problems/"), ("What's new", "whats-new/"), ("Inch–mm converter", "tools/inch-mm-converter/"), ("My shop", "my-shop/"), ("Shop vac hose sizes by brand", "guides/shop-vac-hose-sizes/"), ("Replacing a discontinued part", "guides/replacing-a-discontinued-plastic-part/"), ("How to measure a part", "guides/how-to-measure-a-part/"), ("Glossary", "glossary/")]
     inds = [(n, "industries/" + s + "/") for s, n, *_ in T.INDS]
     brands = [(b + " parts", "brands/" + v[0] + "/") for b, v in T.BRANDS.items()]
     terms = [(t["term"], "glossary/" + t["slug"] + "/") for t in sorted(TERMS, key=lambda t: t["term"].lower())]

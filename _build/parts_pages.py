@@ -142,6 +142,7 @@ def part_page(c, it, items, hose):
   {__import__('seo').part_about(c, it, sizes, KIND.get(it['i'], it['i']))}
   {f'<div class="head" style="margin:10px 0 22px"><div class="label">More {esc(b)} parts</div></div><div class="rel">{rel}</div>' if rel else ''}
   <div class="recent" id="recent" data-me="{esc(it['n'])}|{esc(B.rp(it))}" hidden><div class="head" style="margin:44px 0 18px"><div class="label">Recently viewed</div></div><div class="rel" id="recent-list"></div></div>
+  {__import__('bm2').part_fits(c, it)}
   {__import__('seo2').same_size(c, it)}
   {pn}
   <div class="stickybar" aria-label="Quick actions"><span class="n">{esc(it['n'])}</span><a class="btn" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request</a></div>

@@ -19,7 +19,7 @@
 
   // ---- save form drafts on this device ----
   ['qf','qf-es','rl-form'].concat([].map.call(document.querySelectorAll('form.xform[id]'),function(f){return f.id})).filter(function(x,i,a){return a.indexOf(x)===i}).forEach(function(id){
-    var f=document.getElementById(id);if(!f)return;var key='tpf-draft-'+id,ES2=document.documentElement.lang==='es';
+    var f=document.getElementById(id);if(!f||f.hasAttribute('data-nodraft'))return;var key='tpf-draft-'+id,ES2=document.documentElement.lang==='es';
     var fields=[].filter.call(f.querySelectorAll('input,textarea,select'),function(x){return x.id&&x.type!=='checkbox'&&x.type!=='hidden'&&x.type!=='file'});
     try{var d=JSON.parse(localStorage.getItem(key)||'null');if(d&&Date.now()-d._t<14*864e5){fields.forEach(function(x){if(d[x.id]!=null&&!x.value)x.value=d[x.id]})}}catch(e){}
     function save(){var d={_t:Date.now()},any=false;fields.forEach(function(x){if(x.value){d[x.id]=x.value;any=true}});try{if(any)localStorage.setItem(key,JSON.stringify(d));else localStorage.removeItem(key)}catch(e){}}
@@ -227,6 +227,27 @@
     var n=document.createElement('div');n.className='qr-note';n.setAttribute('role','note');n.innerHTML='Thanks for scanning. To reorder this part, tap <b>Request this part</b> or <b>+ Add to cart</b> below. Save the page to your home screen for next time.';h.appendChild(n)})();
   // ---- offline support (not inside previews) ----
   if('serviceWorker' in navigator&&location.protocol==='https:'&&!/claude|anthropic|usercontent/.test(location.hostname)){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}
+
+  // ---- part page: check your model ----
+  (function(){var w=document.querySelector('[data-fitcheck]');if(!w)return;var M=null,R=w.getAttribute('data-root'),S=w.getAttribute('data-sizes').split('|'),inp=w.querySelector('input'),out=w.querySelector('.fc-out'),dl=w.querySelector('datalist');
+    function load(cb){if(M)return cb();fetch(w.getAttribute('data-models')).then(function(r){return r.json()}).then(function(j){M=j.filter(function(x){return x.g!=='Accessories'});M.forEach(function(x){var o=document.createElement('option');o.value=x.b+' '+x.m;dl.appendChild(o)});cb()}).catch(function(){})}
+    function go(){load(function(){var q=inp.value.trim().toLowerCase();if(!q)return;var x=M.filter(function(x){return (x.b+' '+x.m).toLowerCase()===q||x.m.toLowerCase()===q})[0]||M.filter(function(x){return (x.b+' '+x.m).toLowerCase().indexOf(q)>-1})[0];out.textContent='';
+      if(!x){out.textContent='That model isn\'t in our size data yet. Send the model number with your request and we\'ll check.';return}
+      var same=x.s.filter(function(s){return S.indexOf(s)>-1}),a=document.createElement('a');a.href=R+x.u;a.textContent=x.b+' '+x.m;
+      out.appendChild(document.createTextNode(same.length?'Same size ('+same.join(', ')+'): ':'Different size ('+x.s.join(', ')+'): '));out.appendChild(a);
+      out.appendChild(document.createTextNode(same.length?' should take this part. Brand locking ends may differ.':' needs an adapter for this part. '));
+      if(!same.length){var b=document.createElement('a');b.href=R+'tools/adapter-builder/?a='+encodeURIComponent(x.s[0])+'&b='+encodeURIComponent(S[0]);b.textContent='Build an adapter';out.appendChild(b)}})}
+    inp.addEventListener('focus',function(){load(function(){})});w.querySelector('button').addEventListener('click',go);inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();go()}})})();
+  // ---- size chart filter ----
+  (function(){var q=document.getElementById('chart-q');if(!q)return;var st=document.getElementById('chart-n');
+    q.addEventListener('input',function(){var v=q.value.trim().toLowerCase(),n=0;document.querySelectorAll('.chart tbody tr').forEach(function(tr){var on=!v||tr.textContent.toLowerCase().indexOf(v)>-1;tr.hidden=!on;if(on)n++});
+      document.querySelectorAll('.chart h2[id]').forEach(function(h){var t=h.nextElementSibling;var any=t&&[].some.call(t.querySelectorAll('tbody tr'),function(r){return !r.hidden});h.hidden=!any;if(t)t.hidden=!any});st.textContent=v?n+' match'+(n===1?'':'es'):''})})();
+  // ---- recently viewed models (for My shop) ----
+  (function(){var m=document.querySelector('main[data-model]');if(!m)return;try{var K='tpf-recent-models',L=JSON.parse(localStorage.getItem(K)||'[]'),d=JSON.parse(m.getAttribute('data-model'));L=L.filter(function(x){return x.u!==d.u});L.unshift(d);localStorage.setItem(K,JSON.stringify(L.slice(0,8)))}catch(e){}})();
+  // ---- open this page on your phone (QR) ----
+  (function(){var b=document.querySelector('[data-phone-qr]');if(!b||typeof qrcode!=='function')return;b.hidden=false;b.addEventListener('click',function(){var box=document.getElementById('phone-qr');if(box){box.remove();b.setAttribute('aria-expanded','false');return}
+    var q=qrcode(0,'M');q.addData(location.href.split('#')[0]);q.make();box=document.createElement('div');box.id='phone-qr';box.className='phone-qr';box.innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true});var p=document.createElement('p');p.textContent='Scan with your phone camera to open this page in the shop.';box.appendChild(p);b.insertAdjacentElement('afterend',box);b.setAttribute('aria-expanded','true');
+    var s=box.querySelector('svg');if(s){s.setAttribute('role','img');s.setAttribute('aria-label','QR code for this page')}})})();
 
   // quote form
   var f=document.getElementById('qf');

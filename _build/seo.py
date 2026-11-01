@@ -194,6 +194,11 @@ def post(h):
             name = re.sub(r"<[^>]+>", "", hd[-1]).strip() if hd else ""
             out.append(h[pos:m.start()] + f'aria-label="{name + " table" if name else "Table " + str(n)}"'); pos = m.end()
         out.append(h[pos:]); h = "".join(out)
+    # phone QR library only where the bookmark hint lives
+    if "data-phone-qr" in h and "qrcode.min.js" not in h:
+        mm2 = re.search(r'<script src="([^"]*)site\.js', h)
+        if mm2:
+            h = h.replace(mm2.group(0), f'<script src="{mm2.group(1)}qrcode.min.js" defer></script>\n' + mm2.group(0), 1)
     # light HTML minify: drop indentation and blank lines outside <pre>/<textarea>/<script>
     parts = re.split(r"(<script[\s\S]*?</script>|<textarea[\s\S]*?</textarea>|<pre[\s\S]*?</pre>)", h)
     h = "".join(p if p.startswith(("<script", "<textarea", "<pre")) else re.sub(r"\n[ \t]+", "\n", re.sub(r"\n\s*\n+", "\n", p)) for p in parts)

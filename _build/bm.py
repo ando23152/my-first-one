@@ -23,7 +23,9 @@ def rows():
     global _ROWS
     if _ROWS is None:
         T = _T(); seen = set(); _ROWS = []
-        for r in sorted([r for r in T.HOSE if r["g"] != "Accessories"], key=lambda r: (r["b"], r["mc"])):
+        oems = {x["oem"] for x in B.CAT["items"] if x["oem"]}
+        # every vac, collector, hose and tool port, plus accessories that aren't already a catalog part
+        for r in sorted([r for r in T.HOSE if r["g"] != "Accessories" or r["mc"].split(" / ")[0] not in oems], key=lambda r: (r["b"], r["mc"])):
             s = _slug(r["b"] + " " + r["mc"])[:80]; k, base = 2, s
             while s in seen:
                 s = f"{base}-{k}"; k += 1
@@ -50,7 +52,7 @@ def save_btn(r, c):
     data = {"id": r["pslug"], "b": r["b"], "m": r["mc"], "d": r["d"], "s": r["s"], "u": c.link(model_url(r))}
     return f'<button type="button" class="tbtn shop-save" data-shop-save="{esc(json.dumps(data))}" aria-pressed="false">Save to My shop</button>'
 
-HINT = '<p class="bm-hint" data-bm-hint>Use this often? <span class="bm-keys">Bookmark it</span> so it\'s one click away next time.<button type="button" class="bm-install" hidden>Add to home screen</button></p>'
+HINT = '<p class="bm-hint" data-bm-hint>Use this often? <span class="bm-keys">Bookmark it</span> so it\'s one click away next time.<button type="button" class="bm-install" hidden>Add to home screen</button><button type="button" class="bm-phone" data-phone-qr aria-expanded="false" hidden>Open on your phone</button></p>'
 
 def model_page(c, r):
     T = _T(); path = model_url(r); b, mc = r["b"], r["mc"]
@@ -70,7 +72,7 @@ def model_page(c, r):
     ob = "".join(f'<a href="{c.link(model_url(x))}">{esc(x["mc"])}</a>' for x in same_b)
     sz_txt = " and ".join(r["s"])
     lead = f'{esc(b)} {esc(mc)} ({esc(r["d"])}) uses {esc(sz_txt)}. {esc(CONF_TXT.get(conf, ""))}'
-    body = f"""<main id="main">
+    body = f"""<main id="main" data-model="{esc(json.dumps({'u': model_url(r), 'n': b + ' ' + mc, 's': r['s']}))}">
 <div class="page-hero"><div class="wrap">
   {B.crumbs(c, [('Home', ''), ('Hose size finder', 'tools/hose-size-finder/'), ('Size chart', 'sizes/'), (b + ' ' + mc, path)])}
   <h1>{esc(b)} {esc(mc)} hose and port size<span class="h1sub">{esc(sz_txt)}</span></h1>
@@ -82,11 +84,14 @@ def model_page(c, r):
   {HINT}
   <section class="about-part prose" style="margin-top:34px;padding:0"><h2>Need to connect it to something else?</h2><p>The <a href="{c.link('tools/adapter-builder/')}?a={a0}&amp;am={am}">adapter builder</a> starts with this size filled in. Pick the other end and we make an adapter that fits both. Not sure of the other size? Look it up in the <a href="{c.link('tools/hose-size-finder/')}?brand={quote(b)}">hose size finder</a> or measure it with the <a href="{c.link('tools/inch-mm-converter/')}">inch–mm converter</a>.</p></section>
   {f'<div class="head" style="margin:40px 0 22px"><div class="label">Parts in this size</div></div><div class="rel">{pl}</div>' if pl else ''}
+  {__import__("bm2").same_size_models(c, r)}
   {f'<div class="head" style="margin:40px 0 18px"><div class="label">Other {esc(b)} models</div></div><div class="terms-strip">{ob}</div>' if ob else ''}
   <p class="legal" style="margin-top:44px">Sizes are from published specs where marked Confirmed. {esc(b)} and its model numbers are trademarks of their owner, used only to describe fit. True Part Fabrication is not affiliated with {esc(b)}.</p>
 </div>
 </main>"""
-    title = f"{b} {mc} Hose Size: {', '.join(r['s'])}"
+    nm = mc if mc.lower().startswith(b.lower()) else f"{b} {mc}"
+    dup = sum(1 for x in rows() if x["b"] == b and x["mc"] == mc) > 1
+    title = (f"{nm}: {re.sub(r"\s*\([^)]*$", "", (r['d'][:34].rsplit(' ', 1)[0] if len(r['d']) > 34 else r['d'])).rstrip(' ,(/')} Size" if dup else f"{nm} Hose Size: {', '.join(r['s'])}")
     desc = f"{b} {mc} {r['d'][:60].rstrip()}: {sz_txt} hose and port size, connector details, matching adapters and parts. Free size lookup from True Part Fabrication."
     return B.doc(c, B.head(c, title + " | True Part Fabrication", desc,
                            [B.crumbs_ld([("Home", ""), ("Hose size finder", "tools/hose-size-finder/"), ("Size chart", "sizes/"), (b + " " + mc, path)])]), body)
@@ -108,14 +113,19 @@ def size_chart(c):
 <div class="wrap chart" style="padding-block:30px 80px">
   <div class="acts2"><button type="button" class="tbtn" data-print>Print the chart</button><a class="tbtn" href="{c.link('tools/hose-size-finder/')}">Search the size finder</a><a class="tbtn" href="{c.link('tools/inch-mm-converter/')}">Inch–mm converter</a></div>
   {HINT}
+  <div class="dl-links"><a class="tbtn" href="{c.asset('downloads/TPF-shop-vac-size-chart.pdf')}" download>Download the chart (PDF)</a><a class="tbtn" href="{c.asset('downloads/TPF-fraction-to-mm-chart.pdf')}" download>Fraction to mm chart (PDF)</a></div>
+  <div class="chart-q"><label for="chart-q" style="font:500 .7rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--faint)">Filter the chart</label><input id="chart-q" type="search" placeholder="Model, brand or size" autocomplete="off"><span id="chart-n" role="status" style="color:var(--muted);font-size:.9rem"></span></div>
   <nav class="terms-strip" aria-label="Brands" style="margin:18px 0 10px">{jump}</nav>
+  <p style="color:var(--muted);margin:10px 0 0">By size: {" ".join(f'<a href="{c.link(__import__("bm2").size_url(z))}" style="color:var(--ink)">{esc(z)}</a>' for z in __import__("bm2").sizes_used())}</p>
   {''.join(out)}
+  <p style="margin-top:30px;color:var(--muted)">Missing a model? <a href="mailto:{__import__('extras').QUOTE_TO}?subject=Size%20chart%3A%20missing%20model&amp;body=Brand%3A%20%0AModel%3A%20%0AWhat%20it%20is%20(vac%2C%20hose%2C%20tool)%3A%20%0AMeasured%20size%20(if%20known)%3A%20" style="color:var(--ink)">Tell us the brand and model</a> and we'll add it.</p>
   <p class="legal" style="margin-top:36px">Confirmed: published manufacturer spec. Likely: matched by size or rating. Verify: check your product before buying. Brand names are trademarks of their owners, used only to describe fit.</p>
 </div>
 </main>"""
     return B.doc(c, B.head(c, "Shop Vac Hose & Port Size Chart (Printable) | True Part Fabrication",
                            f"Printable hose and dust port size chart for {len(rows())} wet/dry vacs, dust collectors, hoses and power tools from DeWalt, Milwaukee, RYOBI, RIDGID, WEN and more.",
-                           [B.crumbs_ld([("Home", ""), ("Hose size finder", "tools/hose-size-finder/"), ("Size chart", "sizes/")])]), body)
+                           [{"@context": "https://schema.org", "@type": "Dataset", "name": "Shop vac hose and dust port sizes", "description": f"Hose, wand and dust port sizes for {len(rows())} wet/dry vacuums, dust collectors, hoses and power tools, with a confidence rating for each.", "url": B.BASE + "/sizes/", "creator": {"@id": B.BASE + "/#business"}, "isAccessibleForFree": True, "keywords": ["shop vac hose size", "dust port size", "wet/dry vacuum", "dust collector"], "distribution": [{"@type": "DataDownload", "encodingFormat": "application/pdf", "contentUrl": B.BASE + "/assets/downloads/TPF-shop-vac-size-chart.pdf"}]},
+                            B.crumbs_ld([("Home", ""), ("Hose size finder", "tools/hose-size-finder/"), ("Size chart", "sizes/")])]), body)
 
 # ---------- My shop ----------
 def my_shop(c):
@@ -137,6 +147,7 @@ def my_shop(c):
   <form class="ms-add" id="ms-add" role="search" style="margin-top:18px"><label for="ms-q">Add equipment by model number</label><div style="display:flex;gap:10px;flex-wrap:wrap"><input id="ms-q" list="ms-dl" placeholder="e.g. WD4070, DCA016" autocomplete="off"><button class="btn ghost" type="submit">Add</button></div><datalist id="ms-dl"></datalist><p class="xerr" id="ms-err" role="alert" hidden></p></form>
   </section>
   <section aria-labelledby="ms-fit" id="ms-fit-sec" hidden><h2 id="ms-fit" style="font-size:1.3rem;margin:44px 0 14px">Parts and adapters that fit</h2><div class="rel" id="ms-parts"></div></section>
+  <section aria-labelledby="ms-rv" id="ms-rv-sec" hidden><h2 id="ms-rv" style="font-size:1.3rem;margin:44px 0 14px">Recently viewed</h2><div class="terms-strip" id="ms-rv-list"></div></section>
   <section aria-labelledby="ms-ro"><h2 id="ms-ro" style="font-size:1.3rem;margin:44px 0 10px">Reorder</h2>
   <p style="color:var(--muted);max-width:62ch">Ordered from us before? Use your part ID on the <a href="{c.link('reorder/')}" style="color:var(--ink)">reorder page</a>. Your <a href="{c.link('request-list/')}" style="color:var(--ink)">cart</a> can also make a reorder link to bookmark or send to whoever does the buying.</p></section>
   <div class="acts2" style="margin-top:26px"><button type="button" class="tbtn" id="ms-share">Copy a link to my equipment list</button><button type="button" class="tbtn" id="ms-clear">Clear My shop</button><span id="ms-st" role="status" style="color:var(--muted);font-size:.9rem"></span></div>
@@ -168,6 +179,9 @@ def my_shop(c):
   document.getElementById('ms-share').addEventListener('click',function(){{var L=get();if(!L.length){{st.textContent='Save some equipment first.';return}}var u=location.origin+location.pathname+'?e='+L.map(function(x){{return x.id}}).join(',');
     try{{navigator.clipboard.writeText(u).then(function(){{st.textContent='Link copied. Bookmark it or send it to your team.'}},function(){{st.textContent=u}})}}catch(e){{st.textContent=u}}}});
   draw();
+  (function(){{var R='{c.link('')}',L=[],P=[];try{{L=JSON.parse(localStorage.getItem('tpf-recent-models')||'[]');P=JSON.parse(localStorage.getItem('tpf-recent')||'[]')}}catch(e){{}}
+    var box=document.getElementById('ms-rv-list');L.forEach(function(x){{var a=document.createElement('a');a.href=R+x.u;a.textContent=x.n+' ('+x.s.join(', ')+')';box.appendChild(a)}});
+    P.slice(0,6).forEach(function(x){{if(!x.u||!x.n)return;var a=document.createElement('a');a.href=x.u;a.textContent=x.n;box.appendChild(a)}});document.getElementById('ms-rv-sec').hidden=!box.children.length}})();
 }})();
 </script>"""
     return B.doc(c, B.head(c, "My shop: your saved equipment | True Part Fabrication", "Save your vacs, dust collectors and tools to see their sizes and the parts and adapters that fit, every time you come back.", []), body)
@@ -189,7 +203,7 @@ def converter(c):
 </div></div>
 <div class="wrap" style="padding-block:34px 80px">
   {HINT}
-  <form class="xform conv" id="cv" onsubmit="return false" style="max-width:760px">
+  <form class="xform conv" id="cv" data-nodraft onsubmit="return false" style="max-width:760px">
     <label for="cv-in">Inches (decimal or fraction, e.g. 1-7/8)<input id="cv-in" inputmode="decimal" autocomplete="off" placeholder="1-7/8"></label>
     <label for="cv-mm">Millimeters<input id="cv-mm" inputmode="decimal" autocomplete="off" placeholder="47.6"></label>
     <div class="full cv-out" id="cv-out" role="status" aria-live="polite">Type a value in either box.</div>
@@ -197,7 +211,7 @@ def converter(c):
   <div class="cv-grid">
     <section><h2>Common hose sizes</h2><div class="ftable"><table><thead><tr><th>Nominal</th><th>Inches</th><th>mm</th></tr></thead><tbody>{crow}</tbody></table></div>
       <p style="color:var(--muted);font-size:.9rem;margin-top:10px">Nominal hose sizes are names, not exact measurements. See <a href="{c.link('guides/shop-vac-hose-sizes/')}" style="color:var(--ink)">shop vac hose sizes</a>.</p></section>
-    <section><h2>Fractions of an inch (1/64 to 1)</h2><div class="acts2" style="margin-bottom:10px"><button type="button" class="tbtn" data-print>Print the chart</button></div><div class="ftable"><table><thead><tr><th>Fraction</th><th>Decimal in</th><th>mm</th></tr></thead><tbody>{''.join(rows_)}</tbody></table></div></section>
+    <section><h2>Fractions of an inch (1/64 to 1)</h2><div class="acts2" style="margin-bottom:10px"><button type="button" class="tbtn" data-print>Print the chart</button><a class="tbtn" href="{c.asset('downloads/TPF-fraction-to-mm-chart.pdf')}" download>Download PDF</a></div><div class="ftable"><table><thead><tr><th>Fraction</th><th>Decimal in</th><th>mm</th></tr></thead><tbody>{''.join(rows_)}</tbody></table></div></section>
   </div>
 </div>
 </main>
@@ -245,7 +259,7 @@ JS = r"""
 
 SW = r"""// True Part Fabrication: offline support. Pages: network first, then cache. Assets: cache first.
 const V = 'tpf-@@V@@';
-const PRE = ['/', '/tools/hose-size-finder/', '/sizes/', '/my-shop/', '/tools/inch-mm-converter/', '/request-list/'];
+const PRE = ['/', '/tools/hose-size-finder/', '/sizes/', '/my-shop/', '/tools/inch-mm-converter/', '/tools/will-it-fit/', '/request-list/', '/assets/models.json'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(PRE)).catch(() => {})); self.skipWaiting(); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {

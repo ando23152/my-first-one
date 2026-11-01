@@ -318,6 +318,12 @@ def search_index(c):
     for b, (slug, cat, intro) in T.BRANDS.items(): add(b + " parts", "Brand", "brands/" + slug + "/", intro)
     for t in TERMS: add(t["term"], "Glossary", "glossary/" + t["slug"] + "/", t["short"])
     for fq, fa in B.FAQS(c): add(fq, "FAQ", "faq/", re.sub("<[^>]+>", "", fa).strip()[:200])
+    import bm2 as _bm2
+    for z in _bm2.sizes_used():
+        add("Everything in " + z, "Size", _bm2.size_url(z), "Every vac, hose, port and accessory that uses " + z + ".", z + " " + z.replace(" in", "in").replace(" in", " inch"))
+    add("Will it fit?", "Tool", "tools/will-it-fit/", "Compare two vacs, hoses, ports or accessories.")
+    add("Adapter fit problems and fixes", "Guide", "guides/vacuum-adapter-fit-problems/", "Loose, tight, won't lock or leaking.")
+    add("What's new", "Page", "whats-new/", "Latest tools, guides and size data.")
     import bm as _bm
     for r in _bm.rows():
         add(r["b"] + " " + r["mc"] + " hose size", "Size", _bm.model_url(r), r["d"] + ": " + ", ".join(r["s"]), r["mc"])
@@ -490,7 +496,7 @@ LIST_JS = r"""
 DRAFT_JS = r"""
   // ---- save form drafts on this device ----
   ['qf','qf-es','rl-form'].concat([].map.call(document.querySelectorAll('form.xform[id]'),function(f){return f.id})).filter(function(x,i,a){return a.indexOf(x)===i}).forEach(function(id){
-    var f=document.getElementById(id);if(!f)return;var key='tpf-draft-'+id,ES2=document.documentElement.lang==='es';
+    var f=document.getElementById(id);if(!f||f.hasAttribute('data-nodraft'))return;var key='tpf-draft-'+id,ES2=document.documentElement.lang==='es';
     var fields=[].filter.call(f.querySelectorAll('input,textarea,select'),function(x){return x.id&&x.type!=='checkbox'&&x.type!=='hidden'&&x.type!=='file'});
     try{var d=JSON.parse(localStorage.getItem(key)||'null');if(d&&Date.now()-d._t<14*864e5){fields.forEach(function(x){if(d[x.id]!=null&&!x.value)x.value=d[x.id]})}}catch(e){}
     function save(){var d={_t:Date.now()},any=false;fields.forEach(function(x){if(x.value){d[x.id]=x.value;any=true}});try{if(any)localStorage.setItem(key,JSON.stringify(d));else localStorage.removeItem(key)}catch(e){}}

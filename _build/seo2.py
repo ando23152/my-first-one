@@ -236,6 +236,9 @@ def llms_txt():
              f"- [Material picker]({B.BASE}/tools/material-picker/)",
              f"- [Hose and port size chart, one page per model]({B.BASE}/sizes/)",
              f"- [Inch to mm converter]({B.BASE}/tools/inch-mm-converter/)",
+             f"- [Will it fit? compatibility checker]({B.BASE}/tools/will-it-fit/)",
+             f"- [Adapter fit problems and fixes]({B.BASE}/guides/vacuum-adapter-fit-problems/)",
+             f"- [What's new]({B.BASE}/whats-new/) ([Atom feed]({B.BASE}/feed.xml))",
              f"- [How to measure a part]({B.BASE}/guides/how-to-measure-a-part/)"]
     lines += [f"- [{t}]({B.BASE}/{p})" for p, t, _d, _f in GUIDES]
     lines += [f"- [Glossary]({B.BASE}/glossary/)", "", "## Parts by brand"]
