@@ -331,3 +331,21 @@ CSS = """
 .dl-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 @media print{.fitcheck,.chart-q,.phone-qr,[data-phone-qr]{display:none!important}.hub-list{columns:2}}
 """
+
+# ---- clearer links (user request: make internal links obviously clickable) ----
+CSS += """
+main :is(p,li,dd,td,dt,figcaption,.lead,.def,.note,.legal,.fc-out,.wif-out) a:not([class]),.side a,.faq .a a,.about-part a,.prose a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent-hi);text-decoration-thickness:1.5px;text-underline-offset:3px;border-bottom:0;transition:color .15s,text-decoration-thickness .15s}
+main :is(p,li,dd,td,dt,figcaption,.lead,.def,.note,.legal,.fc-out,.wif-out) a:not([class]):hover,.side a:hover,.faq .a a:hover,.about-part a:hover,.prose a:hover{color:var(--accent-hi);text-decoration-thickness:2.5px}
+main a:not([class]):focus-visible{outline:2px solid var(--accent-hi);outline-offset:2px;border-radius:2px}
+td.mo a,.hub-list a{font-weight:600}
+.rel a,.mini a{position:relative;padding-right:38px}
+.rel a::after,.mini a::after{content:"\\2192";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--accent-hi);font-size:1.05rem;transition:transform .15s}
+.rel a:hover::after,.mini a:hover::after{transform:translate(4px,-50%)}
+.rel a:hover,.mini a:hover{border-color:var(--accent)}
+.terms-strip a{color:var(--ink)}
+.terms-strip a::after{content:" \\2192";color:var(--accent-hi)}
+.crumbs a{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.crumbs a:hover{text-decoration-color:var(--accent-hi)}
+.ms-item>a:first-child{text-decoration:underline;text-decoration-color:var(--accent-hi);text-underline-offset:3px}
+@media print{.rel a::after,.mini a::after,.terms-strip a::after{content:none}}
+"""

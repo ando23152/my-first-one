@@ -38,13 +38,13 @@
     function render(){var v=q.value.trim().toLowerCase(),n=0,shown=0;
       rows.forEach(function(r){var ok=(brand==='All'||r.getAttribute('data-b')===brand)&&(!fit.checked||r.getAttribute('data-fit')==='1')&&(!v||r.getAttribute('data-k').indexOf(v)>-1);if(ok)n++;var show=ok&&shown<limit;if(show)shown++;r.hidden=!show});
       more.hidden=n<=limit;more.textContent=(list.getAttribute('data-more')||'Show more')+' ('+(n-limit)+')';empty.hidden=n>0;count.textContent=n+' '+(n===1?(list.getAttribute('data-one')||'part'):(list.getAttribute('data-many')||'parts'));}
-    function syncURL(){try{var p=new URLSearchParams();if(brand!=='All')p.set('brand',brand);if(q.value.trim())p.set('q',q.value.trim());if(!fit.checked)p.set('all','1');if(srt&&srt.value)p.set('sort',srt.value);var qs=p.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:''))}catch(e){}}
+    function syncURL(){try{var p=new URLSearchParams();if(brand!=='All')p.set('brand',brand);if(q.value.trim())p.set('q',q.value.trim());if(fit.checked)p.set('fit','1');if(srt&&srt.value)p.set('sort',srt.value);var qs=p.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:''))}catch(e){}}
     var srt=document.getElementById('cat-sort'),orig=rows.slice();
     function key(r,k){if(k==='name')return r.querySelector('.n').textContent.trim().toLowerCase();if(k==='brand')return (r.getAttribute('data-b')+' '+r.querySelector('.n').textContent).toLowerCase();if(k==='pn')return r.querySelector('.o').textContent.replace(/^\S+\s+\S+\s+/,'').toLowerCase();return ''}
     function applySort(){var k=srt?srt.value:'';rows=k?orig.slice().sort(function(a,b){return key(a,k).localeCompare(key(b,k),undefined,{numeric:true})}):orig.slice();rows.forEach(function(r){list.appendChild(r)})}
     if(srt)srt.addEventListener('change',function(){applySort();limit=40;render()});
     var rr=render;render=function(){rr();syncURL()};
-    try{var P=new URLSearchParams(location.search);if(P.get('q'))q.value=P.get('q');if(P.get('all')==='1')fit.checked=false;if(srt&&P.get('sort')){srt.value=P.get('sort');applySort()}var pb=P.get('brand');if(pb){var ch=[].find.call(document.querySelectorAll('#cat-chips .chip'),function(x){return x.getAttribute('data-b').toLowerCase()===pb.toLowerCase()});if(ch){brand=ch.getAttribute('data-b');document.querySelectorAll('#cat-chips .chip').forEach(function(k){k.setAttribute('aria-pressed',k===ch)})}}}catch(e){}
+    try{var P=new URLSearchParams(location.search);if(P.get('q'))q.value=P.get('q');if(P.get('fit')==='1')fit.checked=true;if(srt&&P.get('sort')){srt.value=P.get('sort');applySort()}var pb=P.get('brand');if(pb){var ch=[].find.call(document.querySelectorAll('#cat-chips .chip'),function(x){return x.getAttribute('data-b').toLowerCase()===pb.toLowerCase()});if(ch){brand=ch.getAttribute('data-b');document.querySelectorAll('#cat-chips .chip').forEach(function(k){k.setAttribute('aria-pressed',k===ch)})}}}catch(e){}
     q.addEventListener('input',function(){limit=40;render()});fit.addEventListener('change',function(){limit=40;render()});more.addEventListener('click',function(){limit+=60;render()});render();
   }
 
@@ -144,7 +144,7 @@
 
   // r1: clear catalog filters
   (function(){var b=document.getElementById('cat-clear');if(!b)return;b.addEventListener('click',function(){var q=document.getElementById('cat-q'),f=document.getElementById('fit-only'),s=document.getElementById('cat-sort');
-    if(s&&s.value){s.value='';s.dispatchEvent(new Event('change'))}if(f&&!f.checked){f.checked=true;f.dispatchEvent(new Event('change'))}q.value='';q.dispatchEvent(new Event('input'));var all=document.querySelector('#cat-chips .chip[data-b="All"]');if(all)all.click();q.focus()})})();
+    if(s&&s.value){s.value='';s.dispatchEvent(new Event('change'))}if(f&&!f.checked){f.checked=false;f.dispatchEvent(new Event('change'))}q.value='';q.dispatchEvent(new Event('input'));var all=document.querySelector('#cat-chips .chip[data-b="All"]');if(all)all.click();q.focus()})})();
   // r3/r4: adapter builder swap ends + copy spec
   (function(){var f=document.getElementById('ab');if(!f)return;var out=document.querySelector('.ab-out > div[style]');if(!out)return;
     var sw=document.createElement('button');sw.type='button';sw.className='tbtn';sw.textContent='Swap ends';
