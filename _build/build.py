@@ -103,38 +103,6 @@ td.m a:hover{border-color:var(--accent)}
 
 LIGHT_CSS = r"""
 /* ---- light theme (visitor toggle) ---- */
-:root[data-tpf-theme="light"]{--bg:#ffffff;--surface:#f6f6f4;--surface-2:#efefec;--ink:#121214;--muted:#2b2b30;--faint:#626269;--line:#e2e2de;--accent:#d71f28;--accent-hi:#c3141c;color-scheme:light}
-:root[data-tpf-theme="light"] header.scrolled{background:rgba(255,255,255,.9)}
-:root[data-tpf-theme="light"] .hero::before{background:radial-gradient(closest-side,rgba(215,31,40,.06),rgba(215,31,40,0))}
-:root[data-tpf-theme="light"] .hero-logo,:root[data-tpf-theme="light"] .brand img{filter:none}
-:root[data-tpf-theme="light"] .hero-shot img{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 80%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 80%,transparent 100%)}
-:root[data-tpf-theme="light"] .facts{background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg) 40%)}
-:root[data-tpf-theme="light"] .btn.ghost{border-color:#cdcdc8}
-:root[data-tpf-theme="light"] .btn.ghost:hover{border-color:var(--ink)}
-:root[data-tpf-theme="light"] .btn:hover{box-shadow:0 10px 26px -12px rgba(215,31,40,.6)}
-:root[data-tpf-theme="light"] .pc:hover,:root[data-tpf-theme="light"] .res:hover,:root[data-tpf-theme="light"] .gcard:hover{border-color:#cdcdc8}
-:root[data-tpf-theme="light"] .chip:hover{border-color:#bdbdb8}
-:root[data-tpf-theme="light"] .row button{border-color:#cdcdc8}
-:root[data-tpf-theme="light"] .row button:hover{color:#fff}
-:root[data-tpf-theme="light"] .steps .n{border-color:#cdcdc8}
-:root[data-tpf-theme="light"] .statement{background:radial-gradient(60% 80% at 50% 50%,rgba(215,31,40,.06),transparent)}
-:root[data-tpf-theme="light"] .price,:root[data-tpf-theme="light"] .callout,:root[data-tpf-theme="light"] .result{background:linear-gradient(135deg,rgba(215,31,40,.08),rgba(215,31,40,.01));border-color:rgba(215,31,40,.35)}
-:root[data-tpf-theme="light"] .inds div{background:var(--bg)}
-:root[data-tpf-theme="light"] .inds div:hover{background:var(--surface)}
-:root[data-tpf-theme="light"] td.m i{box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
-:root[data-tpf-theme="light"] .pc .ph span{background:rgba(255,255,255,.85);color:var(--ink)}
-:root[data-tpf-theme="light"] .cf.Confirmed{color:#1c7f45;border-color:rgba(28,127,69,.4)}
-:root[data-tpf-theme="light"] .cf.Likely{color:#9a6200;border-color:rgba(154,98,0,.4)}
-:root[data-tpf-theme="light"] .dots i{color:#d6d6d2}
-:root[data-tpf-theme="light"] .mq label.o,:root[data-tpf-theme="light"] .sz{border-color:#cdcdc8}
-:root[data-tpf-theme="light"] .explain b.ok{color:#1c7f45}
-:root[data-tpf-theme="light"] .explain b.lk{color:#9a6200}
-.theme-btn{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:border-color .2s}
-.theme-btn:hover{border-color:var(--accent)}
-.theme-btn svg{width:18px;height:18px}
-.theme-btn .sun,.theme-btn .dot{display:none}
-:root[data-tpf-theme="black"] .theme-btn .dot{display:block}
-:root[data-tpf-theme="black"] .theme-btn .moon{display:none}
 /* ---- black theme (the original look) ---- */
 :root[data-tpf-theme="black"]{--bg:#070708;--surface:#0f0f11;--surface-2:#16161a;--line:#232328;--accent-hi:#ff3b43}
 :root[data-tpf-theme="black"] header.scrolled{background:rgba(7,7,8,.82)}
@@ -145,12 +113,6 @@ LIGHT_CSS = r"""
 :root[data-tpf-theme="black"] .hero-shot{padding-inline:0!important;max-width:none!important;margin-top:0!important}
 :root[data-tpf-theme="black"] .facts{margin-top:-40px}
 :root[data-tpf-theme="black"] .hero-shot img{border-radius:0!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%)!important;mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 72%,transparent 100%)!important}
-.theme-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-.theme-row span{width:100%;font:500 .7rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
-.theme-row button{font:500 .95rem var(--f-body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer}
-.theme-row button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}
-:root[data-tpf-theme="light"] .theme-btn .sun{display:block}
-:root[data-tpf-theme="light"] .theme-btn .moon{display:none}
 """
 def css():
     import tools, parts_pages
@@ -160,20 +122,9 @@ def css():
 
 JS = r"""
 (function(){
-  var root=document.documentElement,tb=document.getElementById('theme-btn'),meta=document.querySelector('meta[name="theme-color"]');
-  var NAMES={dark:'Blue',black:'Black',light:'Light'},NEXT={dark:'black',black:'light',light:'dark'},COL={dark:'#0A3161',black:'#070708',light:'#ffffff'};
-  function cur(){var a=root.getAttribute('data-tpf-theme');return a==='light'||a==='black'?a:'dark'}
-  function applyTheme(t){
-    if(t==='light'||t==='black')root.setAttribute('data-tpf-theme',t);else{root.removeAttribute('data-tpf-theme');t='dark'}
-    document.querySelectorAll('img[data-light]').forEach(function(i){if(!i.getAttribute('data-dark'))i.setAttribute('data-dark',i.getAttribute('src'));var want=i.getAttribute('data-'+t)||i.getAttribute('data-dark');if(i.getAttribute('src')!==want)i.setAttribute('src',want)});
-    if(tb){tb.setAttribute('aria-label','Theme: '+NAMES[t]+'. Switch to '+NAMES[NEXT[t]]);tb.setAttribute('title','Theme: '+NAMES[t])}
-    document.querySelectorAll('[data-set-theme]').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-set-theme')===t)});
-    if(meta)meta.setAttribute('content',COL[t]);
-  }
-  function setTheme(t){applyTheme(t);try{localStorage.setItem('tpf-theme',t)}catch(e){}}
-  applyTheme(cur());
-  if(tb)tb.addEventListener('click',function(){setTheme(NEXT[cur()])});
-  document.addEventListener('click',function(e){var b=e.target.closest('[data-set-theme]');if(b)setTheme(b.getAttribute('data-set-theme'))});
+  // one look: black. Clear any theme saved by older versions of the site.
+  var root=document.documentElement;root.setAttribute('data-tpf-theme','black');
+  try{localStorage.removeItem('tpf-theme')}catch(e){}
   var hdr=document.getElementById('hdr');
   function onS(){hdr.classList.toggle('scrolled',scrollY>24)}addEventListener('scroll',onS,{passive:true});onS();
   function store(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}
@@ -260,14 +211,14 @@ SECTION_PAGES = {"quote": "quote/", "business": "business/", "process": "process
 def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>"
 
 ORG = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": BASE + "/#business", "name": "True Part Fabrication LLC",
-       "url": BASE + "/", "logo": BASE + "/assets/img/logo-dark.png", "image": BASE + "/assets/img/og-image.jpg",
+       "url": BASE + "/", "logo": BASE + "/assets/img/logo-black.png", "image": BASE + "/assets/img/og-image.jpg",
        "description": "Custom part manufacturing, replacement parts, and small-batch production in Modesto, California.",
        "address": {"@type": "PostalAddress", "addressLocality": "Modesto", "addressRegion": "CA", "addressCountry": "US"},
        "areaServed": ["Modesto", "Ceres", "Turlock", "Manteca", "Tracy", "Stockton", "Stanislaus County", "San Joaquin County"],
        "sameAs": [EBAY], "telephone": "+1-209-554-4800",
        "priceRange": "$$", "currenciesAccepted": "USD", "knowsAbout": ["Additive manufacturing", "Replacement parts", "Reverse engineering", "Jigs and fixtures", "Small-batch manufacturing"]}
 
-ORG["logo"] = {"@type": "ImageObject", "url": BASE + "/assets/img/logo-dark.png", "width": 800, "height": 493}
+ORG["logo"] = {"@type": "ImageObject", "url": BASE + "/assets/img/logo-black.png", "width": 800, "height": 493}
 ORG["areaServed"] = ORG["areaServed"] + [{"@type": "Country", "name": "United States"}]
 ORG["contactPoint"] = [{"@type": "ContactPoint", "telephone": "+1-209-554-4800", "contactType": "customer service", "areaServed": "US-CA"}]
 
@@ -291,8 +242,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="True Part Fabrication logo over custom manufactured parts">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0A3161">
-<script>try{{var t=localStorage.getItem("tpf-theme");if(t==="light"||t==="black")document.documentElement.setAttribute("data-tpf-theme",t)}}catch(e){{}}</script>
+<meta name="theme-color" content="#070708">
 <link rel="icon" type="image/png" sizes="32x32" href="{c.asset('img/favicon-32.png')}">
 <link rel="icon" type="image/png" sizes="48x48" href="{c.asset('img/favicon-48.png')}">
 <link rel="apple-touch-icon" href="{c.asset('img/icon-180.png')}">
@@ -300,7 +250,7 @@ def head(c, title, desc, lds=(), og_type="website"):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="{c.asset('site.css')}?v=13">
+<link rel="stylesheet" href="{c.asset('site.css')}?v=14">
 """
     return h + "\n".join(ld(x) for x in lds)
 
@@ -321,7 +271,6 @@ def header(c):
       <a class="l" href="{L('resources/')}">Resources</a>
       <a class="l" href="{L('faq/')}">FAQ</a>
       <a class="l" href="{L('', 'about')}">About</a>
-      <button class="theme-btn" type="button" id="theme-btn" aria-label="Theme"><svg class="dot" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="currentColor"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="icon-l s" href="{L('search/')}" aria-label="Search the site">{X.SEARCH_SVG}</a>
       <a class="list-pill" id="list-pill" href="{L('request-list/')}" hidden>Cart <b id="list-n">0</b></a>
       <a class="btn" href="{L('', 'quote')}">Request a quote</a>
@@ -346,7 +295,7 @@ def footer(c):
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span><a href="{L('business/')}" style="color:inherit;text-decoration:none">Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</a></span></div>
   </div>
 </footer>
-<script src="{c.asset('site.js')}?v=13" defer></script>"""
+<script src="{c.asset('site.js')}?v=14" defer></script>"""
 
 SWAP = re.compile(r'<img([^>]*?) src="([^"]*assets/img/)(logo-dark\.png|hero\.jpg|svc-[a-z]+\.jpg|sample-[a-z]+\.jpg)"')
 def swapimgs(h):
@@ -504,8 +453,8 @@ def home(c, art=False, raw=False):
     org = dict(ORG)
     web = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE, "alternateName": "True Part", "url": BASE + "/", "inLanguage": ["en", "es"], "publisher": {"@id": BASE + "/#business"}}
     script = TPL[TPL.index('<script id="cat-data"'):]
-    sample = json.dumps({k: c.asset('img/sample-' + k + '.jpg') for k in ['adapter','nozzle','brush','separator','clip','roller']})
-    script = script.replace("im.src=IMG[it.i];", "var s0=IMG[it.i],th=document.documentElement.getAttribute('data-tpf-theme');im.setAttribute('data-dark',s0);im.setAttribute('data-light',s0.replace('.webp','-light.webp'));im.setAttribute('data-black',s0.replace('.webp','-black.webp'));im.src=(th==='light'||th==='black')?im.getAttribute('data-'+th):s0;")
+    sample = json.dumps({k: c.asset('img/sample-' + k + '-black.jpg') for k in ['adapter','nozzle','brush','separator','clip','roller']})
+    script = script.replace("im.src=IMG[it.i];", "im.src=IMG[it.i];")
     script = script.replace("bd.appendChild(el('h4',null,it.n));", "var h4=el('h4');var ha=el('a',null,it.n);ha.href=it.u;h4.appendChild(ha);bd.appendChild(h4);")
     script = script.replace("r.appendChild(el('div','n',it.n));", "var nd=el('div','n');var na=el('a',null,it.n);na.href=it.u;nd.appendChild(na);r.appendChild(nd);")
     CATU = {"feat": CAT["feat"], "items": [dict(x, u=c.link("parts/" + x["slug"] + "/")) for x in CAT["items"]]}
@@ -798,7 +747,7 @@ def build(mode, root):
     write(root, "assets/site.css", css())
     __import__("seo").copy_fonts(root)
     write(root, "assets/manifest.webmanifest", json.dumps({"name": "True Part Fabrication", "short_name": "True Part", "description": "Custom part manufacturing and replacement parts in Modesto, CA.",
-        "start_url": "../", "scope": "../", "display": "standalone", "background_color": "#0A3161", "theme_color": "#0A3161",
+        "start_url": "../", "scope": "../", "display": "standalone", "background_color": "#070708", "theme_color": "#070708",
         "icons": [{"src": "img/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}]}, indent=1))
     write(root, "assets/site.js", JS.replace("@@MENU@@", __import__("extras").MENU_JS + __import__("extras").LIST_JS + __import__("improve").IMP_JS).replace("@@DRAFT@@", __import__("extras").DRAFT_JS))
     import tools, parts_pages

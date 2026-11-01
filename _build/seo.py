@@ -105,6 +105,16 @@ def post(h):
     path = _path(h)
     if path is None:
         return h
+    # one look (black): set it on <html> and serve the black images directly
+    h = re.sub(r'<html lang="([a-z]+)"(?! data-tpf-theme)', r'<html lang="\1" data-tpf-theme="black"', h, 1)
+    if "<html" not in h and "data-tpf-theme" not in h[:400]:
+        h = '<script>document.documentElement.setAttribute("data-tpf-theme","black")</script>\n' + h
+    def _img(m):
+        tag = m.group(0); bl = re.search(r'data-black="([^"]*)"', tag)
+        if bl:
+            tag = re.sub(r'\ssrc="[^"]*"', ' src="' + bl.group(1) + '"', tag, 1)
+        return re.sub(r'\sdata-(?:light|black|dark)="[^"]*"', '', tag)
+    h = re.sub(r"<img\b[^>]*>", _img, h)
     # titles
     m = re.search(r"<title>(.*?)</title>", h, re.S)
     if m:
@@ -166,6 +176,8 @@ def post(h):
         if items:
             ld = {"@context": "https://schema.org", "@type": "ItemList", "name": html.unescape(re.sub(r"<[^>]+>", "", re.search(r"<h1[^>]*>(.*?)</h1>", h, re.S).group(1))).strip() if "<h1" in h else "Parts", "itemListElement": items}
             h = h.replace("</head>", B.ld(ld) + "\n</head>", 1)
+    # share images: black versions
+    h = re.sub(r'(<meta property="og:image" content="[^"]*/assets/img/(?:svc|sample)-[a-z]+)\.jpg"', r'\1-black.jpg"', h)
     # light HTML minify: drop indentation and blank lines outside <pre>/<textarea>/<script>
     parts = re.split(r"(<script[\s\S]*?</script>|<textarea[\s\S]*?</textarea>|<pre[\s\S]*?</pre>)", h)
     h = "".join(p if p.startswith(("<script", "<textarea", "<pre")) else re.sub(r"\n[ \t]+", "\n", re.sub(r"\n\s*\n+", "\n", p)) for p in parts)

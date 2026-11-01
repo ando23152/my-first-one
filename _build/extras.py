@@ -23,7 +23,7 @@ form.sbox,form.notify{padding:0;border:0;background:none;border-radius:0}
 .mnav a{display:block;padding:16px 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font:500 1.15rem var(--f-body)}
 .mnav .btn{display:inline-flex;margin-top:22px;font-size:1rem}
 @media (max-width:900px){.menu-btn{display:inline-grid}nav.main .icon-l.s{display:none}nav.main{gap:10px}}
-@media (max-width:420px){nav.main .btn{padding:0 14px;font-size:.8rem}nav.main .theme-btn{display:none}}
+@media (max-width:420px){nav.main .btn{padding:0 14px;font-size:.8rem}}
 @media (max-width:380px){.brand img{height:44px}}
 body.menu-open{overflow:hidden}
 /* ---- notify ---- */
@@ -95,9 +95,7 @@ def menu(c, es=False):
         items.append((("Llamar " if es else "Call ") + PHONE, tel(PHONE)))
     lis = "".join(f'<li><a href="{h}">{esc(t)}</a></li>' for t, h in items)
     btn = f'<button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="mnav" aria-label="{label}">{MENU_SVG}</button>'
-    tl = ("Tema", "Azul", "Negro", "Claro") if es else ("Theme", "Blue", "Black", "Light")
-    themes = f'<div class="theme-row" role="group" aria-label="{tl[0]}"><span>{tl[0]}</span><button type="button" data-set-theme="dark" aria-pressed="false">{tl[1]}</button><button type="button" data-set-theme="black" aria-pressed="false">{tl[2]}</button><button type="button" data-set-theme="light" aria-pressed="false">{tl[3]}</button></div>'
-    panel = f'<div class="mnav" id="mnav" hidden><div class="wrap"><nav aria-label="{label}"><ul>{lis}</ul><a class="btn" href="{cta[1]}">{esc(cta[0])} <span class="ar">→</span></a>{themes}</nav></div></div>'
+    panel = f'<div class="mnav" id="mnav" hidden><div class="wrap"><nav aria-label="{label}"><ul>{lis}</ul><a class="btn" href="{cta[1]}">{esc(cta[0])} <span class="ar">→</span></a></nav></div></div>'
     return btn, panel
 
 MENU_JS = r"""
