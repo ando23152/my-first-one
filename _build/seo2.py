@@ -234,6 +234,8 @@ def llms_txt():
              f"- [Hose and dust port size finder]({B.BASE}/tools/hose-size-finder/)",
              f"- [Adapter builder]({B.BASE}/tools/adapter-builder/)",
              f"- [Material picker]({B.BASE}/tools/material-picker/)",
+             f"- [Hose and port size chart, one page per model]({B.BASE}/sizes/)",
+             f"- [Inch to mm converter]({B.BASE}/tools/inch-mm-converter/)",
              f"- [How to measure a part]({B.BASE}/guides/how-to-measure-a-part/)"]
     lines += [f"- [{t}]({B.BASE}/{p})" for p, t, _d, _f in GUIDES]
     lines += [f"- [Glossary]({B.BASE}/glossary/)", "", "## Parts by brand"]

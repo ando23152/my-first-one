@@ -119,7 +119,7 @@ def hose_finder(c):
             from urllib.parse import quote as _q
             ask = f'<a class="ask" href="{c.link("tools/adapter-builder/")}?a={_q(r["s"][0])}&amp;am={_q(r["b"] + " " + r["mc"])}">Get an adapter →</a>'
         k = " ".join([r["b"], r["mc"], r["d"], r["c"], r["w"], r["sys"]]).lower()
-        rows.append(f"""<tr data-b="{esc(r['b'])}" data-s="{esc('|'.join(r['s']))}" data-g="{esc(r['g'])}" data-k="{esc(k)}"><td class="br">{esc(r['b'])}</td><td class="mo">{esc(r['mc'])}</td><td>{esc(r['d'])}<br><span style="color:var(--faint);font-size:.8rem">{esc(r['g'])}</span></td><td>{''.join(f'<span class="sz">{esc(s)}</span>' for s in r['s'])}<div style="font-size:.8rem;margin-top:4px">{esc(r['c'])}</div></td><td>{esc(r['w'] or '—')}</td><td><span class="cf {conf}">{esc(r['conf'] or 'Unrated')}</span></td><td>{ask}</td></tr>""")
+        rows.append(f"""<tr data-b="{esc(r['b'])}" data-s="{esc('|'.join(r['s']))}" data-g="{esc(r['g'])}" data-k="{esc(k)}"><td class="br">{esc(r['b'])}</td><td class="mo">{(lambda _r: f'<a href="{c.link(__import__("bm").model_url(_r))}">{esc(r["mc"])}</a>' if _r else esc(r["mc"]))(__import__("bm").by_mc().get((r["b"], r["mc"])))}</td><td>{esc(r['d'])}<br><span style="color:var(--faint);font-size:.8rem">{esc(r['g'])}</span></td><td>{''.join(f'<span class="sz">{esc(s)}</span>' for s in r['s'])}<div style="font-size:.8rem;margin-top:4px">{esc(r['c'])}</div></td><td>{esc(r['w'] or '—')}</td><td><span class="cf {conf}">{esc(r['conf'] or 'Unrated')}</span></td><td>{ask}</td></tr>""")
     bchips = '<button class="chip sm" type="button" data-f="b" data-v="All" aria-pressed="true">All brands</button>' + "".join(f'<button class="chip sm" type="button" data-f="b" data-v="{esc(b)}" aria-pressed="false">{esc(b)}</button>' for b in brands)
     schips = '<button class="chip sm" type="button" data-f="s" data-v="All" aria-pressed="true">All sizes</button>' + "".join(f'<button class="chip sm" type="button" data-f="s" data-v="{esc(s)}" aria-pressed="false">{esc(s)}</button>' for s in sizes)
     gopts = '<option value="All">All types</option>' + "".join(f'<option>{g}</option>' for g in groups)
@@ -137,12 +137,12 @@ def hose_finder(c):
     <div class="chips" role="group" aria-label="Filter by size">{schips}</div>
   </div>
   <div class="ftable"><table id="hf">
-    <thead><tr><th>Brand</th><th>Model</th><th>Item</th><th>Size</th><th>Works with</th><th>Confidence</th><th></th></tr></thead>
+    <thead><tr><th>Brand</th><th>Model</th><th>Item</th><th>Size</th><th>Works with</th><th>Confidence</th><th><span class="sr-only">Get it</span></th></tr></thead>
     <tbody>
 {chr(10).join(rows)}
     </tbody></table></div>
   <p class="empty" id="hf-empty" hidden>Nothing matches. Try a shorter model number, build a custom piece in the <a href="{c.link('tools/adapter-builder/')}" style="color:var(--ink)">adapter builder</a>, or <a href="{c.link('', 'quote')}" style="color:var(--ink)">ask us</a> and we'll measure it.</p>
-  <div class="explain">
+  <h2 class="sr-only">About these sizes</h2><div class="explain">
     <div><h3>Sizes are nominal</h3><p>"2-1/2 inch" names a family, not an exact measurement. Cuff and port diameters vary by brand, which is why universal adapters often fit loosely. See {G(c,'dust-port-hose-sizes','shop-vac hose sizes')}.</p></div>
     <div><h3>Confidence ratings</h3><p><b class="ok">Confirmed</b> means a published manufacturer spec. <b class="lk">Likely</b> means matched by size or rating. <b>Verify</b> means check your product before buying.</p></div>
     <div><h3>Measure to be sure</h3><p>Before ordering an adapter, measure the outside of the hose cuff and the inside or outside of the port. Our <a href="{c.link('guides/how-to-measure-a-part/')}" style="color:var(--ink)">measuring guide</a> shows how.</p></div>
@@ -368,6 +368,9 @@ def resources(c):
              ("Tool", "Adapter builder", "Pick any two hose or port sizes and request an adapter made to fit both.", "tools/adapter-builder/"),
              ("Tool", "Material picker", "Answer five questions and get the right material for your part, with a full comparison chart.", "tools/material-picker/"),
              ("Guide", "How to measure a part", "Photograph and measure a broken part so it can be modeled and printed.", "guides/how-to-measure-a-part/"),
+             ("Tool", "Size chart (printable)", "Every vac, collector, hose and tool port in the finder, by brand, with a page for each model.", "sizes/"),
+             ("Tool", "Inch–mm converter", "Convert caliper readings and print a 1/64-inch fraction chart.", "tools/inch-mm-converter/"),
+             ("Tool", "My shop", "Save your equipment and see the sizes and parts that fit it, every visit.", "my-shop/"),
              ("Guide", "Shop vac hose sizes by brand", "The common hose sizes, how to measure, and which sizes each brand uses.", "guides/shop-vac-hose-sizes/"),
              ("Guide", "Replacing a discontinued plastic part", "Five ways to find or replace a part the manufacturer no longer sells.", "guides/replacing-a-discontinued-plastic-part/"),
              ("Reference", "Glossary", f"{len(B.TERMS)} plain-English definitions of printing, material, and fit terms.", "glossary/"),

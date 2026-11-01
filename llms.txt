@@ -15,6 +15,8 @@ Parts are plastic, made to order, and not genuine brand parts. We do not make sa
 - [Hose and dust port size finder](https://truepart-fabrication.onrender.com/tools/hose-size-finder/)
 - [Adapter builder](https://truepart-fabrication.onrender.com/tools/adapter-builder/)
 - [Material picker](https://truepart-fabrication.onrender.com/tools/material-picker/)
+- [Hose and port size chart, one page per model](https://truepart-fabrication.onrender.com/sizes/)
+- [Inch to mm converter](https://truepart-fabrication.onrender.com/tools/inch-mm-converter/)
 - [How to measure a part](https://truepart-fabrication.onrender.com/guides/how-to-measure-a-part/)
 - [Shop vac hose sizes by brand](https://truepart-fabrication.onrender.com/guides/shop-vac-hose-sizes/)
 - [Replacing a discontinued plastic part](https://truepart-fabrication.onrender.com/guides/replacing-a-discontinued-plastic-part/)

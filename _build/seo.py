@@ -41,7 +41,7 @@ DESC_OVERRIDES = {
 }
 
 # Never indexed, never in sitemap.xml
-NOINDEX = {"cart/", "order/success/", "order/cancelled/", "request-list/", "search/"}
+NOINDEX = {"my-shop/", "cart/", "order/success/", "order/cancelled/", "request-list/", "search/"}
 
 # English page <-> Spanish page
 HREFLANG = {"": "es/", "faq/": "es/preguntas-frecuentes/", "parts/": "es/piezas/"}
@@ -178,6 +178,22 @@ def post(h):
             h = h.replace("</head>", B.ld(ld) + "\n</head>", 1)
     # share images: black versions
     h = re.sub(r'(<meta property="og:image" content="[^"]*/assets/img/(?:svc|sample)-[a-z]+)\.jpg"', r'\1-black.jpg"', h)
+    # bookmark hint on tool pages that don't have one yet
+    if path in ("tools/hose-size-finder/", "tools/material-picker/", "tools/adapter-builder/", "guides/how-to-measure-a-part/", "guides/shop-vac-hose-sizes/") and "data-bm-hint" not in h:
+        i = h.find('<div class="page-hero">')
+        if i > -1:
+            j = h.find("</div></div>", i)
+            if j > -1:
+                h = h[:j] + __import__("bm").HINT + h[j:]
+    # scrollable tables: give each region a unique name (from the heading before it)
+    if h.count('aria-label="Scrollable table"') > 1:
+        out, pos, n = [], 0, 0
+        for m in re.finditer(r'aria-label="Scrollable table"', h):
+            n += 1
+            hd = re.findall(r"<h[23][^>]*>(.*?)</h[23]>", h[:m.start()], re.S)
+            name = re.sub(r"<[^>]+>", "", hd[-1]).strip() if hd else ""
+            out.append(h[pos:m.start()] + f'aria-label="{name + " table" if name else "Table " + str(n)}"'); pos = m.end()
+        out.append(h[pos:]); h = "".join(out)
     # light HTML minify: drop indentation and blank lines outside <pre>/<textarea>/<script>
     parts = re.split(r"(<script[\s\S]*?</script>|<textarea[\s\S]*?</textarea>|<pre[\s\S]*?</pre>)", h)
     h = "".join(p if p.startswith(("<script", "<textarea", "<pre")) else re.sub(r"\n[ \t]+", "\n", re.sub(r"\n\s*\n+", "\n", p)) for p in parts)

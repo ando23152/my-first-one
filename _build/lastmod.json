@@ -1,66 +1,66 @@
 {
 "": [
-"a78deaf5e29154a2",
+"135f2ca3f6634b84",
 "2026-11-01"
 ],
 "about/": [
-"fa7f80abe5f1248b",
+"5d9771666dfeb247",
 "2026-11-01"
 ],
 "brands/craftsman/": [
-"ebceb3149b03fe1a",
+"d5373312242a9474",
 "2026-11-01"
 ],
 "brands/dewalt/": [
-"a23b992f9e8e56a7",
+"a52ae9ff0fa46864",
 "2026-11-01"
 ],
 "brands/hampton-bay/": [
-"afb49fc05e103169",
+"75a40f462b639333",
 "2026-11-01"
 ],
 "brands/makita/": [
-"34fd00c469d867af",
+"9cd74b270bcccd1c",
 "2026-11-01"
 ],
 "brands/milwaukee/": [
-"c1bea183483489a9",
+"eb0a24cbdf9bba02",
 "2026-11-01"
 ],
 "brands/prolux/": [
-"b4cdb49430048626",
+"a1199cefa390b1e4",
 "2026-11-01"
 ],
 "brands/ridgid/": [
-"7a539d050d070194",
+"941fc71c09f133d4",
 "2026-11-01"
 ],
 "brands/ryobi/": [
-"4b5a6c625fe239fa",
+"89096e76ee0df537",
 "2026-11-01"
 ],
 "brands/samsung/": [
-"4ca779d2e7e0dacb",
+"079289f7bb9ac4d6",
 "2026-11-01"
 ],
 "brands/shark/": [
-"0aba759371830ab7",
+"f65da5f7ff987481",
 "2026-11-01"
 ],
 "brands/shop-vac/": [
-"4a31c926ff9ab3e7",
+"e0bcefe34f7ff7f7",
 "2026-11-01"
 ],
 "brands/vacmaster/": [
-"6896cd15dc0cb761",
+"2082ab7a87ca84d7",
 "2026-11-01"
 ],
 "brands/wen/": [
-"ca8aa2c03d798429",
+"a1e8a4e707c1be18",
 "2026-11-01"
 ],
 "business/": [
-"2bc7dbdbb2f36918",
+"8b3e7f084e558139",
 "2026-11-01"
 ],
 "es/": [
@@ -76,1023 +76,1567 @@
 "2026-11-01"
 ],
 "faq/": [
-"c2c7a2ad91c2aa20",
+"3e288d8bc877a93c",
 "2026-11-01"
 ],
 "glossary/": [
-"752c48d5de0b59a8",
+"9c86e40a2fe585c9",
 "2026-11-01"
 ],
 "glossary/abs/": [
-"988ae5e7a48abe4d",
+"14f17e82b6041ad0",
 "2026-11-01"
 ],
 "glossary/aftermarket-part/": [
-"c11ef9d7ef36ffe2",
+"dae21344d3f42ad9",
 "2026-11-01"
 ],
 "glossary/asa/": [
-"b5b2ba44cf2aba13",
+"df4cf73c7069478e",
 "2026-11-01"
 ],
 "glossary/bracket/": [
-"4238236e1d5601bb",
+"7f7365e029da407f",
 "2026-11-01"
 ],
 "glossary/cad/": [
-"77503f8ad57a3898",
+"24bf3af82106c4ee",
 "2026-11-01"
 ],
 "glossary/clips-and-covers/": [
-"effe0a4166355e01",
+"e5b3d8cd87daba29",
 "2026-11-01"
 ],
 "glossary/dust-port-hose-sizes/": [
-"569b88172c6b05c5",
+"88524a026391895d",
 "2026-11-01"
 ],
 "glossary/enclosure/": [
-"b8a6d71ae2e1896d",
+"39e0abc3d8917716",
 "2026-11-01"
 ],
 "glossary/fdm-3d-printing/": [
-"20beed4a4dcc7715",
+"4107c4689e81f6c4",
 "2026-11-01"
 ],
 "glossary/fit-types/": [
-"2df26b6d5188dcdb",
+"530350723566a130",
 "2026-11-01"
 ],
 "glossary/fixture/": [
-"56aed0b3e366ff64",
+"7a71b31ec4c05ad0",
 "2026-11-01"
 ],
 "glossary/food-contact/": [
-"9092cee16a4174f9",
+"d4dee7f3ae9ccec9",
 "2026-11-01"
 ],
 "glossary/heat-deflection-temperature/": [
-"d2054d16951ebdd8",
+"1bcf72fb1df4a118",
 "2026-11-01"
 ],
 "glossary/infill/": [
-"bd5151036009714d",
+"b8a53a564b95fc75",
 "2026-11-01"
 ],
 "glossary/jig/": [
-"b97c9099da8fb06f",
+"1f16314e61db742b",
 "2026-11-01"
 ],
 "glossary/layer-height/": [
-"5bbf966dfc880ff4",
+"ae8952a177c59b6c",
 "2026-11-01"
 ],
 "glossary/oem-part/": [
-"3e7e0ac9bbf08644",
+"135f57ca536ef7cb",
 "2026-11-01"
 ],
 "glossary/organizer/": [
-"7c067f6918312567",
+"854de91b5f2d5ce9",
 "2026-11-01"
 ],
 "glossary/pa-cf/": [
-"5599fe1c765be5ec",
+"6e2ab04a6a80b343",
 "2026-11-01"
 ],
 "glossary/petg/": [
-"1edbac4c6cb1ebd3",
+"beb57edfabcba163",
 "2026-11-01"
 ],
 "glossary/pla/": [
-"94f82f658ed4e5de",
+"ed19607b48052504",
 "2026-11-01"
 ],
 "glossary/print-orientation/": [
-"a2d9e412a99737a9",
+"6660f22c7ded3022",
 "2026-11-01"
 ],
 "glossary/prototyping/": [
-"3e341ee484872189",
+"66f8f7ffe5261138",
 "2026-11-01"
 ],
 "glossary/reverse-engineering/": [
-"e0bbb49e3866d440",
+"c1cf9309dee76136",
 "2026-11-01"
 ],
 "glossary/roller/": [
-"3b06cd02c8f402ee",
+"840e0f810c502a9c",
 "2026-11-01"
 ],
 "glossary/small-batch-manufacturing/": [
-"79416e72b0b5f00f",
+"8a9b4637ac479311",
 "2026-11-01"
 ],
 "glossary/stl-file/": [
-"7445ccb72ebe7f44",
+"a065c4326917ee9a",
 "2026-11-01"
 ],
 "glossary/tolerance/": [
-"03e931e1b2061e76",
+"dcdeddf19a6702cf",
 "2026-11-01"
 ],
 "glossary/tpu/": [
-"7c682accd24f9e4c",
+"cfa8e4327dc7df95",
 "2026-11-01"
 ],
 "glossary/uv-resistance/": [
-"46f168cbc920607d",
+"d1fa12ae2413e717",
 "2026-11-01"
 ],
 "glossary/wall-count/": [
-"8ab7ce333458273e",
+"f0775b614dc84da1",
 "2026-11-01"
 ],
 "guides/how-to-measure-a-part/": [
-"43068c1c84cb46d0",
+"b49913b73185d2cc",
 "2026-11-01"
 ],
 "guides/replacing-a-discontinued-plastic-part/": [
-"0186309fa81aa060",
+"74237b177dd9a607",
 "2026-11-01"
 ],
 "guides/shop-vac-hose-sizes/": [
-"72ed70fef1ca6f19",
+"03201f0e5ed8a2b4",
 "2026-11-01"
 ],
 "industries/agriculture/": [
-"78c6a7139c193bce",
+"3c8dff915e821b72",
 "2026-11-01"
 ],
 "industries/food-processing/": [
-"8146f8c99e39bf6e",
+"049a028106ca6b6d",
 "2026-11-01"
 ],
 "industries/industrial-shops/": [
-"4b0325ab4339c945",
+"782c7813789bc3c9",
 "2026-11-01"
 ],
 "industries/warehouse-cold-storage/": [
-"9d5527d1f5c69857",
+"c40c5fc35398df24",
 "2026-11-01"
 ],
 "materials/": [
-"a288dac295f2b7fb",
+"64e79d768b5bfebe",
 "2026-11-01"
 ],
 "parts/": [
-"631d22189629c1b5",
+"051c1fcdf8290973",
 "2026-11-01"
 ],
 "parts/craftsman-cmxzvbe38620-2-1-2-in-car-nozzle/": [
-"df30c9ea6062087c",
+"6a54791b65d86296",
 "2026-11-01"
 ],
 "parts/craftsman-cmxzvbe38639-2-1-2-in-hose-grip-handle/": [
-"154420ff3fac26e5",
+"caa518aa9d430c21",
 "2026-11-01"
 ],
 "parts/craftsman-cmxzvbe38676-1-7-8-in-utility-nozzle/": [
-"2462de8c31366352",
+"af2636dc27a10df5",
 "2026-11-01"
 ],
 "parts/craftsman-cmxzvbe38725-1-7-8-in-dusting-brush/": [
-"aee52add340ec9d5",
+"9a11ecd54397960d",
 "2026-11-01"
 ],
 "parts/dewalt-dwh052-1-1-8-in-hex-breaker-dust-collector/": [
-"0dd2b67c0cb72a07",
+"5fed46c6c56e5ea0",
 "2026-11-01"
 ],
 "parts/dewalt-dwh079d-sds-rotary-hammer-dust-box-evacuator/": [
-"6efd229b62b10ea4",
+"405c68551f6c26db",
 "2026-11-01"
 ],
 "parts/dewalt-dwh205dh-dust-extractor-for-dch263-sds-plus-d-handle/": [
-"bc445cd6ed2a8020",
+"e7e4515cfef38cb0",
 "2026-11-01"
 ],
 "parts/dewalt-dwh304dh-multi-surface-dust-extractor/": [
-"ac01d3dc43913bb3",
+"659ffa5cb140174a",
 "2026-11-01"
 ],
 "parts/dewalt-dwv2759-dust-extractor-accessory-kit-5-piece/": [
-"f9d330fe5e6bbc52",
+"13a8ef2e660f8d37",
 "2026-11-01"
 ],
 "parts/dewalt-dwv9000-universal-quick-connector/": [
-"65d4a56375a31bf2",
+"c8155cd67886057e",
 "2026-11-01"
 ],
 "parts/dewalt-dwv9190-large-hose-adapter/": [
-"c6ddf642fff9de02",
+"3add3f189498b8e2",
 "2026-11-01"
 ],
 "parts/dewalt-dxva08-2503-2-1-2-in-utility-nozzle-attachment/": [
-"54831a12e9c8a254",
+"937d12421230b6ab",
 "2026-11-01"
 ],
 "parts/dewalt-dxva08-2712-2-1-2-in-to-1-1-4/": [
-"32a7d4ea789c4081",
+"a80f3c5067381e2f",
 "2026-11-01"
 ],
 "parts/dewalt-dxva08-2718-2-1-2-in-to-1-7-8/": [
-"953c89f0302a0017",
+"584a8032902578a6",
 "2026-11-01"
 ],
 "parts/dewalt-dxva11-2100-1-7-8-in-to-2-1-2/": [
-"3f78253562e6b347",
+"5fc765326318f3ca",
 "2026-11-01"
 ],
 "parts/dewalt-dxva13-0801-1-25-2-5-in-car-cleaning-accessory/": [
-"380cc2c8ce172704",
+"326ba10884a81512",
 "2026-11-01"
 ],
 "parts/dewalt-dxva13-4333-1-7-8-in-car-cleaning-nozzle-attachment/": [
-"11b5da273fc60386",
+"89374af1ad041896",
 "2026-11-01"
 ],
 "parts/dewalt-dxva13-4364-1-7-8-in-car-cleaning-flexible-claw/": [
-"b56345357e8b39b7",
+"e6850420c78683f3",
 "2026-11-01"
 ],
 "parts/dewalt-dxva15-1100-multi-fit-accessory-attachment-hose-adapter/": [
-"08ebe428722cc1f0",
+"02960ac4fa5b1f02",
 "2026-11-01"
 ],
 "parts/dewalt-dxva19-1400-1-7-8-in-crevice-nozzle-attachment/": [
-"cfac3baea596318b",
+"4fab8917293c7f48",
 "2026-11-01"
 ],
 "parts/dewalt-dxva19-1900-1-7-8-in-floor-brush-attachment/": [
-"25921b30af47bf00",
+"68621acc5356df3a",
 "2026-11-01"
 ],
 "parts/dewalt-dxva19-2780-adapter-1-7-8-in-hose/": [
-"46f3bac48be9b27d",
+"80c829bc30aec9f3",
 "2026-11-01"
 ],
 "parts/dewalt-dxvcs001-dust-separator-for-wet-dry-vacuums/": [
-"09bdf4b6005fe897",
+"7670a059f4787c35",
 "2026-11-01"
 ],
 "parts/hampton-bay-70830-battery-cover-for-universal-kit-remotes-70830-98101/": [
-"0701e5420a8d4249",
+"ff930087b898df7e",
 "2026-11-01"
 ],
 "parts/hampton-bay-uc7078t-battery-door-cover-for-uc7078t-handheld-remote/": [
-"c744a2d5c8385e44",
+"33524c3409dc8537",
 "2026-11-01"
 ],
 "parts/hampton-bay-uc7078t-ceiling-fan-remote-wall-holder-plastic-new/": [
-"ce0c9c8e0ca81392",
+"bab1d066a6a4ae56",
 "2026-11-01"
 ],
 "parts/hampton-bay-uc7083t-battery-door-cover-for-uc7083t-handheld-remote-dipswitch/": [
-"fbd300111df164e2",
+"9be55075afe39f72",
 "2026-11-01"
 ],
 "parts/makita-195548-6-cuff-joint-adapter-38-mm-to-22-mm/": [
-"223c75c30ee808c5",
+"06c816246ea146ea",
 "2026-11-01"
 ],
 "parts/makita-417765-1-22-mm-tool-cuff-adapter/": [
-"d4f3e8799760030d",
+"cae82e536d725881",
 "2026-11-01"
 ],
 "parts/makita-417766-9-38-mm-tool-cuff-adapter/": [
-"70379cee9d276552",
+"1074002e4bd858e1",
 "2026-11-01"
 ],
 "parts/makita-424379-9-24-mm-thread-on-tool-cuff-adapter/": [
-"a157965c1375350f",
+"e215535ba6cd6af3",
 "2026-11-01"
 ],
 "parts/makita-w107418678-15-16-in-hose-cuff-adapter/": [
-"db39c6cdb58eac9d",
+"07ccc84e89727f80",
 "2026-11-01"
 ],
 "parts/makita-w107418688-1-3-4-in-hose-cuff-adapter/": [
-"78d087f7a431c99d",
+"8f46889df99810d4",
 "2026-11-01"
 ],
 "parts/milwaukee-0990-20-dedicated-debris-separator-between-head-and-tank/": [
-"0c310397877faed4",
+"701c9950e9effb46",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-1959-hose-clip-adapter-extractor/": [
-"5d7e1a77f72cbb3a",
+"3015460147aec149",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-1981-1-7-8-in-round-brush/": [
-"195fee396178ab58",
+"45e7d5fdce6a1a5a",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-1982-1-7-8-in-floor-brush-reversible/": [
-"451862d7e8f65230",
+"804e42760cc3967d",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-1983-1-7-8-in-curved-nozzle/": [
-"070beb2112d577a8",
+"a33912f02f7ec64e",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-1985-1-7-8-in-wet-floor-nozzle-9/": [
-"0b114b45d113f5be",
+"b36936d42a0c90f0",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-1988-1-7-8-in-crevice-tool-7-1/": [
-"4e5840ba4993bbb7",
+"b6a45013aa2314b6",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-1991-hose-and-accessory-adapter-kit-2-1-2/": [
-"54f0f5fc205eb367",
+"81b7c2afe3b4af48",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-1992-hose-to-drain-adapter-kit-garden-hose/": [
-"434dc7095df3808e",
+"dcde470eb15d58f3",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2001-2-1-2-in-round-brush/": [
-"3d2eedd9fb60bbf2",
+"306fd73a51f730f7",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2002-2-1-2-in-floor-brush/": [
-"ee812ed4db9413cc",
+"8ebd8b97ef8df4f8",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2005-2-1-2-in-wet-floor-nozzle/": [
-"ec2bf7fc3e31a18a",
+"faa488bad128e683",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2008-2-1-2-in-crevice-tool/": [
-"3f284e9eb18224ac",
+"9f638fcd714a7355",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2009-2-1-2-in-floor-utility-nozzle/": [
-"f6a7e86b51701958",
+"10b6f302a1a67037",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2011-1-7-8-in-floor-utility-nozzle/": [
-"d9f19ec90438d995",
+"22512ebb64bdbbd3",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2017-1-1-4-in-round-brush/": [
-"2dbc72b2530454d1",
+"09700b5ac07d6f89",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2018-vacuum-power-tool-adapter-3-steps-1-22/": [
-"20dc52584a418419",
+"834905e4a8f12622",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2019a-automotive-kit-w-crevice-tools-utility-nozzle/": [
-"341aa9e6047c4d2e",
+"d9ce659b61c6473d",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2020-swiveling-palm-brush/": [
-"4f8d82229592ba7e",
+"c99397f1d15425a3",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2021-rotating-corner-brush/": [
-"b9dce9d1ed3bfa7d",
+"16b32dd916816b07",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2022-dust-collector-wall-suction-funnel/": [
-"cddb9429d5462a21",
+"b075ceb759d5f6fc",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2023y-3-in-1-crevice-and-brush-tool/": [
-"01cc1390da0826d1",
+"6cde7d43962a5a7a",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2024-conduit-line-puller-3-pc/": [
-"da4542569b5ce4d1",
+"6f158bcce8168125",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2026-4-in-1-right-angle-tool-5-pc/": [
-"a0cda64e5a822a48",
+"6c6c7c7771ac5f10",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2027-low-profile-pivoting-brush/": [
-"13185cf62ce3a10c",
+"8b9f449cc3d63eaf",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2028-2-in-1-utility-brush/": [
-"62b6bc145ff3d881",
+"383fdce07bc48742",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2030y-flexible-long-reach-crevice-tool/": [
-"37b86dfe042c6a48",
+"e6960a87eb865369",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2032-magnetic-utility-nozzle/": [
-"76aaf478a778d6ae",
+"8263cd2f599676b1",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2033-2-1-2-in-magnetic-utility-nozzle/": [
-"23b40025636be3f0",
+"7b4ce4b5bbf9a0dc",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2034-non-marring-crevice-tool-utility-nozzle-2-pc/": [
-"1d3e3a62910925ed",
+"14e97d573d50f922",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2035-cross-brush-tool/": [
-"7ebb3cfd7682583a",
+"60d6440924600932",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2038-rocking-utility-nozzle-w-brushes/": [
-"edf0cb0777829e18",
+"f05605ababdf0ed9",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2039-2-1-2-in-rocking-utility-nozzle-w/": [
-"2d02295920bfaf3c",
+"2ac13df8d0df8843",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2040-claw-utility-nozzle-w-brushes/": [
-"8666aa1c2ba296c1",
+"ad1b9d0a33484438",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2041-bucket-topper-dust-collector/": [
-"ec555401af0649bc",
+"f622d6e190d2981d",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2043-automotive-detail-brush/": [
-"e2a78bdbdde78bbe",
+"5f8e5ba2d5dd5797",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2043p-kit-cross-brush-2-in-1-brush-rocking/": [
-"c5c68077960b1e91",
+"b6b2ebd6ec5ec391",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2044-compact-dust-collector/": [
-"97ac69b8c2d9edde",
+"afa93169b3ca86c1",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2046-boiler-coil-cleaning-brush/": [
-"0e998a19a63c6ee9",
+"065b4cff6e88d82f",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2047-debris-scraper/": [
-"2c534f47bbc3772f",
+"4a78597a84291894",
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2200-compact-debris-separator-6-ft-1-7-8/": [
-"36edc7492981c88d",
+"3447980c49323259",
 "2026-11-01"
 ],
 "parts/prolux-prolux-10qt-multi-surface-14-in-floor-tool/": [
-"709942c6e7af2ec1",
+"9d286b2b8f083fa4",
 "2026-11-01"
 ],
 "parts/prolux-prolux-2-0-squeegee-floor-tool/": [
-"11669eac283793bf",
+"33b5aaadd2e653ec",
 "2026-11-01"
 ],
 "parts/prolux-prolux-ctx-canister-latches-springs-and-latch-pins/": [
-"9aeb1921bb1511de",
+"62e649979bf090a4",
 "2026-11-01"
 ],
 "parts/prolux-prolux-tritan-combination-floor-tool-new-style/": [
-"1346dffa9f62982a",
+"76607268a813784f",
 "2026-11-01"
 ],
 "parts/prolux-prolux-tritan-tool-caddy-wand-mounted/": [
-"d33c1e7cf6ec39c1",
+"a66766c648c3d02c",
 "2026-11-01"
 ],
 "parts/ridgid-la2501-2-1-2-in-locking-round-dusting-brush/": [
-"2a533c7dea645929",
+"c8e011d52cf6cb20",
 "2026-11-01"
 ],
 "parts/ridgid-la2502-2-1-2-in-locking-crevice-tool/": [
-"ada28cab4a502689",
+"90480490dd1881f6",
 "2026-11-01"
 ],
 "parts/ridgid-la2503-2-1-2-in-locking-car-nozzle/": [
-"c0568afa96948d25",
+"6411dfd0dde709bb",
 "2026-11-01"
 ],
 "parts/ridgid-la2509-2-1-2-in-locking-utility-nozzle/": [
-"762c3fe0fedcec37",
+"f9e64d46717d8ca3",
 "2026-11-01"
 ],
 "parts/ridgid-la2510-2-1-2-in-locking-wet-nozzle/": [
-"76d573d99b908ca4",
+"4f368c1f5c52c0cc",
 "2026-11-01"
 ],
 "parts/ridgid-la2514-2-1-2-in-locking-floor-brush/": [
-"5740fa052d6e680b",
+"61cc8df7525b9fc1",
 "2026-11-01"
 ],
 "parts/ridgid-vt1407-2-1-2-in-power-tool-adaptor-stepped/": [
-"09246b592e5fd249",
+"8648c06dc798f738",
 "2026-11-01"
 ],
 "parts/ridgid-vt1701-1-7-8-in-dusting-brush/": [
-"f818797340b0a693",
+"60110b76cff6d439",
 "2026-11-01"
 ],
 "parts/ridgid-vt1702-1-7-8-in-crevice-tool/": [
-"ced3e1273fc3d74d",
+"c129604227e9ae63",
 "2026-11-01"
 ],
 "parts/ridgid-vt1709-1-7-8-in-utility-nozzle/": [
-"41a1ba8a9ba9b22b",
+"9d7c3c97adbc74ff",
 "2026-11-01"
 ],
 "parts/ridgid-vt1710-1-7-8-in-wet-nozzle-squeegee/": [
-"856ada759a4107eb",
+"1c47eb53f970382d",
 "2026-11-01"
 ],
 "parts/ridgid-vt1712-1-7-8-in-crevice-dusting-brush-combo/": [
-"0c6999fd80891a32",
+"497bc35fda12d1d3",
 "2026-11-01"
 ],
 "parts/ridgid-vt1714-1-7-8-in-floor-brush/": [
-"8d7253c113c53d00",
+"2c839cfe68583692",
 "2026-11-01"
 ],
 "parts/ridgid-vt1755-3-pc-hose-accessory-adapter-kit/": [
-"9de4c0df560502a4",
+"8917741c4048c107",
 "2026-11-01"
 ],
 "parts/ridgid-vt1781-1-7-8-in-car-nozzle/": [
-"49d3a9a29d84d6c5",
+"e84598120a1b82cc",
 "2026-11-01"
 ],
 "parts/ridgid-vt2505-2-1-2-in-hose-grip-with-bleeder/": [
-"4ed1a46fa3507de9",
+"769179815aef4431",
 "2026-11-01"
 ],
 "parts/ridgid-vt2519-hose-to-drain-adapter/": [
-"7ed5518a957c7996",
+"605169c9d2eb8f2a",
 "2026-11-01"
 ],
 "parts/ridgid-vt2525-2-1-2-in-muffler-diffuser-with-adapter/": [
-"1dd4175050c6e463",
+"a99d7bb563810c5c",
 "2026-11-01"
 ],
 "parts/ridgid-vt2530-multi-surface-carpet-hard-floor-nozzle/": [
-"1690a9d238e3fa36",
+"7908acb53643a4ed",
 "2026-11-01"
 ],
 "parts/ridgid-vt2540-claw-nozzle/": [
-"6c435bb65d4059f0",
+"bfa5ccbff54477bb",
 "2026-11-01"
 ],
 "parts/ridgid-vt2571-turbo-beater-bar-kit/": [
-"1b1610951c464115",
+"bf01b74e746d4923",
 "2026-11-01"
 ],
 "parts/ridgid-vt2575-12-pc-heavy-duty-cleaning-kit-stainless-wands/": [
-"70986bb31d08b157",
+"7516cfaa2439c781",
 "2026-11-01"
 ],
 "parts/ryobi-a21ccv1-sander-vacuum-adaptor/": [
-"f0a4cbae5496b5db",
+"d8774fba417b4eb4",
 "2026-11-01"
 ],
 "parts/ryobi-a3210g01-1-7-8-in-6-pc-kit-2/": [
-"cc30a299ce42fca9",
+"9672b5b4e39469f9",
 "2026-11-01"
 ],
 "parts/ryobi-a323g01-1-1-4-in-crevice-tool-utility-nozzle/": [
-"ad22a895f130ef13",
+"3cda04eac6162576",
 "2026-11-01"
 ],
 "parts/ryobi-a326g01-1-7-8-in-4-pc-kit-crevice/": [
-"d00a5c23d6f2e785",
+"1c21c720df8340cf",
 "2026-11-01"
 ],
 "parts/ryobi-a326g01n-p770-6-gal-accessory-kit-1-7-8/": [
-"10999df90cb98137",
+"bb7d8fd2f8dbe69f",
 "2026-11-01"
 ],
 "parts/ryobi-a32ad01-wet-dry-vacuum-adapter-step-adapter/": [
-"3989d399a2485e2e",
+"e8433e00f1c8da91",
 "2026-11-01"
 ],
 "parts/ryobi-a32k02-4-pc-wet-dry-hand-vac-kit-crevice/": [
-"ea13b056dc85aeb0",
+"26a2ff4d5a4b15e1",
 "2026-11-01"
 ],
 "parts/ryobi-a32k04-stick-vac-accessory-kit-crevice-dust-brush-micro/": [
-"d190200e342bf978",
+"0a43d56eb9333ea0",
 "2026-11-01"
 ],
 "parts/ryobi-a32ss02n-1-3-8-in-accessory-kit-crevice-tool/": [
-"12ece5136bb31fc9",
+"fc54ae6a0d34af80",
 "2026-11-01"
 ],
 "parts/ryobi-a32ua01-crevice-tool/": [
-"181f902bea571cfc",
+"ed414707b0615303",
 "2026-11-01"
 ],
 "parts/ryobi-a32ua02-flexible-micro-crevice-tool-rubber/": [
-"64c54df758179d0d",
+"7cded488ef6aacac",
 "2026-11-01"
 ],
 "parts/ryobi-a32ua03-flexible-extended-micro-crevice-tool-14/": [
-"297fb1a08d7718cd",
+"6e49a249282ce44c",
 "2026-11-01"
 ],
 "parts/ryobi-a32ua04-dust-brush-triangular/": [
-"baba217b70d508b7",
+"82e0079609524b1a",
 "2026-11-01"
 ],
 "parts/ryobi-a32ua05-car-nozzle-3-3-8-in-opening/": [
-"b458e25b3d328d95",
+"d31ca9f9d3111288",
 "2026-11-01"
 ],
 "parts/ryobi-a32ua06-micro-crevice-tool-16-bendable-straws/": [
-"98334a339714f24b",
+"e8b2d2473c57d9fd",
 "2026-11-01"
 ],
 "parts/ryobi-a32ua07-floor-head-10-in-wide/": [
-"846f8d7ec6f6d804",
+"f31198e70037cdc5",
 "2026-11-01"
 ],
 "parts/ryobi-a32uak1-universal-fit-accessories-kit-3-piece/": [
-"277e5cd84758d181",
+"00def348c2201503",
 "2026-11-01"
 ],
 "parts/samsung-da61-04195a-door-stopper-left/": [
-"bfa810d44092fdc2",
+"63e51ac77ee99cb2",
 "2026-11-01"
 ],
 "parts/samsung-da63-06911a-drawer-slide-rail-cover-full-length/": [
-"52368bb428a2e8a0",
+"8e2e3cdbfd673a67",
 "2026-11-01"
 ],
 "parts/samsung-da63-08459a-tray-support-rollers-dispenser-tray/": [
-"9bf43fc7cd723c36",
+"b3fcb996f724f910",
 "2026-11-01"
 ],
 "parts/samsung-da67-02291a-freezer-door-handle-end-cap-left-gray/": [
-"6f00002f267fb0c4",
+"7f6a55495c15e399",
 "2026-11-01"
 ],
 "parts/samsung-da67-02292a-freezer-door-handle-end-cap-right/": [
-"c02d95d8ffffd54c",
+"5eaf83afa931a2bc",
 "2026-11-01"
 ],
 "parts/samsung-da67-02512a-convenience-door-handle-mounting-cap-left/": [
-"2272a8b3060f61d7",
+"37cdfea88ba88a7d",
 "2026-11-01"
 ],
 "parts/samsung-da67-02787b-freezer-door-handle-end-cap/": [
-"b4bd8c55550fc9eb",
+"620d8be8c957440e",
 "2026-11-01"
 ],
 "parts/samsung-da67-02787c-freezer-handle-cap/": [
-"fd1ac93055fd9070",
+"a19af63324668017",
 "2026-11-01"
 ],
 "parts/samsung-dd61-00216a-tine-row-clip/": [
-"80f2f53073e1f96f",
+"49c63ac7e69ddd8c",
 "2026-11-01"
 ],
 "parts/samsung-dd61-00348a-tine-holder-back/": [
-"4a6c3e6012413df8",
+"b778a613ccae3b63",
 "2026-11-01"
 ],
 "parts/samsung-dd61-00351a-rack-roller-holder/": [
-"afa48283510650af",
+"93a6b9abfd7ad3c1",
 "2026-11-01"
 ],
 "parts/samsung-dd61-00469a-rack-tine-holder/": [
-"780b3cef3add8082",
+"6ce30c541d198641",
 "2026-11-01"
 ],
 "parts/samsung-dd61-00472a-lower-rack-tine-holder/": [
-"0eacdd9184f72d3d",
+"3c44d60acef651bf",
 "2026-11-01"
 ],
 "parts/samsung-dd61-00473a-rack-holder-tine-clip/": [
-"d794716968630a48",
+"a19872c47772a1e0",
 "2026-11-01"
 ],
 "parts/samsung-dd61-00497a-dishrack-slide-rail-holder/": [
-"25ff8a85f2ecc77a",
+"6a29d4dadd71eb47",
 "2026-11-01"
 ],
 "parts/samsung-dd66-00023a-lower-rack-roller/": [
-"8b1277b40ce74381",
+"e5dcd07bce102351",
 "2026-11-01"
 ],
 "parts/samsung-dd66-00076a-lower-roller-basket/": [
-"9ded2e846bca7350",
+"f9834c4deeff09a8",
 "2026-11-01"
 ],
 "parts/samsung-dj64-01328b-button-brush-vs9000rl-dark-chrome/": [
-"abb10db323a04d63",
+"d28aa9b53fdaee93",
 "2026-11-01"
 ],
 "parts/samsung-dj98-01130a-accessory-crevice-tool-vs9000rl/": [
-"75217c7be3e07d16",
+"8fa0e06bcd878e1f",
 "2026-11-01"
 ],
 "parts/samsung-vca-sad95-aa-combination-tool/": [
-"1c0a6a8fe9e9159b",
+"1cb0b73f3b1ea98a",
 "2026-11-01"
 ],
 "parts/samsung-vca-saf95-vaa-flex-tool-chrometal-black/": [
-"f8d56bdecda31826",
+"3f38ee621bc1aea4",
 "2026-11-01"
 ],
 "parts/samsung-vca-sak90-gl-tool-kit-gray-white-vca-sak90w/": [
-"0701efc3454f34c4",
+"51192aac4bbfd262",
 "2026-11-01"
 ],
 "parts/samsung-vca-sar95-aa-long-reach-crevice-tool/": [
-"310c4a4320c20d7f",
+"39ea5a63767fe804",
 "2026-11-01"
 ],
 "parts/shark-102ky1000-side-brush-aftermarket-referenced/": [
-"6ad4e3c5a25fcd9b",
+"8911d7445728b10b",
 "2026-11-01"
 ],
 "parts/shark-112ffj-crevice-tool-dusting-brush-set/": [
-"b54626e6489e2023",
+"4f6482c5f3c2ebfb",
 "2026-11-01"
 ],
 "parts/shark-1171fk870-robot-side-brushes/": [
-"d0139c6675c6d461",
+"946c514c2a59bff0",
 "2026-11-01"
 ],
 "parts/shark-123ky1000a-robot-self-cleaning-brushroll/": [
-"59d51ae120b9f018",
+"e2f9d135197454aa",
 "2026-11-01"
 ],
 "parts/shark-1365fc200-wall-mount/": [
-"6c56a3059a69834d",
+"879232f91cfaff58",
 "2026-11-01"
 ],
 "parts/shark-1539fc3000-soft-brushroll-front-roller/": [
-"794a904ae652255f",
+"836af265b30940d6",
 "2026-11-01"
 ],
 "parts/shark-153hg2300-triple-side-brushes-2/": [
-"112f45049bee68ed",
+"2be378cccd17c231",
 "2026-11-01"
 ],
 "parts/shark-158fli650-duster-crevice-tool/": [
-"17a8d40b5d4e8998",
+"c866db837a863a2b",
 "2026-11-01"
 ],
 "parts/shark-159fli650-upholstery-tool/": [
-"24b46ad1ada6c629",
+"80f44754f03ead13",
 "2026-11-01"
 ],
 "parts/shark-166kku2500-self-cleaning-brushroll/": [
-"abf5fd7dda31525a",
+"a88070d8ad99be7c",
 "2026-11-01"
 ],
 "parts/shark-167kku2500-robot-self-cleaning-brushroll/": [
-"7f9e532f1d2f6393",
+"1a15973267de2196",
 "2026-11-01"
 ],
 "parts/shark-189fli680-duster-crevice-tool/": [
-"8ebfd3d6a17ae326",
+"566d1a465cbf8caa",
 "2026-11-01"
 ],
 "parts/shark-210flih380-duster-crevice-tool/": [
-"5508ad5918c5f49a",
+"26394dae98f6d518",
 "2026-11-01"
 ],
 "parts/shark-219flin800-pet-multi-tool/": [
-"83f10ce37cf67d97",
+"af242686a5618de0",
 "2026-11-01"
 ],
 "parts/shark-240flin850-under-appliance-wand/": [
-"ed451f37f4b68430",
+"345945ab37bff387",
 "2026-11-01"
 ],
 "parts/shark-255flih380-8in-crevice-tool/": [
-"8f30bb53239546ac",
+"08342a89e82af706",
 "2026-11-01"
 ],
 "parts/shark-278kku2800-robot-self-cleaning-brushroll/": [
-"7df6b201ea278d73",
+"f8fc0b5f1b6128ae",
 "2026-11-01"
 ],
 "parts/shark-353ch1000-crevice-tool/": [
-"b45e76ae80c4e972",
+"62dd03bc149864dc",
 "2026-11-01"
 ],
 "parts/shark-354ch1000ce-pet-multi-tool/": [
-"ba4a8ff2dfecfb4a",
+"f3d0d0d64b90feb7",
 "2026-11-01"
 ],
 "parts/shark-406gp2300-triple-side-brush-single/": [
-"29ab5cbcc45d6b17",
+"07095c6a053b0002",
 "2026-11-01"
 ],
 "parts/shark-58mmsb2pk-triple-side-brushes-2/": [
-"b0d5fdebe64ea11f",
+"d23ece2e11e57fb2",
 "2026-11-01"
 ],
 "parts/shark-619fj140-crevice-tool/": [
-"efa77369c384bc2d",
+"0313b010c00cff83",
 "2026-11-01"
 ],
 "parts/shark-621fj140-flexible-crevice-tool/": [
-"0e703ce4c89391b2",
+"4fd4f2922dd02261",
 "2026-11-01"
 ],
 "parts/shark-623fj140-duster-crevice-tool/": [
-"2f7762fb64f23099",
+"416af896166b026b",
 "2026-11-01"
 ],
 "parts/shark-627fj140-upholstery-tool/": [
-"037f70ac9654e8f9",
+"603caf17d4bb3692",
 "2026-11-01"
 ],
 "parts/shark-629fj140-pet-multi-tool/": [
-"b8921ad04706887e",
+"b82cb0dd53baf620",
 "2026-11-01"
 ],
 "parts/shark-632fj140-under-appliance-wand/": [
-"44ade49114bf2c9e",
+"c4aefc86d0f5bda5",
 "2026-11-01"
 ],
 "parts/shark-673ffj200-crevice-tool/": [
-"427bfff27e911762",
+"7c3b3459a97c818e",
 "2026-11-01"
 ],
 "parts/shark-hvuaw300-138fliv300-under-appliance-wand-36in-adjustable/": [
-"95d486716e401f08",
+"5e1a1ad5db3ce829",
 "2026-11-01"
 ],
 "parts/shark-x11fc500-crevice-dusting-brush-upholstery-tool-set/": [
-"25a12702276d10f0",
+"6f153f2ad0fc5f75",
 "2026-11-01"
 ],
 "parts/shop-vac-9066600-2-1-2-in-hose-handle-grip/": [
-"dc7a5aa6027753ca",
+"94cff9b0fccd57a9",
 "2026-11-01"
 ],
 "parts/shop-vac-9068500-2-1-2-in-to-1-1-4/": [
-"3bc08066cae604d1",
+"dc9e9fb628fadd5f",
 "2026-11-01"
 ],
 "parts/shop-vac-9196600-1-1-2-in-wet-dry-nozzle/": [
-"cb8b2ccfb5de04af",
+"c0dbff278884ef88",
 "2026-11-01"
 ],
 "parts/vacmaster-v12ccb-1-1-4-in-car-claw-nozzle/": [
-"7165f234a31d4bb4",
+"b7977745c07af280",
 "2026-11-01"
 ],
 "parts/vacmaster-v21a-2-1-2-in-to-1-1-4/": [
-"1cb335ea9db3e3e4",
+"df15a4f378685690",
 "2026-11-01"
 ],
 "parts/vacmaster-v2tab-2-1-2-in-tool-adapter/": [
-"d28ae6b1411995d2",
+"472017d7f43bcd6e",
 "2026-11-01"
 ],
 "parts/vacmaster-v78ab-1-7-8-in-to-1-1-4/": [
-"2810b128f0975af0",
+"e421a6126cf3f370",
 "2026-11-01"
 ],
 "parts/vacmaster-v78tab-1-7-8-in-power-tool-adapter/": [
-"bc1e5eccd6aed84c",
+"92c9a8fd36ec7edf",
 "2026-11-01"
 ],
 "parts/wen-dca001-4-in-to-2-1-2-in-cone/": [
-"d12c04890f4729cc",
+"13bb44f9d7940d43",
 "2026-11-01"
 ],
 "parts/wen-dca002-2-1-2-in-to-1-1-2/": [
-"d04c6fd8335c4918",
+"803aa805aa0c87b0",
 "2026-11-01"
 ],
 "parts/wen-dca003-4-in-y-fitting-splitter/": [
-"c67d3aab04e80acf",
+"962a09b309e1db65",
 "2026-11-01"
 ],
 "parts/wen-dca004-4-in-90-degree-elbow-94-mm-id/": [
-"2071124fcbe1a2ce",
+"b4d5d1f6db34dcb9",
 "2026-11-01"
 ],
 "parts/wen-dca005-4-in-t-fitting-splitter/": [
-"df53cd7cc94c3459",
+"e69102ac7eca1a60",
 "2026-11-01"
 ],
 "parts/wen-dca006-4-in-blast-gate-plastic/": [
-"44cb956b7f9ff44d",
+"1f38ddce2ddba254",
 "2026-11-01"
 ],
 "parts/wen-dca007-2-1-2-in-blast-gate-plastic/": [
-"f7bedae5d89fc6b0",
+"4a71e517dc1ae291",
 "2026-11-01"
 ],
 "parts/wen-dca008-4-in-locking-aluminum-blast-gate/": [
-"a9d47b9308210a95",
+"20d9d63728f6094b",
 "2026-11-01"
 ],
 "parts/wen-dca009-2-1-2-in-locking-aluminum-blast-gate/": [
-"d459f19cf45f9c24",
+"5dbf719510d4dc49",
 "2026-11-01"
 ],
 "parts/wen-dca012-2-1-2-in-flexible-rubber-dust-cuff/": [
-"54677aa76f012093",
+"17d7f71014714c13",
 "2026-11-01"
 ],
 "parts/wen-dca013-4-in-flexible-rubber-dust-cuff-101-mm/": [
-"4a79c4a77fb5d8d0",
+"4dd828156f2197b8",
 "2026-11-01"
 ],
 "parts/wen-dca014-5-step-modular-reducer-adapter-set-4-2/": [
-"8748859b9143329d",
+"00c6425b56a60d05",
 "2026-11-01"
 ],
 "parts/wen-dca015-22-in-floor-sweep-for-4-in-hoses/": [
-"5af5fde31d4736c1",
+"7e8459d313ffc14b",
 "2026-11-01"
 ],
 "parts/wen-dca021-12-in-cyclone-separator-lid-2-1-2/": [
-"cffdb523674b78b9",
+"fa81078aad684e1c",
 "2026-11-01"
 ],
 "parts/wen-dca022-21-in-cyclone-separator-lid-4-in-ports/": [
-"a015c10085071a6e",
+"6d36e778d03eacc2",
 "2026-11-01"
 ],
 "parts/wen-dca028-magnetic-floor-sweeping-kit-w-12x9-5/": [
-"103133bd143407e8",
+"1bfc22ff45f1de14",
 "2026-11-01"
 ],
 "parts/wen-pl1326-0r42-dust-chute-adapter-for-pl1326-and-pl1303/": [
-"5d0060e1a38826b7",
+"ba985f2aa9b1813e",
 "2026-11-01"
 ],
 "pricing/": [
-"8972fe0a4322d340",
+"5bcdabce0296193c",
 "2026-11-01"
 ],
 "privacy/": [
-"965d0b0a24b518f1",
+"a9ccb56b12bfa745",
 "2026-11-01"
 ],
 "process/": [
-"5a2e844d768f1f4c",
+"4f17f998a036da85",
 "2026-11-01"
 ],
 "projects/": [
-"ce8f3b3028acd714",
+"586818a56566686d",
 "2026-11-01"
 ],
 "quote/": [
-"bd351b3114776017",
+"5fe35316d48b9f2d",
 "2026-11-01"
 ],
 "reorder/": [
-"4e7652dfe16d9ebe",
+"bb406f63f45b48ec",
 "2026-11-01"
 ],
 "resources/": [
-"cf20ce649a46ccca",
+"948d85e93195d160",
 "2026-11-01"
 ],
 "services/": [
-"61995bf98bf53df5",
+"fe95f93b9251234c",
 "2026-11-01"
 ],
 "services/custom-fabrication/": [
-"2ec5d14d6736005c",
+"6a29c7cf646a9c4d",
 "2026-11-01"
 ],
 "services/electronics-enclosures/": [
-"19c293524df479e5",
+"cb53d2a4a5fcfdef",
 "2026-11-01"
 ],
 "services/replacement-parts/": [
-"b032300edd8ec1bf",
+"311cec3186d8cf91",
 "2026-11-01"
 ],
 "services/small-batch-manufacturing/": [
-"029d94fe67f18686",
+"0a6c5613a48a29b7",
 "2026-11-01"
 ],
 "sitemap/": [
-"5649e93ba9959428",
+"43abc1cc7be8a726",
+"2026-11-01"
+],
+"sizes/": [
+"958daa698c9149f4",
+"2026-11-01"
+],
+"sizes/craftsman-cmcv002b/": [
+"1d904cbb99a652b3",
+"2026-11-01"
+],
+"sizes/craftsman-cmxevbe17250/": [
+"c86b0921ed07809c",
+"2026-11-01"
+],
+"sizes/craftsman-cmxevbe17590/": [
+"a9a20cb6482c4a9e",
+"2026-11-01"
+],
+"sizes/craftsman-cmxevbe17594/": [
+"05f34b4222c90d51",
+"2026-11-01"
+],
+"sizes/craftsman-cmxevbe17595/": [
+"ee59c8c3578393f2",
+"2026-11-01"
+],
+"sizes/craftsman-cmxzvbe38758/": [
+"b8b6e40bb32bd2c8",
+"2026-11-01"
+],
+"sizes/craftsman-cmxzvbe38759/": [
+"5366aa004f7fdf54",
+"2026-11-01"
+],
+"sizes/craftsman-cmxzvbe38761/": [
+"0efd632db880a5f4",
+"2026-11-01"
+],
+"sizes/craftsman-cmxzvbe38804/": [
+"613995280f2b7723",
+"2026-11-01"
+],
+"sizes/dewalt-dxva19-2500/": [
+"2e9d9bc0da3f24b2",
+"2026-11-01"
+],
+"sizes/dewalt-dxva19-2501/": [
+"2dc4306d31d5c4a4",
+"2026-11-01"
+],
+"sizes/dewalt-dxva19-2515/": [
+"6c12131348222ef2",
+"2026-11-01"
+],
+"sizes/husky-at08-2536/": [
+"62edd05152eaa313",
+"2026-11-01"
+],
+"sizes/husky-at18303p-4a/": [
+"3b7cd459efb6927b",
+"2026-11-01"
+],
+"sizes/husky-at18304-6b/": [
+"5392eb3b3f647550",
+"2026-11-01"
+],
+"sizes/husky-at18503-10c/": [
+"04746943195cbef0",
+"2026-11-01"
+],
+"sizes/husky-at18621p-16a/": [
+"9cc8fd84be91b0e3",
+"2026-11-01"
+],
+"sizes/makita-140g04-3/": [
+"d6ea399e73df40e5",
+"2026-11-01"
+],
+"sizes/makita-143787-2/": [
+"dffd5f5ca7e3132a",
+"2026-11-01"
+],
+"sizes/makita-152992-0/": [
+"669921520024a6a0",
+"2026-11-01"
+],
+"sizes/makita-199453-9/": [
+"269451ee89144e22",
+"2026-11-01"
+],
+"sizes/makita-199493-7/": [
+"c2ddfcf444bd0563",
+"2026-11-01"
+],
+"sizes/makita-gcv01z/": [
+"77aaeebab19f63fa",
+"2026-11-01"
+],
+"sizes/makita-gcv03z/": [
+"8243d78a9b767086",
+"2026-11-01"
+],
+"sizes/makita-p-84084/": [
+"56bc7a78223df624",
+"2026-11-01"
+],
+"sizes/makita-vc2512l/": [
+"5267f24e8a8658b8",
+"2026-11-01"
+],
+"sizes/makita-vc4210l/": [
+"53979dcd8a5cb745",
+"2026-11-01"
+],
+"sizes/makita-xcv11z/": [
+"6bae095173e5cc01",
+"2026-11-01"
+],
+"sizes/makita-xcv17z/": [
+"b69486b36e330ca9",
+"2026-11-01"
+],
+"sizes/milwaukee-0880-20/": [
+"d2012f8fded59f2f",
+"2026-11-01"
+],
+"sizes/milwaukee-0882-20/": [
+"de855a88dfe32429",
+"2026-11-01"
+],
+"sizes/milwaukee-0885-20/": [
+"3202cfceac4bf05f",
+"2026-11-01"
+],
+"sizes/milwaukee-0910-20/": [
+"7fa5b637a32f9b6a",
+"2026-11-01"
+],
+"sizes/milwaukee-0940-20/": [
+"ea7be8a6cbcd4712",
+"2026-11-01"
+],
+"sizes/milwaukee-0960-20/": [
+"4e278a54df89a792",
+"2026-11-01"
+],
+"sizes/milwaukee-0970-20/": [
+"015ef8a791fbbfd3",
+"2026-11-01"
+],
+"sizes/milwaukee-0971-20/": [
+"5e985fb05d1755f2",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-1971/": [
+"ffd42a2ff9f59272",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-1973/": [
+"a3ad14ab09727cd0",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-1976/": [
+"4e894978c7e5b9a2",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-1984/": [
+"fbf46c6daca0a491",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-1986/": [
+"7292096560a345a1",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-1996/": [
+"cd071e46e5cad8c5",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-2004/": [
+"e1aaa307134c3465",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-2006/": [
+"1470c8dc9e3866e6",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-2014/": [
+"c29dbaae36743e3d",
+"2026-11-01"
+],
+"sizes/milwaukee-49-90-2037/": [
+"1b0239c7168d7eb0",
+"2026-11-01"
+],
+"sizes/prolux-prolux-10qt-plc10/": [
+"ed30ec8df448ba92",
+"2026-11-01"
+],
+"sizes/prolux-prolux-10qt/": [
+"cfa22e660a84757e",
+"2026-11-01"
+],
+"sizes/prolux-prolux-2-0-backpacks/": [
+"62d33454a7032c25",
+"2026-11-01"
+],
+"sizes/prolux-prolux-2-0-cordless/": [
+"7286d49f1571017b",
+"2026-11-01"
+],
+"sizes/prolux-prolux-2-0-plc2-0-commercial/": [
+"5d3e8f18d8ee8987",
+"2026-11-01"
+],
+"sizes/prolux-prolux-2-0/": [
+"f7fbbbebe81adfea",
+"2026-11-01"
+],
+"sizes/prolux-prolux-cv12000-any-1-5-in-inlet/": [
+"6b041be876730d0f",
+"2026-11-01"
+],
+"sizes/prolux-prolux-tritan/": [
+"e8417bea20b9ddd8",
+"2026-11-01"
+],
+"sizes/prolux-prolux-x8-lite/": [
+"b44bb1597622b295",
+"2026-11-01"
+],
+"sizes/prolux-prolux-x8-pro-plcx8p/": [
+"0e46faf0ad452799",
+"2026-11-01"
+],
+"sizes/prolux-prolux-xforce-pro/": [
+"9465283a0beee881",
+"2026-11-01"
+],
+"sizes/ridgid-hd0918/": [
+"fa4cdcae48156dfe",
+"2026-11-01"
+],
+"sizes/ridgid-hd0919/": [
+"6937083f0905c93f",
+"2026-11-01"
+],
+"sizes/ridgid-hd1200/": [
+"56ddc22d2abe114e",
+"2026-11-01"
+],
+"sizes/ridgid-hd1400/": [
+"6c34dca8df5fbd15",
+"2026-11-01"
+],
+"sizes/ridgid-hd1800/": [
+"81d35d302826d42a",
+"2026-11-01"
+],
+"sizes/ridgid-la2521/": [
+"c707dbece9b4a19c",
+"2026-11-01"
+],
+"sizes/ridgid-la2522/": [
+"d1c790833c4bbb83",
+"2026-11-01"
+],
+"sizes/ridgid-la2570/": [
+"eea431c9b19c3f92",
+"2026-11-01"
+],
+"sizes/ridgid-r4520/": [
+"72a7402ba08311fe",
+"2026-11-01"
+],
+"sizes/ridgid-vt1720/": [
+"a254f77ed0aa201b",
+"2026-11-01"
+],
+"sizes/ridgid-vt1722/": [
+"6a6f2129a69f3052",
+"2026-11-01"
+],
+"sizes/ridgid-vt2520/": [
+"74c0e3e8124daed2",
+"2026-11-01"
+],
+"sizes/ridgid-vt2522/": [
+"f68c15c250d0b127",
+"2026-11-01"
+],
+"sizes/ridgid-vt2572/": [
+"4949016c901aebd3",
+"2026-11-01"
+],
+"sizes/ridgid-wd0319/": [
+"89ac30b870762599",
+"2026-11-01"
+],
+"sizes/ridgid-wd4070/": [
+"c06f587623bca54a",
+"2026-11-01"
+],
+"sizes/ryobi-a32bt01/": [
+"3023a07cbab8fddd",
+"2026-11-01"
+],
+"sizes/ryobi-a32k01/": [
+"ffd54d7502517142",
+"2026-11-01"
+],
+"sizes/ryobi-a32k05/": [
+"504cebf7b52a35c4",
+"2026-11-01"
+],
+"sizes/ryobi-a32vh02/": [
+"e56a76039645d3f5",
+"2026-11-01"
+],
+"sizes/ryobi-a32vh03/": [
+"dd6fd49776b3319d",
+"2026-11-01"
+],
+"sizes/ryobi-a32vh04n/": [
+"251fc38b50caffad",
+"2026-11-01"
+],
+"sizes/ryobi-a32vh05/": [
+"c111707b6ae73736",
+"2026-11-01"
+],
+"sizes/ryobi-pcl732b/": [
+"499c755963e0496f",
+"2026-11-01"
+],
+"sizes/ryobi-pcl733b/": [
+"29e1620123761968",
+"2026-11-01"
+],
+"sizes/ryobi-pcl734b/": [
+"1252869f7a3f2caf",
+"2026-11-01"
+],
+"sizes/ryobi-pcl735b/": [
+"bf5648a2b6872f68",
+"2026-11-01"
+],
+"sizes/ryobi-pwv201b/": [
+"4feb4afae15b499e",
+"2026-11-01"
+],
+"sizes/ryobi-ry40wd01b/": [
+"3c2412edfb87cabf",
+"2026-11-01"
+],
+"sizes/shark-193ffj/": [
+"f76d03ec7ac1c842",
+"2026-11-01"
+],
+"sizes/shop-vac-5430162/": [
+"89954d90a7060f02",
+"2026-11-01"
+],
+"sizes/shop-vac-5430542/": [
+"3aa0364ffbaa013f",
+"2026-11-01"
+],
+"sizes/shop-vac-5761311/": [
+"e7ee98606a8fd7c5",
+"2026-11-01"
+],
+"sizes/shop-vac-8252605/": [
+"5eee453966bd6d6d",
+"2026-11-01"
+],
+"sizes/shop-vac-90503/": [
+"9b4fb1d0c80f39bd",
+"2026-11-01"
+],
+"sizes/shop-vac-9050533/": [
+"626b95bdeb919cdd",
+"2026-11-01"
+],
+"sizes/shop-vac-9051233/": [
+"f6aa9ca327af44d8",
+"2026-11-01"
+],
+"sizes/shop-vac-9198133/": [
+"346e6d6a495f27c5",
+"2026-11-01"
+],
+"sizes/shop-vac-9627806/": [
+"29dc9c10d6854664",
+"2026-11-01"
+],
+"sizes/vacmaster-v78h7/": [
+"56cc5ef30b0c91bf",
+"2026-11-01"
+],
+"sizes/vacmaster-vbv1210/": [
+"31fd60543efc3a4e",
+"2026-11-01"
+],
+"sizes/vacmaster-vjf608pf-0201/": [
+"dbb70365e1ab68fb",
+"2026-11-01"
+],
+"sizes/vacmaster-vjh1612pf-0201/": [
+"b91c1f4c120abd96",
+"2026-11-01"
+],
+"sizes/vacmaster-voc507pf/": [
+"01c18a27ea5c6c8b",
+"2026-11-01"
+],
+"sizes/vacmaster-vwm510/": [
+"b9cedf2728ce4c89",
+"2026-11-01"
+],
+"sizes/wen-28200/": [
+"ab1c979bade808e5",
+"2026-11-01"
+],
+"sizes/wen-28221/": [
+"2a90794f150694ee",
+"2026-11-01"
+],
+"sizes/wen-28250/": [
+"19236651273f9904",
+"2026-11-01"
+],
+"sizes/wen-3403/": [
+"b237053a84cbdbd9",
+"2026-11-01"
+],
+"sizes/wen-3922-3923-3921-ll2156/": [
+"fa4ec8b3ce8c0dc5",
+"2026-11-01"
+],
+"sizes/wen-6502t/": [
+"e6f2a6f2e3b8595c",
+"2026-11-01"
+],
+"sizes/wen-6524-at6535/": [
+"9a356c57c6f136f6",
+"2026-11-01"
+],
+"sizes/wen-65812/": [
+"c66c86aca54b45b9",
+"2026-11-01"
+],
+"sizes/wen-ba1411/": [
+"5f5bd153225a5547",
+"2026-11-01"
+],
+"sizes/wen-ba1487/": [
+"1ab00d7f09eaed41",
+"2026-11-01"
+],
+"sizes/wen-ba3959/": [
+"be69fea4032bc4e7",
+"2026-11-01"
+],
+"sizes/wen-ba3962/": [
+"9abae84455f9064c",
+"2026-11-01"
+],
+"sizes/wen-dc1300/": [
+"a5ef7e38d17da037",
+"2026-11-01"
+],
+"sizes/wen-dc3401/": [
+"a25a597a1a103152",
+"2026-11-01"
+],
+"sizes/wen-dc3474/": [
+"6d381d66d5a7065b",
+"2026-11-01"
+],
+"sizes/wen-dca016/": [
+"dc046efd5f687b2d",
+"2026-11-01"
+],
+"sizes/wen-dca018/": [
+"5460ebadb666a021",
+"2026-11-01"
+],
+"sizes/wen-dca023/": [
+"4681bf602a04c2ec",
+"2026-11-01"
+],
+"sizes/wen-dca251/": [
+"53982d37377c1f0b",
+"2026-11-01"
+],
+"sizes/wen-dca252/": [
+"a37af9018d7db58f",
+"2026-11-01"
+],
+"sizes/wen-ha5932/": [
+"c45412dd26b55093",
+"2026-11-01"
+],
+"sizes/wen-hb321v-hb632v-hb6319-20418/": [
+"c7ca68f048ca7acb",
+"2026-11-01"
+],
+"sizes/wen-jt1020h-jt1224h/": [
+"d0e373f32d877e01",
+"2026-11-01"
+],
+"sizes/wen-jt3062/": [
+"4c9a0461c87a6a35",
+"2026-11-01"
+],
+"sizes/wen-jt630h/": [
+"53d6294683474350",
+"2026-11-01"
+],
+"sizes/wen-jt833h/": [
+"a4dbd220819b7b55",
+"2026-11-01"
+],
+"sizes/wen-pl1252/": [
+"d2575d1415ca8eb9",
+"2026-11-01"
+],
+"sizes/wen-pl1303/": [
+"312f49c8378150e2",
+"2026-11-01"
+],
+"sizes/wen-pl1337/": [
+"54076536e54eace2",
+"2026-11-01"
+],
+"sizes/wen-tt1015/": [
+"b35f23c281ac6fe0",
+"2026-11-01"
+],
+"sizes/wen-vc4710-041/": [
+"4a91c913c1243619",
 "2026-11-01"
 ],
 "terms/": [
-"87e0321e28f41859",
+"8e45d7808872ffba",
 "2026-11-01"
 ],
 "tools/adapter-builder/": [
-"c2c3b2d8c3156807",
+"293400aad0b57f40",
 "2026-11-01"
 ],
 "tools/hose-size-finder/": [
-"e5995ffd1ff77abb",
+"bfb41fbe3dc6f27c",
+"2026-11-01"
+],
+"tools/inch-mm-converter/": [
+"1ee36798f04df36a",
 "2026-11-01"
 ],
 "tools/material-picker/": [
-"c85db031ac8a8cd6",
+"b6d380e216f775d4",
 "2026-11-01"
 ]
 }

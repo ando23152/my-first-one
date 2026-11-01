@@ -211,6 +211,23 @@
     function u(){var L=[];try{L=JSON.parse(localStorage.getItem('tpf-list')||'[]')}catch(e){}var n=L.reduce(function(s,x){return s+(x.q||1)},0);tot.textContent=L.length?(L.length+(L.length===1?' part, ':' parts, ')+n+(n===1?' piece in total.':' pieces in total.')):''}
     new MutationObserver(u).observe(ul,{childList:true});ul.addEventListener('change',function(){setTimeout(u,0)});u()})();
 
+  // ---- My shop save buttons ----
+  (function(){var K='tpf-shop';function get(){try{return JSON.parse(localStorage.getItem(K)||'[]')}catch(e){return []}}function set(a){try{localStorage.setItem(K,JSON.stringify(a))}catch(e){}}
+    function sync(){var L=get();document.querySelectorAll('[data-shop-save]').forEach(function(b){var d=JSON.parse(b.getAttribute('data-shop-save')),on=L.some(function(x){return x.id===d.id});b.setAttribute('aria-pressed',on);b.textContent=on?'✓ In My shop':'Save to My shop'})}
+    document.addEventListener('click',function(e){var b=e.target.closest('[data-shop-save]');if(!b)return;var d=JSON.parse(b.getAttribute('data-shop-save')),L=get(),i=L.findIndex(function(x){return x.id===d.id});if(i>-1)L.splice(i,1);else L.push(d);set(L);sync();
+      var lv=document.getElementById('list-live');if(lv)lv.textContent=i>-1?'Removed from My shop.':'Saved to My shop.'});sync()})();
+  // ---- bookmark hint + install ----
+  (function(){var hs=document.querySelectorAll('[data-bm-hint]');if(!hs.length)return;var mac=/Mac|iPhone|iPad/.test(navigator.platform||navigator.userAgent),ios=/iPhone|iPad|iPod/.test(navigator.userAgent),touch=matchMedia('(pointer:coarse)').matches;
+    var standalone=matchMedia('(display-mode: standalone)').matches||navigator.standalone;if(standalone){hs.forEach(function(h){h.hidden=true});return}
+    hs.forEach(function(h){var k=h.querySelector('.bm-keys');if(ios)k.textContent='Tap Share, then Add to Home Screen,';else if(!touch)k.textContent='Bookmark it (press '+(mac?'⌘D':'Ctrl+D')+')'});
+    var dp=null;addEventListener('beforeinstallprompt',function(e){e.preventDefault();dp=e;document.querySelectorAll('.bm-install').forEach(function(b){b.hidden=false})});
+    document.addEventListener('click',function(e){var b=e.target.closest('.bm-install');if(!b||!dp)return;dp.prompt();dp.userChoice.then(function(){dp=null;document.querySelectorAll('.bm-install').forEach(function(x){x.hidden=true})})})})();
+  // ---- QR scan landing on part pages ----
+  (function(){try{if(new URLSearchParams(location.search).get('ref')!=='qr')return}catch(e){return}var h=document.querySelector('.page-hero .wrap');if(!h)return;
+    var n=document.createElement('div');n.className='qr-note';n.setAttribute('role','note');n.innerHTML='Thanks for scanning. To reorder this part, tap <b>Request this part</b> or <b>+ Add to cart</b> below. Save the page to your home screen for next time.';h.appendChild(n)})();
+  // ---- offline support (not inside previews) ----
+  if('serviceWorker' in navigator&&location.protocol==='https:'&&!/claude|anthropic|usercontent/.test(location.hostname)){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}
+
   // quote form
   var f=document.getElementById('qf');
   if(f&&!window.TPF_HOME){

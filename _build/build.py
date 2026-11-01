@@ -118,7 +118,7 @@ def css():
     import tools, parts_pages
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
     import improve
-    return improve.minify_css(__import__('seo').font_css() + __import__('seo').PART_CSS + base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + __import__('shop').SHOP_CSS + improve.IMP_CSS + __import__('seo2').CSS + LIGHT_CSS)
+    return improve.minify_css(__import__('seo').font_css() + __import__('seo').PART_CSS + base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + __import__('shop').SHOP_CSS + improve.IMP_CSS + __import__('seo2').CSS + __import__('bm').CSS + LIGHT_CSS)
 
 JS = r"""
 (function(){
@@ -288,9 +288,9 @@ def footer(c):
   <div class="wrap">
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
-      <div><h2 class="fh">Explore</h2><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('tools/adapter-builder/')}">Adapter builder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
+      <div><h2 class="fh">Explore</h2><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('sizes/')}">Size chart</a></li><li><a href="{L('tools/inch-mm-converter/')}">Inch–mm converter</a></li><li><a href="{L('tools/adapter-builder/')}">Adapter builder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
       {__import__('seo2').footer_brands(c)}
-      <div><h2 class="fh">Contact</h2><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li><li><a href="{L('request-list/')}">Cart</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li><li><a href="{L('sitemap/')}">Site map</a></li></ul></div>
+      <div><h2 class="fh">Contact</h2><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li><li><a href="{L('request-list/')}">Cart</a></li><li><a href="{L('my-shop/')}">My shop</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li><li><a href="{L('sitemap/')}">Site map</a></li></ul></div>
     </div>
     <div class="copy-line"><span>© 2026 True Part Fabrication LLC</span><span><a href="{L('business/')}" style="color:inherit;text-decoration:none">Modesto · Ceres · Turlock · Manteca · Tracy · Stockton</a></span></div>
   </div>
@@ -749,7 +749,7 @@ def build(mode, root):
     write(root, "assets/manifest.webmanifest", json.dumps({"name": "True Part Fabrication", "short_name": "True Part", "description": "Custom part manufacturing and replacement parts in Modesto, CA.",
         "start_url": "../", "scope": "../", "display": "standalone", "background_color": "#070708", "theme_color": "#070708",
         "icons": [{"src": "img/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}]}, indent=1))
-    write(root, "assets/site.js", JS.replace("@@MENU@@", __import__("extras").MENU_JS + __import__("extras").LIST_JS + __import__("improve").IMP_JS).replace("@@DRAFT@@", __import__("extras").DRAFT_JS))
+    write(root, "assets/site.js", JS.replace("@@MENU@@", __import__("extras").MENU_JS + __import__("extras").LIST_JS + __import__("improve").IMP_JS + __import__("bm").JS).replace("@@DRAFT@@", __import__("extras").DRAFT_JS))
     import tools, parts_pages
     parts_pages.assign_slugs(CAT["items"])
     pages = {"": lambda c: home(c, art=(mode == "art")), "parts/": parts, "faq/": faq, "glossary/": gloss_index, "privacy/": privacy, "terms/": terms}
@@ -763,6 +763,7 @@ def build(mode, root):
     import shop
     pages.update(shop.pages())
     pages.update(__import__("seo2").pages())
+    pages.update(__import__("bm").pages())
     write(root, "llms.txt", __import__("seo2").llms_txt())
     write(root, "assets/prices.json", json.dumps(shop.prices_data(CAT["items"]), ensure_ascii=False, separators=(",", ":")))
     sp = "/home/claude/site_src/checkout-server/prices.json"
@@ -787,7 +788,10 @@ def build(mode, root):
         nf = re.sub(r'\n?<link rel="(?:canonical|alternate)"[^>]*>', "", nf)
         nf = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex">', nf, 1)
         nf = re.sub(r'\n?<meta property="og:url"[^>]*>', "", nf)
+        nf = re.sub(r'(<meta (?:name="description"|property="og:description") content=")[^"]*"', r'\1This page could not be found. Search the site or start from the parts catalog."', nf)
         write(root, "404.html", nf)
+        import time as _t
+        write(root, "sw.js", __import__("bm").SW.replace("@@V@@", str(int(_t.time()))))
         write(root, "robots.txt", (f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n") if INDEX else "# Temporary address: block all crawling until the real domain is live.\nUser-agent: *\nDisallow: /\n")
     return urls
 

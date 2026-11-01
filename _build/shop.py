@@ -114,6 +114,14 @@ CART_JS = r"""
   document.getElementById('rl-csv').addEventListener('click',function(){var L=get(),rows=[['Line','Quantity','Part','Replaces / fits','Price each','Line total']];L.forEach(function(x,i){var t=clean(x.t).split('\n'),p=priced(x);rows.push([i+1,x.q||1,t[0],t.slice(1).join(' '),p?(p.p/100).toFixed(2):'Quote',p?(p.p*(x.q||1)/100).toFixed(2):''])});
     var csv=rows.map(function(r){return r.map(function(c){c=String(c);return /[",\n]/.test(c)?'"'+c.replace(/"/g,'""')+'"':c}).join(',')}).join('\r\n');
     var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='TPF-cart.csv';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);st.textContent='Spreadsheet downloaded.'});
+  // reorder links: the whole cart in one URL to bookmark or send to whoever buys
+  function enc(L){return btoa(unescape(encodeURIComponent(JSON.stringify(L.map(function(x){return {t:x.t,q:x.q||1}}))))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
+  function dec(s){try{s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';var a=JSON.parse(decodeURIComponent(escape(atob(s))));return Array.isArray(a)?a.filter(function(x){return x&&typeof x.t==='string'&&x.t.length<400}).slice(0,60).map(function(x){return {t:x.t,q:Math.min(999,Math.max(1,parseInt(x.q,10)||1))}}):[]}catch(e){return []}}
+  document.getElementById('rl-link').addEventListener('click',function(){var L=get();if(!L.length)return;var u=location.origin+location.pathname+'?r='+enc(L);try{navigator.clipboard.writeText(u).then(function(){st.textContent='Reorder link copied. Bookmark it, or send it to whoever places orders.'},function(){st.textContent=u})}catch(e){st.textContent=u}});
+  (function(){var r=new URLSearchParams(location.search).get('r');if(!r)return;var A=dec(r);if(!A.length)return;var box=document.createElement('div');box.className='qr-note';box.setAttribute('role','region');box.setAttribute('aria-label','Reorder link');
+    var p=document.createElement('p');p.style.margin='0 0 10px';p.textContent='This reorder link has '+A.length+(A.length===1?' part':' parts')+': '+A.map(function(x){return 'Qty '+x.q+' '+clean(x.t).split('\n')[0]}).join('; ')+'.';
+    var b=document.createElement('button');b.type='button';b.className='btn';b.textContent='Add them to my cart';b.addEventListener('click',function(){var L=get();A.forEach(function(x){var i=L.findIndex(function(y){return y.t===x.t});if(i>-1)L[i].q=x.q;else L.push(x)});set(L);draw();box.remove();history.replaceState(null,'',location.pathname);st.textContent='Added to your cart.'});
+    box.appendChild(p);box.appendChild(b);ul.parentNode.insertBefore(box,ul)})();
   draw();
   fetch('@@PRICES@@').then(function(r){return r.json()}).then(function(j){P=j;
     if(go){go.disabled=!j.enabled;document.getElementById('b-off').hidden=j.enabled}draw()}).catch(function(){});
@@ -155,7 +163,7 @@ def cart(c):
       <label class="full" for="rl-notes">Notes (optional)<textarea id="rl-notes" placeholder="Equipment model numbers, colors, delivery address"></textarea></label>
       <label class="agree full" for="rl-terms"><input type="checkbox" id="rl-terms"> <span>I've read and agree to the <a href="{c.link('terms/')}">Terms of Service</a>.</span></label>
       <p class="xerr" id="rl-err" role="alert" hidden></p>
-      <div class="full" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Open in my email <span class="ar">→</span></button><button class="btn ghost" type="button" id="rl-copy">Copy request</button><button class="btn ghost" type="button" id="rl-csv">Download spreadsheet (CSV)</button><button class="btn ghost" type="button" id="rl-print">Print cart</button><button class="btn ghost" type="button" id="rl-clear">Clear cart</button><span id="rl-st" role="status" style="color:var(--muted);font-size:.92rem"></span></div>
+      <div class="full" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Open in my email <span class="ar">→</span></button><button class="btn ghost" type="button" id="rl-copy">Copy request</button><button class="btn ghost" type="button" id="rl-csv">Download spreadsheet (CSV)</button><button class="btn ghost" type="button" id="rl-print">Print cart</button><button class="btn ghost" type="button" id="rl-link">Copy reorder link</button><button class="btn ghost" type="button" id="rl-clear">Clear cart</button><span id="rl-st" role="status" style="color:var(--muted);font-size:.92rem"></span></div>
     </form>
   </div>
 </div>

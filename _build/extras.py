@@ -89,7 +89,7 @@ def menu(c, es=False):
         H = L('')
         items = [("Services", H + '#services'), ("For business", H + '#business'), ("Parts catalog", L('parts/')), ("Pricing", L('pricing/')),
                  ("Process", H + '#process'), ("Resources", L('resources/')), ("FAQ", L('faq/')), ("About", H + '#about'),
-                 ("Reorder a part", L('reorder/')), ("Search", L('search/')), ("Español", L('es/'))]
+                 ("Reorder a part", L('reorder/')), ("My shop", L('my-shop/')), ("Search", L('search/')), ("Español", L('es/'))]
         cta = ("Request a quote", H + '#quote'); label = "Menu"
     if PHONE:
         items.append((("Llamar " if es else "Call ") + PHONE, tel(PHONE)))
@@ -306,6 +306,9 @@ def search_index(c):
                     ("Cart", "request-list/", "Buy priced parts online, or send several parts in one quote request."),
                     ("Material picker", "tools/material-picker/", "Five questions to the right material: PLA, PETG, ASA, TPU, nylon."),
                     ("How to measure a part", "guides/how-to-measure-a-part/", "Photograph and measure a broken part for an accurate quote."),
+                    ("Size chart", "sizes/", "Printable hose and port size chart for every model in the size finder."),
+                    ("Inch to mm converter", "tools/inch-mm-converter/", "Convert inches, fractions and millimeters; 1/64-inch chart."),
+                    ("My shop", "my-shop/", "Save your equipment and see parts that fit."),
                     ("Shop vac hose sizes by brand", "guides/shop-vac-hose-sizes/", "Common shop vac hose sizes, how to measure, and the sizes each brand uses."),
                     ("Replacing a discontinued plastic part", "guides/replacing-a-discontinued-plastic-part/", "Five ways to find or replace a discontinued plastic part."),
                     ("Terms of Service", "terms/", "Quotes, orders, aftermarket parts, fit guarantee."), ("Privacy", "privacy/", "How we handle your information."),
@@ -315,6 +318,9 @@ def search_index(c):
     for b, (slug, cat, intro) in T.BRANDS.items(): add(b + " parts", "Brand", "brands/" + slug + "/", intro)
     for t in TERMS: add(t["term"], "Glossary", "glossary/" + t["slug"] + "/", t["short"])
     for fq, fa in B.FAQS(c): add(fq, "FAQ", "faq/", re.sub("<[^>]+>", "", fa).strip()[:200])
+    import bm as _bm
+    for r in _bm.rows():
+        add(r["b"] + " " + r["mc"] + " hose size", "Size", _bm.model_url(r), r["d"] + ": " + ", ".join(r["s"]), r["mc"])
     for it in B.CAT["items"]:
         add(it["n"], it["b"] + " part", "parts/" + it["slug"] + "/", B.rp(it) + (". Fits " + it["f"] if it["f"] else ""), it["oem"] + " " + it.get("for", ""))
     return idx
