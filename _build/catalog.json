@@ -7,7 +7,8 @@
    "f": "",
    "mat": "PETG",
    "pp": true,
-   "i": "separator"
+   "i": "separator",
+   "price": 58.99
   },
   {
    "b": "DeWalt",
@@ -49,7 +50,7 @@
    "b": "DeWalt",
    "oem": "DXVA11-2100",
    "n": "1-7/8 in. to 2-1/2 in. Accessory Hose Adapter",
-   "f": "Vacs: DXV04T, DXV06G, DXV10SB \u2192 DXVA08-2502, DXVA08-2503",
+   "f": "Vacs: DXV04T, DXV06G, DXV10SB → DXVA08-2502, DXVA08-2503",
    "mat": "PETG / PA-CF",
    "pp": false,
    "i": "adapter"
@@ -57,11 +58,12 @@
   {
    "b": "DeWalt",
    "oem": "DXVA13-0801",
-   "n": "1.25\u20132.5 in. Car Cleaning Accessory Kit",
+   "n": "1.25–2.5 in. Car Cleaning Accessory Kit",
    "f": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P",
    "mat": "PETG",
    "pp": true,
-   "i": "clip"
+   "i": "clip",
+   "price": 52.99
   },
   {
    "b": "DeWalt",
@@ -76,7 +78,7 @@
    "b": "DeWalt",
    "oem": "DXVA08-2712",
    "n": "2-1/2 in. to 1-1/4 in. Accessory Hose Adapter",
-   "f": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-1/4 in. attachments / small tool ports",
+   "f": "Vacs: DXV12P, DXV16PA, DXV212P → 1-1/4 in. attachments / small tool ports",
    "mat": "PETG / PA-CF",
    "pp": false,
    "i": "adapter"
@@ -85,7 +87,7 @@
    "b": "DeWalt",
    "oem": "DXVA08-2718",
    "n": "2-1/2 in. to 1-7/8 in. Accessory Hose Adapter",
-   "f": "Vacs: DXV12P, DXV16PA, DXV212P \u2192 1-7/8 in. attachments (DXVA19-1400, DXVA19-1900, DXVA13-4333, DXVA13-4364) or DXVA19-2780",
+   "f": "Vacs: DXV12P, DXV16PA, DXV212P → 1-7/8 in. attachments (DXVA19-1400, DXVA19-1900, DXVA13-4333, DXVA13-4364) or DXVA19-2780",
    "mat": "PETG / PA-CF",
    "pp": false,
    "i": "adapter"
@@ -94,7 +96,7 @@
    "b": "DeWalt",
    "oem": "DXVA19-2780",
    "n": "Adapter 1-7/8 in. Hose to 1-2/3 in. Power Tools",
-   "f": "Vacs: DXV04T, DXV06G, DXV10SB (direct); DXV12P, DXV16PA, DXV212P (stack with DXVA08-2718). Tools: DeWalt sanders, miter saws, table saws wit\u2026",
+   "f": "Vacs: DXV04T, DXV06G, DXV10SB (direct); DXV12P, DXV16PA, DXV212P (stack with DXVA08-2718). Tools: DeWalt sanders, miter saws, table saws wit…",
    "mat": "PETG / PA-CF",
    "pp": false,
    "i": "adapter"
@@ -106,7 +108,8 @@
    "f": "DWV010, DWV015, DCV585B",
    "mat": "PETG",
    "pp": true,
-   "i": "separator"
+   "i": "separator",
+   "price": 71.99
   },
   {
    "b": "DeWalt",
@@ -115,7 +118,8 @@
    "f": "DCH263",
    "mat": "PETG",
    "pp": true,
-   "i": "separator"
+   "i": "separator",
+   "price": 146.99
   },
   {
    "b": "DeWalt",
@@ -133,7 +137,8 @@
    "f": "",
    "mat": "PETG / PA-CF",
    "pp": false,
-   "i": "adapter"
+   "i": "adapter",
+   "price": 24.99
   },
   {
    "b": "DeWalt",
@@ -151,7 +156,8 @@
    "f": "",
    "mat": "PETG",
    "pp": true,
-   "i": "separator"
+   "i": "separator",
+   "price": 58.99
   },
   {
    "b": "DeWalt",
@@ -160,7 +166,8 @@
    "f": "",
    "mat": "PETG",
    "pp": true,
-   "i": "clip"
+   "i": "clip",
+   "price": 39.99
   },
   {
    "b": "DeWalt",
@@ -169,7 +176,8 @@
    "f": "",
    "mat": "PETG / PA-CF",
    "pp": false,
-   "i": "adapter"
+   "i": "adapter",
+   "price": 16.99
   },
   {
    "b": "Milwaukee",
@@ -187,7 +195,8 @@
    "f": "1-7/8 hoses 49-90-1996/1984/1986",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 17.99
   },
   {
    "b": "Milwaukee",
@@ -214,7 +223,8 @@
    "f": "0920-20",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 14.99
   },
   {
    "b": "Milwaukee",
@@ -250,7 +260,8 @@
    "f": "2-1/2 hoses 49-90-2004/2006",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 26.99
   },
   {
    "b": "Milwaukee",
@@ -268,7 +279,8 @@
    "f": "2-1/2 hoses",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 11.99
   },
   {
    "b": "Milwaukee",
@@ -277,7 +289,8 @@
    "f": "2-1/2 hoses",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 18.99
   },
   {
    "b": "Milwaukee",
@@ -295,7 +308,8 @@
    "f": "2-1/2 hoses",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 17.99
   },
   {
    "b": "Milwaukee",
@@ -304,7 +318,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 19.99
   },
   {
    "b": "Milwaukee",
@@ -322,7 +337,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 30.99
   },
   {
    "b": "Milwaukee",
@@ -331,7 +347,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 33.99
   },
   {
    "b": "Milwaukee",
@@ -340,7 +357,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 96.99
   },
   {
    "b": "Milwaukee",
@@ -349,7 +367,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 34.99
   },
   {
    "b": "Milwaukee",
@@ -358,7 +377,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": false,
-   "i": "separator"
+   "i": "separator",
+   "price": 40.99
   },
   {
    "b": "Milwaukee",
@@ -367,7 +387,8 @@
    "f": "Milwaukee + other brands at those sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 18.99
   },
   {
    "b": "Milwaukee",
@@ -376,7 +397,8 @@
    "f": "Any common wet/dry vac; mounting clips for 0910/0920/0930; 49-90-2201 caster kit",
    "mat": "PETG",
    "pp": true,
-   "i": "separator"
+   "i": "separator",
+   "price": 95.99
   },
   {
    "b": "Milwaukee",
@@ -385,7 +407,8 @@
    "f": "Any wet/dry brand at those sizes",
    "mat": "PETG",
    "pp": false,
-   "i": "separator"
+   "i": "separator",
+   "price": 40.99
   },
   {
    "b": "Milwaukee",
@@ -394,7 +417,8 @@
    "f": "AIR-TIP sizes; bundled w/ 0880-20",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 70.99
   },
   {
    "b": "Milwaukee",
@@ -412,7 +436,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 35.99
   },
   {
    "b": "Milwaukee",
@@ -421,7 +446,8 @@
    "f": "NEXUS 0910/0914/0915/0920/0930",
    "mat": "PETG / PA-CF",
    "pp": false,
-   "i": "separator"
+   "i": "separator",
+   "price": 81.99
   },
   {
    "b": "Milwaukee",
@@ -430,7 +456,8 @@
    "f": "Any brand at those sizes; 0970 PACKOUT 2.5 gal, M12 FUEL 1.6 gal",
    "mat": "PETG",
    "pp": false,
-   "i": "separator"
+   "i": "separator",
+   "price": 46.99
   },
   {
    "b": "Milwaukee",
@@ -439,7 +466,8 @@
    "f": "AIR-TIP sizes; Milwaukee suggests for 0888",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 28.99
   },
   {
    "b": "Milwaukee",
@@ -457,7 +485,8 @@
    "f": "0888 ; 5317-DE, 49-40-6110, 5318-DE",
    "mat": "PETG / PA-CF",
    "pp": false,
-   "i": "clip"
+   "i": "clip",
+   "price": 12.99
   },
   {
    "b": "Milwaukee",
@@ -484,7 +513,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 27.99
   },
   {
    "b": "Milwaukee",
@@ -493,7 +523,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 18.99
   },
   {
    "b": "Milwaukee",
@@ -502,7 +533,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "clip"
+   "i": "clip",
+   "price": 30.99
   },
   {
    "b": "Milwaukee",
@@ -511,7 +543,8 @@
    "f": "Milwaukee + other brands at those sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 21.99
   },
   {
    "b": "Milwaukee",
@@ -520,7 +553,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 16.99
   },
   {
    "b": "Milwaukee",
@@ -529,7 +563,8 @@
    "f": "AIR-TIP sizes",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 29.99
   },
   {
    "b": "Milwaukee",
@@ -556,7 +591,8 @@
    "f": "PWV200, PWV201",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 23.99
   },
   {
    "b": "RYOBI",
@@ -646,7 +682,8 @@
    "f": "PCL732, PCL733, PCL734, PCL735, PWV200, RY40WD01",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 14.99
   },
   {
    "b": "RYOBI",
@@ -673,7 +710,8 @@
    "f": "PCL720, PBLSV716, PBLSV717, PCL704",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 23.99
   },
   {
    "b": "RYOBI",
@@ -682,7 +720,8 @@
    "f": "",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 27.99
   },
   {
    "b": "RYOBI",
@@ -691,7 +730,8 @@
    "f": "All RYOBI wet/dry vacs; tool dust ports",
    "mat": "PETG / PA-CF",
    "pp": false,
-   "i": "adapter"
+   "i": "adapter",
+   "price": 23.99
   },
   {
    "b": "RIDGID",
@@ -700,7 +740,8 @@
    "f": "RIDGID 1-7/8 in. vacs",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 11.99
   },
   {
    "b": "RIDGID",
@@ -709,7 +750,8 @@
    "f": "RIDGID 1-7/8 in. vacs",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 11.99
   },
   {
    "b": "RIDGID",
@@ -718,7 +760,8 @@
    "f": "RIDGID 1-7/8 in. vacs",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 29.99
   },
   {
    "b": "RIDGID",
@@ -727,7 +770,8 @@
    "f": "RIDGID 1-7/8 in. vacs",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 13.99
   },
   {
    "b": "RIDGID",
@@ -736,7 +780,8 @@
    "f": "RIDGID 1-7/8 in. vacs",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 16.99
   },
   {
    "b": "RIDGID",
@@ -754,7 +799,8 @@
    "f": "RIDGID 1-7/8 in. vacs",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 14.99
   },
   {
    "b": "RIDGID",
@@ -763,7 +809,8 @@
    "f": "Most RIDGID 1-7/8 and 2-1/2 in. vacs; WD06701 WD09701 WD16350",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 94.99
   },
   {
    "b": "RIDGID",
@@ -781,7 +828,8 @@
    "f": "RIDGID 2-1/2 in. vacs",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 11.99
   },
   {
    "b": "RIDGID",
@@ -799,7 +847,8 @@
    "f": "RIDGID 2-1/2 in. vacs",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 24.99
   },
   {
    "b": "RIDGID",
@@ -826,7 +875,8 @@
    "f": "RIDGID 2-1/2 in. vacs",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 32.99
   },
   {
    "b": "RIDGID",
@@ -835,7 +885,8 @@
    "f": "4-20 gal RIDGID vacs with blower port",
    "mat": "PETG",
    "pp": false,
-   "i": "adapter"
+   "i": "adapter",
+   "price": 17.99
   },
   {
    "b": "RIDGID",
@@ -844,7 +895,8 @@
    "f": "LA2520 LA2521 LA2522 LA2570 hoses; miter saws, sanders, benchtop tools",
    "mat": "PETG / PA-CF",
    "pp": false,
-   "i": "clip"
+   "i": "clip",
+   "price": 11.99
   },
   {
    "b": "RIDGID",
@@ -1060,7 +1112,8 @@
    "f": "NV500, NV501, NV502, NV560",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 15.99
   },
   {
    "b": "Shark",
@@ -1069,7 +1122,8 @@
    "f": "",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 15.99
   },
   {
    "b": "Shark",
@@ -1078,7 +1132,8 @@
    "f": "",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 22.99
   },
   {
    "b": "Shark",
@@ -1096,7 +1151,8 @@
    "f": "NV350, NV351, NV352, NV355, NV356E, NV357, NV360, NV370, UV440",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 14.99
   },
   {
    "b": "Shark",
@@ -1105,7 +1161,8 @@
    "f": "",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 24.99
   },
   {
    "b": "Shark",
@@ -1114,7 +1171,8 @@
    "f": "",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 15.99
   },
   {
    "b": "Shark",
@@ -1159,7 +1217,8 @@
    "f": "",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 18.99
   },
   {
    "b": "Shark",
@@ -1177,7 +1236,8 @@
    "f": "RV1001, RV1001AE, RV1000S, UR1000SR",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 11.99
   },
   {
    "b": "Shark",
@@ -1186,7 +1246,8 @@
    "f": "2500-series AI robots",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 22.99
   },
   {
    "b": "Shark",
@@ -1195,7 +1256,8 @@
    "f": "AV2820S, AV2820AE, RV2820AE",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 17.99
   },
   {
    "b": "Shark",
@@ -1222,7 +1284,8 @@
    "f": "R101AE, RV1001, RV1001AE, UR1005AE, AV2501S, RV2520A0US, UR2500SR",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 10.99
   },
   {
    "b": "Shark",
@@ -1249,7 +1312,8 @@
    "f": "Matrix / AI 2300-series",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 12.99
   },
   {
    "b": "Shark",
@@ -1258,7 +1322,8 @@
    "f": "RV2300-series",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 10.99
   },
   {
    "b": "Shark",
@@ -1267,7 +1332,8 @@
    "f": "",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 38.99
   },
   {
    "b": "Shark",
@@ -1294,7 +1360,8 @@
    "f": "",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 19.99
   },
   {
    "b": "Shark",
@@ -1303,7 +1370,8 @@
    "f": "",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 27.99
   },
   {
    "b": "Shark",
@@ -1398,7 +1466,8 @@
    "f": "",
    "mat": "PETG",
    "pp": false,
-   "i": "clip"
+   "i": "clip",
+   "price": 34.99
   },
   {
    "b": "Samsung",
@@ -1416,7 +1485,8 @@
    "f": "Samsung & Kenmore refrigerators (review: RSG257AARS)",
    "mat": "PETG",
    "pp": false,
-   "i": "clip"
+   "i": "clip",
+   "price": 43.99
   },
   {
    "b": "Samsung",
@@ -1425,7 +1495,8 @@
    "f": "",
    "mat": "PETG",
    "pp": false,
-   "i": "clip"
+   "i": "clip",
+   "price": 54.99
   },
   {
    "b": "Samsung",
@@ -1452,7 +1523,8 @@
    "f": "RFG237AAPN",
    "mat": "PETG",
    "pp": false,
-   "i": "clip"
+   "i": "clip",
+   "price": 39.99
   },
   {
    "b": "Samsung",
@@ -1461,7 +1533,8 @@
    "f": "",
    "mat": "PETG",
    "pp": false,
-   "i": "clip"
+   "i": "clip",
+   "price": 32.99
   },
   {
    "b": "Samsung",
@@ -1485,7 +1558,7 @@
    "b": "Samsung",
    "oem": "DD66-00023A",
    "n": "Lower rack roller",
-   "f": "DW80J3020, DW80K5050, DW80K7050, DW80R5060/5061, DW80F600UT, DW80F800UW, DW7933LRA, DMT300RF/400RH/610RH/800RH, DMR57LF/77LH/78AH (54 models\u2026",
+   "f": "DW80J3020, DW80K5050, DW80K7050, DW80R5060/5061, DW80F600UT, DW80F800UW, DW7933LRA, DMT300RF/400RH/610RH/800RH, DMR57LF/77LH/78AH (54 models…",
    "mat": "ASA / PA-CF",
    "pp": false,
    "i": "roller"

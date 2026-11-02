@@ -21,5 +21,342 @@
   "cents": 0
  },
  "maxQty": 25,
- "items": {}
+ "items": {
+  "dewalt-dxva13-0801-1-25-2-5-in-car-cleaning-accessory": {
+   "name": "1.25–2.5 in. Car Cleaning Accessory Kit",
+   "ref": "Replaces DeWalt DXVA13-0801",
+   "cents": 5299,
+   "ship": "small"
+  },
+  "dewalt-dwv2759-dust-extractor-accessory-kit-5-piece": {
+   "name": "Dust Extractor Accessory Kit (5-Piece)",
+   "ref": "Replaces DeWalt DWV2759",
+   "cents": 7199,
+   "ship": "large"
+  },
+  "dewalt-dwh205dh-dust-extractor-for-dch263-sds-plus-d-handle": {
+   "name": "Dust Extractor for DCH263 SDS Plus D-Handle",
+   "ref": "Replaces DeWalt DWH205DH",
+   "cents": 14699,
+   "ship": "large"
+  },
+  "milwaukee-49-90-1988-1-7-8-in-crevice-tool-7-1": {
+   "name": "1-7/8 in crevice tool 7-1/2 in",
+   "ref": "Replaces Milwaukee 49-90-1988",
+   "cents": 1799,
+   "ship": "medium"
+  },
+  "milwaukee-49-90-2011-1-7-8-in-floor-utility-nozzle": {
+   "name": "1-7/8 in floor utility nozzle",
+   "ref": "Replaces Milwaukee 49-90-2011",
+   "cents": 1499,
+   "ship": "medium"
+  },
+  "milwaukee-49-90-2002-2-1-2-in-floor-brush": {
+   "name": "2-1/2 in floor brush",
+   "ref": "Replaces Milwaukee 49-90-2002",
+   "cents": 2699,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2033-2-1-2-in-magnetic-utility-nozzle": {
+   "name": "2-1/2 in magnetic utility nozzle",
+   "ref": "Replaces Milwaukee 49-90-2033",
+   "cents": 1199,
+   "ship": "medium"
+  },
+  "milwaukee-49-90-2039-2-1-2-in-rocking-utility-nozzle-w": {
+   "name": "2-1/2 in rocking utility nozzle w/ brushes",
+   "ref": "Replaces Milwaukee 49-90-2039",
+   "cents": 1899,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2005-2-1-2-in-wet-floor-nozzle": {
+   "name": "2-1/2 in wet floor nozzle",
+   "ref": "Replaces Milwaukee 49-90-2005",
+   "cents": 1799,
+   "ship": "medium"
+  },
+  "milwaukee-49-90-2028-2-in-1-utility-brush": {
+   "name": "2-in-1 utility brush",
+   "ref": "Replaces Milwaukee 49-90-2028",
+   "cents": 1999,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2026-4-in-1-right-angle-tool-5-pc": {
+   "name": "4-in-1 right angle tool (5 pc)",
+   "ref": "Replaces Milwaukee 49-90-2026",
+   "cents": 3099,
+   "ship": "medium"
+  },
+  "milwaukee-49-90-2043-automotive-detail-brush": {
+   "name": "Automotive detail brush",
+   "ref": "Replaces Milwaukee 49-90-2043",
+   "cents": 3399,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2019a-automotive-kit-w-crevice-tools-utility-nozzle": {
+   "name": "Automotive kit w/ crevice tools, utility nozzle and bag (4 pc)",
+   "ref": "Replaces Milwaukee 49-90-2019A",
+   "cents": 9699,
+   "ship": "medium"
+  },
+  "milwaukee-49-90-2046-boiler-coil-cleaning-brush": {
+   "name": "Boiler coil cleaning brush",
+   "ref": "Replaces Milwaukee 49-90-2046",
+   "cents": 3499,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2041-bucket-topper-dust-collector": {
+   "name": "Bucket topper dust collector",
+   "ref": "Replaces Milwaukee 49-90-2041",
+   "cents": 4099,
+   "ship": "large"
+  },
+  "milwaukee-49-90-2040-claw-utility-nozzle-w-brushes": {
+   "name": "Claw utility nozzle w/ brushes",
+   "ref": "Replaces Milwaukee 49-90-2040",
+   "cents": 1899,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2200-compact-debris-separator-6-ft-1-7-8": {
+   "name": "Compact debris separator (6 ft 1-7/8 expandable hose + multi-fit adapter)",
+   "ref": "Replaces Milwaukee 49-90-2200",
+   "cents": 9599,
+   "ship": "large"
+  },
+  "milwaukee-49-90-2044-compact-dust-collector": {
+   "name": "Compact dust collector",
+   "ref": "Replaces Milwaukee 49-90-2044",
+   "cents": 4099,
+   "ship": "large"
+  },
+  "milwaukee-49-90-2024-conduit-line-puller-3-pc": {
+   "name": "Conduit line puller (3 pc)",
+   "ref": "Replaces Milwaukee 49-90-2024",
+   "cents": 7099,
+   "ship": "medium"
+  },
+  "milwaukee-49-90-2047-debris-scraper": {
+   "name": "Debris scraper",
+   "ref": "Replaces Milwaukee 49-90-2047",
+   "cents": 3599,
+   "ship": "medium"
+  },
+  "milwaukee-0990-20-dedicated-debris-separator-between-head-and-tank": {
+   "name": "Dedicated debris separator (between head and tank)",
+   "ref": "Replaces Milwaukee 0990-20",
+   "cents": 8199,
+   "ship": "large"
+  },
+  "milwaukee-49-90-2022-dust-collector-wall-suction-funnel": {
+   "name": "Dust collector (wall suction funnel)",
+   "ref": "Replaces Milwaukee 49-90-2022",
+   "cents": 4699,
+   "ship": "large"
+  },
+  "milwaukee-49-90-2030y-flexible-long-reach-crevice-tool": {
+   "name": "Flexible long reach crevice tool",
+   "ref": "Replaces Milwaukee 49-90-2030Y",
+   "cents": 2899,
+   "ship": "medium"
+  },
+  "milwaukee-49-90-1959-hose-clip-adapter-extractor": {
+   "name": "Hose clip adapter (extractor)",
+   "ref": "Replaces Milwaukee 49-90-1959",
+   "cents": 1299,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2027-low-profile-pivoting-brush": {
+   "name": "Low-profile pivoting brush",
+   "ref": "Replaces Milwaukee 49-90-2027",
+   "cents": 2799,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2032-magnetic-utility-nozzle": {
+   "name": "Magnetic utility nozzle",
+   "ref": "Replaces Milwaukee 49-90-2032",
+   "cents": 1899,
+   "ship": "medium"
+  },
+  "milwaukee-49-90-2034-non-marring-crevice-tool-utility-nozzle-2-pc": {
+   "name": "Non-marring crevice tool + utility nozzle (2 pc)",
+   "ref": "Replaces Milwaukee 49-90-2034",
+   "cents": 3099,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2038-rocking-utility-nozzle-w-brushes": {
+   "name": "Rocking utility nozzle w/ brushes",
+   "ref": "Replaces Milwaukee 49-90-2038",
+   "cents": 2199,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2021-rotating-corner-brush": {
+   "name": "Rotating corner brush",
+   "ref": "Replaces Milwaukee 49-90-2021",
+   "cents": 1699,
+   "ship": "small"
+  },
+  "milwaukee-49-90-2020-swiveling-palm-brush": {
+   "name": "Swiveling palm brush",
+   "ref": "Replaces Milwaukee 49-90-2020",
+   "cents": 2999,
+   "ship": "small"
+  },
+  "ryobi-a32ss02n-1-3-8-in-accessory-kit-crevice-tool": {
+   "name": "1-3/8 in. accessory kit: crevice tool, floor nozzle, dust brush",
+   "ref": "Replaces RYOBI A32SS02N",
+   "cents": 2399,
+   "ship": "small"
+  },
+  "ryobi-a32ua06-micro-crevice-tool-16-bendable-straws": {
+   "name": "Micro-crevice tool (16 bendable straws)",
+   "ref": "Replaces RYOBI A32UA06",
+   "cents": 1499,
+   "ship": "medium"
+  },
+  "ryobi-a32k04-stick-vac-accessory-kit-crevice-dust-brush-micro": {
+   "name": "Stick vac accessory kit: crevice, dust brush, micro crevice, adaptor",
+   "ref": "Replaces RYOBI A32K04",
+   "cents": 2399,
+   "ship": "small"
+  },
+  "ryobi-a32ad01-wet-dry-vacuum-adapter-step-adapter": {
+   "name": "Wet/dry vacuum adapter (step adapter)",
+   "ref": "Replaces RYOBI A32AD01",
+   "cents": 2399,
+   "ship": "medium"
+  },
+  "ridgid-vt1781-1-7-8-in-car-nozzle": {
+   "name": "1-7/8 in. car nozzle",
+   "ref": "Replaces RIDGID VT1781",
+   "cents": 1199,
+   "ship": "medium"
+  },
+  "ridgid-vt1702-1-7-8-in-crevice-tool": {
+   "name": "1-7/8 in. crevice tool",
+   "ref": "Replaces RIDGID VT1702",
+   "cents": 1199,
+   "ship": "medium"
+  },
+  "ridgid-vt1712-1-7-8-in-crevice-dusting-brush-combo": {
+   "name": "1-7/8 in. crevice/dusting brush combo",
+   "ref": "Replaces RIDGID VT1712",
+   "cents": 2999,
+   "ship": "small"
+  },
+  "ridgid-vt1701-1-7-8-in-dusting-brush": {
+   "name": "1-7/8 in. dusting brush",
+   "ref": "Replaces RIDGID VT1701",
+   "cents": 1399,
+   "ship": "small"
+  },
+  "ridgid-vt1714-1-7-8-in-floor-brush": {
+   "name": "1-7/8 in. floor brush",
+   "ref": "Replaces RIDGID VT1714",
+   "cents": 1699,
+   "ship": "small"
+  },
+  "ridgid-vt1710-1-7-8-in-wet-nozzle-squeegee": {
+   "name": "1-7/8 in. wet nozzle (squeegee)",
+   "ref": "Replaces RIDGID VT1710",
+   "cents": 1499,
+   "ship": "medium"
+  },
+  "ridgid-vt2575-12-pc-heavy-duty-cleaning-kit-stainless-wands": {
+   "name": "12-pc heavy-duty cleaning kit, stainless wands",
+   "ref": "Replaces RIDGID VT2575",
+   "cents": 9499,
+   "ship": "medium"
+  },
+  "ridgid-la2503-2-1-2-in-locking-car-nozzle": {
+   "name": "2-1/2 in. locking car nozzle",
+   "ref": "Replaces RIDGID LA2503",
+   "cents": 1199,
+   "ship": "medium"
+  },
+  "ridgid-la2514-2-1-2-in-locking-floor-brush": {
+   "name": "2-1/2 in. locking floor brush",
+   "ref": "Replaces RIDGID LA2514",
+   "cents": 2499,
+   "ship": "small"
+  },
+  "ridgid-la2510-2-1-2-in-locking-wet-nozzle": {
+   "name": "2-1/2 in. locking wet nozzle",
+   "ref": "Replaces RIDGID LA2510",
+   "cents": 3299,
+   "ship": "medium"
+  },
+  "ridgid-vt2525-2-1-2-in-muffler-diffuser-with-adapter": {
+   "name": "2-1/2 in. muffler/diffuser with adapter",
+   "ref": "Replaces RIDGID VT2525",
+   "cents": 1799,
+   "ship": "medium"
+  },
+  "ridgid-vt1407-2-1-2-in-power-tool-adaptor-stepped": {
+   "name": "2-1/2 in. power tool adaptor (stepped, trimmable)",
+   "ref": "Replaces RIDGID VT1407",
+   "cents": 1199,
+   "ship": "small"
+  },
+  "shark-x11fc500-crevice-dusting-brush-upholstery-tool-set": {
+   "name": "Crevice / dusting brush / upholstery tool set",
+   "ref": "Replaces Shark X11FC500",
+   "cents": 1599,
+   "ship": "small"
+  },
+  "shark-112ffj-crevice-tool-dusting-brush-set": {
+   "name": "Crevice tool + dusting brush set",
+   "ref": "Replaces Shark 112FFJ",
+   "cents": 1499,
+   "ship": "small"
+  },
+  "shark-123ky1000a-robot-self-cleaning-brushroll": {
+   "name": "Robot self-cleaning brushroll",
+   "ref": "Replaces Shark 123KY1000A",
+   "cents": 1199,
+   "ship": "small"
+  },
+  "shark-167kku2500-robot-self-cleaning-brushroll": {
+   "name": "Robot self-cleaning brushroll",
+   "ref": "Replaces Shark 167KKU2500",
+   "cents": 2299,
+   "ship": "small"
+  },
+  "shark-278kku2800-robot-self-cleaning-brushroll": {
+   "name": "Robot self-cleaning brushroll",
+   "ref": "Replaces Shark 278KKU2800",
+   "cents": 1799,
+   "ship": "small"
+  },
+  "shark-102ky1000-side-brush-aftermarket-referenced": {
+   "name": "Side brush (aftermarket-referenced)",
+   "ref": "Replaces Shark 102KY1000",
+   "cents": 1099,
+   "ship": "small"
+  },
+  "shark-58mmsb2pk-triple-side-brushes-2": {
+   "name": "Triple side brushes (2)",
+   "ref": "Replaces Shark 58MMSB2PK",
+   "cents": 1299,
+   "ship": "small"
+  },
+  "shark-153hg2300-triple-side-brushes-2": {
+   "name": "Triple side brushes (2)",
+   "ref": "Replaces Shark 153HG2300",
+   "cents": 1099,
+   "ship": "small"
+  },
+  "samsung-da61-04195a-door-stopper-left": {
+   "name": "Door stopper, left",
+   "ref": "Replaces Samsung DA61-04195A",
+   "cents": 4399,
+   "ship": "small"
+  },
+  "samsung-da67-02291a-freezer-door-handle-end-cap-left-gray": {
+   "name": "Freezer door handle end cap, left (gray)",
+   "ref": "Replaces Samsung DA67-02291A",
+   "cents": 3999,
+   "ship": "small"
+  }
+ }
 }
