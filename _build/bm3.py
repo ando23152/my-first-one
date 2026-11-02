@@ -110,41 +110,45 @@ FLYER_HTML = r"""<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:"JetBrains Mono";src:url(@@R@@/assets/fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");font-weight:100 800}
 @page{size:8.5in 11in;margin:0}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{width:8.5in;height:11in;background:#0a0a0a;color:#f4f1ec;font-family:"Instrument Sans",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{width:8.5in;height:11in;background:#000;color:#f4f1ec;font-family:"Instrument Sans",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{position:relative;width:8.5in;height:11in;overflow:hidden;display:flex;flex-direction:column}
 .red{color:#e3262f}
 .mono{font-family:"JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
+/* top bar */
+.bar{display:flex;align-items:center;justify-content:space-between;padding:.28in .55in .18in;background:#000;border-bottom:3px solid #e3262f}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:.66in}
+.brand .nm{font-family:Archivo;font-stretch:85%;font-weight:800;font-size:15pt;letter-spacing:.02em;color:#fff;text-transform:uppercase;line-height:1}
+.brand .loc{margin-top:5px;font-family:"JetBrains Mono",monospace;font-weight:600;font-size:8.5pt;letter-spacing:.16em;color:#ff4a52;text-transform:uppercase}
+.open{background:#e3262f;color:#fff;border-radius:999px;padding:7px 15px;font-family:"JetBrains Mono",monospace;font-weight:700;font-size:8.5pt;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 0 0 3px rgba(227,38,47,.25)}
 /* hero */
-.hero{position:relative;padding:.45in .55in .26in;background:#0a0a0a}
-.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%;opacity:.95;-webkit-mask-image:radial-gradient(ellipse 72% 80% at 74% 38%,#000 42%,transparent 100%);mask-image:radial-gradient(ellipse 72% 80% at 74% 38%,#000 42%,transparent 100%)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.75) 35%,rgba(10,10,10,.15) 62%,rgba(10,10,10,0) 100%)}
+.hero{position:relative;padding:.26in .55in .22in;background:#000;min-height:3in}
+.hero img.bg{position:absolute;top:0;right:0;width:58%;height:100%;object-fit:cover;object-position:70% 45%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%);mask-image:linear-gradient(90deg,transparent 0%,#000 30%);filter:brightness(1.25) contrast(1.15) saturate(1.2)}
 .hero>*{position:relative;z-index:1}
-.top{display:flex;align-items:center;gap:12px}
-.top img{height:.62in}
-.top .mono{font-size:7.5pt;color:#bdb8b0;line-height:1.6}
-h1{font-family:Archivo;font-stretch:78%;font-weight:800;font-size:38pt;line-height:.92;letter-spacing:-.01em;text-transform:uppercase;margin-top:.3in}
-h1 em{font-family:"Instrument Serif";font-style:italic;font-weight:400;text-transform:none;font-size:43pt;letter-spacing:0;color:#e3262f}
-.sub{margin-top:.14in;max-width:4.1in;font-size:10.5pt;line-height:1.45;color:#d6d1c9}
+h1{font-family:Archivo;font-stretch:78%;font-weight:800;font-size:40pt;line-height:.92;letter-spacing:-.01em;text-transform:uppercase;color:#fff;max-width:4.6in}
+h1 em{font-family:"Instrument Serif";font-style:italic;font-weight:400;text-transform:none;font-size:45pt;letter-spacing:0;color:#ff3b44}
+h1 .red{color:#ff3b44}
+.sub{margin-top:.16in;max-width:3.85in;font-size:10.5pt;line-height:1.45;color:#f1ede6}
 .sub b{color:#fff}
 /* services */
 .sec{padding:0 .55in}
-.kicker{font-size:7.5pt;color:#e3262f;margin-bottom:.1in;display:flex;align-items:center;gap:8px}
+.kicker{font-size:8.5pt;font-weight:700;color:#ff3b44;margin-bottom:.1in;display:flex;align-items:center;gap:8px}
 .kicker::before{content:"";width:.28in;height:2px;background:#e3262f}
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:.12in}
 .tile{border:1px solid #2a2a2a;border-radius:10px;overflow:hidden;background:#121212}
-.tile img{display:block;width:100%;height:.86in;object-fit:cover}
+.tile img{display:block;width:100%;height:.78in;object-fit:cover}
 .tile div{padding:.09in .1in .11in}
 .tile b{display:block;font-family:Archivo;font-stretch:85%;font-weight:700;font-size:10.5pt;text-transform:uppercase;letter-spacing:.01em}
-.tile span{display:block;margin-top:3px;font-size:7.8pt;line-height:1.35;color:#a9a39b}
+.tile span{display:block;margin-top:3px;font-size:7.8pt;line-height:1.35;color:#c9c3ba}
 /* industries */
 .inds{margin-top:.18in;display:flex;flex-wrap:wrap;gap:6px}
 .inds span{border:1px solid #3a3a3a;border-radius:999px;padding:4px 11px;font-size:8.3pt;color:#e9e4dc}
-.inds span i{font-style:normal;color:#8d877f;font-size:7.3pt}
+.inds span i{font-style:normal;color:#b5afa6;font-size:7.3pt}
 /* steps */
 .steps{margin-top:.2in;display:grid;grid-template-columns:repeat(3,1fr);gap:.2in}
 .step .n{font-family:Archivo;font-stretch:75%;font-weight:800;font-size:34pt;line-height:.9;color:transparent;-webkit-text-stroke:1.2px #e3262f}
 .step b{display:block;margin-top:4px;font-size:10pt}
-.step span{display:block;font-size:8pt;color:#a9a39b;line-height:1.35;margin-top:2px}
+.step span{display:block;font-size:8pt;color:#c9c3ba;line-height:1.35;margin-top:2px}
 /* promise band */
 .band{margin-top:.24in;background:#e3262f;color:#fff;padding:.2in .55in;display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:.18in;align-items:center}
 .band .big{font-family:Archivo;font-stretch:80%;font-weight:800;font-size:17pt;line-height:.98;text-transform:uppercase}
@@ -152,26 +156,24 @@ h1 em{font-family:"Instrument Serif";font-style:italic;font-weight:400;text-tran
 .band p{font-size:8.3pt;line-height:1.35;border-left:1px solid rgba(255,255,255,.45);padding-left:.12in}
 .band p b{display:block;font-size:9.3pt}
 /* footer */
-.foot{margin-top:auto;padding:.22in .55in .3in;display:grid;grid-template-columns:1fr auto;gap:.3in;align-items:end;background:radial-gradient(120% 140% at 100% 100%,#2a0b0d 0%,#0a0a0a 55%)}
-.foot .mono{font-size:7.3pt;color:#8d877f}
+.foot{margin-top:auto;padding:.22in .55in .3in;display:grid;grid-template-columns:1fr auto;gap:.3in;align-items:end;background:radial-gradient(120% 140% at 100% 100%,#2a0b0d 0%,#000 55%)}
+.foot .mono{font-size:8pt;color:#ff4a52;font-weight:600}
 .phone{font-family:Archivo;font-stretch:80%;font-weight:800;font-size:34pt;line-height:1;margin-top:4px}
 .contact{margin-top:6px;font-size:9.5pt;color:#d6d1c9;line-height:1.55}
 .price{margin-top:.12in;display:inline-flex;gap:10px;align-items:baseline;border-top:1px solid #333;padding-top:.08in}
 .price b{font-family:Archivo;font-stretch:85%;font-size:15pt}
-.price span{font-size:8pt;color:#a9a39b}
+.price span{font-size:8pt;color:#c9c3ba}
 .qr{text-align:center}
 .qr .box{background:#fff;border-radius:10px;padding:8px;width:1.25in;height:1.25in}
 .qr .box svg{width:100%;height:100%}
-.qr .mono{display:block;margin-top:6px;font-size:6.8pt}
-.open{position:absolute;top:.52in;right:.55in;z-index:2;border:1px solid rgba(255,255,255,.35);background:rgba(10,10,10,.55);border-radius:999px;padding:5px 12px;font-size:7.5pt}
+.qr .mono{display:block;margin-top:6px;font-size:7.5pt;color:#fff}
 </style></head><body><div class="page">
+<header class="bar"><div class="brand"><img src="@@R@@/assets/img/logo-black.png" alt="True Part Fabrication"><div><div class="nm">True Part Fabrication</div><div class="loc">Modesto, California</div></div></div><div class="open">Opening Jan 1, 2027</div></header>
 <section class="hero"><img class="bg" src="@@R@@/assets/img/hero-black.webp" alt="">
-  <div class="top"><img src="@@R@@/assets/img/logo-black.png" alt="True Part Fabrication"><div class="mono">True Part Fabrication LLC<br>Modesto, California</div></div>
   <h1>Broken.<br>Backordered.<br><em>Discontinued?</em><br><span class="red">We make it.</span></h1>
   <p class="sub">Custom and replacement plastic parts for the businesses that keep the Central Valley running. <b>No molds. No minimums. No waiting on a backorder.</b></p>
 </section>
-<div class="open mono">Opening Jan 1, 2027</div>
-<section class="sec" style="margin-top:.06in">
+<section class="sec" style="margin-top:.3in">
   <div class="kicker mono">What we make</div>
   <div class="tiles">
     <div class="tile"><img src="@@R@@/assets/img/svc-adapter-black.jpg" alt=""><div><b>Replacement parts</b><span>Discontinued or hard-to-find parts, measured and remade.</span></div></div>
