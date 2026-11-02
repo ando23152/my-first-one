@@ -128,7 +128,8 @@
    "f": "DXV04T, DXV06G, DXV10SB, DXV12P, DXV16PA, DXV212P",
    "mat": "PETG",
    "pp": true,
-   "i": "separator"
+   "i": "separator",
+   "price": 37.99
   },
   {
    "b": "DeWalt",
@@ -504,7 +505,8 @@
    "f": "Other wet/dry brands",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 51.99
   },
   {
    "b": "Milwaukee",
@@ -582,7 +584,8 @@
    "f": "PCL733, PCL734, P3240",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 9.99
   },
   {
    "b": "RYOBI",
@@ -619,7 +622,8 @@
    "f": "PCL702",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 18.99
   },
   {
    "b": "RYOBI",
@@ -655,7 +659,8 @@
    "f": "PCL732, PCL733, PCL734, PCL735, PWV200, 4.75 gal, RY40WD01",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 13.99
   },
   {
    "b": "RYOBI",
@@ -790,7 +795,8 @@
    "f": "RIDGID 1-7/8 in. vacs",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 13.99
   },
   {
    "b": "RIDGID",
@@ -914,7 +920,8 @@
    "f": "RIDGID vacs",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 16.99
   },
   {
    "b": "RIDGID",
@@ -932,7 +939,8 @@
    "f": "RIDGID vacs with 2-1/2 or 1-1/4 hose/wand",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 12.99
   },
   {
    "b": "RIDGID",
@@ -1031,7 +1039,8 @@
    "f": "4 in. hoses",
    "mat": "PETG / PA-CF",
    "pp": false,
-   "i": "adapter"
+   "i": "adapter",
+   "price": 15.99
   },
   {
    "b": "WEN",
@@ -1142,7 +1151,8 @@
    "f": "IX141 / CH-series",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 13.99
   },
   {
    "b": "Shark",
@@ -1181,7 +1191,8 @@
    "f": "",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 12.99
   },
   {
    "b": "Shark",
@@ -1208,7 +1219,8 @@
    "f": "NV800, NV801, NV803, NV810",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 17.99
   },
   {
    "b": "Shark",
@@ -1266,7 +1278,8 @@
    "f": "ION robots (RV7xx/RV8xx)",
    "mat": "PETG",
    "pp": true,
-   "i": "brush"
+   "i": "brush",
+   "price": 15.99
   },
   {
    "b": "Shark",
@@ -1294,7 +1307,8 @@
    "f": "AZ3000, AZ3000C, AZ3000W, AZ3002, AZ3002C, LA555, LA700, LA702, UV900",
    "mat": "PETG",
    "pp": true,
-   "i": "roller"
+   "i": "roller",
+   "price": 17.99
   },
   {
    "b": "Shark",
@@ -1342,7 +1356,8 @@
    "f": "",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 31.99
   },
   {
    "b": "Shark",
@@ -1351,7 +1366,8 @@
    "f": "HV300 / HV320 series",
    "mat": "PETG",
    "pp": true,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 33.99
   },
   {
    "b": "Shark",
@@ -1380,7 +1396,8 @@
    "f": "",
    "mat": "PETG",
    "pp": false,
-   "i": "clip"
+   "i": "clip",
+   "price": 12.99
   },
   {
    "b": "Prolux",
@@ -1410,7 +1427,8 @@
    "mat": "PETG",
    "pp": false,
    "i": "nozzle",
-   "for": "Prolux 10qt"
+   "for": "Prolux 10qt",
+   "price": 24.99
   },
   {
    "b": "Prolux",
@@ -1439,7 +1457,8 @@
    "f": "VS20T7512N7 (Jet 75)",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 61.99
   },
   {
    "b": "Samsung",
@@ -1457,7 +1476,8 @@
    "f": "Samsung Jet stick (models not listed)",
    "mat": "PETG",
    "pp": false,
-   "i": "nozzle"
+   "i": "nozzle",
+   "price": 35.99
   },
   {
    "b": "Samsung",
@@ -1505,7 +1525,8 @@
    "f": "Jet Stick (models not listed)",
    "mat": "PETG / PA-CF",
    "pp": false,
-   "i": "adapter"
+   "i": "adapter",
+   "price": 19.99
   },
   {
    "b": "Samsung",
@@ -1588,7 +1609,8 @@
    "f": "DW80J7550US",
    "mat": "ASA / PA-CF",
    "pp": false,
-   "i": "clip"
+   "i": "clip",
+   "price": 13.99
   },
   {
    "b": "Samsung",
@@ -1642,7 +1664,8 @@
    "f": "RF23HCEDBSG, RF28HFEDBSG, RF28HFEDTSG",
    "mat": "ASA / PA-CF",
    "pp": false,
-   "i": "roller"
+   "i": "roller",
+   "price": 87.99
   },
   {
    "b": "Hampton Bay",
@@ -1682,7 +1705,8 @@
    "mat": "PETG",
    "pp": false,
    "i": "clip",
-   "for": "UC7078T"
+   "for": "UC7078T",
+   "price": 11.99
   },
   {
    "b": "Makita",

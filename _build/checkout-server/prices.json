@@ -40,6 +40,12 @@
    "cents": 14699,
    "ship": "large"
   },
+  "dewalt-dxvcs001-dust-separator-for-wet-dry-vacuums": {
+   "name": "Dust Separator for Wet/Dry Vacuums",
+   "ref": "Replaces DeWalt DXVCS001",
+   "cents": 3799,
+   "ship": "large"
+  },
   "milwaukee-49-90-1988-1-7-8-in-crevice-tool-7-1": {
    "name": "1-7/8 in crevice tool 7-1/2 in",
    "ref": "Replaces Milwaukee 49-90-1988",
@@ -166,6 +172,12 @@
    "cents": 1299,
    "ship": "small"
   },
+  "milwaukee-49-90-2043p-kit-cross-brush-2-in-1-brush-rocking": {
+   "name": "Kit (cross brush, 2-in-1 brush, rocking nozzle, compact organizer)",
+   "ref": "Replaces Milwaukee 49-90-2043P",
+   "cents": 5199,
+   "ship": "small"
+  },
   "milwaukee-49-90-2027-low-profile-pivoting-brush": {
    "name": "Low-profile pivoting brush",
    "ref": "Replaces Milwaukee 49-90-2027",
@@ -202,11 +214,29 @@
    "cents": 2999,
    "ship": "small"
   },
+  "ryobi-a323g01-1-1-4-in-crevice-tool-utility-nozzle": {
+   "name": "1-1/4 in. crevice tool + utility nozzle",
+   "ref": "Replaces RYOBI A323G01",
+   "cents": 999,
+   "ship": "medium"
+  },
   "ryobi-a32ss02n-1-3-8-in-accessory-kit-crevice-tool": {
    "name": "1-3/8 in. accessory kit: crevice tool, floor nozzle, dust brush",
    "ref": "Replaces RYOBI A32SS02N",
    "cents": 2399,
    "ship": "small"
+  },
+  "ryobi-a32k02-4-pc-wet-dry-hand-vac-kit-crevice": {
+   "name": "4-pc wet/dry hand vac kit: crevice, squeegee, dust brush, accessory adaptor",
+   "ref": "Replaces RYOBI A32K02",
+   "cents": 1899,
+   "ship": "small"
+  },
+  "ryobi-a32ua03-flexible-extended-micro-crevice-tool-14": {
+   "name": "Flexible extended micro-crevice tool, 14 in.",
+   "ref": "Replaces RYOBI A32UA03",
+   "cents": 1399,
+   "ship": "medium"
   },
   "ryobi-a32ua06-micro-crevice-tool-16-bendable-straws": {
    "name": "Micro-crevice tool (16 bendable straws)",
@@ -256,6 +286,12 @@
    "cents": 1699,
    "ship": "small"
   },
+  "ridgid-vt1709-1-7-8-in-utility-nozzle": {
+   "name": "1-7/8 in. utility nozzle",
+   "ref": "Replaces RIDGID VT1709",
+   "cents": 1399,
+   "ship": "medium"
+  },
   "ridgid-vt1710-1-7-8-in-wet-nozzle-squeegee": {
    "name": "1-7/8 in. wet nozzle (squeegee)",
    "ref": "Replaces RIDGID VT1710",
@@ -298,17 +334,47 @@
    "cents": 1199,
    "ship": "small"
   },
+  "ridgid-vt2540-claw-nozzle": {
+   "name": "Claw nozzle",
+   "ref": "Replaces RIDGID VT2540",
+   "cents": 1699,
+   "ship": "medium"
+  },
+  "ridgid-vt2530-multi-surface-carpet-hard-floor-nozzle": {
+   "name": "Multi-surface carpet/hard floor nozzle",
+   "ref": "Replaces RIDGID VT2530",
+   "cents": 1299,
+   "ship": "medium"
+  },
+  "wen-dca003-4-in-y-fitting-splitter": {
+   "name": "4 in. Y-fitting splitter",
+   "ref": "Replaces WEN DCA003",
+   "cents": 1599,
+   "ship": "medium"
+  },
   "shark-x11fc500-crevice-dusting-brush-upholstery-tool-set": {
    "name": "Crevice / dusting brush / upholstery tool set",
    "ref": "Replaces Shark X11FC500",
    "cents": 1599,
    "ship": "small"
   },
+  "shark-353ch1000-crevice-tool": {
+   "name": "Crevice tool",
+   "ref": "Replaces Shark 353CH1000",
+   "cents": 1399,
+   "ship": "medium"
+  },
   "shark-112ffj-crevice-tool-dusting-brush-set": {
    "name": "Crevice tool + dusting brush set",
    "ref": "Replaces Shark 112FFJ",
    "cents": 1499,
    "ship": "small"
+  },
+  "shark-219flin800-pet-multi-tool": {
+   "name": "Pet multi-tool",
+   "ref": "Replaces Shark 219FLIN800",
+   "cents": 1799,
+   "ship": "medium"
   },
   "shark-123ky1000a-robot-self-cleaning-brushroll": {
    "name": "Robot self-cleaning brushroll",
@@ -328,11 +394,23 @@
    "cents": 1799,
    "ship": "small"
   },
+  "shark-1171fk870-robot-side-brushes": {
+   "name": "Robot side brushes",
+   "ref": "Replaces Shark 1171FK870",
+   "cents": 1599,
+   "ship": "small"
+  },
   "shark-102ky1000-side-brush-aftermarket-referenced": {
    "name": "Side brush (aftermarket-referenced)",
    "ref": "Replaces Shark 102KY1000",
    "cents": 1099,
    "ship": "small"
+  },
+  "shark-1539fc3000-soft-brushroll-front-roller": {
+   "name": "Soft brushroll ( front roller)",
+   "ref": "Replaces Shark 1539FC3000",
+   "cents": 1799,
+   "ship": "medium"
   },
   "shark-58mmsb2pk-triple-side-brushes-2": {
    "name": "Triple side brushes (2)",
@@ -346,16 +424,64 @@
    "cents": 1099,
    "ship": "small"
   },
+  "shark-hvuaw300-138fliv300-under-appliance-wand-36in-adjustable": {
+   "name": "Under-appliance wand (36in adjustable)",
+   "ref": "Replaces Shark HVUAW300 / 138FLIV300",
+   "cents": 3399,
+   "ship": "medium"
+  },
+  "prolux-prolux-10qt-multi-surface-14-in-floor-tool": {
+   "name": "Multi-surface 14 in. floor tool",
+   "ref": "For Prolux Prolux 10qt",
+   "cents": 2499,
+   "ship": "medium"
+  },
+  "samsung-dj98-01130a-accessory-crevice-tool-vs9000rl": {
+   "name": "Accessory crevice tool (VS9000RL)",
+   "ref": "Replaces Samsung DJ98-01130A",
+   "cents": 6199,
+   "ship": "medium"
+  },
+  "samsung-vca-sad95-aa-combination-tool": {
+   "name": "Combination tool",
+   "ref": "Replaces Samsung VCA-SAD95/AA",
+   "cents": 3599,
+   "ship": "medium"
+  },
   "samsung-da61-04195a-door-stopper-left": {
    "name": "Door stopper, left",
    "ref": "Replaces Samsung DA61-04195A",
    "cents": 4399,
    "ship": "small"
   },
+  "samsung-vca-saf95-vaa-flex-tool-chrometal-black": {
+   "name": "Flex tool (Chrometal Black)",
+   "ref": "Replaces Samsung VCA-SAF95/VAA",
+   "cents": 1999,
+   "ship": "medium"
+  },
   "samsung-da67-02291a-freezer-door-handle-end-cap-left-gray": {
    "name": "Freezer door handle end cap, left (gray)",
    "ref": "Replaces Samsung DA67-02291A",
    "cents": 3999,
+   "ship": "small"
+  },
+  "samsung-dd61-00473a-rack-holder-tine-clip": {
+   "name": "Rack holder tine clip",
+   "ref": "Replaces Samsung DD61-00473A",
+   "cents": 1399,
+   "ship": "small"
+  },
+  "samsung-da63-08459a-tray-support-rollers-dispenser-tray": {
+   "name": "Tray/support rollers (dispenser tray)",
+   "ref": "Replaces Samsung DA63-08459A",
+   "cents": 8799,
+   "ship": "medium"
+  },
+  "hampton-bay-uc7078t-ceiling-fan-remote-wall-holder-plastic-new": {
+   "name": "Ceiling fan remote wall holder, plastic, new",
+   "ref": "For Hampton Bay UC7078T",
+   "cents": 1199,
    "ship": "small"
   }
  }
