@@ -122,47 +122,47 @@ html,body{width:8.5in;height:11in;background:#000;color:#f4f1ec;font-family:"Ins
 .brand .loc{margin-top:5px;font-family:"JetBrains Mono",monospace;font-weight:600;font-size:8.5pt;letter-spacing:.16em;color:#ff4a52;text-transform:uppercase}
 .open{background:#e3262f;color:#fff;border-radius:999px;padding:7px 15px;font-family:"JetBrains Mono",monospace;font-weight:700;font-size:8.5pt;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 0 0 3px rgba(227,38,47,.25)}
 /* hero */
-.hero{position:relative;padding:.26in .55in .22in;background:#000;min-height:3in}
+.hero{position:relative;padding:.24in .55in .18in;background:#000;min-height:2.85in}
 .hero img.bg{position:absolute;top:0;right:0;width:58%;height:100%;object-fit:cover;object-position:70% 45%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%);mask-image:linear-gradient(90deg,transparent 0%,#000 30%);filter:brightness(1.25) contrast(1.15) saturate(1.2)}
 .hero>*{position:relative;z-index:1}
 h1{font-family:Archivo;font-stretch:78%;font-weight:800;font-size:40pt;line-height:.92;letter-spacing:-.01em;text-transform:uppercase;color:#fff;max-width:4.6in}
 h1 em{font-family:"Instrument Serif";font-style:italic;font-weight:400;text-transform:none;font-size:45pt;letter-spacing:0;color:#ff3b44}
 h1 .red{color:#ff3b44}
-.sub{margin-top:.16in;max-width:3.85in;font-size:10.5pt;line-height:1.45;color:#f1ede6}
-.sub b{color:#fff}
+.sub{margin-top:.16in;max-width:4in;font-size:11.5pt;line-height:1.4;color:#fff;font-weight:600}
+.sub b{color:#ff3b44;font-weight:700}
 /* services */
 .sec{padding:0 .55in}
 .kicker{font-size:8.5pt;font-weight:700;color:#ff3b44;margin-bottom:.1in;display:flex;align-items:center;gap:8px}
 .kicker::before{content:"";width:.28in;height:2px;background:#e3262f}
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:.12in}
 .tile{border:1px solid #2a2a2a;border-radius:10px;overflow:hidden;background:#121212}
-.tile img{display:block;width:100%;height:.78in;object-fit:cover}
+.tile img{display:block;width:100%;height:.7in;object-fit:cover}
 .tile div{padding:.09in .1in .11in}
-.tile b{display:block;font-family:Archivo;font-stretch:85%;font-weight:700;font-size:10.5pt;text-transform:uppercase;letter-spacing:.01em}
-.tile span{display:block;margin-top:3px;font-size:7.8pt;line-height:1.35;color:#c9c3ba}
+.tile b{display:block;font-family:Archivo;font-stretch:85%;font-weight:800;font-size:10pt;color:#ff3b44;text-transform:uppercase;letter-spacing:.01em}
+.tile span{display:block;margin-top:3px;font-size:8.4pt;line-height:1.3;color:#fff;font-weight:500}
 /* industries */
-.inds{margin-top:.18in;display:flex;flex-wrap:wrap;gap:6px}
-.inds span{border:1px solid #3a3a3a;border-radius:999px;padding:4px 11px;font-size:8.3pt;color:#e9e4dc}
-.inds span i{font-style:normal;color:#b5afa6;font-size:7.3pt}
+.inds{margin-top:.16in;display:flex;flex-wrap:nowrap;gap:5px;justify-content:space-between}
+.inds span{white-space:nowrap;background:#3a0d10;border:1.5px solid #e3262f;border-radius:999px;padding:4px 9px;font-size:8.4pt;font-weight:700;color:#fff}
+.inds span i{font-style:normal;font-weight:600;font-size:7.4pt;color:#ffb3b6;font-size:7.3pt}
 /* steps */
-.steps{margin-top:.2in;display:grid;grid-template-columns:repeat(3,1fr);gap:.2in}
+.steps{margin-top:.16in;display:grid;grid-template-columns:repeat(3,1fr);gap:.2in}
 .step .n{font-family:Archivo;font-stretch:75%;font-weight:800;font-size:34pt;line-height:.9;color:transparent;-webkit-text-stroke:1.2px #e3262f}
-.step b{display:block;margin-top:4px;font-size:10pt}
-.step span{display:block;font-size:8pt;color:#c9c3ba;line-height:1.35;margin-top:2px}
+.step b{display:block;margin-top:4px;font-size:10.5pt;font-weight:700}
+.step span{display:block;font-size:8.8pt;color:#fff;font-weight:500;line-height:1.35;margin-top:2px}
 /* promise band */
-.band{margin-top:.24in;background:#e3262f;color:#fff;padding:.2in .55in;display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:.18in;align-items:center}
+.band{margin-top:.2in;background:#e3262f;color:#fff;padding:.2in .55in;display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:.18in;align-items:center}
 .band .big{font-family:Archivo;font-stretch:80%;font-weight:800;font-size:17pt;line-height:.98;text-transform:uppercase}
 .band .big em{font-family:"Instrument Serif";font-style:italic;font-weight:400;text-transform:none;font-size:19pt}
-.band p{font-size:8.3pt;line-height:1.35;border-left:1px solid rgba(255,255,255,.45);padding-left:.12in}
+.band p{font-size:8.8pt;font-weight:500;line-height:1.35;border-left:1px solid rgba(255,255,255,.45);padding-left:.12in}
 .band p b{display:block;font-size:9.3pt}
 /* footer */
-.foot{margin-top:auto;padding:.22in .55in .3in;display:grid;grid-template-columns:1fr auto;gap:.3in;align-items:end;background:radial-gradient(120% 140% at 100% 100%,#2a0b0d 0%,#000 55%)}
+.foot{margin-top:auto;padding:.18in .55in .26in;display:grid;grid-template-columns:1fr auto;gap:.3in;align-items:end;background:radial-gradient(120% 140% at 100% 100%,#2a0b0d 0%,#000 55%)}
 .foot .mono{font-size:8pt;color:#ff4a52;font-weight:600}
 .phone{font-family:Archivo;font-stretch:80%;font-weight:800;font-size:34pt;line-height:1;margin-top:4px}
-.contact{margin-top:6px;font-size:9.5pt;color:#d6d1c9;line-height:1.55}
+.contact{margin-top:6px;font-size:10pt;color:#fff;font-weight:600;line-height:1.55}
 .price{margin-top:.12in;display:inline-flex;gap:10px;align-items:baseline;border-top:1px solid #333;padding-top:.08in}
 .price b{font-family:Archivo;font-stretch:85%;font-size:15pt}
-.price span{font-size:8pt;color:#c9c3ba}
+.price span{font-size:9pt;color:#fff;font-weight:500}
 .qr{text-align:center}
 .qr .box{background:#fff;border-radius:10px;padding:8px;width:1.25in;height:1.25in}
 .qr .box svg{width:100%;height:100%}
@@ -173,7 +173,7 @@ h1 .red{color:#ff3b44}
   <h1>Broken.<br>Backordered.<br><em>Discontinued?</em><br><span class="red">We make it.</span></h1>
   <p class="sub">Custom and replacement plastic parts for the businesses that keep the Central Valley running. <b>No molds. No minimums. No waiting on a backorder.</b></p>
 </section>
-<section class="sec" style="margin-top:.3in">
+<section class="sec" style="margin-top:.2in">
   <div class="kicker mono">What we make</div>
   <div class="tiles">
     <div class="tile"><img src="@@R@@/assets/img/svc-adapter-black.jpg" alt=""><div><b>Replacement parts</b><span>Discontinued or hard-to-find parts, measured and remade.</span></div></div>
@@ -181,7 +181,7 @@ h1 .red{color:#ff3b44}
     <div class="tile"><img src="@@R@@/assets/img/svc-batch-black.jpg" alt=""><div><b>Small batches</b><span>10 to 500 brackets, clips or covers, no mold needed.</span></div></div>
     <div class="tile"><img src="@@R@@/assets/img/svc-enclosure-black.jpg" alt=""><div><b>Enclosures</b><span>Housings and covers for controls and sensors.</span></div></div>
   </div>
-  <div class="inds"><span>Food processing <i>· non-food-contact</i></span><span>Agriculture</span><span>Warehouse &amp; cold storage</span><span>Industrial shops</span><span>Dust collection</span></div>
+  <div class="inds"><span>Food processing <i>(non-food-contact)</i></span><span>Agriculture</span><span>Warehouse &amp; cold storage</span><span>Industrial shops</span><span>Dust collection</span></div>
   <div class="steps">
     <div class="step"><div class="n">01</div><b>Send a photo or the part</b><span>With a ruler in the shot and the machine's model number.</span></div>
     <div class="step"><div class="n">02</div><b>Get a written quote</b><span>Material, price and turnaround, before any work starts.</span></div>
