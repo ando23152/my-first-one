@@ -24,6 +24,10 @@ def rows():
     if _ROWS is None:
         T = _T(); seen = set(); _ROWS = []
         oems = {x["oem"] for x in B.CAT["items"] if x["oem"]}
+        # parts taken off the site (under $15) don't get accessory size pages either
+        import os
+        _rp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "removed_parts.json")
+        oems |= {o for b, o in json.load(open(_rp))} if os.path.exists(_rp) else set()
         # every vac, collector, hose and tool port, plus accessories that aren't already a catalog part
         for r in sorted([r for r in T.HOSE if r["g"] != "Accessories" or r["mc"].split(" / ")[0] not in oems], key=lambda r: (r["b"], r["mc"])):
             s = _slug(r["b"] + " " + r["mc"])[:80]; k, base = 2, s

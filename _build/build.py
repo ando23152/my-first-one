@@ -118,7 +118,7 @@ def css():
     import tools, parts_pages
     base = re.search(r"<style>(.*?)</style>", TPL, re.S).group(1)
     import improve
-    return improve.minify_css(__import__('seo').font_css() + __import__('seo').PART_CSS + base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + __import__('shop').SHOP_CSS + improve.IMP_CSS + __import__('seo2').CSS + __import__('bm').CSS + __import__('bm2').CSS + LIGHT_CSS)
+    return improve.minify_css(__import__('seo').font_css() + __import__('seo').PART_CSS + base + EXTRA_CSS + tools.EXTRA_CSS + parts_pages.PART_CSS + __import__('es').ES_CSS + __import__('extras').EX_CSS + __import__('shop').SHOP_CSS + improve.IMP_CSS + __import__('seo2').CSS + __import__('bm').CSS + __import__('bm2').CSS + __import__('bm3').CSS + LIGHT_CSS)
 
 JS = r"""
 (function(){
@@ -288,7 +288,7 @@ def footer(c):
   <div class="wrap">
     <div class="foot">
       <div><img src="{c.asset('img/logo-dark.png')}" alt="True Part Fabrication" width="800" height="493" loading="lazy"><p style="color:var(--muted);margin-top:18px;max-width:28em;font-size:.95rem">Replacement parts, custom fabrication, and small-batch manufacturing in Modesto, California.</p></div>
-      <div><h2 class="fh">Explore</h2><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('sizes/')}">Size chart</a></li><li><a href="{L('tools/will-it-fit/')}">Will it fit?</a></li><li><a href="{L('tools/inch-mm-converter/')}">Inch–mm converter</a></li><li><a href="{L('tools/adapter-builder/')}">Adapter builder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
+      <div><h2 class="fh">Explore</h2><ul><li><a href="{L('services/')}">Services</a></li><li><a href="{L('', 'business')}">For business</a></li><li><a href="{L('parts/')}">Compatible parts</a></li><li><a href="{L('bundles/')}">Part sets</a></li><li><a href="{L('pricing/')}">Pricing</a></li><li><a href="{L('projects/')}">Projects</a></li><li><a href="{L('', 'process')}">Process</a></li><li><a href="{L('resources/')}">Resources</a></li><li><a href="{L('tools/hose-size-finder/')}">Hose size finder</a></li><li><a href="{L('sizes/')}">Size chart</a></li><li><a href="{L('tools/will-it-fit/')}">Will it fit?</a></li><li><a href="{L('tools/inch-mm-converter/')}">Inch–mm converter</a></li><li><a href="{L('tools/adapter-builder/')}">Adapter builder</a></li><li><a href="{L('glossary/')}">Glossary</a></li><li><a href="{L('faq/')}">FAQ</a></li></ul></div>
       {__import__('seo2').footer_brands(c)}
       <div><h2 class="fh">Contact</h2><ul><li><a href="{L('', 'quote')}">Request a quote</a></li><li><a href="{L('reorder/')}">Reorder a part</a></li><li><a href="{L('request-list/')}">Cart</a></li><li><a href="{L('my-shop/')}">My shop</a></li><li><a href="{L('whats-new/')}">What's new</a></li>{PH}<li><a href="{EBAY}" target="_blank" rel="noopener">eBay store</a></li><li><a href="{L('search/')}">Search</a></li><li><a href="{L('es/')}" hreflang="es" lang="es">Español</a></li><li><a href="{L('privacy/')}">Privacy</a></li><li><a href="{L('terms/')}">Terms of Service</a></li><li><a href="{L('sitemap/')}">Site map</a></li></ul></div>
     </div>
@@ -496,6 +496,11 @@ def section_page(c, sid):
         extra = "\n<script>window.TPF_HOME=1</script>\n<script>(function(){\n" + qs + "\n})();</script>"
     if sid == "quote":
         sec = sec + '''<div class="wrap" style="padding-bottom:80px"><div class="callout checklist"><div class="k">Before you send</div><ul><li>Photos of the part from three angles, with a ruler or calipers in the shot</li><li>The make and model of the equipment it goes on</li><li>Any part number molded or printed on the original</li><li>How many you need, and when</li><li>Where it's used: indoors, outdoors, heat, cold, or chemicals</li></ul></div></div>'''
+    if sid == "business" and "<h3" in sec:
+        _i = sec.index("<h3"); _i = sec.rfind("<div", 0, _i); _i = sec.rfind("<div", 0, _i)
+        sec = sec[:_i] + '<h2 class="sr-only">Industries we serve</h2>' + sec[_i:]
+    if sid == "business":
+        sec = sec + f'''<div class="wrap" style="padding-bottom:80px"><div class="callout checklist"><div class="k">Start a business job</div><ul><li>Send a photo of the broken part, with a ruler in the shot, and the machine's make and model</li><li>Get a written quote with material, price and turnaround</li><li>We make the part, check the fit, and ship it or you pick it up</li></ul><p style="margin:14px 0 0"><a class="btn" href="{c.link('', 'quote')}">Request a quote <span class="ar">→</span></a> <a class="btn ghost" href="{c.link('assets/downloads/TPF-business-flyer.pdf')}" download>Download our one-page flyer (PDF)</a></p></div></div>'''
     body = f'''<main id="main" class="secpage">
 <div class="wrap" style="padding-top:28px">{crumbs(c, [('Home', ''), (name, sid + '/')])}</div>
 {sec}
@@ -518,7 +523,7 @@ def parts(c):
 <div class="page-hero"><div class="wrap">
   {crumbs(c, [('Home', ''), ('Compatible parts', 'parts/')])}
   <h1>Compatible replacement parts</h1>
-  <p class="lead">{len(items)} made-to-order aftermarket parts that fit {', '.join(brands[:-1])}, and {brands[-1]} tools, vacuums, and appliances. Search by part number or model, then request a quote. Every part is covered by our <a href="{c.link('faq/')}" style="color:var(--ink)">fit guarantee</a>.</p>
+  <p class="lead">{len(items)} made-to-order aftermarket parts that fit {', '.join(brands[:-1])}, and {brands[-1]} tools, vacuums, and appliances. Search by part number or model, then request a quote. Every part is covered by our <a href="{c.link('faq/')}" style="color:var(--ink)">fit guarantee</a>. Buying several? See the <a href="{c.link('bundles/')}" style="color:var(--ink)">part sets</a>.</p>
 </div></div>
 <section style="padding-block:44px 100px"><div class="wrap">
   <div class="tools">
@@ -767,10 +772,12 @@ def build(mode, root):
     pages.update(__import__("seo2").pages())
     pages.update(__import__("bm").pages())
     pages.update(__import__("bm2").pages())
+    pages.update(__import__("bm3").pages())
     write(root, "assets/models.json", __import__("bm2").models_json(None))
     write(root, "feed.xml", __import__("bm2").feed_xml())
     shutil.copy(SRC + "/qrcode.min.js", root + "/assets/qrcode.min.js")
     __import__("bm2").make_pdfs(root)
+    __import__("bm3").make_flyer(root)
     write(root, "llms.txt", __import__("seo2").llms_txt())
     write(root, "assets/prices.json", json.dumps(shop.prices_data(CAT["items"]), ensure_ascii=False, separators=(",", ":")))
     sp = "/home/claude/site_src/checkout-server/prices.json"

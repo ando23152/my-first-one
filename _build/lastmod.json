@@ -1,74 +1,78 @@
 {
 "": [
-"567db6d52265d8e4",
+"fbdcc83537257c1f",
 "2026-11-02"
 ],
 "about/": [
-"9f349d0654ee1d11",
-"2026-11-01"
+"346737ab70c85c2f",
+"2026-11-02"
 ],
 "brands/craftsman/": [
-"bcc44d49f4104bec",
-"2026-11-01"
+"caafafa5283641ba",
+"2026-11-02"
 ],
 "brands/dewalt/": [
-"a5bd2e225ceede41",
-"2026-11-01"
+"f5980c9796a41793",
+"2026-11-02"
 ],
 "brands/hampton-bay/": [
-"4e915c5763fec8b7",
-"2026-11-01"
+"790b551917a15646",
+"2026-11-02"
 ],
 "brands/makita/": [
-"4e1e901b9e48333a",
-"2026-11-01"
+"2ae41b0b40490fe2",
+"2026-11-02"
 ],
 "brands/milwaukee/": [
-"1e56b223a6f5ae81",
-"2026-11-01"
+"c3272ac57616c169",
+"2026-11-02"
 ],
 "brands/prolux/": [
-"96943d1e12fbd217",
-"2026-11-01"
+"9623f2a41ee368fb",
+"2026-11-02"
 ],
 "brands/ridgid/": [
-"97b3f87b0e83782a",
-"2026-11-01"
+"c200f5c50f4c2c50",
+"2026-11-02"
 ],
 "brands/ryobi/": [
-"60ddc61b13b396ec",
-"2026-11-01"
+"388f6be81d634bbb",
+"2026-11-02"
 ],
 "brands/samsung/": [
-"38968ffc09160636",
-"2026-11-01"
+"16c07be3eec31b88",
+"2026-11-02"
 ],
 "brands/shark/": [
-"3f3ad163ecfd668c",
-"2026-11-01"
+"8234e8ee0e913089",
+"2026-11-02"
 ],
 "brands/shop-vac/": [
-"1372f57a45e29b43",
-"2026-11-01"
+"e29faec1b4510be3",
+"2026-11-02"
 ],
 "brands/vacmaster/": [
-"5b4332aed74aad8f",
-"2026-11-01"
+"02f8eb3c48dee7f0",
+"2026-11-02"
 ],
 "brands/wen/": [
-"091021591d768be3",
-"2026-11-01"
+"1876c215712f03eb",
+"2026-11-02"
+],
+"bundles/": [
+"ba711e496c897d47",
+"2026-11-02"
 ],
 "business/": [
-"f1a27f861c2886e9",
-"2026-11-01"
+"5a88e821c07f6d9f",
+"2026-11-02"
 ],
 "es/": [
 "0ba996a8c2142e69",
 "2026-11-01"
 ],
 "es/piezas/": [
-"434e31a93b2f390e",
+"21631a14b5767f85",
 "2026-11-02"
 ],
 "es/preguntas-frecuentes/": [
@@ -76,247 +80,247 @@
 "2026-11-01"
 ],
 "faq/": [
-"202c0cba38594bdb",
-"2026-11-01"
+"b983f3cd2850ddb6",
+"2026-11-02"
 ],
 "glossary/": [
-"2835889a6d802690",
-"2026-11-01"
+"ab89f7bef6733def",
+"2026-11-02"
 ],
 "glossary/abs/": [
-"22af7568f435172d",
-"2026-11-01"
+"c682514e0a03843a",
+"2026-11-02"
 ],
 "glossary/aftermarket-part/": [
-"773d542d7c41b1f4",
-"2026-11-01"
+"6290c0bf889ada9d",
+"2026-11-02"
 ],
 "glossary/asa/": [
-"09593a8b7b347961",
-"2026-11-01"
+"6a6c6852a1063264",
+"2026-11-02"
 ],
 "glossary/blast-gate/": [
-"246c8182ce8b1132",
-"2026-11-01"
+"a3fbebb51e0b15c3",
+"2026-11-02"
 ],
 "glossary/bracket/": [
-"81609b94ec138ce3",
-"2026-11-01"
+"0323433b7e89c0b6",
+"2026-11-02"
 ],
 "glossary/cad/": [
-"65874fe063f660e1",
-"2026-11-01"
+"0c9a0dae6dda4512",
+"2026-11-02"
 ],
 "glossary/clips-and-covers/": [
-"b68659d784ee74b5",
-"2026-11-01"
+"5b9467e1010a440a",
+"2026-11-02"
 ],
 "glossary/cyclone-separator/": [
-"f015ce159df0735f",
-"2026-11-01"
+"7c5a24a516fcb453",
+"2026-11-02"
 ],
 "glossary/dust-port-hose-sizes/": [
-"4ff595103ee009f5",
-"2026-11-01"
+"fbbab20f51b92a03",
+"2026-11-02"
 ],
 "glossary/enclosure/": [
-"12762fbe171be09b",
-"2026-11-01"
+"33bee809da513b0f",
+"2026-11-02"
 ],
 "glossary/fdm-3d-printing/": [
-"7ecc7c6b36c16602",
-"2026-11-01"
+"a723ae0aea48ad07",
+"2026-11-02"
 ],
 "glossary/fit-types/": [
-"1df49203872b79a4",
-"2026-11-01"
+"b7d738d7a932d3f2",
+"2026-11-02"
 ],
 "glossary/fixture/": [
-"a6cf6e0019b4ac8e",
-"2026-11-01"
+"abff146ce67d6c69",
+"2026-11-02"
 ],
 "glossary/food-contact/": [
-"6302da7174e894e2",
-"2026-11-01"
+"d7e3a04d11a25af3",
+"2026-11-02"
 ],
 "glossary/friction-fit/": [
-"6d4b42fc3a994b63",
-"2026-11-01"
+"31ee9022d2d5b268",
+"2026-11-02"
 ],
 "glossary/heat-deflection-temperature/": [
-"ce8162635e7f99ee",
-"2026-11-01"
+"443152b6b9d42d51",
+"2026-11-02"
 ],
 "glossary/infill/": [
-"5a83a4f13fb36e93",
-"2026-11-01"
+"61f8590a6c7ebe84",
+"2026-11-02"
 ],
 "glossary/jig/": [
-"98525d3a0591afdb",
-"2026-11-01"
+"43683ece34241f13",
+"2026-11-02"
 ],
 "glossary/layer-height/": [
-"103dc2a6dd5c8732",
-"2026-11-01"
+"46c86c19d2760fc2",
+"2026-11-02"
 ],
 "glossary/locking-hose-ends/": [
-"b987ba3ee0340501",
-"2026-11-01"
+"8f62a3909c7f3dfe",
+"2026-11-02"
 ],
 "glossary/nominal-size/": [
-"f05de3921b9bb574",
-"2026-11-01"
+"403277ab5d0fd18c",
+"2026-11-02"
 ],
 "glossary/od-and-id/": [
-"067993c741387ec2",
-"2026-11-01"
+"2b4756b53d88261d",
+"2026-11-02"
 ],
 "glossary/oem-part/": [
-"f3534bc3f015dcaf",
-"2026-11-01"
+"c0586a0d72ad33bb",
+"2026-11-02"
 ],
 "glossary/organizer/": [
-"f69db26b0d4cbeff",
-"2026-11-01"
+"da4f71fc36634520",
+"2026-11-02"
 ],
 "glossary/pa-cf/": [
-"0400e143f32261a4",
-"2026-11-01"
+"7e41583ed1c671f9",
+"2026-11-02"
 ],
 "glossary/petg/": [
-"8d1b30bcd2bd52fd",
-"2026-11-01"
+"ba756742e134162c",
+"2026-11-02"
 ],
 "glossary/pla/": [
-"f8930f852a817c0f",
-"2026-11-01"
+"dfd2c3476812b532",
+"2026-11-02"
 ],
 "glossary/print-orientation/": [
-"29cfccb45a3356ea",
-"2026-11-01"
+"161ed6e09832cbad",
+"2026-11-02"
 ],
 "glossary/prototyping/": [
-"cbe6cfd652033f8f",
-"2026-11-01"
+"b6580617573acd23",
+"2026-11-02"
 ],
 "glossary/reverse-engineering/": [
-"36499f63ac414088",
-"2026-11-01"
+"3a24b0c84404413f",
+"2026-11-02"
 ],
 "glossary/roller/": [
-"7baebc5309a1e514",
-"2026-11-01"
+"4de6520baa53b328",
+"2026-11-02"
 ],
 "glossary/small-batch-manufacturing/": [
-"c73538c5f161dd36",
-"2026-11-01"
+"c6d08d153396b52e",
+"2026-11-02"
 ],
 "glossary/step-adapter/": [
-"9f2b53be5bc2fa76",
-"2026-11-01"
+"cbff0382891e292a",
+"2026-11-02"
 ],
 "glossary/stl-file/": [
-"9c5117c299238612",
-"2026-11-01"
+"bf4e361fa7e9e89e",
+"2026-11-02"
 ],
 "glossary/taper/": [
-"13833a8023c97406",
-"2026-11-01"
+"5ee209d00bb37d55",
+"2026-11-02"
 ],
 "glossary/tolerance/": [
-"06da0aed2fcff73e",
-"2026-11-01"
+"6e7a49af0f4f28f6",
+"2026-11-02"
 ],
 "glossary/tpu/": [
-"8abd2f3b851a789f",
-"2026-11-01"
+"0e55cfd8b3f067ce",
+"2026-11-02"
 ],
 "glossary/uv-resistance/": [
-"2f228523c66f2e49",
-"2026-11-01"
+"f17ea5bc1e4bbf87",
+"2026-11-02"
 ],
 "glossary/wall-count/": [
-"60d3840396048c65",
-"2026-11-01"
+"b9128c4ab86898c2",
+"2026-11-02"
 ],
 "guides/how-to-measure-a-part/": [
-"8527e352a460d0c6",
-"2026-11-01"
+"42bda42135a2e9ef",
+"2026-11-02"
 ],
 "guides/replacing-a-discontinued-plastic-part/": [
-"7e69b5c233a7c971",
-"2026-11-01"
+"223a677dbbfdf184",
+"2026-11-02"
 ],
 "guides/shop-vac-hose-sizes/": [
-"014c31a4401dc677",
-"2026-11-01"
+"b6b99d954c8fcf8e",
+"2026-11-02"
 ],
 "guides/vacuum-adapter-fit-problems/": [
-"b857632e18584836",
-"2026-11-01"
+"667fc3bdeb12e0ba",
+"2026-11-02"
 ],
 "industries/agriculture/": [
-"009db744672852ff",
-"2026-11-01"
+"2bae924dab501f34",
+"2026-11-02"
 ],
 "industries/food-processing/": [
-"222054296f5bbf9f",
-"2026-11-01"
+"a95506d573d4e575",
+"2026-11-02"
 ],
 "industries/industrial-shops/": [
-"b5a4f46f58363d20",
-"2026-11-01"
+"a54f1c6d20febd25",
+"2026-11-02"
 ],
 "industries/warehouse-cold-storage/": [
-"09d9a4bf6e95af09",
-"2026-11-01"
+"a7fe6fc866e098ec",
+"2026-11-02"
 ],
 "materials/": [
-"4f85109145a11db6",
-"2026-11-01"
+"ffe2d8f49e10ed4c",
+"2026-11-02"
 ],
 "parts/": [
-"d809e134c14a598b",
+"d1318a4ba683476f",
 "2026-11-02"
 ],
 "parts/craftsman-cmxzvbe38620-2-1-2-in-car-nozzle/": [
-"57a0de8f00b03219",
-"2026-11-01"
+"9dab419e5c47db7a",
+"2026-11-02"
 ],
 "parts/craftsman-cmxzvbe38639-2-1-2-in-hose-grip-handle/": [
-"6132dea44578f106",
-"2026-11-01"
+"a849bbd4ba0e9ee6",
+"2026-11-02"
 ],
 "parts/craftsman-cmxzvbe38676-1-7-8-in-utility-nozzle/": [
-"6ac9b78c9a1c1e5f",
-"2026-11-01"
+"73d1002f88492076",
+"2026-11-02"
 ],
 "parts/craftsman-cmxzvbe38725-1-7-8-in-dusting-brush/": [
-"a5997a7667ff79b6",
-"2026-11-01"
+"27087b8d820f611f",
+"2026-11-02"
 ],
 "parts/dewalt-dwh052-1-1-8-in-hex-breaker-dust-collector/": [
-"25e8acdfeb4403bf",
+"cde71a2eb81bdc48",
 "2026-11-02"
 ],
 "parts/dewalt-dwh079d-sds-rotary-hammer-dust-box-evacuator/": [
-"f603d1712d76c5a7",
+"729019017f454dd3",
 "2026-11-02"
 ],
 "parts/dewalt-dwh205dh-dust-extractor-for-dch263-sds-plus-d-handle/": [
-"fc66a17e5a2ae8fe",
+"b3fbe61405f39514",
 "2026-11-02"
 ],
 "parts/dewalt-dwh304dh-multi-surface-dust-extractor/": [
-"9362b4daf45e3f1f",
+"f9fdc4fde0e82263",
 "2026-11-02"
 ],
 "parts/dewalt-dwv2759-dust-extractor-accessory-kit-5-piece/": [
-"86e9e6f92b7fbf44",
+"6adee54fd25a46e0",
 "2026-11-02"
 ],
 "parts/dewalt-dwv9000-universal-quick-connector/": [
-"7e0d62affd2fca9e",
+"0f823669dac9248c",
 "2026-11-02"
 ],
 "parts/dewalt-dwv9190-large-hose-adapter/": [
@@ -340,7 +344,7 @@
 "2026-11-01"
 ],
 "parts/dewalt-dxva13-0801-1-25-2-5-in-car-cleaning-accessory/": [
-"642589a40e1a3ade",
+"03bfd97c58d93e2f",
 "2026-11-02"
 ],
 "parts/dewalt-dxva13-4333-1-7-8-in-car-cleaning-nozzle-attachment/": [
@@ -360,59 +364,59 @@
 "2026-11-01"
 ],
 "parts/dewalt-dxva19-1900-1-7-8-in-floor-brush-attachment/": [
-"1447f69406328399",
-"2026-11-01"
+"0e71662c0fbd1ce0",
+"2026-11-02"
 ],
 "parts/dewalt-dxva19-2780-adapter-1-7-8-in-hose/": [
 "4db9db52817176a8",
 "2026-11-01"
 ],
 "parts/dewalt-dxvcs001-dust-separator-for-wet-dry-vacuums/": [
-"6b5073c30c33dc2c",
-"2026-11-01"
+"e3d7a9ff328a2e97",
+"2026-11-02"
 ],
 "parts/hampton-bay-70830-battery-cover-for-universal-kit-remotes-70830-98101/": [
-"a2957a9165163b21",
-"2026-11-01"
+"fed8da38fc255f13",
+"2026-11-02"
 ],
 "parts/hampton-bay-uc7078t-battery-door-cover-for-uc7078t-handheld-remote/": [
-"8064cd473bd4b57e",
-"2026-11-01"
+"626d502b03f1d689",
+"2026-11-02"
 ],
 "parts/hampton-bay-uc7078t-ceiling-fan-remote-wall-holder-plastic-new/": [
-"984f6c6f1d82fb08",
-"2026-11-01"
+"f9ba95ca7a529448",
+"2026-11-02"
 ],
 "parts/hampton-bay-uc7083t-battery-door-cover-for-uc7083t-handheld-remote-dipswitch/": [
-"01adf522c3ff4174",
-"2026-11-01"
+"eac7f3d6ee25e42f",
+"2026-11-02"
 ],
 "parts/makita-195548-6-cuff-joint-adapter-38-mm-to-22-mm/": [
-"9cd4d420979b3bda",
-"2026-11-01"
+"5a406210e351ebca",
+"2026-11-02"
 ],
 "parts/makita-417765-1-22-mm-tool-cuff-adapter/": [
-"e6c2f7c5e7711435",
-"2026-11-01"
+"37d69228f2787f4e",
+"2026-11-02"
 ],
 "parts/makita-417766-9-38-mm-tool-cuff-adapter/": [
-"0ecfec32ba69f5a7",
-"2026-11-01"
+"48c6f017659f7b20",
+"2026-11-02"
 ],
 "parts/makita-424379-9-24-mm-thread-on-tool-cuff-adapter/": [
-"7a904f12774316d5",
-"2026-11-01"
+"52b866b664e2b458",
+"2026-11-02"
 ],
 "parts/makita-w107418678-15-16-in-hose-cuff-adapter/": [
-"0ed3a4b182f7c826",
-"2026-11-01"
+"64ed1e3ab60758f0",
+"2026-11-02"
 ],
 "parts/makita-w107418688-1-3-4-in-hose-cuff-adapter/": [
-"8b3300b376a36ec3",
-"2026-11-01"
+"ea846ed4b37eb9d0",
+"2026-11-02"
 ],
 "parts/milwaukee-0990-20-dedicated-debris-separator-between-head-and-tank/": [
-"2630a12ca8c3b22c",
+"2ea31d80ee49792c",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-1959-hose-clip-adapter-extractor/": [
@@ -436,7 +440,7 @@
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-1988-1-7-8-in-crevice-tool-7-1/": [
-"3e0207bb2590b99a",
+"14d307579bce4d4e",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-1991-hose-and-accessory-adapter-kit-2-1-2/": [
@@ -452,20 +456,20 @@
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2002-2-1-2-in-floor-brush/": [
-"3a7df7332e253737",
+"42c5b0cc9f398196",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2005-2-1-2-in-wet-floor-nozzle/": [
-"299bb0d401a92f97",
+"0dafab914d358e61",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2008-2-1-2-in-crevice-tool/": [
-"995aaa2329eaf71c",
-"2026-11-01"
+"74f72ea9c224a819",
+"2026-11-02"
 ],
 "parts/milwaukee-49-90-2009-2-1-2-in-floor-utility-nozzle/": [
-"8511c6d072ecd344",
-"2026-11-01"
+"3fd47af855472c04",
+"2026-11-02"
 ],
 "parts/milwaukee-49-90-2011-1-7-8-in-floor-utility-nozzle/": [
 "fc764f33137d6355",
@@ -480,47 +484,47 @@
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2019a-automotive-kit-w-crevice-tools-utility-nozzle/": [
-"4a0309dfb137c273",
+"04356d81268e0da2",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2020-swiveling-palm-brush/": [
-"9443519e37a98f5f",
+"7ed3fb06ad564dbc",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2021-rotating-corner-brush/": [
-"c40ed75138e49e0a",
+"10ff61fbcf720830",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2022-dust-collector-wall-suction-funnel/": [
-"6b072b168a61f9f5",
+"9891689510c0ea08",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2023y-3-in-1-crevice-and-brush-tool/": [
-"6c0a8268247ff019",
-"2026-11-01"
+"8d43b74fe0de4dcf",
+"2026-11-02"
 ],
 "parts/milwaukee-49-90-2024-conduit-line-puller-3-pc/": [
-"764620f5687e81b0",
+"43abdca514d29f40",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2026-4-in-1-right-angle-tool-5-pc/": [
-"8176f871eea617f2",
+"dc64e4870a8f52e0",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2027-low-profile-pivoting-brush/": [
-"8d5960c751e98c66",
+"4c9f4c39811cd320",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2028-2-in-1-utility-brush/": [
-"5f05fb8394656681",
+"338a3daca81390c9",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2030y-flexible-long-reach-crevice-tool/": [
-"240b7988c4d7d06f",
+"e9879d7922baa259",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2032-magnetic-utility-nozzle/": [
-"59de4c94f7806862",
+"ca49c808949ff108",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2033-2-1-2-in-magnetic-utility-nozzle/": [
@@ -528,7 +532,7 @@
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2034-non-marring-crevice-tool-utility-nozzle-2-pc/": [
-"5734f7554b050162",
+"43b28a4dd24785b8",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2035-cross-brush-tool/": [
@@ -536,72 +540,72 @@
 "2026-11-01"
 ],
 "parts/milwaukee-49-90-2038-rocking-utility-nozzle-w-brushes/": [
-"59a5da1c42fe415c",
+"aa0520efd9c1286b",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2039-2-1-2-in-rocking-utility-nozzle-w/": [
-"14852502ac849445",
+"617aed96c93e5a46",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2040-claw-utility-nozzle-w-brushes/": [
-"dd635c2824dc22ef",
+"2205f55c4f0ead2c",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2041-bucket-topper-dust-collector/": [
-"98e1cbce24fb7566",
+"16d9c2e1dd2c269b",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2043-automotive-detail-brush/": [
-"72faeee86f8309b3",
+"4401bf11b6e45cfa",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2043p-kit-cross-brush-2-in-1-brush-rocking/": [
-"37a2775750a118f5",
-"2026-11-01"
+"7f9a7092e4a28418",
+"2026-11-02"
 ],
 "parts/milwaukee-49-90-2044-compact-dust-collector/": [
-"0f228f749e467abb",
+"d51ed5d981d0baf9",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2046-boiler-coil-cleaning-brush/": [
-"b90b94b5db94f0a4",
+"ffa5cc7b15ad02be",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2047-debris-scraper/": [
-"9fe9bf2681093f07",
+"d78804de56a15979",
 "2026-11-02"
 ],
 "parts/milwaukee-49-90-2200-compact-debris-separator-6-ft-1-7-8/": [
-"8eea6fbff24551e5",
+"f2eefc570bcaf9bf",
 "2026-11-02"
 ],
 "parts/prolux-prolux-10qt-multi-surface-14-in-floor-tool/": [
-"dcfe64db576540f2",
-"2026-11-01"
+"50920080372a2817",
+"2026-11-02"
 ],
 "parts/prolux-prolux-2-0-squeegee-floor-tool/": [
-"d0f01d350da2748a",
-"2026-11-01"
+"9aee3a6c9b5da136",
+"2026-11-02"
 ],
 "parts/prolux-prolux-ctx-canister-latches-springs-and-latch-pins/": [
-"383b996e154f635f",
-"2026-11-01"
+"e835f69d49bd778e",
+"2026-11-02"
 ],
 "parts/prolux-prolux-tritan-combination-floor-tool-new-style/": [
-"4c1ad3d9031a9aab",
-"2026-11-01"
+"91a223c66df52531",
+"2026-11-02"
 ],
 "parts/prolux-prolux-tritan-tool-caddy-wand-mounted/": [
-"7349730efcc9549b",
-"2026-11-01"
+"ed790d67c5251afc",
+"2026-11-02"
 ],
 "parts/ridgid-la2501-2-1-2-in-locking-round-dusting-brush/": [
 "2729cc6797045102",
 "2026-11-01"
 ],
 "parts/ridgid-la2502-2-1-2-in-locking-crevice-tool/": [
-"fe9269eacaeec971",
-"2026-11-01"
+"3382a4b496133c08",
+"2026-11-02"
 ],
 "parts/ridgid-la2503-2-1-2-in-locking-car-nozzle/": [
 "a198c816afc89622",
@@ -612,11 +616,11 @@
 "2026-11-01"
 ],
 "parts/ridgid-la2510-2-1-2-in-locking-wet-nozzle/": [
-"3380e640a538274c",
+"d39ab27d67620185",
 "2026-11-02"
 ],
 "parts/ridgid-la2514-2-1-2-in-locking-floor-brush/": [
-"68d8add795387c94",
+"175edb7c2cbef616",
 "2026-11-02"
 ],
 "parts/ridgid-vt1407-2-1-2-in-power-tool-adaptor-stepped/": [
@@ -632,19 +636,19 @@
 "2026-11-02"
 ],
 "parts/ridgid-vt1709-1-7-8-in-utility-nozzle/": [
-"cb52ef483602db2f",
-"2026-11-01"
+"e2441b052b7f362b",
+"2026-11-02"
 ],
 "parts/ridgid-vt1710-1-7-8-in-wet-nozzle-squeegee/": [
 "4594d43965c3070e",
 "2026-11-02"
 ],
 "parts/ridgid-vt1712-1-7-8-in-crevice-dusting-brush-combo/": [
-"c269e4b78cdd8420",
+"7842c25c72207b8c",
 "2026-11-02"
 ],
 "parts/ridgid-vt1714-1-7-8-in-floor-brush/": [
-"5bd25356b85a45eb",
+"271cb06b35f0f047",
 "2026-11-02"
 ],
 "parts/ridgid-vt1755-3-pc-hose-accessory-adapter-kit/": [
@@ -664,23 +668,23 @@
 "2026-11-01"
 ],
 "parts/ridgid-vt2525-2-1-2-in-muffler-diffuser-with-adapter/": [
-"cc782d5546b41a45",
+"f22411c936b31183",
 "2026-11-02"
 ],
 "parts/ridgid-vt2530-multi-surface-carpet-hard-floor-nozzle/": [
-"bf88e82b23155d97",
-"2026-11-01"
+"f7024a3b4e8c1a7f",
+"2026-11-02"
 ],
 "parts/ridgid-vt2540-claw-nozzle/": [
-"07f85323c7a35193",
-"2026-11-01"
+"fd9f473c058d1830",
+"2026-11-02"
 ],
 "parts/ridgid-vt2571-turbo-beater-bar-kit/": [
-"ce7bcebec4fb4329",
-"2026-11-01"
+"4f7e85ddb7ceea26",
+"2026-11-02"
 ],
 "parts/ridgid-vt2575-12-pc-heavy-duty-cleaning-kit-stainless-wands/": [
-"83b8fae6c076dd7d",
+"c682d75d9eae6154",
 "2026-11-02"
 ],
 "parts/ryobi-a21ccv1-sander-vacuum-adaptor/": [
@@ -688,35 +692,35 @@
 "2026-11-01"
 ],
 "parts/ryobi-a3210g01-1-7-8-in-6-pc-kit-2/": [
-"0ab08f7f19e3fa8f",
-"2026-11-01"
+"99aa0bbe52fd9017",
+"2026-11-02"
 ],
 "parts/ryobi-a323g01-1-1-4-in-crevice-tool-utility-nozzle/": [
-"ee51939983eab89b",
-"2026-11-01"
+"c68f12b79ea7454c",
+"2026-11-02"
 ],
 "parts/ryobi-a326g01-1-7-8-in-4-pc-kit-crevice/": [
-"d14cee62e0fd57c0",
-"2026-11-01"
+"b99e0d4d7d87b5b4",
+"2026-11-02"
 ],
 "parts/ryobi-a326g01n-p770-6-gal-accessory-kit-1-7-8/": [
-"2d3aa539855c43ba",
-"2026-11-01"
+"ade7d03219641040",
+"2026-11-02"
 ],
 "parts/ryobi-a32ad01-wet-dry-vacuum-adapter-step-adapter/": [
-"71103ecba3f81a1e",
+"49bcd54eaccdc79e",
 "2026-11-02"
 ],
 "parts/ryobi-a32k02-4-pc-wet-dry-hand-vac-kit-crevice/": [
-"e1b21ca3f1b88e4e",
-"2026-11-01"
+"0a6c1906ce9fac4d",
+"2026-11-02"
 ],
 "parts/ryobi-a32k04-stick-vac-accessory-kit-crevice-dust-brush-micro/": [
-"0b6ed13e5ba669fc",
+"92f0f35f7c9b2d95",
 "2026-11-02"
 ],
 "parts/ryobi-a32ss02n-1-3-8-in-accessory-kit-crevice-tool/": [
-"38fd762b412684b3",
+"75eb1e13fe5d5adf",
 "2026-11-02"
 ],
 "parts/ryobi-a32ua01-crevice-tool/": [
@@ -724,12 +728,12 @@
 "2026-11-01"
 ],
 "parts/ryobi-a32ua02-flexible-micro-crevice-tool-rubber/": [
-"40e99baf3db20d03",
-"2026-11-01"
+"72774dbb572fd6f4",
+"2026-11-02"
 ],
 "parts/ryobi-a32ua03-flexible-extended-micro-crevice-tool-14/": [
-"c482ee5026086151",
-"2026-11-01"
+"8090f6aef484de42",
+"2026-11-02"
 ],
 "parts/ryobi-a32ua04-dust-brush-triangular/": [
 "f548bab5ef6f4b4f",
@@ -744,35 +748,35 @@
 "2026-11-02"
 ],
 "parts/ryobi-a32ua07-floor-head-10-in-wide/": [
-"64caf41ac8088fa2",
-"2026-11-01"
+"76cf63ce5ad65bdf",
+"2026-11-02"
 ],
 "parts/ryobi-a32uak1-universal-fit-accessories-kit-3-piece/": [
-"887b26d7113e6087",
+"d24325df4fd85eac",
 "2026-11-02"
 ],
 "parts/samsung-da61-04195a-door-stopper-left/": [
-"462eab5a90a0dea5",
+"deddb2229a4b6beb",
 "2026-11-02"
 ],
 "parts/samsung-da63-06911a-drawer-slide-rail-cover-full-length/": [
-"fb009a8a0efa3051",
+"bf9a2398d76b26a3",
 "2026-11-02"
 ],
 "parts/samsung-da63-08459a-tray-support-rollers-dispenser-tray/": [
-"35c11a396ff9eacc",
-"2026-11-01"
+"14317c94635e2acf",
+"2026-11-02"
 ],
 "parts/samsung-da67-02291a-freezer-door-handle-end-cap-left-gray/": [
-"7007cbcd2410dc39",
+"6bf482c0acc24976",
 "2026-11-02"
 ],
 "parts/samsung-da67-02292a-freezer-door-handle-end-cap-right/": [
-"01947e098a6eaf9e",
+"1018b2e0bfc7c9a6",
 "2026-11-02"
 ],
 "parts/samsung-da67-02512a-convenience-door-handle-mounting-cap-left/": [
-"69eb00a35dcc9fa0",
+"4bb2db449223aa28",
 "2026-11-02"
 ],
 "parts/samsung-da67-02787b-freezer-door-handle-end-cap/": [
@@ -804,8 +808,8 @@
 "2026-11-01"
 ],
 "parts/samsung-dd61-00473a-rack-holder-tine-clip/": [
-"6153100f35c1e32c",
-"2026-11-01"
+"5bed50308441d417",
+"2026-11-02"
 ],
 "parts/samsung-dd61-00497a-dishrack-slide-rail-holder/": [
 "da300455519164fb",
@@ -824,24 +828,24 @@
 "2026-11-01"
 ],
 "parts/samsung-dj98-01130a-accessory-crevice-tool-vs9000rl/": [
-"0fa4dfd7aefcf6c8",
-"2026-11-01"
+"5a8df601b4b0cb72",
+"2026-11-02"
 ],
 "parts/samsung-vca-sad95-aa-combination-tool/": [
-"0aea0d1f3d8c6240",
-"2026-11-01"
+"754963b8f18b91ec",
+"2026-11-02"
 ],
 "parts/samsung-vca-saf95-vaa-flex-tool-chrometal-black/": [
-"78f1df95b917860d",
-"2026-11-01"
+"0f931e756e79b774",
+"2026-11-02"
 ],
 "parts/samsung-vca-sak90-gl-tool-kit-gray-white-vca-sak90w/": [
-"2478d8c248264065",
-"2026-11-01"
+"5ff49b05188d154a",
+"2026-11-02"
 ],
 "parts/samsung-vca-sar95-aa-long-reach-crevice-tool/": [
-"bbdea75830c01cb2",
-"2026-11-01"
+"89c7af70f16cbd02",
+"2026-11-02"
 ],
 "parts/shark-102ky1000-side-brush-aftermarket-referenced/": [
 "1687141bc5623269",
@@ -852,148 +856,148 @@
 "2026-11-02"
 ],
 "parts/shark-1171fk870-robot-side-brushes/": [
-"28a67c6fcd1bc2b6",
-"2026-11-01"
+"24bc890ba1691a9d",
+"2026-11-02"
 ],
 "parts/shark-123ky1000a-robot-self-cleaning-brushroll/": [
 "5cb428b08b5b8782",
 "2026-11-02"
 ],
 "parts/shark-1365fc200-wall-mount/": [
-"549abd3f0ba7413e",
-"2026-11-01"
+"72ea8d82444fdd93",
+"2026-11-02"
 ],
 "parts/shark-1539fc3000-soft-brushroll-front-roller/": [
-"b50af650041f0f20",
-"2026-11-01"
+"fce13a6fb81fb187",
+"2026-11-02"
 ],
 "parts/shark-153hg2300-triple-side-brushes-2/": [
 "5f3d610768addc4c",
 "2026-11-02"
 ],
 "parts/shark-158fli650-duster-crevice-tool/": [
-"e46348a281691052",
+"bcd1f05ac0501b43",
 "2026-11-02"
 ],
 "parts/shark-159fli650-upholstery-tool/": [
-"f2a131fa6ff6ed44",
+"c9c014549e342716",
 "2026-11-02"
 ],
 "parts/shark-166kku2500-self-cleaning-brushroll/": [
-"76498f0d4a2995fd",
-"2026-11-01"
+"3cc7a65c867574cd",
+"2026-11-02"
 ],
 "parts/shark-167kku2500-robot-self-cleaning-brushroll/": [
-"d9b7deac847c4d22",
+"57c470134ed94a4b",
 "2026-11-02"
 ],
 "parts/shark-189fli680-duster-crevice-tool/": [
-"db46707dc760eb24",
+"d34141b9bcb81454",
 "2026-11-02"
 ],
 "parts/shark-210flih380-duster-crevice-tool/": [
-"b2c876a3462910bd",
-"2026-11-01"
+"738c3d1cb3b93e79",
+"2026-11-02"
 ],
 "parts/shark-219flin800-pet-multi-tool/": [
-"bf8b579a9620bb3c",
-"2026-11-01"
+"e539469fa46c901c",
+"2026-11-02"
 ],
 "parts/shark-240flin850-under-appliance-wand/": [
-"c010932a0049e05c",
+"4b33ab0a48f85b9e",
 "2026-11-02"
 ],
 "parts/shark-255flih380-8in-crevice-tool/": [
-"13fb99f16d5fcff1",
-"2026-11-01"
+"ca3610e4b2469fc9",
+"2026-11-02"
 ],
 "parts/shark-278kku2800-robot-self-cleaning-brushroll/": [
-"eb88b4e1e5929527",
+"eef63528042761ae",
 "2026-11-02"
 ],
 "parts/shark-353ch1000-crevice-tool/": [
-"10c4cd2b4494536b",
-"2026-11-01"
+"4df56f07166619ab",
+"2026-11-02"
 ],
 "parts/shark-354ch1000ce-pet-multi-tool/": [
-"ccfe45b5aaaab48c",
-"2026-11-01"
+"84f6746f2ddddeba",
+"2026-11-02"
 ],
 "parts/shark-406gp2300-triple-side-brush-single/": [
-"d7067c4d12ec5515",
-"2026-11-01"
+"73e44060b699b6e3",
+"2026-11-02"
 ],
 "parts/shark-58mmsb2pk-triple-side-brushes-2/": [
 "32fc2ffad7f56822",
 "2026-11-02"
 ],
 "parts/shark-619fj140-crevice-tool/": [
-"c68715d571e095c9",
+"a5ebdbbaaadc722d",
 "2026-11-02"
 ],
 "parts/shark-621fj140-flexible-crevice-tool/": [
-"b322072ae5ade8bb",
-"2026-11-01"
+"f6f0ffadf3a80a0d",
+"2026-11-02"
 ],
 "parts/shark-623fj140-duster-crevice-tool/": [
-"2aa6e5cebb59f284",
-"2026-11-01"
+"30ab84ebeae3049c",
+"2026-11-02"
 ],
 "parts/shark-627fj140-upholstery-tool/": [
-"d21f7521cb03ea0b",
+"084b1868ab0deb1e",
 "2026-11-02"
 ],
 "parts/shark-629fj140-pet-multi-tool/": [
-"7c950fcfc9674b41",
+"ff8c904ae6737d11",
 "2026-11-02"
 ],
 "parts/shark-632fj140-under-appliance-wand/": [
-"17ddb07bda2048f3",
-"2026-11-01"
+"557ec1d2d4afc413",
+"2026-11-02"
 ],
 "parts/shark-673ffj200-crevice-tool/": [
-"e4aa8a5cfa6699f6",
+"56ddbe47b4c55b95",
 "2026-11-02"
 ],
 "parts/shark-hvuaw300-138fliv300-under-appliance-wand-36in-adjustable/": [
-"ca344d24ed00739b",
-"2026-11-01"
+"beeb9dcad27a4f48",
+"2026-11-02"
 ],
 "parts/shark-x11fc500-crevice-dusting-brush-upholstery-tool-set/": [
-"e973033df47217ee",
+"b028ce0b23de09b9",
 "2026-11-02"
 ],
 "parts/shop-vac-9066600-2-1-2-in-hose-handle-grip/": [
-"331537fcda6a5267",
-"2026-11-01"
+"2531135ee6b02258",
+"2026-11-02"
 ],
 "parts/shop-vac-9068500-2-1-2-in-to-1-1-4/": [
-"e049fc20c198f59f",
-"2026-11-01"
+"65870e05a62d7cfc",
+"2026-11-02"
 ],
 "parts/shop-vac-9196600-1-1-2-in-wet-dry-nozzle/": [
-"4e46d5c76a1d515d",
-"2026-11-01"
+"aebf4ca354c16dad",
+"2026-11-02"
 ],
 "parts/vacmaster-v12ccb-1-1-4-in-car-claw-nozzle/": [
-"aa3e2163bd15cb9a",
-"2026-11-01"
+"5f8fb77eb16c57c5",
+"2026-11-02"
 ],
 "parts/vacmaster-v21a-2-1-2-in-to-1-1-4/": [
-"0410580b38cf43af",
-"2026-11-01"
+"4ab802a7044db50d",
+"2026-11-02"
 ],
 "parts/vacmaster-v2tab-2-1-2-in-tool-adapter/": [
-"232aacd84694b361",
-"2026-11-01"
+"8b49461e6e1e6603",
+"2026-11-02"
 ],
 "parts/vacmaster-v78ab-1-7-8-in-to-1-1-4/": [
-"909262f1a5c40e5a",
-"2026-11-01"
+"db03d208e625babf",
+"2026-11-02"
 ],
 "parts/vacmaster-v78tab-1-7-8-in-power-tool-adapter/": [
-"9e3399fd2bad08f7",
-"2026-11-01"
+"1a11ded46c2deedc",
+"2026-11-02"
 ],
 "parts/wen-dca001-4-in-to-2-1-2-in-cone/": [
 "14431500c559193f",
@@ -1004,8 +1008,8 @@
 "2026-11-01"
 ],
 "parts/wen-dca003-4-in-y-fitting-splitter/": [
-"68cf2f89d15bf076",
-"2026-11-01"
+"8c7b2718f69047a9",
+"2026-11-02"
 ],
 "parts/wen-dca004-4-in-90-degree-elbow-94-mm-id/": [
 "2c476f0f7afc24a5",
@@ -1048,807 +1052,1015 @@
 "2026-11-01"
 ],
 "parts/wen-dca021-12-in-cyclone-separator-lid-2-1-2/": [
-"747509c01a68444c",
-"2026-11-01"
+"3a899fc9e8ee1fc7",
+"2026-11-02"
 ],
 "parts/wen-dca022-21-in-cyclone-separator-lid-4-in-ports/": [
-"72ffbe44d69ae98b",
-"2026-11-01"
+"69290e0ac2bdf0e3",
+"2026-11-02"
 ],
 "parts/wen-dca028-magnetic-floor-sweeping-kit-w-12x9-5/": [
-"c46ff6e8068796c2",
-"2026-11-01"
+"519645c92cfad890",
+"2026-11-02"
 ],
 "parts/wen-pl1326-0r42-dust-chute-adapter-for-pl1326-and-pl1303/": [
 "dac4782ff06367b4",
 "2026-11-01"
 ],
 "pricing/": [
-"d2242db449a22c5a",
-"2026-11-01"
+"7c1b08a74e36d31f",
+"2026-11-02"
 ],
 "privacy/": [
-"e3f40830e7ced42a",
-"2026-11-01"
+"a43c540cefec84f1",
+"2026-11-02"
 ],
 "process/": [
-"b476c4719e567aa9",
-"2026-11-01"
+"3c227b8d1636174f",
+"2026-11-02"
 ],
 "projects/": [
-"c7710329ce459f73",
-"2026-11-01"
+"0db95ff97c4c5893",
+"2026-11-02"
 ],
 "quote/": [
-"fe2b9e19544db4fe",
-"2026-11-01"
+"c2ca353bbe24dded",
+"2026-11-02"
 ],
 "reorder/": [
-"bdb76011ff1ff127",
-"2026-11-01"
+"fd6f5692bac8efc4",
+"2026-11-02"
 ],
 "resources/": [
-"886993b6c1977f9a",
-"2026-11-01"
+"4e07e5320160ab0b",
+"2026-11-02"
 ],
 "services/": [
-"a2770afe27a5a5c6",
-"2026-11-01"
+"f995aead7a4bd911",
+"2026-11-02"
 ],
 "services/custom-fabrication/": [
-"353cba05e78f5278",
-"2026-11-01"
+"27625ccc59b7a5e7",
+"2026-11-02"
 ],
 "services/electronics-enclosures/": [
-"89ea6027dbec3526",
-"2026-11-01"
+"e7b32418db5a019c",
+"2026-11-02"
 ],
 "services/replacement-parts/": [
-"cb2e1ef3b746236c",
-"2026-11-01"
+"643bf5514723babc",
+"2026-11-02"
 ],
 "services/small-batch-manufacturing/": [
-"caca20b4a1c58bc6",
-"2026-11-01"
+"fb92cb03dcca18f4",
+"2026-11-02"
 ],
 "sitemap/": [
-"cf3d7e63774aef67",
-"2026-11-01"
+"596ad2504a85492b",
+"2026-11-02"
 ],
 "sizes/": [
-"aafde6726d22da07",
-"2026-11-01"
+"48d00aa9db41f697",
+"2026-11-02"
 ],
 "sizes/by-size/1-1-2-in/": [
-"963145a37de8ad86",
-"2026-11-01"
+"b494f413c1247644",
+"2026-11-02"
 ],
 "sizes/by-size/1-1-4-in/": [
-"cadfe9869b194c42",
-"2026-11-01"
+"c936cfbc0bf73c81",
+"2026-11-02"
 ],
 "sizes/by-size/1-3-8-in/": [
-"3bd2a87480bf684d",
-"2026-11-01"
+"1f9f8e371d51d331",
+"2026-11-02"
 ],
 "sizes/by-size/1-7-8-in/": [
-"1b62cbe70d95041b",
-"2026-11-01"
+"fe4b3d05f714cbc6",
+"2026-11-02"
 ],
 "sizes/by-size/1-in/": [
-"148f5d79bfa19641",
-"2026-11-01"
+"888fd81104601ec6",
+"2026-11-02"
 ],
 "sizes/by-size/2-1-2-in/": [
-"406aa7294b86e6ba",
-"2026-11-01"
+"a6ec6f89ab3ad27d",
+"2026-11-02"
 ],
 "sizes/by-size/2-in/": [
-"0e0cba4b59fb9b3c",
-"2026-11-01"
+"b1b1310478a5a6b9",
+"2026-11-02"
 ],
 "sizes/by-size/22-mm/": [
-"d6f899a040a1692d",
-"2026-11-01"
+"c819f4e55a3cb7e5",
+"2026-11-02"
 ],
 "sizes/by-size/32-mm/": [
-"bea3c6ac9aa8882a",
-"2026-11-01"
+"ac1d047340767e31",
+"2026-11-02"
 ],
 "sizes/by-size/35-mm/": [
-"6aad686f5dcd03bc",
-"2026-11-01"
+"0bbce02dcbe1ce02",
+"2026-11-02"
 ],
 "sizes/by-size/36-mm/": [
-"969239a4b60c0f96",
-"2026-11-01"
+"758fcddce48dfc68",
+"2026-11-02"
 ],
 "sizes/by-size/38-mm/": [
-"93c7b9e9f7be3dae",
-"2026-11-01"
+"1fbb4a37ee416bea",
+"2026-11-02"
 ],
 "sizes/by-size/4-in/": [
-"b0e4857083db6671",
-"2026-11-01"
+"8fc314dc51b33faa",
+"2026-11-02"
 ],
 "sizes/craftsman-cmcv002b/": [
-"60de1cd8175acfc6",
-"2026-11-01"
+"75c42f18e75128a0",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxevbe17250/": [
-"39112cf3fd730b3e",
-"2026-11-01"
+"785b05f7d157790f",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxevbe17590/": [
-"e4c91af8cd3979a1",
-"2026-11-01"
+"fdbfa50bf25f3303",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxevbe17594/": [
-"e4e4d20bc212bf5a",
-"2026-11-01"
+"e75e5d35e2f3e7c1",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxevbe17595/": [
-"1f4eeaeb2fadd26a",
-"2026-11-01"
+"4686e6ba742f99e6",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxzvbe38640/": [
-"4f5f511889a2124f",
-"2026-11-01"
+"8bf9314bbca965b6",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxzvbe38675/": [
-"55e4b517894d2cda",
-"2026-11-01"
+"966144d277f821f1",
+"2026-11-02"
+],
+"sizes/craftsman-cmxzvbe38676/": [
+"ce68db033cbaab37",
+"2026-11-02"
+],
+"sizes/craftsman-cmxzvbe38725/": [
+"597b79fe0e5382fe",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxzvbe38758/": [
-"af74c9dd7e54edce",
-"2026-11-01"
+"3890a13f08d080f1",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxzvbe38759/": [
-"c312c39e2e7fc3db",
-"2026-11-01"
+"772746a82bc13289",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxzvbe38761/": [
-"c6647db9a2179660",
-"2026-11-01"
+"637bb894b0ce154a",
+"2026-11-02"
 ],
 "sizes/craftsman-cmxzvbe38804/": [
-"e2e4c48d18b56308",
-"2026-11-01"
+"f7e2c52ef398866e",
+"2026-11-02"
 ],
 "sizes/dewalt-dxva08-2502/": [
-"f4dbc14be743adcc",
-"2026-11-01"
+"866ef4a030b1165c",
+"2026-11-02"
+],
+"sizes/dewalt-dxva08-2503/": [
+"1e75483e2fc05de8",
+"2026-11-02"
+],
+"sizes/dewalt-dxva08-2712/": [
+"0a55ee8c20e9ab24",
+"2026-11-02"
+],
+"sizes/dewalt-dxva08-2718/": [
+"03ec0bead2addbb4",
+"2026-11-02"
+],
+"sizes/dewalt-dxva11-2100/": [
+"9a3fa2b9ef7d5239",
+"2026-11-02"
+],
+"sizes/dewalt-dxva13-4333/": [
+"6d981e934610e261",
+"2026-11-02"
+],
+"sizes/dewalt-dxva13-4364/": [
+"93fdba133a67698c",
+"2026-11-02"
+],
+"sizes/dewalt-dxva15-1100/": [
+"f6e8ecd530473412",
+"2026-11-02"
+],
+"sizes/dewalt-dxva19-1400/": [
+"1c35e4d5b6a90b1d",
+"2026-11-02"
 ],
 "sizes/dewalt-dxva19-2500/": [
-"92e453c390c443a1",
-"2026-11-01"
+"7bc33dc6c8156fb3",
+"2026-11-02"
 ],
 "sizes/dewalt-dxva19-2501/": [
-"63979faa68834e14",
-"2026-11-01"
+"11e0ae1f36a73d34",
+"2026-11-02"
 ],
 "sizes/dewalt-dxva19-2515/": [
-"e557e6010936ce20",
-"2026-11-01"
+"57888b49fb2e1269",
+"2026-11-02"
+],
+"sizes/dewalt-dxva19-2780/": [
+"543acd61fbb43bd4",
+"2026-11-02"
 ],
 "sizes/husky-at08-2536/": [
-"542abb97e5603964",
-"2026-11-01"
+"219720faeaa22040",
+"2026-11-02"
 ],
 "sizes/husky-at08-2591/": [
-"48d5931c774bc28a",
-"2026-11-01"
+"31945e475b5d6d0d",
+"2026-11-02"
 ],
 "sizes/husky-at18303p-4a/": [
-"a8cc6c8e7d398592",
-"2026-11-01"
+"547cdf363fe26714",
+"2026-11-02"
 ],
 "sizes/husky-at18304-6b/": [
-"43138ff29a501fcd",
-"2026-11-01"
+"d4c693abeac549f2",
+"2026-11-02"
 ],
 "sizes/husky-at18503-10c/": [
-"1bf3045861df4553",
-"2026-11-01"
+"d4b9396d8c11a08b",
+"2026-11-02"
 ],
 "sizes/husky-at18621p-16a/": [
-"b72d4ec8fa9c91e2",
-"2026-11-01"
+"3ca247f5423a3409",
+"2026-11-02"
 ],
 "sizes/makita-140g04-3/": [
-"3ea6ab9329940cab",
-"2026-11-01"
+"e7f9691e498de070",
+"2026-11-02"
 ],
 "sizes/makita-143787-2/": [
-"2092ba85b1701d72",
-"2026-11-01"
+"125a4d1b4d4aa08d",
+"2026-11-02"
 ],
 "sizes/makita-152992-0/": [
-"a52914b7fb68d4e9",
-"2026-11-01"
+"6083a4f1516d8bf1",
+"2026-11-02"
 ],
 "sizes/makita-199453-9/": [
-"c314a2cebca02809",
-"2026-11-01"
+"3324937064156379",
+"2026-11-02"
 ],
 "sizes/makita-199493-7/": [
-"2389fe6aa8e08b2f",
-"2026-11-01"
+"5955fcfcc75a7a0c",
+"2026-11-02"
 ],
 "sizes/makita-gcv01z/": [
-"88bac2bee0b95784",
-"2026-11-01"
+"f8fb93a786f88ed0",
+"2026-11-02"
 ],
 "sizes/makita-gcv03z/": [
-"f8add0b5cdacd583",
-"2026-11-01"
+"2b81a8b4bae113c0",
+"2026-11-02"
 ],
 "sizes/makita-p-84084/": [
-"998a445e01f4e077",
-"2026-11-01"
+"0e7cbd537b14768c",
+"2026-11-02"
 ],
 "sizes/makita-vc2512l/": [
-"8081a7b39c5b4350",
-"2026-11-01"
+"932f47fa9092b332",
+"2026-11-02"
 ],
 "sizes/makita-vc4210l/": [
-"5a1f9849579d16c5",
-"2026-11-01"
+"40f1b5e3a2bd1e47",
+"2026-11-02"
 ],
 "sizes/makita-xcv11z/": [
-"21d1e2d85e1cfe85",
-"2026-11-01"
+"16d3a568d06702d5",
+"2026-11-02"
 ],
 "sizes/makita-xcv17z/": [
-"55d50c99c4dd368d",
-"2026-11-01"
+"135a6d2297e13934",
+"2026-11-02"
 ],
 "sizes/milwaukee-0880-20/": [
-"fb785de89847d3be",
-"2026-11-01"
+"78b7e9359ce8e5fd",
+"2026-11-02"
 ],
 "sizes/milwaukee-0882-20/": [
-"227c72682babda7e",
-"2026-11-01"
+"12af2c98f2193753",
+"2026-11-02"
 ],
 "sizes/milwaukee-0885-20/": [
-"49139134059c4f64",
-"2026-11-01"
+"1677f35b22dc8e3c",
+"2026-11-02"
 ],
 "sizes/milwaukee-0910-20/": [
-"de26b6fdd29c7393",
-"2026-11-01"
+"ff36c84cf45f0fad",
+"2026-11-02"
 ],
 "sizes/milwaukee-0940-20/": [
-"d96ce08cc198a407",
-"2026-11-01"
+"9d4cff512857bcab",
+"2026-11-02"
 ],
 "sizes/milwaukee-0960-20/": [
-"cf209db0d9f5f15e",
-"2026-11-01"
+"5ec4b0e065d18ee5",
+"2026-11-02"
 ],
 "sizes/milwaukee-0970-20/": [
-"2dd1aac9d31568cc",
-"2026-11-01"
+"ed28e736a7b57e31",
+"2026-11-02"
 ],
 "sizes/milwaukee-0971-20/": [
-"6be5ea67c6cb99ba",
-"2026-11-01"
+"1db87cffae3bc476",
+"2026-11-02"
 ],
 "sizes/milwaukee-0980-20/": [
-"ca1bb8bf212312be",
-"2026-11-01"
+"78c23a0002adccc6",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-1970/": [
-"5a8150097820c584",
-"2026-11-01"
+"133891a8796cb2d1",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-1971/": [
-"23092c9ebfd8ff97",
-"2026-11-01"
+"4e307f7ebb288f4c",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-1973/": [
-"9742752feb170735",
-"2026-11-01"
+"d849ba4d0f51d75b",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-1976/": [
-"9ce2b27559a35501",
-"2026-11-01"
+"2fcbd4e8eac9abd5",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-1981/": [
+"1495deb593b98c61",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-1982/": [
+"68ee265226c6d4e4",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-1983/": [
+"0f1bab4a34172ee3",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-1984/": [
-"3225bc71e746cc11",
-"2026-11-01"
+"0ef4a18fef9f1632",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-1985/": [
+"5fe4822060390bef",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-1986/": [
-"93a118ebc3153538",
-"2026-11-01"
+"60b25294b34a18bd",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-1987/": [
-"a65e0d8530bb44fd",
-"2026-11-01"
+"f8c12dd5300ff0d9",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-1991/": [
+"891a2fd7be89e2eb",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-1992/": [
+"9decc818fc3d2cd1",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-1996/": [
-"ad2601c74b978c52",
-"2026-11-01"
+"efc9e1bb4882b9c3",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-2001/": [
+"89255ad86ffc3e72",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-2004/": [
-"7bea52d87f73fba7",
-"2026-11-01"
+"7e8a0b3653e05dc2",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-2006/": [
-"0f26d1eb1ce81e46",
-"2026-11-01"
+"9270d3809de36095",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-2007/": [
-"d92a6bd6ae1bd15c",
-"2026-11-01"
+"173b9bf982f2adfe",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-2011/": [
+"589e0f6d93ca0d4f",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-2014/": [
-"9ed4d8e164d61ecf",
-"2026-11-01"
+"3e708eb2cc21d8d1",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-2017/": [
+"c1f62cafcbdce13a",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-2031/": [
-"e576d3888e6b3c8d",
-"2026-11-01"
+"9117493b1f70dacf",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-2033/": [
+"d6e2aac9b95d09f8",
+"2026-11-02"
+],
+"sizes/milwaukee-49-90-2035/": [
+"69402d5ad93a3ad0",
+"2026-11-02"
 ],
 "sizes/milwaukee-49-90-2037/": [
-"ef544163b2a41f64",
-"2026-11-01"
+"a0aca4abe916bdc9",
+"2026-11-02"
 ],
 "sizes/prolux-32-mm-any-brand-2/": [
-"5b7d3ed529204a1c",
-"2026-11-01"
+"f14b7cb16dc8b756",
+"2026-11-02"
 ],
 "sizes/prolux-32-mm-any-brand-3/": [
-"13cab27464bf4961",
-"2026-11-01"
+"b40c27cae5e47869",
+"2026-11-02"
 ],
 "sizes/prolux-32-mm-any-brand/": [
-"bc204431fea9fbdd",
-"2026-11-01"
+"1c14e312724c45dd",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-10qt-2/": [
-"b36d17c0f8195f6d",
-"2026-11-01"
+"fc1e391c49109545",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-10qt-plc10/": [
-"9b6583e54e81fd11",
-"2026-11-01"
+"405731940acdde1a",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-10qt/": [
-"c5b277123be66a52",
-"2026-11-01"
+"49feca1122100f01",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-2-0-2/": [
-"16641058d63f03ae",
-"2026-11-01"
+"da8248e4d27e3a20",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-2-0-3/": [
-"53c283fbc638db73",
-"2026-11-01"
+"fff09456f1c81012",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-2-0-backpacks/": [
-"5488d641998a9d71",
-"2026-11-01"
+"00e200064b2c9cc2",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-2-0-cordless/": [
-"de1a95912ceaaa49",
-"2026-11-01"
+"b6fe20c7858f157f",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-2-0-plc2-0-commercial/": [
-"b3bf0890c2d5b34a",
-"2026-11-01"
+"7cdbae5d3d96ca1f",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-2-0/": [
-"43eb7b584b76b317",
-"2026-11-01"
+"b5a3abfdd1d89410",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-cv12000-any-1-5-in-inlet/": [
-"aeef32f98ae3b6d1",
-"2026-11-01"
+"d0aed048622a0586",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-plc2-0/": [
-"e0ae32d414726bf3",
-"2026-11-01"
+"0df0e7bfb341204b",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-tritan/": [
-"b7b70e9b15e0c97d",
-"2026-11-01"
+"6750e2bc36e4fd5a",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-x8-lite/": [
-"876fa3a30836e388",
-"2026-11-01"
+"1d041fbb866fd752",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-x8-pro-plcx8p/": [
-"77e8aa796a8f6843",
-"2026-11-01"
+"a99c86201c9af116",
+"2026-11-02"
 ],
 "sizes/prolux-prolux-xforce-pro/": [
-"3bce80d87db82401",
-"2026-11-01"
+"372cd70a6d40a885",
+"2026-11-02"
 ],
 "sizes/ridgid-hd0918/": [
-"9a6ebc96250209be",
-"2026-11-01"
+"6746d56abc9e8a18",
+"2026-11-02"
 ],
 "sizes/ridgid-hd0919/": [
-"1f97de3faaae5f5c",
-"2026-11-01"
+"85c9a341ea73e948",
+"2026-11-02"
 ],
 "sizes/ridgid-hd1200/": [
-"9357fea322f7450c",
-"2026-11-01"
+"dfe0380c64b3a86e",
+"2026-11-02"
 ],
 "sizes/ridgid-hd1400/": [
-"89a71c5c0584b089",
-"2026-11-01"
+"76166beda6fbe7aa",
+"2026-11-02"
 ],
 "sizes/ridgid-hd1800/": [
-"bbfd27566b408cbb",
-"2026-11-01"
+"8e9afe26a442cd37",
+"2026-11-02"
+],
+"sizes/ridgid-la2501/": [
+"0e9534c38c6ffbed",
+"2026-11-02"
+],
+"sizes/ridgid-la2503/": [
+"0d4419ed52b74357",
+"2026-11-02"
 ],
 "sizes/ridgid-la2508/": [
-"165c6d3cd00f4a2c",
-"2026-11-01"
+"df4947339ac77d92",
+"2026-11-02"
+],
+"sizes/ridgid-la2509/": [
+"f9077b5193eb126f",
+"2026-11-02"
 ],
 "sizes/ridgid-la2518/": [
-"08dafb4788e58b23",
-"2026-11-01"
+"d392a9e3fc03689e",
+"2026-11-02"
 ],
 "sizes/ridgid-la2521/": [
-"232a521bc3b5c962",
-"2026-11-01"
+"3ccc2a93259d2bd6",
+"2026-11-02"
 ],
 "sizes/ridgid-la2522/": [
-"d528edb65624c153",
-"2026-11-01"
+"a9167db1ef732e4c",
+"2026-11-02"
 ],
 "sizes/ridgid-la2570/": [
-"0b412f21fa84691e",
-"2026-11-01"
+"ff173d608768de80",
+"2026-11-02"
 ],
 "sizes/ridgid-r4520/": [
-"5e8491abbb7ed906",
-"2026-11-01"
+"30793631075e5dae",
+"2026-11-02"
+],
+"sizes/ridgid-vt1407/": [
+"bee9385e9e3f8e8f",
+"2026-11-02"
+],
+"sizes/ridgid-vt1701/": [
+"982a7f4cde5c0f78",
+"2026-11-02"
+],
+"sizes/ridgid-vt1702/": [
+"00c8a521cfbd5015",
+"2026-11-02"
 ],
 "sizes/ridgid-vt1708/": [
-"be15c98d0e4aa3ff",
-"2026-11-01"
+"70705d075a5d9c47",
+"2026-11-02"
+],
+"sizes/ridgid-vt1709/": [
+"04ead69395b46903",
+"2026-11-02"
+],
+"sizes/ridgid-vt1710/": [
+"9588cd74ab3d2c26",
+"2026-11-02"
 ],
 "sizes/ridgid-vt1720/": [
-"bbf4965d7bea93f9",
-"2026-11-01"
+"a53744ca7dcce321",
+"2026-11-02"
 ],
 "sizes/ridgid-vt1722/": [
-"43fc473b31b5e9ea",
-"2026-11-01"
+"7d78a7c31a5f6a2d",
+"2026-11-02"
 ],
 "sizes/ridgid-vt1734/": [
-"e1f13f1746dbaa19",
-"2026-11-01"
+"60473d39c374c59a",
+"2026-11-02"
+],
+"sizes/ridgid-vt1781/": [
+"b8402a2122f6d599",
+"2026-11-02"
+],
+"sizes/ridgid-vt2505/": [
+"4b2ae442b2e71ed5",
+"2026-11-02"
 ],
 "sizes/ridgid-vt2520/": [
-"7be93ad80ec2ee24",
-"2026-11-01"
+"c36534b53be75cdb",
+"2026-11-02"
 ],
 "sizes/ridgid-vt2522/": [
-"95fe313754615718",
-"2026-11-01"
+"60bb88e767084e57",
+"2026-11-02"
+],
+"sizes/ridgid-vt2530/": [
+"8ce35b7c7687c464",
+"2026-11-02"
 ],
 "sizes/ridgid-vt2572/": [
-"77da6cef36a7793d",
-"2026-11-01"
+"8943a917ff1746ec",
+"2026-11-02"
 ],
 "sizes/ridgid-wd0319/": [
-"a958e9905d3f12e0",
-"2026-11-01"
+"9359233fdfd48dc3",
+"2026-11-02"
 ],
 "sizes/ridgid-wd4070/": [
-"ddc67b826cb2f278",
-"2026-11-01"
+"c0cd1a6f558ea55a",
+"2026-11-02"
+],
+"sizes/ryobi-a21ccv1/": [
+"f617b8a1efcee9d9",
+"2026-11-02"
+],
+"sizes/ryobi-a323g01/": [
+"789d7a08753932ce",
+"2026-11-02"
 ],
 "sizes/ryobi-a32bt01/": [
-"b42a3d5cc0ed3678",
-"2026-11-01"
+"89ddb6c6cd5a01ab",
+"2026-11-02"
 ],
 "sizes/ryobi-a32k01/": [
-"48e6e937a724a0ee",
-"2026-11-01"
+"40b526e120f92d49",
+"2026-11-02"
 ],
 "sizes/ryobi-a32k05/": [
-"5c8e194f4741acd8",
-"2026-11-01"
+"3d4258f2a9900b87",
+"2026-11-02"
 ],
 "sizes/ryobi-a32tw01n/": [
-"c4b46d70da29e2bd",
-"2026-11-01"
+"2807a2da18768f91",
+"2026-11-02"
+],
+"sizes/ryobi-a32ua01/": [
+"6eee6472a85db72f",
+"2026-11-02"
+],
+"sizes/ryobi-a32ua03/": [
+"4e9292bf33c8c047",
+"2026-11-02"
+],
+"sizes/ryobi-a32ua04/": [
+"30f26e0f56a11648",
+"2026-11-02"
+],
+"sizes/ryobi-a32ua05/": [
+"1876694fef0c0afb",
+"2026-11-02"
+],
+"sizes/ryobi-a32ua06/": [
+"246870be285a0441",
+"2026-11-02"
 ],
 "sizes/ryobi-a32vh02/": [
-"ecb01bd47541b28a",
-"2026-11-01"
+"0d1e4b9ddf006c2d",
+"2026-11-02"
 ],
 "sizes/ryobi-a32vh03/": [
-"eb14eef469fb7f88",
-"2026-11-01"
+"be39836b04987a2f",
+"2026-11-02"
 ],
 "sizes/ryobi-a32vh04n/": [
-"f56cb6f01e631080",
-"2026-11-01"
+"12779c9488c2b87f",
+"2026-11-02"
 ],
 "sizes/ryobi-a32vh05/": [
-"74b2e85194b0c547",
-"2026-11-01"
+"2cb5b5d72095e70b",
+"2026-11-02"
 ],
 "sizes/ryobi-pcl732b/": [
-"fef3d39fc8665dfa",
-"2026-11-01"
+"40cf96e012add114",
+"2026-11-02"
 ],
 "sizes/ryobi-pcl733b/": [
-"13ee0e34085bdece",
-"2026-11-01"
+"6c78ddbdf6de00cd",
+"2026-11-02"
 ],
 "sizes/ryobi-pcl734b/": [
-"441cdbd579eb9e4b",
-"2026-11-01"
+"1fd2a053249142da",
+"2026-11-02"
 ],
 "sizes/ryobi-pcl735b/": [
-"38fda3ed8b7ed34a",
-"2026-11-01"
+"987e40e893e9279e",
+"2026-11-02"
 ],
 "sizes/ryobi-pwv201b/": [
-"63aa73b53273943c",
-"2026-11-01"
+"cf6e028f70826815",
+"2026-11-02"
 ],
 "sizes/ryobi-ry40wd01b/": [
-"5c70f2fc9f8a5f0b",
-"2026-11-01"
+"1c3754d538c7c355",
+"2026-11-02"
+],
+"sizes/shark-112ffj/": [
+"dc695f08d2808b1d",
+"2026-11-02"
 ],
 "sizes/shark-121ffj/": [
-"b0b3c408f09f41ee",
-"2026-11-01"
+"ce016177c6178c98",
+"2026-11-02"
 ],
 "sizes/shark-193ffj/": [
-"3e916b74def9a17f",
-"2026-11-01"
+"9de38993281f2678",
+"2026-11-02"
 ],
 "sizes/shop-vac-5430162/": [
-"508b7abc08b25689",
-"2026-11-01"
+"0e59a99a5e3d917c",
+"2026-11-02"
 ],
 "sizes/shop-vac-5430542/": [
-"3a66275347e40dcf",
-"2026-11-01"
+"9f05ce6b703fc2e7",
+"2026-11-02"
 ],
 "sizes/shop-vac-5761311/": [
-"28f88e233d6c61a4",
-"2026-11-01"
+"d2c97bedafc990b9",
+"2026-11-02"
 ],
 "sizes/shop-vac-8252605/": [
-"e420e74d06787939",
-"2026-11-01"
+"cd8b629afbd53065",
+"2026-11-02"
 ],
 "sizes/shop-vac-90503/": [
-"645e0901b8fba11a",
-"2026-11-01"
+"4322613b80a6ba34",
+"2026-11-02"
 ],
 "sizes/shop-vac-9050533/": [
-"c00d3bf42c0130c1",
-"2026-11-01"
+"31ebf049bbfc4258",
+"2026-11-02"
 ],
 "sizes/shop-vac-9051233/": [
-"63f77978d435c519",
-"2026-11-01"
+"b9e897ac1864f8d5",
+"2026-11-02"
 ],
 "sizes/shop-vac-90684/": [
-"8b82a3f155f60bbe",
-"2026-11-01"
+"287230b9c39f601b",
+"2026-11-02"
 ],
 "sizes/shop-vac-9198133/": [
-"99cb0d76e1411949",
-"2026-11-01"
+"c87f77072dbf1e7e",
+"2026-11-02"
 ],
 "sizes/shop-vac-9627806/": [
-"22f966af8b0cf88f",
-"2026-11-01"
+"a551f877cab06c54",
+"2026-11-02"
 ],
 "sizes/vacmaster-v78h7/": [
-"a937b10e34fa87b4",
-"2026-11-01"
+"7b9c5baeec1e613e",
+"2026-11-02"
 ],
 "sizes/vacmaster-vbv1210/": [
-"98ab5eb5b694c3b0",
-"2026-11-01"
+"82d6557b756f8b3e",
+"2026-11-02"
 ],
 "sizes/vacmaster-vjf608pf-0201/": [
-"b356fb8fb8b0bc1a",
-"2026-11-01"
+"49c4b8c6432010c7",
+"2026-11-02"
 ],
 "sizes/vacmaster-vjh1612pf-0201/": [
-"20692c7b9dcb6dbb",
-"2026-11-01"
+"8bc043132d323600",
+"2026-11-02"
 ],
 "sizes/vacmaster-voc507pf/": [
-"fb69c4366f1ba43c",
-"2026-11-01"
+"f8f3246ca79200f9",
+"2026-11-02"
 ],
 "sizes/vacmaster-vwm510/": [
-"997d3367892a30b5",
-"2026-11-01"
+"67aec78a7aeeb595",
+"2026-11-02"
 ],
 "sizes/wen-28200/": [
-"cb4aaf8403d84315",
-"2026-11-01"
+"d86d1a581ed93fa0",
+"2026-11-02"
 ],
 "sizes/wen-28221/": [
-"d699c813d2b5ba0e",
-"2026-11-01"
+"0327005c3dce55f5",
+"2026-11-02"
 ],
 "sizes/wen-28250/": [
-"dce8293f5fce10e1",
-"2026-11-01"
+"67c68b5e168b68f6",
+"2026-11-02"
 ],
 "sizes/wen-3403/": [
-"5c88e70af0660b1a",
-"2026-11-01"
+"1da60b7516fdbfd9",
+"2026-11-02"
 ],
 "sizes/wen-3922-3923-3921-ll2156/": [
-"63ab1eefb2392651",
-"2026-11-01"
+"5b77863500e2897d",
+"2026-11-02"
 ],
 "sizes/wen-6502t/": [
-"a26fd55991754617",
-"2026-11-01"
+"ccf4b42aae800661",
+"2026-11-02"
 ],
 "sizes/wen-6524-at6535/": [
-"135ecb6ea7a440ce",
-"2026-11-01"
+"9733a47498cb50c9",
+"2026-11-02"
 ],
 "sizes/wen-65812/": [
-"9e7e2b0e086599cd",
-"2026-11-01"
+"e966671578e1b914",
+"2026-11-02"
 ],
 "sizes/wen-ba1411/": [
-"39cc938288f1e7be",
-"2026-11-01"
+"932850f520becdd0",
+"2026-11-02"
 ],
 "sizes/wen-ba1487/": [
-"a4c70192e5701020",
-"2026-11-01"
+"2be957e03c6aa938",
+"2026-11-02"
 ],
 "sizes/wen-ba3959/": [
-"8154435a120b22d3",
-"2026-11-01"
+"967c0b07bcff8994",
+"2026-11-02"
 ],
 "sizes/wen-ba3962/": [
-"d216efac43f1f6d4",
-"2026-11-01"
+"77f481435e27cbc3",
+"2026-11-02"
 ],
 "sizes/wen-dc1300/": [
-"3566e0ef6f728de4",
-"2026-11-01"
+"bd31544c87cd4143",
+"2026-11-02"
 ],
 "sizes/wen-dc3401/": [
-"f197135d25e0cad8",
-"2026-11-01"
+"c8acb75f516fbb2c",
+"2026-11-02"
 ],
 "sizes/wen-dc3474/": [
-"ef21f7abdfe7f126",
-"2026-11-01"
+"63cc9a436570cafd",
+"2026-11-02"
+],
+"sizes/wen-dca001/": [
+"0c7e531dc85fa5c7",
+"2026-11-02"
+],
+"sizes/wen-dca002/": [
+"609f6a88e644be19",
+"2026-11-02"
+],
+"sizes/wen-dca004/": [
+"cd9f37e80df1d8dc",
+"2026-11-02"
+],
+"sizes/wen-dca005/": [
+"aefa6208bbe0c5a8",
+"2026-11-02"
+],
+"sizes/wen-dca006/": [
+"83881bdd274f973d",
+"2026-11-02"
+],
+"sizes/wen-dca007/": [
+"9dbebb03a4c571cb",
+"2026-11-02"
+],
+"sizes/wen-dca008/": [
+"9befd061ec88a7cb",
+"2026-11-02"
+],
+"sizes/wen-dca009/": [
+"a6cc6c78ea9e0c7b",
+"2026-11-02"
 ],
 "sizes/wen-dca010/": [
-"d9146cbeb12fdf42",
-"2026-11-01"
+"ea6b85cea5e7fa78",
+"2026-11-02"
 ],
 "sizes/wen-dca011/": [
-"f9dca58342ec8f89",
-"2026-11-01"
+"67d471668aad2f6e",
+"2026-11-02"
+],
+"sizes/wen-dca012/": [
+"9713fb6b1319a4f7",
+"2026-11-02"
+],
+"sizes/wen-dca013/": [
+"e88e11448a82ea33",
+"2026-11-02"
+],
+"sizes/wen-dca015/": [
+"fd53b2169b1264f6",
+"2026-11-02"
 ],
 "sizes/wen-dca016/": [
-"de6317e0ac24bab3",
-"2026-11-01"
+"c2bae0492ebf41e0",
+"2026-11-02"
 ],
 "sizes/wen-dca018/": [
-"5c0c0fd0aad99486",
-"2026-11-01"
+"0c9d8525ad8b0a88",
+"2026-11-02"
 ],
 "sizes/wen-dca023/": [
-"b05afb20e91a90e9",
-"2026-11-01"
+"2da3848cc1c1dfe1",
+"2026-11-02"
 ],
 "sizes/wen-dca024/": [
-"baaab48c1ccfa9b8",
-"2026-11-01"
+"3d7f55c83afda140",
+"2026-11-02"
 ],
 "sizes/wen-dca025/": [
-"58482cf494750e8a",
-"2026-11-01"
+"6090e740a1fcacc6",
+"2026-11-02"
 ],
 "sizes/wen-dca026/": [
-"af382b39316a7fad",
-"2026-11-01"
+"8731af9b8855c0be",
+"2026-11-02"
 ],
 "sizes/wen-dca027/": [
-"293d36c0cfbdf51b",
-"2026-11-01"
+"4e879ea43316804d",
+"2026-11-02"
 ],
 "sizes/wen-dca251/": [
-"47545df7944655a7",
-"2026-11-01"
+"aebd5fb128302372",
+"2026-11-02"
 ],
 "sizes/wen-dca252/": [
-"dd227ecdb38f613b",
-"2026-11-01"
+"aac577875dcacd22",
+"2026-11-02"
 ],
 "sizes/wen-ha5932/": [
-"771eb548eeb81729",
-"2026-11-01"
+"f3ac9e7a6c540c62",
+"2026-11-02"
 ],
 "sizes/wen-hb321v-hb632v-hb6319-20418/": [
-"4c52c99a67c33cfb",
-"2026-11-01"
+"654605606b2f4a0f",
+"2026-11-02"
 ],
 "sizes/wen-jt1020h-jt1224h/": [
-"bfc78bb923bdc318",
-"2026-11-01"
+"3cb2615d3455477a",
+"2026-11-02"
 ],
 "sizes/wen-jt3062/": [
-"76ebcb0b3227f27e",
-"2026-11-01"
+"f3bfac0fe30ec81f",
+"2026-11-02"
 ],
 "sizes/wen-jt630h/": [
-"fd137c861505d600",
-"2026-11-01"
+"f8aaa5d5b6ad44d7",
+"2026-11-02"
 ],
 "sizes/wen-jt833h/": [
-"2590a61e9fb35400",
-"2026-11-01"
+"221ab1aab92af0b4",
+"2026-11-02"
 ],
 "sizes/wen-pl1252/": [
-"5dda4f6eb167cbab",
-"2026-11-01"
+"93cda0b881f9e59f",
+"2026-11-02"
 ],
 "sizes/wen-pl1303/": [
-"34384a82278537a0",
-"2026-11-01"
+"86046c5097e0a7ac",
+"2026-11-02"
 ],
 "sizes/wen-pl1337/": [
-"a842bb148cab9890",
-"2026-11-01"
+"369eb12073313d57",
+"2026-11-02"
 ],
 "sizes/wen-tt1015/": [
-"34d45dfe5ca172dd",
-"2026-11-01"
+"1f38eb5d55276a91",
+"2026-11-02"
 ],
 "sizes/wen-vc4710-041/": [
-"58fea2ae02410ccc",
-"2026-11-01"
+"f2f7afd916b77eb9",
+"2026-11-02"
 ],
 "terms/": [
-"026f6fed6fba81de",
-"2026-11-01"
+"767e358a98892759",
+"2026-11-02"
 ],
 "tools/adapter-builder/": [
-"dd861c42117ae362",
-"2026-11-01"
+"9dd97fb8ebe32aa4",
+"2026-11-02"
 ],
 "tools/hose-size-finder/": [
-"064fb2dd9e99cabc",
-"2026-11-01"
+"55a80d5350a59f8c",
+"2026-11-02"
 ],
 "tools/inch-mm-converter/": [
-"79a792a668c46217",
-"2026-11-01"
+"4f46c6f5619bb192",
+"2026-11-02"
 ],
 "tools/material-picker/": [
-"c233fa475408517c",
-"2026-11-01"
+"5e7f377bc36d05cd",
+"2026-11-02"
 ],
 "tools/will-it-fit/": [
-"2402a680e0b953ff",
-"2026-11-01"
+"61980572a3ed60ac",
+"2026-11-02"
 ],
 "whats-new/": [
-"9eee6e0bc30ed2f7",
-"2026-11-01"
+"20724b623ec2bb80",
+"2026-11-02"
 ]
 }

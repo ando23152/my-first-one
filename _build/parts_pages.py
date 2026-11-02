@@ -103,6 +103,7 @@ def part_page(c, it, items, hose):
     if sizes:
         rows.append(("Size", "".join(f'<span class="sz">{esc(s)}</span> ' for s in sizes) + f' <a href="{c.link("tools/hose-size-finder/")}?brand={esc(b).replace(" ","%20")}" style="color:var(--ink);font-size:.88rem;white-space:nowrap">All {esc(b)} sizes</a>'))
     rows.append(("Made in", "Modesto, California, to order"))
+    rows.append(("Ships", "Anywhere in the US, or free local pickup in Modesto"))
     spec = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in rows)
     price = ""
     if it.get("price"):
@@ -134,7 +135,7 @@ def part_page(c, it, items, hose):
         <a class="btn" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it))}">Request this part <span class="ar">→</span></a>
         <a class="btn ghost" href="{EBAY_SEARCH + esc(re.sub(r'[^A-Za-z0-9-]+', '+', ref).strip('+'))}" target="_blank" rel="noopener">Check our eBay store <span class="ar">↗</span></a>
       </div>
-      <div class="acts2"><button type="button" class="tbtn" data-print>Print spec sheet</button>{f'<button type="button" class="tbtn" data-copytext="{esc(it["oem"])}">Copy part number</button>' if it["oem"] else ''}<button type="button" class="tbtn" data-share data-title="{esc(it['n'])}">Share this part</button><a class="tbtn" style="display:inline-flex;align-items:center;text-decoration:none" href="mailto:ando23152@gmail.com?subject={quote('Question about ' + it['n'] + ' (' + B.rp(it) + ')')}">Ask a question</a><span class="tstat" role="status"></span></div>
+      <div class="acts2"><button type="button" class="tbtn" data-print>Print spec sheet</button>{f'<button type="button" class="tbtn" data-copytext="{esc(it["oem"])}">Copy part number</button>' if it["oem"] else ''}<button type="button" class="tbtn" data-share data-title="{esc(it['n'])}">Share this part</button><a class="tbtn" data-nocart style="display:inline-flex;align-items:center;text-decoration:none" href="{c.link('', 'quote')}" data-part="{esc(B.part_text(it) + chr(10) + 'I need it in a different size: ')}">Need a different size?</a><a class="tbtn" style="display:inline-flex;align-items:center;text-decoration:none" href="mailto:ando23152@gmail.com?subject={quote('Question about ' + it['n'] + ' (' + B.rp(it) + ')')}">Ask a question</a><span class="tstat" role="status"></span></div>
       <p class="note">Send your equipment's model number with the request so we can confirm the fit before we print. Not sure of a size? Use the <a href="{c.link('guides/how-to-measure-a-part/')}">measuring guide</a>. Prices and turnaround are in your written quote; see the <a href="{c.link('faq/')}">FAQ</a> and our <a href="{c.link('terms/')}">Terms of Service</a>.</p>
     </div>
     <figure class="fig" style="margin:0"><img src="{c.asset('img/sample-' + it['i'] + '.jpg')}" alt="Illustration of {('an ' if __import__('seo2').KIND_PLURAL.get(it['i'], (it['i'],))[0][0] in 'aeiou' else 'a ') + esc(__import__('seo2').KIND_PLURAL.get(it['i'], (it['i'],))[0])} like this {esc(b)} {esc(ref)} replacement" width="640" height="480" loading="lazy"><figcaption>Illustration only, not a photo of this exact part.</figcaption></figure>

@@ -379,7 +379,8 @@ def resources(c):
              ("Guide", "Replacing a discontinued plastic part", "Five ways to find or replace a part the manufacturer no longer sells.", "guides/replacing-a-discontinued-plastic-part/"),
              ("Reference", "Glossary", f"{len(B.TERMS)} plain-English definitions of printing, material, and fit terms.", "glossary/"),
              ("Reference", "FAQ", "Quotes, pricing, turnaround, the fit guarantee, and what we won't make.", "faq/"),
-             ("Catalog", "Compatible parts", f"{len(CAT['items'])} made-to-order aftermarket parts, searchable by part number.", "parts/")]
+             ("Catalog", "Compatible parts", f"{len(CAT['items'])} made-to-order aftermarket parts, searchable by part number.", "parts/"),
+             ("Catalog", "Part sets", "Tools that work together, grouped by tool family and hose size. One order, one shipping charge.", "bundles/")]
     cg = "".join(f'<a class="res" href="{c.link(p)}"><div class="k">{k}</div><h3>{esc(t)}</h3><p>{esc(d)}</p><span class="go">Open →</span></a>' for k, t, d, p in cards)
     bl = "".join(f'<a href="{c.link("brands/" + s + "/")}">{esc(b)}</a>' for b, (s, *_) in BRANDS.items())
     il = "".join(f'<a href="{c.link("industries/" + s + "/")}">{esc(n)}</a>' for s, n, *_ in INDS)

@@ -250,6 +250,8 @@ def make_pdfs(root):
 
 # ---------- R14: what's new + feed ----------
 NEWS = [
+    ("2026-11-02", "Part sets", "bundles/", "Tools that work together, grouped by tool family and hose size. Add a whole set to your cart in one click."),
+    ("2026-11-02", "One-page business flyer", "business/", "A printable summary of what we make for food processing, agriculture, warehouses and industrial shops."),
     ("2026-11-01", "Will it fit? compatibility checker", "tools/will-it-fit/", "Compare any two vacs, hoses, ports or accessories and see whether they connect directly or need an adapter."),
     ("2026-11-01", "Size pages for every model, and a page for every size", "sizes/", "A page for each vac, hose and tool port in our size data, a printable chart, and hub pages listing everything in each size."),
     ("2026-11-01", "Guide: shop vac adapter fit problems", "guides/vacuum-adapter-fit-problems/", "Loose, tight, won't lock or leaking: causes and fixes."),

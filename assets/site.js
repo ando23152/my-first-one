@@ -87,7 +87,7 @@
   function updPill(){var p=document.getElementById('list-pill'),n=getL().length;if(!p)return;p.hidden=n===0;var b=document.getElementById('list-n');if(b)b.textContent=n;p.setAttribute('aria-label',(ES?'Carrito: ':'Cart: ')+n+(ES?' piezas':n===1?' part':' parts'))}
   function lbl(on){return on?(ES?'✓ En el carrito':'✓ In cart'):(ES?'+ Carrito':'+ Add to cart')}
   document.querySelectorAll('a[data-part]').forEach(function(a){
-    if(a.closest('.pc')||a.closest('.stickybar'))return;
+    if(a.closest('.pc')||a.closest('.stickybar')||a.hasAttribute('data-nocart'))return;
     var b=document.createElement('button');b.type='button';b.className='add-list';var t=a.getAttribute('data-part');b.setAttribute('data-add',t);
     var on=inL(t);b.textContent=lbl(on);b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?(ES?'Quitar del carrito: ':'Remove from cart: '):(ES?'Añadir al carrito: ':'Add to cart: '))+t.split('\n')[0].replace(/^[^:]*: /,''));
     a.insertAdjacentElement('afterend',b);
