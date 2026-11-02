@@ -194,7 +194,7 @@ SERVICES = [
   [("What we make", ["Dust collection adapters and hose fittings", "Vacuum nozzles, brushes, and attachments", "Clips, covers, caps, and battery doors", "Rollers, wheels, and glides", "Handle end caps and trim pieces"]),
    ("How it works", ["Send the broken part, or photos with a ruler and the model number", "We measure it and model it in CAD", "You approve the material, price, and turnaround in writing", "We print, check the fit, and deliver or ship"]),
    ("Good to know", ["Our parts are compatible aftermarket parts, not genuine brand parts", "We fix the weak spot that made the original fail where we can", "Not for safety-critical, pressurized, or electrical parts"])],
-  [("Browse 196 compatible parts", "parts/"), ("Hose size finder", "tools/hose-size-finder/"), ("Clips and covers", "glossary/clips-and-covers/"), ("Rollers and wheels", "glossary/roller/")]),
+  [("Browse all compatible parts", "parts/"), ("Hose size finder", "tools/hose-size-finder/"), ("Clips and covers", "glossary/clips-and-covers/"), ("Rollers and wheels", "glossary/roller/")]),
  ("custom-fabrication", "Custom fabrication", "Built to your drawing.",
   "Mounts, brackets, jigs, fixtures, organizers, prototypes, and specialty components, modeled in CAD from your sketch, sample, or measurements.",
   [("What we make", ["Brackets and mounts for sensors, scanners, and tools", "Jigs and fixtures for repeat cuts, drilling, and assembly", "Organizers, trays, and holders shaped to your items", "Prototypes to test fit and function before production"]),

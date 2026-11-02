@@ -52,23 +52,11 @@
    "cents": 1799,
    "ship": "medium"
   },
-  "milwaukee-49-90-2011-1-7-8-in-floor-utility-nozzle": {
-   "name": "1-7/8 in floor utility nozzle",
-   "ref": "Replaces Milwaukee 49-90-2011",
-   "cents": 1499,
-   "ship": "medium"
-  },
   "milwaukee-49-90-2002-2-1-2-in-floor-brush": {
    "name": "2-1/2 in floor brush",
    "ref": "Replaces Milwaukee 49-90-2002",
    "cents": 2699,
    "ship": "small"
-  },
-  "milwaukee-49-90-2033-2-1-2-in-magnetic-utility-nozzle": {
-   "name": "2-1/2 in magnetic utility nozzle",
-   "ref": "Replaces Milwaukee 49-90-2033",
-   "cents": 1199,
-   "ship": "medium"
   },
   "milwaukee-49-90-2039-2-1-2-in-rocking-utility-nozzle-w": {
    "name": "2-1/2 in rocking utility nozzle w/ brushes",
@@ -166,12 +154,6 @@
    "cents": 2899,
    "ship": "medium"
   },
-  "milwaukee-49-90-1959-hose-clip-adapter-extractor": {
-   "name": "Hose clip adapter (extractor)",
-   "ref": "Replaces Milwaukee 49-90-1959",
-   "cents": 1299,
-   "ship": "small"
-  },
   "milwaukee-49-90-2043p-kit-cross-brush-2-in-1-brush-rocking": {
    "name": "Kit (cross brush, 2-in-1 brush, rocking nozzle, compact organizer)",
    "ref": "Replaces Milwaukee 49-90-2043P",
@@ -214,12 +196,6 @@
    "cents": 2999,
    "ship": "small"
   },
-  "ryobi-a323g01-1-1-4-in-crevice-tool-utility-nozzle": {
-   "name": "1-1/4 in. crevice tool + utility nozzle",
-   "ref": "Replaces RYOBI A323G01",
-   "cents": 999,
-   "ship": "medium"
-  },
   "ryobi-a32ss02n-1-3-8-in-accessory-kit-crevice-tool": {
    "name": "1-3/8 in. accessory kit: crevice tool, floor nozzle, dust brush",
    "ref": "Replaces RYOBI A32SS02N",
@@ -231,18 +207,6 @@
    "ref": "Replaces RYOBI A32K02",
    "cents": 1899,
    "ship": "small"
-  },
-  "ryobi-a32ua03-flexible-extended-micro-crevice-tool-14": {
-   "name": "Flexible extended micro-crevice tool, 14 in.",
-   "ref": "Replaces RYOBI A32UA03",
-   "cents": 1399,
-   "ship": "medium"
-  },
-  "ryobi-a32ua06-micro-crevice-tool-16-bendable-straws": {
-   "name": "Micro-crevice tool (16 bendable straws)",
-   "ref": "Replaces RYOBI A32UA06",
-   "cents": 1499,
-   "ship": "medium"
   },
   "ryobi-a32k04-stick-vac-accessory-kit-crevice-dust-brush-micro": {
    "name": "Stick vac accessory kit: crevice, dust brush, micro crevice, adaptor",
@@ -256,28 +220,10 @@
    "cents": 2399,
    "ship": "medium"
   },
-  "ridgid-vt1781-1-7-8-in-car-nozzle": {
-   "name": "1-7/8 in. car nozzle",
-   "ref": "Replaces RIDGID VT1781",
-   "cents": 1199,
-   "ship": "medium"
-  },
-  "ridgid-vt1702-1-7-8-in-crevice-tool": {
-   "name": "1-7/8 in. crevice tool",
-   "ref": "Replaces RIDGID VT1702",
-   "cents": 1199,
-   "ship": "medium"
-  },
   "ridgid-vt1712-1-7-8-in-crevice-dusting-brush-combo": {
    "name": "1-7/8 in. crevice/dusting brush combo",
    "ref": "Replaces RIDGID VT1712",
    "cents": 2999,
-   "ship": "small"
-  },
-  "ridgid-vt1701-1-7-8-in-dusting-brush": {
-   "name": "1-7/8 in. dusting brush",
-   "ref": "Replaces RIDGID VT1701",
-   "cents": 1399,
    "ship": "small"
   },
   "ridgid-vt1714-1-7-8-in-floor-brush": {
@@ -286,28 +232,10 @@
    "cents": 1699,
    "ship": "small"
   },
-  "ridgid-vt1709-1-7-8-in-utility-nozzle": {
-   "name": "1-7/8 in. utility nozzle",
-   "ref": "Replaces RIDGID VT1709",
-   "cents": 1399,
-   "ship": "medium"
-  },
-  "ridgid-vt1710-1-7-8-in-wet-nozzle-squeegee": {
-   "name": "1-7/8 in. wet nozzle (squeegee)",
-   "ref": "Replaces RIDGID VT1710",
-   "cents": 1499,
-   "ship": "medium"
-  },
   "ridgid-vt2575-12-pc-heavy-duty-cleaning-kit-stainless-wands": {
    "name": "12-pc heavy-duty cleaning kit, stainless wands",
    "ref": "Replaces RIDGID VT2575",
    "cents": 9499,
-   "ship": "medium"
-  },
-  "ridgid-la2503-2-1-2-in-locking-car-nozzle": {
-   "name": "2-1/2 in. locking car nozzle",
-   "ref": "Replaces RIDGID LA2503",
-   "cents": 1199,
    "ship": "medium"
   },
   "ridgid-la2514-2-1-2-in-locking-floor-brush": {
@@ -328,22 +256,10 @@
    "cents": 1799,
    "ship": "medium"
   },
-  "ridgid-vt1407-2-1-2-in-power-tool-adaptor-stepped": {
-   "name": "2-1/2 in. power tool adaptor (stepped, trimmable)",
-   "ref": "Replaces RIDGID VT1407",
-   "cents": 1199,
-   "ship": "small"
-  },
   "ridgid-vt2540-claw-nozzle": {
    "name": "Claw nozzle",
    "ref": "Replaces RIDGID VT2540",
    "cents": 1699,
-   "ship": "medium"
-  },
-  "ridgid-vt2530-multi-surface-carpet-hard-floor-nozzle": {
-   "name": "Multi-surface carpet/hard floor nozzle",
-   "ref": "Replaces RIDGID VT2530",
-   "cents": 1299,
    "ship": "medium"
   },
   "wen-dca003-4-in-y-fitting-splitter": {
@@ -358,29 +274,11 @@
    "cents": 1599,
    "ship": "small"
   },
-  "shark-353ch1000-crevice-tool": {
-   "name": "Crevice tool",
-   "ref": "Replaces Shark 353CH1000",
-   "cents": 1399,
-   "ship": "medium"
-  },
-  "shark-112ffj-crevice-tool-dusting-brush-set": {
-   "name": "Crevice tool + dusting brush set",
-   "ref": "Replaces Shark 112FFJ",
-   "cents": 1499,
-   "ship": "small"
-  },
   "shark-219flin800-pet-multi-tool": {
    "name": "Pet multi-tool",
    "ref": "Replaces Shark 219FLIN800",
    "cents": 1799,
    "ship": "medium"
-  },
-  "shark-123ky1000a-robot-self-cleaning-brushroll": {
-   "name": "Robot self-cleaning brushroll",
-   "ref": "Replaces Shark 123KY1000A",
-   "cents": 1199,
-   "ship": "small"
   },
   "shark-167kku2500-robot-self-cleaning-brushroll": {
    "name": "Robot self-cleaning brushroll",
@@ -400,29 +298,11 @@
    "cents": 1599,
    "ship": "small"
   },
-  "shark-102ky1000-side-brush-aftermarket-referenced": {
-   "name": "Side brush (aftermarket-referenced)",
-   "ref": "Replaces Shark 102KY1000",
-   "cents": 1099,
-   "ship": "small"
-  },
   "shark-1539fc3000-soft-brushroll-front-roller": {
    "name": "Soft brushroll ( front roller)",
    "ref": "Replaces Shark 1539FC3000",
    "cents": 1799,
    "ship": "medium"
-  },
-  "shark-58mmsb2pk-triple-side-brushes-2": {
-   "name": "Triple side brushes (2)",
-   "ref": "Replaces Shark 58MMSB2PK",
-   "cents": 1299,
-   "ship": "small"
-  },
-  "shark-153hg2300-triple-side-brushes-2": {
-   "name": "Triple side brushes (2)",
-   "ref": "Replaces Shark 153HG2300",
-   "cents": 1099,
-   "ship": "small"
   },
   "shark-hvuaw300-138fliv300-under-appliance-wand-36in-adjustable": {
    "name": "Under-appliance wand (36in adjustable)",
@@ -466,23 +346,11 @@
    "cents": 3999,
    "ship": "small"
   },
-  "samsung-dd61-00473a-rack-holder-tine-clip": {
-   "name": "Rack holder tine clip",
-   "ref": "Replaces Samsung DD61-00473A",
-   "cents": 1399,
-   "ship": "small"
-  },
   "samsung-da63-08459a-tray-support-rollers-dispenser-tray": {
    "name": "Tray/support rollers (dispenser tray)",
    "ref": "Replaces Samsung DA63-08459A",
    "cents": 8799,
    "ship": "medium"
-  },
-  "hampton-bay-uc7078t-ceiling-fan-remote-wall-holder-plastic-new": {
-   "name": "Ceiling fan remote wall holder, plastic, new",
-   "ref": "For Hampton Bay UC7078T",
-   "cents": 1199,
-   "ship": "small"
   }
  }
 }

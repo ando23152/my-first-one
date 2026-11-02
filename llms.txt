@@ -6,7 +6,7 @@ Parts are plastic, made to order, and not genuine brand parts. We do not make sa
 
 ## Main pages
 - [Services](https://truepart-fabrication.onrender.com/services/): replacement parts, custom fabrication, electronics enclosures, small-batch manufacturing
-- [Compatible parts catalog](https://truepart-fabrication.onrender.com/parts/): 196 parts by brand and part number
+- [Compatible parts catalog](https://truepart-fabrication.onrender.com/parts/): 119 parts by brand and part number
 - [Pricing](https://truepart-fabrication.onrender.com/pricing/): how quotes are priced
 - [FAQ](https://truepart-fabrication.onrender.com/faq/)
 - [Terms of Service](https://truepart-fabrication.onrender.com/terms/)
